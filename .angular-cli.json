@@ -18,7 +18,10 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": [
+      "styles": [ "../node_modules/ag-grid/dist/styles/ag-grid.css",
+        "../node_modules/ag-grid/dist/styles/ag-theme-bootstrap.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+
         "styles.css"
       ],
       "scripts": [],

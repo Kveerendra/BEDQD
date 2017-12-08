@@ -1,0 +1,92 @@
+
+<div class="row">
+  <div class="col-4">
+    <app-label-percentage [percentage]="'83.4'" [label]="'Data Quality Score'"></app-label-percentage>
+  </div>
+  <div class="col-4">
+    <app-label-percentage [percentage]="'51'" [label]="'ECDE with DQ Monitoring'"></app-label-percentage>
+  </div>
+  <div class="col-4">
+    <app-label-percentage [percentage]="'39'" [label]="'BCDE with DQ Monitoring'"></app-label-percentage>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+      <div class="btn-group" ngbDropdown autoClose="outside" aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop1}}</button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <label class="dropdown-item">
+            <input type="checkbox" /> one
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> two
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> three
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> four
+          </label>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+    <div class="col-3">
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+          <div class="btn-group"  ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop2}}</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button class="dropdown-item">One</button>
+              <button class="dropdown-item">Two</button>
+              <button class="dropdown-item">Four!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop3}}</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button class="dropdown-item">One</button>
+              <button class="dropdown-item">Two</button>
+              <button class="dropdown-item">Four!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="btn-group">
+          <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop4}}</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button class="dropdown-item">One</button>
+              <button class="dropdown-item">Two</button>
+              <button class="dropdown-item">Four!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop4}}</button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <button class="dropdown-item">One</button>
+                <button class="dropdown-item">Two</button>
+                <button class="dropdown-item">Four!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
