@@ -87,21 +87,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           label: '1',
           data: [65, 59, 80, 81, 56, 55, 40],
           stack: 'Stack 0',
-          backgroundColor: 'red',
-          options: {
-            scales: {
-              xAxes: [
-                {
-                  stacked: true
-                }
-              ],
-              yAxes: [
-                {
-                  stacked: true
-                }
-              ]
-            }
-          }
+          backgroundColor: 'red'
         }
       ]
     },
