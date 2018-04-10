@@ -1,5 +1,163 @@
-<p>
-  key-highlights-page works!
-</p>
-<app-dq-score></app-dq-score>
+<div class="row bg-primary">
+  <h3 class="col-8">Data Quality and Integrity - key Highlights</h3>
+  <h4 class="col-4 pull-right">Default Date as of Oct-Dec 2014
+  </h4>
+</div>
+<div class="container-fluid row text-center">
+
+  <div class="col-md-3 col-xs-12" style="padding-right:20px; border-right: 1px solid #ccc;">
+    <h2>Data Quality Monitoring</h2>
+    <app-dq-score></app-dq-score>
+
+    <hr>
+    <div class="div col-xs-12  text-center">
+      <h3 class="">DQ Monitoring Stats</h3>
+      <chart [type]="type" [data]="data" [options]="options"></chart>
+    </div>
+  </div>
+  <div class="col-md-4 col-xs-12" style="padding-right:20px; border-right: 1px solid #ccc;">
+    <h2>Measure / Remediate Data Quality</h2>
+    <div class="row">
+      <chart [type]="type" [data]="data" [options]="options"></chart>
+    </div>
+    <div class="row">
+      <div class="col-xs-5">
+        <chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
+      </div>
+      <div class="col-xs-6">
+        <chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options"></chart>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5 col-xs-12" style="padding-left:10px;">
+    <h2>Internal Controls</h2>
+    <div class="row">
+      <div class="col-7 offset-1">
+
+        <div class="row mt-3">
+          <div class="col-12">
+            <h4 class="float-left">Total Records</h4>
+            <h4 class="float-right">497229</h4>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12">
+            <h4 class="float-left">DQRI Score</h4>
+            <h4 class="float-right">0.2</h4>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12">
+            <h4 class="float-left">DQP Score</h4>
+            <h4 class="float-right">100%</h4>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <h4 class="float-left">Impact Score</h4>
+            <h4 class="float-right">2.2</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 float-right">
+        <div class="row">
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+            <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>All</button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> one
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> two
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> three
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> four
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+            <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>All</button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> one
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> two
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> three
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> four
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+            <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>All</button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> one
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> two
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> three
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> four
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
+            <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
+              <button class="btn btn-outline-primary" ngbDropdownToggle>All</button>
+              <div class="dropdown-menu" ngbDropdownMenu>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> one
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> two
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> three
+                </label>
+                <label class="dropdown-item">
+                  <input type="checkbox" /> four
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--<app-dq-score></app-dq-score>
 <app-grid></app-grid>
+-->
