@@ -43,6 +43,87 @@ export class KeyHighlightsPageComponent implements OnInit {
       }
     }
   };
+  grid3config = {
+    type: 'horizontalBar',
+    data: {
+        labels: ["ECDEs", "BCDEs"],
+        
+        datasets: [{
+            label:"Not DQ Monitered",
+            data: [39, 51],
+            backgroundColor: "green",
+            hoverBackgroundColor: "green"
+        },{
+            label:"DQ Monitered",
+            data: [61, 49],
+            backgroundColor: "blue",
+            hoverBackgroundColor: "blue"
+        }]
+    },
+    options: {
+    scales: {
+        xAxes: [{
+            ticks: {
+                beginAtZero:true,
+                fontFamily: "'Open Sans Bold', sans-serif",
+                fontSize:11
+            },
+            scaleLabel:{
+                display:true
+            },
+            gridLines: {
+            }, 
+            stacked: true
+        }],
+        yAxes: [{
+            gridLines: {
+                display:false,
+                color: "#fff",
+                zeroLineColor: "#fff",
+                zeroLineWidth: 0
+            },
+            ticks: {
+                fontFamily: "'Open Sans Bold', sans-serif",
+                fontSize:11
+            },
+            stacked: true
+        }]
+    },
+    legend:{
+        display:true
+    },
+}
+  };
+
+grid4config = {
+    type: 'bar',
+    data: {
+      labels: ['Jul-Sep 2014', 'Oct-Dec 2014'],
+      datasets: [
+        {
+          label: '<30 days',
+          data: [65, 59],
+          stack: 'Stack 0',
+          backgroundColor: 'blue',
+        },
+        {
+          label: '60 days',
+          data: [65, 59],
+          stack: 'Stack 0',
+          backgroundColor: '#2eb82e'
+        },
+        {
+          label: '30-60 days',
+          data: [65, 59],
+          stack: 'Stack 0',
+          backgroundColor: '#85e085'
+        }
+      ]
+    },
+    options: {
+      responsive: true
+    }
+  };
   constructor(service: KeyHilightsService) {
     this.grid1config.data.labels = service.getGrid1Data();
     this.grid2config.data.labels = service.getGrid2Data();
