@@ -5,7 +5,7 @@
   </div>
 <div class="row">
   <div class="col-4">
-    <app-label-percentage [percentage]="'83.4'" [label]="'Data Quality Score'"></app-label-percentage>
+    <app-label-percentage [percentage]="dataQualityScoreModel.dqScore" [label]="dataQualityScoreModel.header"></app-label-percentage>
   </div>
   <div class="col-4">
     <app-label-percentage [percentage]="'51'" [label]="'ECDE with DQ Monitoring'"></app-label-percentage>
