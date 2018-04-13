@@ -1,8 +1,9 @@
-<div class="row bg-primary">
-    <h3 class="col-8">Data Quality Monitering</h3>
-    <h4 class="col-4 pull-right">Default Date as of Oct-Dec 2014
-    </h4>
+<div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 10px;">
+     <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;">Data Quality Monitoring</div>
+  <div class="col-4 pull-right text-center"style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">Default Date as of Oct-Dec 2014
   </div>
+  </div>
+  <br>
 <div class="row">
   <div class="col-4">
     <app-label-percentage [percentage]="dataQualityScoreModel.dqScore" [label]="dataQualityScoreModel.header"></app-label-percentage>
@@ -14,30 +15,100 @@
     <app-label-percentage [percentage]="'39'" [label]="'BCDE with DQ Monitoring'"></app-label-percentage>
   </div>
 </div>
-<div class="row " style="height:90%;width:90%;">
-  <div class="col-md-3 col-sm-12">
-    <div class="btn-group">
-      <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
-      <div class="btn-group" ngbDropdown aria-label="Button group with nested dropdown">
-        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop1}}</button>
+<br>
+<div class="container-fluid row">
+<div class="col-4 col-xs-12" style="padding-top:20px; border-right: 1px solid #ccc;">
+ <span style="font-weight: bolder;font-size: 12px;">DQ Monitoring Details By Source System</span>
+ <span ><div class="btn-group" ngbDropdown aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-primary" style="width: 135px;height: 40px;" ngbDropdownToggle>{{drop1}}</button>
         <div class="dropdown-menu" ngbDropdownMenu>
-          <button class="dropdown-item">One</button>
-          <button class="dropdown-item">Two</button>
-          <button class="dropdown-item">Four!</button>
+          <button class="dropdown-item">Source System</button>
+          <button class="dropdown-item">Legal Entity/LOB</button>
 
+        </div>
+      </div>
+  </span>
+</div>
+<div class="col-md-5 col-xs-12 text-center">
+  <span style="font-weight: bolder;font-size: 12px;">% of ADS Profiled</span>
+  <br>
+    <chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;" [options]="grid1config.options"></chart>
+    <br><br>
+    <span style="font-weight: bolder;font-size: 12px;">ECDE and BCDE with DQ Monitoring by ADS</span>
+<!-- <div class="col-md-2 col-sm-12"></div> -->
+    <chart [type]="grid2config.type" [data]="grid2config.data" style="height: 300px;" [options]="grid2config.options"></chart>
+</div>
+<div class="col-md-3 col-xs-12" style="padding-top: 50px; padding-left: 60px;">
+    <div class="col-3">
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-secondary" disabled>Source System</button>
+      <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop2}}</button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <label class="dropdown-item">
+            <input type="checkbox" /> one
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> two
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> three
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> four
+          </label>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-md-9 col-sm-12">
-    <div class="align-middle">
-      <app-grid></app-grid>
+<br><br>
+ <div class="col-3">
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-secondary" disabled>Year-Quarter</button>
+      <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop2}}</button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <label class="dropdown-item">
+            <input type="checkbox" /> one
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> two
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> three
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> four
+          </label>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<div class="panel">
-<div class="row">
-  <div class="col-3">
+<br><br>
+   <div class="col-3">
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-secondary" disabled>LOB</button>
+      <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
+        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop2}}</button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <label class="dropdown-item">
+            <input type="checkbox" /> one
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> two
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> three
+          </label>
+          <label class="dropdown-item">
+            <input type="checkbox" /> four
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br>
+   <div class="col-3">
     <div class="btn-group">
       <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
       <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
@@ -59,71 +130,5 @@
       </div>
     </div>
   </div>
-  <div class="col-3">
-    <div class="btn-group">
-      <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
-      <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
-        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop3}}</button>
-        <div class="dropdown-menu" ngbDropdownMenu>
-          <label class="dropdown-item">
-            <input type="checkbox" /> one
-          </label>
-          <label class="dropdown-item">
-            <input type="checkbox" /> two
-          </label>
-          <label class="dropdown-item">
-            <input type="checkbox" /> three
-          </label>
-          <label class="dropdown-item">
-            <input type="checkbox" /> four
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="btn-group">
-      <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
-      <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
-        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop4}}</button>
-        <div class="dropdown-menu" ngbDropdownMenu>
-          <label class="dropdown-item">
-            <input type="checkbox" /> one
-          </label>
-          <label class="dropdown-item">
-            <input type="checkbox" /> two
-          </label>
-          <label class="dropdown-item">
-            <input type="checkbox" /> three
-          </label>
-          <label class="dropdown-item">
-            <input type="checkbox" /> four
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="btn-group">
-      <button type="button" class="btn btn-outline-secondary" disabled>Dimension</button>
-      <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-        <button class="btn btn-outline-primary" ngbDropdownToggle>{{drop4}}</button>
-        <div class="dropdown-menu" ngbDropdownMenu>
-          <button class="dropdown-item">One</button>
-          <button class="dropdown-item">Two</button>
-          <button class="dropdown-item">Four!</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-<div class="row" style="height:40vh;">
-  <div class="col-md-6 col-sm-12">
-    <chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;" [options]="grid1config.options"></chart>
-  </div>
-<!-- <div class="col-md-2 col-sm-12"></div> -->
-  <div class="col-md-6 col-sm-12">
-    <chart [type]="grid2config.type" [data]="grid2config.data" style="height: 300px;" [options]="grid2config.options"></chart>
-  </div>
-</div>
-</div>
+

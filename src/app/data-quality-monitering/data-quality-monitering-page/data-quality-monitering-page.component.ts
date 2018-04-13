@@ -26,13 +26,13 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   grid1config = {
     type: 'bar',
     data: {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['CAO', 'CD', 'HR', 'Legal', 'QS', 'XXXGS', 'XYZ'],
       datasets: [
         {
-          label: '0',
+          label: 'Current Quarter',
           data: [65, 59, 80, 81, 56, 55, 40],
           stack: 'Stack 0',
-          backgroundColor: 'blue',
+          backgroundColor: '#007acc',
           options: {
             scales: {
               xAxes: [
@@ -49,10 +49,10 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           }
         },
         {
-          label: '3',
+          label: 'Prior Quarter',
           data: [65, 59, 80, 81, 56, 55, 40],
           stack: 'Stack 1',
-          backgroundColor: 'green'
+          backgroundColor: '#29a329'
         }
       ]
     },
@@ -64,13 +64,12 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   grid2config = {
     type: 'bar',
     data: {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['Archer', 'BluePrint', 'CREST', 'Finance FW', 'GOALD-UK', 'Insurence...', 'Service No...'],
       datasets: [
         {
-          label: '0',
           data: [65, 59, 80, 81, 56, 55, 40],
           stack: 'Stack 0',
-          backgroundColor: 'blue',
+          backgroundColor: '#29a329',
           options: {
             scales: {
               xAxes: [
@@ -87,26 +86,12 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           }
         },
         {
-          label: '1',
           data: [65, 59, 80, 81, 56, 55, 40],
           stack: 'Stack 0',
-          backgroundColor: 'red'
+          backgroundColor: '#007acc'
         }
       ]
     },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        yAxes: [{
-          type: 'linear',
-          position: 'left',
-        }, {
-          type: 'linear',
-          position: 'right',
-        }]
-      }
-    }
   };
   ngOnInit() {}
 }

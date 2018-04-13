@@ -51,13 +51,13 @@ export class KeyHighlightsPageComponent implements OnInit {
         datasets: [{
             label:"Not DQ Monitered",
             data: [39, 51],
-            backgroundColor: "green",
-            hoverBackgroundColor: "green"
+            backgroundColor: "#006622",
+            hoverBackgroundColor: "#006622"
         },{
             label:"DQ Monitered",
             data: [61, 49],
-            backgroundColor: "blue",
-            hoverBackgroundColor: "blue"
+            backgroundColor: " #004080",
+            hoverBackgroundColor: " #004080"
         }]
     },
     options: {
@@ -102,19 +102,19 @@ grid4config = {
       datasets: [
         {
           label: '<30 days',
-          data: [65, 59],
+          data: [35, 20],
           stack: 'Stack 0',
-          backgroundColor: 'blue',
+          backgroundColor: ' #004080',
         },
         {
           label: '60 days',
-          data: [65, 59],
+          data: [30, 15],
           stack: 'Stack 0',
-          backgroundColor: '#2eb82e'
+          backgroundColor: '#00b33c'
         },
         {
           label: '30-60 days',
-          data: [65, 59],
+          data: [25, 9],
           stack: 'Stack 0',
           backgroundColor: '#85e085'
         }
