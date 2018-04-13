@@ -1,0 +1,1164 @@
+{
+    "bcdeWithDQModel": {
+        "header": "BCDE_WITH_DQ_MONITORING",
+        "bcdeWithDQcore": "39"
+    },
+    "dQScoreModel": {
+        "header": "DATA_QUALITY_SCORE",
+        "dqScore": "83.39"
+    },
+    "ecdeWithDQModel": {
+        "header": "ECDE_DQ_MNTR",
+        "ecdeWithDQScore": "50"
+    },
+    "perstOfAdsProfileModel": [
+        {
+            "header": "% of ADS Profiled",
+            "bucfName": "CAO",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        },
+        {
+            "header": "% of ADS git cle",
+            "bucfName": "QS",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        },
+        {
+            "header": "% of ADS Profiled",
+            "bucfName": "XXXGS",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        },
+        {
+            "header": "% of ADS Profiled",
+            "bucfName": "CD",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        },
+        {
+            "header": "% of ADS Profiled",
+            "bucfName": "Legal",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        },
+        {
+            "header": "% of ADS Profiled",
+            "bucfName": "HR",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        },
+        {
+            "header": "% of ADS Profiled",
+            "bucfName": "XYZ",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        },
+        {
+            "header": "% of ADS Profiled",
+            "bucfName": "",
+            "adsCount": "1",
+            "prQtr": "100",
+            "crntQtr": "100"
+        }
+    ],
+    "dQMonitoringDetailsbySourceSystem": [
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "CD",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "5458.0",
+            "rowsTstd": "5459.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "229089.0",
+            "rowsTstd": "229115.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "CD",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "CAO",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "10892.0",
+            "rowsTstd": "10917.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "Legal",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "HR",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "16363.0",
+            "rowsTstd": "16365.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "XYZ",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "21895.0",
+            "rowsTstd": "21896.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "QS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "XYZ",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "5458.0",
+            "rowsTstd": "5459.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "306523.0",
+            "rowsTstd": "306545.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "10892.0",
+            "rowsTstd": "10917.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "Legal",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "16363.0",
+            "rowsTstd": "16365.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "76416.0",
+            "rowsTstd": "76421.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "XYZ",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "CD",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "CAO",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "HR",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "21895.0",
+            "rowsTstd": "21896.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "QS",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "16363.0",
+            "rowsTstd": "16365.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+            "bucfName": "CD",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "HR",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "5458.0",
+            "rowsTstd": "5459.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "HR",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "Legal",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "21895.0",
+            "rowsTstd": "21896.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "CAO",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "16363.0",
+            "rowsTstd": "16365.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "Legal",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "5458.0",
+            "rowsTstd": "5459.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "CD",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "10892.0",
+            "rowsTstd": "10917.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "XYZ",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "QS",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "21895.0",
+            "rowsTstd": "21896.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "Legal",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+            "bucfName": "XYZ",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "QS",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "5458.0",
+            "rowsTstd": "5459.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+            "bucfName": "",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "QS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "16363.0",
+            "rowsTstd": "16365.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "CAO",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "21895.0",
+            "rowsTstd": "21896.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "HR",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "XYZ",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "10892.0",
+            "rowsTstd": "10917.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "CAO",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "5458.0",
+            "rowsTstd": "5459.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+            "bucfName": "HR",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "CD",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "152486.0",
+            "rowsTstd": "152842.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "CAO",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "Legal",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "21895.0",
+            "rowsTstd": "21896.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+           "bucfName": "Legal",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "HR",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "10892.0",
+            "rowsTstd": "10917.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "QS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "HR GDW",
+            "ads": "Archer",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "50.03",
+            "rcrdsPsd": "5458.0",
+            "rowsTstd": "5459.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "CD",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "16363.0",
+            "rowsTstd": "16365.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+            "bucfName": "QS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "People Soft",
+            "ads": "Blueprint",
+            "bucfName": "XXXGS",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "XYZ",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "Legal",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "10892.0",
+            "rowsTstd": "10917.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "GOALD- UK",
+            "ads": "Finance FW",
+            "bucfName": "CAO",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "IFEED",
+            "ads": "VALIC-Ligh...",
+            "bucfName": "CAO",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Insurance Data Warehouse",
+            "ads": "GOALD- UK",
+            "bucfName": "QS",
+            "dataQualityScore": "99.77",
+            "chgFrmPrQtr": "10.84",
+            "rcrdsPsd": "10892.0",
+            "rowsTstd": "10917.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "CRS",
+            "ads": "Insurance ...",
+            "bucfName": "CD",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "21895.0",
+            "rowsTstd": "21896.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1003",
+            "ads": "Service No...",
+            "bucfName": "XYZ",
+            "dataQualityScore": "99.99",
+            "chgFrmPrQtr": "99.99",
+            "rcrdsPsd": "16363.0",
+            "rowsTstd": "16365.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        },
+        {
+            "databaseName": "Database 1006",
+            "ads": "CREST",
+            "bucfName": "HR",
+            "dataQualityScore": "0",
+            "chgFrmPrQtr": "0.0",
+            "rcrdsPsd": "0.0",
+            "rowsTstd": "0.0",
+            "header": "DQ_MONITORING_BY_SOURCE_SYSTEM"
+        }
+    ],
+    "eCDEandBCDEwithDQmonitoringbyADS": [
+        {
+            "ads": "Insurance ...",
+            "bucfName": "CD",
+            "yearQtr": "Nov-Dec 2010",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Archer",
+            "bucfName": "CD",
+            "yearQtr": "Jul-Sep 2015",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Service No...",
+            "bucfName": "QS",
+            "yearQtr": "Jan-Mar 2021",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "GOALD- UK",
+            "bucfName": "CAO",
+            "yearQtr": "Apr-Jun 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Blueprint",
+            "bucfName": "CD",
+            "yearQtr": "Apr-Jun 2018",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Service No...",
+            "bucfName": "XYZ",
+            "yearQtr": "Jan-Mar 2021",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "CREST",
+            "bucfName": "HR",
+            "yearQtr": "Jan-Mar 2011",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Blueprint",
+            "bucfName": "Legal",
+            "yearQtr": "Apr-Jun 2018",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Insurance ...",
+            "bucfName": "Legal",
+            "yearQtr": "Nov-Dec 2010",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Archer",
+            "bucfName": "Legal",
+            "yearQtr": "Jul-Sep 2015",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "GOALD- UK",
+            "bucfName": "HR",
+            "yearQtr": "Apr-Jun 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Service No...",
+            "bucfName": "CAO",
+            "yearQtr": "Jan-Mar 2021",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "CREST",
+            "bucfName": "CD",
+            "yearQtr": "Jan-Mar 2011",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "GOALD- UK",
+            "bucfName": "XXXGS",
+            "yearQtr": "Apr-Jun 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Finance FW",
+            "bucfName": "QS",
+            "yearQtr": "Nov-Dec 2014",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "GOALD- UK",
+            "bucfName": "CD",
+            "yearQtr": "Apr-Jun 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Blueprint",
+            "bucfName": "QS",
+            "yearQtr": "Apr-Jun 2018",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "VALIC-Ligh...",
+            "bucfName": "QS",
+            "yearQtr": "Jul-Sep 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "CREST",
+            "bucfName": "Legal",
+            "yearQtr": "Jan-Mar 2011",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Service No...",
+            "bucfName": "HR",
+            "yearQtr": "Jan-Mar 2021",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "CREST",
+            "bucfName": "QS",
+            "yearQtr": "Jan-Mar 2011",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Service No...",
+            "bucfName": "XXXGS",
+            "yearQtr": "Jan-Mar 2021",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Finance FW",
+            "bucfName": "XYZ",
+            "yearQtr": "Nov-Dec 2014",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "GOALD- UK",
+            "bucfName": "Legal",
+            "yearQtr": "Apr-Jun 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Blueprint",
+            "bucfName": "XYZ",
+            "yearQtr": "Apr-Jun 2018",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "VALIC-Ligh...",
+            "bucfName": "XYZ",
+            "yearQtr": "Jul-Sep 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Insurance ...",
+            "bucfName": "QS",
+            "yearQtr": "Nov-Dec 2010",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Archer",
+            "bucfName": "QS",
+            "yearQtr": "Jul-Sep 2015",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "CREST",
+            "bucfName": "XYZ",
+            "yearQtr": "Jan-Mar 2011",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Finance FW",
+            "bucfName": "CAO",
+            "yearQtr": "Nov-Dec 2014",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "CREST",
+            "bucfName": "CAO",
+            "yearQtr": "Jan-Mar 2011",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Blueprint",
+            "bucfName": "CAO",
+            "yearQtr": "Apr-Jun 2018",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "VALIC-Ligh...",
+            "bucfName": "CAO",
+            "yearQtr": "Jul-Sep 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Service No...",
+            "bucfName": "CD",
+            "yearQtr": "Jan-Mar 2021",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Insurance ...",
+            "bucfName": "XYZ",
+            "yearQtr": "Nov-Dec 2010",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Archer",
+            "bucfName": "XYZ",
+            "yearQtr": "Jul-Sep 2015",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Finance FW",
+            "bucfName": "HR",
+            "yearQtr": "Nov-Dec 2014",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Service No...",
+            "bucfName": "Legal",
+            "yearQtr": "Jan-Mar 2021",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Blueprint",
+            "bucfName": "HR",
+            "yearQtr": "Apr-Jun 2018",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "VALIC-Ligh...",
+            "bucfName": "HR",
+            "yearQtr": "Jul-Sep 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Insurance ...",
+            "bucfName": "CAO",
+            "yearQtr": "Nov-Dec 2010",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Finance FW",
+            "bucfName": "XXXGS",
+            "yearQtr": "Nov-Dec 2014",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "GOALD- UK",
+            "bucfName": "QS",
+            "yearQtr": "Apr-Jun 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Finance FW",
+            "bucfName": "CD",
+            "yearQtr": "Nov-Dec 2014",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Archer",
+            "bucfName": "CAO",
+            "yearQtr": "Jul-Sep 2015",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Blueprint",
+            "bucfName": "XXXGS",
+            "yearQtr": "Apr-Jun 2018",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "VALIC-Ligh...",
+            "bucfName": "XXXGS",
+            "yearQtr": "Jul-Sep 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Insurance ...",
+            "bucfName": "HR",
+            "yearQtr": "Nov-Dec 2010",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Archer",
+            "bucfName": "HR",
+            "yearQtr": "Jul-Sep 2015",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "VALIC-Ligh...",
+            "bucfName": "CD",
+            "yearQtr": "Jul-Sep 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "CREST",
+            "bucfName": "XXXGS",
+            "yearQtr": "Jan-Mar 2011",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "GOALD- UK",
+            "bucfName": "XYZ",
+            "yearQtr": "Apr-Jun 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Finance FW",
+            "bucfName": "Legal",
+            "yearQtr": "Nov-Dec 2014",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Insurance ...",
+            "bucfName": "XXXGS",
+            "yearQtr": "Nov-Dec 2010",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "Archer",
+            "bucfName": "XXXGS",
+            "yearQtr": "Jul-Sep 2015",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        },
+        {
+            "ads": "VALIC-Ligh...",
+            "bucfName": "Legal",
+            "yearQtr": "Jul-Sep 2020",
+            "bcdeTot": "1",
+            "ecdeTot": "1",
+            "header": "ECDE_AND_BCDE_WITH_DQ_MONITORING_BY_ADS"
+        }
+    ]
+}

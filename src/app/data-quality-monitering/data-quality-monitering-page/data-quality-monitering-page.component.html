@@ -6,7 +6,7 @@
   <br>
 <div class="row">
   <div class="col-4">
-    <app-label-percentage [percentage]="dataQualityScoreModel.dqScore" [label]="dataQualityScoreModel.header"></app-label-percentage>
+    <app-label-percentage [percentage]="dataQualityScoreModel['dqScore']" [label]="dataQualityScoreModel['header']"></app-label-percentage>
   </div>
   <div class="col-4">
     <app-label-percentage [percentage]="'51'" [label]="'ECDE with DQ Monitoring'"></app-label-percentage>
@@ -29,10 +29,10 @@
       </div>
   </span>
 </div>
-<div class="col-md-5 col-xs-12 text-center">
+<div *ngIf="grid1loaded" class="col-md-5 col-xs-12 text-center">
   <span style="font-weight: bolder;font-size: 12px;">% of ADS Profiled</span>
   <br>
-    <chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;" [options]="grid1config.options"></chart>
+    <chart  [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;" [options]="grid1config.options"></chart>
     <br><br>
     <span style="font-weight: bolder;font-size: 12px;">ECDE and BCDE with DQ Monitoring by ADS</span>
 <!-- <div class="col-md-2 col-sm-12"></div> -->

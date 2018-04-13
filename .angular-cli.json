@@ -9,7 +9,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "DataQualityMonitoring.json"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,7 +20,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [ "../node_modules/ag-grid/dist/styles/ag-grid.css",
-        "../node_modules/ag-grid/dist/styles/ag-theme-bootstrap.css",
+        "../node_modules/ag-grid/dist/styles/ag-theme-blue.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
 
         "styles.css"

@@ -6,23 +6,17 @@ import { DataQualityMoniteringService } from '../service/data-quality-monitering
   selector: 'app-data-quality-monitering-page',
   templateUrl: './data-quality-monitering-page.component.html',
   styleUrls: ['./data-quality-monitering-page.component.css'],
-  providers: [NgbDropdownConfig,DataQualityMoniteringService]
+  providers: [NgbDropdownConfig, DataQualityMoniteringService]
 })
+
 export class DataQualityMoniteringPageComponent implements OnInit {
-  dataQualityScoreModel ={};
+  grid1loaded = false;
+  dataQualityScoreModel = {};
   drop1: String;
   drop2: String;
   drop3: String;
   drop4: String;
   drop5: String;
-  constructor(DataQualityMoniteringService:DataQualityMoniteringService) {
-    this.drop1 = 'Source System';
-    this.drop2 = 'All';
-    this.drop3 = 'All';
-    this.drop4 = 'All';
-    this.drop5 = 'ADS';
-    this.dataQualityScoreModel = DataQualityMoniteringService.getDataQualityModel();
-  }
   grid1config = {
     type: 'bar',
     data: {
@@ -30,27 +24,13 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       datasets: [
         {
           label: 'Current Quarter',
-          data: [65, 59, 80, 81, 56, 55, 40],
+          data: [],
           stack: 'Stack 0',
           backgroundColor: '#007acc',
-          options: {
-            scales: {
-              xAxes: [
-                {
-                  stacked: true
-                }
-              ],
-              yAxes: [
-                {
-                  stacked: true
-                }
-              ]
-            }
-          }
         },
         {
           label: 'Prior Quarter',
-          data: [65, 59, 80, 81, 56, 55, 40],
+          data: [],
           stack: 'Stack 1',
           backgroundColor: '#29a329'
         }
@@ -70,20 +50,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           data: [65, 59, 80, 81, 56, 55, 40],
           stack: 'Stack 0',
           backgroundColor: '#29a329',
-          options: {
-            scales: {
-              xAxes: [
-                {
-                  stacked: true
-                }
-              ],
-              yAxes: [
-                {
-                  stacked: true
-                }
-              ]
-            }
-          }
+
         },
         {
           data: [65, 59, 80, 81, 56, 55, 40],
@@ -93,5 +60,58 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       ]
     },
   };
-  ngOnInit() {}
+  service: DataQualityMoniteringService;
+  constructor(dataQualityMoniteringService: DataQualityMoniteringService) {
+    this.drop1 = 'Source System';
+    this.drop2 = 'All';
+    this.drop3 = 'All';
+    this.drop4 = 'All';
+    this.drop5 = 'ADS';
+    this.service = dataQualityMoniteringService;
+
+
+
+  }
+
+  ngOnInit() {
+    
+    this.service.getData().then((dataaa) => {
+    
+       
+     
+      this.dataQualityScoreModel = this.service.getdQScoreModel();
+      var recievedData = this.service.getperstOfAdsProfileModel();
+      var data = {
+        label: '0',
+        data: [],
+        stack: 'Stack 0',
+        backgroundColor: 'blue'
+      };
+      var priorQrtr = this.grid1config.data.datasets[0].data;
+      var currentQrtr = this.grid1config.data.datasets[1].data;
+      var datasets = [];
+      for (var i in recievedData) {
+        this.grid1config.data.datasets[0].data.push(recievedData[i]["prQtr"])
+        this.grid1config.data.datasets[1].data.push(recievedData[i]["crntQtr"])
+      }
+      this.grid1loaded = true;
+    /*  datasets = [
+        {
+          label: '0',
+          data: priorQrtr,
+          stack: 'Stack 0',
+          backgroundColor: 'blue'
+        },
+        {
+          label: '3',
+          data: currentQrtr,
+          stack: 'Stack 1',
+          backgroundColor: 'green'
+        }
+      ]*/
+      //this.grid1config.data.datasets = datasets;
+    });
+ 
+  }
+
 }
