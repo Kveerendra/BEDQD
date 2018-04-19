@@ -8,7 +8,7 @@
         "dqScore": "83.39"
     },
     "ecdeWithDQModel": {
-        "header": "ECDE_DQ_MNTR",
+        "header": "ECDE_DQ_MONITORING",
         "ecdeWithDQScore": "50"
     },
     "perstOfAdsProfileModel": [

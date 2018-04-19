@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { KeyHilightsService } from '../key-hilights.service';
 
@@ -9,57 +9,34 @@ import { KeyHilightsService } from '../key-hilights.service';
   providers: [NgbDropdownConfig,KeyHilightsService]
 })
 export class KeyHighlightsPageComponent implements OnInit {
-  grid1config = {
-    type: 'pie',
-    data: {
-      labels: ["Data"],
-      datasets: [{
-        label: "Population (millions)",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-        data: [2478,5267,734,784,433]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
-    }
-  };
-  grid2config = {
-    type: 'pie',
-    data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-      datasets: [{
-        label: "Population (millions)",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-        data: [2478,5267,734,784,433]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
-    }
-  };
+
+  grid3loaded = false;
+  grid4loaded = false;
+  tRecords : String;
+  dqriScore : String;
+  dqpScore : String;
+  impactScore : String;
+  drop2: String[] = [];
+  drop3: String[] = [];
+  drop4: String[] = [];
+
   grid3config = {
     type: 'horizontalBar',
     data: {
         labels: ["ECDEs", "BCDEs"],
-        
         datasets: [{
             label:"Not DQ Monitered",
-            data: [39, 51],
-            backgroundColor: "#006622",
-            hoverBackgroundColor: "#006622"
+            data: [],
+            backgroundColor: "#29a329",
+            hoverBackgroundColor: "#29a329"
         },{
             label:"DQ Monitered",
-            data: [61, 49],
-            backgroundColor: " #004080",
-            hoverBackgroundColor: " #004080"
+            data: [],
+            backgroundColor: " #007acc",
+            hoverBackgroundColor: " #007acc"
         }]
     },
+
     options: {
     scales: {
         xAxes: [{
@@ -102,19 +79,19 @@ grid4config = {
       datasets: [
         {
           label: '<30 days',
-          data: [35, 20],
+          data: [],
           stack: 'Stack 0',
-          backgroundColor: ' #004080',
+          backgroundColor: ' #007acc',
         },
         {
           label: '60 days',
-          data: [30, 15],
+          data: [],
           stack: 'Stack 0',
-          backgroundColor: '#00b33c'
+          backgroundColor: '#29a329'
         },
         {
           label: '30-60 days',
-          data: [25, 9],
+          data: [],
           stack: 'Stack 0',
           backgroundColor: '#85e085'
         }
@@ -124,12 +101,91 @@ grid4config = {
       responsive: true
     }
   };
-  constructor(service: KeyHilightsService) {
-    this.grid1config.data.labels = service.getGrid1Data();
-    this.grid2config.data.labels = service.getGrid2Data();
+
+  grid1config = {
+    type: 'pie',
+    data: {
+      labels: ['Prior Quarter'],
+      datasets: [
+        {
+          label: '',
+          data: [],
+          backgroundColor: ' #007acc',
+        }
+      ]
+    }
+  };
+
+  grid2config = {
+    type: 'pie',
+    data: {
+      labels: ['Current Quarter'],
+      datasets: [
+        {
+          label: '',
+          data: [],
+          backgroundColor: ' #007acc',
+        }
+      ]
+    }
+  };
+  service: KeyHilightsService;
+  constructor(KeyHighlightsService: KeyHilightsService) {
+   this.service = KeyHighlightsService;
+
    }
 
   ngOnInit() {
-  }
+    this.service.getData().then((dataaa) =>{
 
+        var recievedData_1 = this.service.getdQRIAndDQPScoresData();
+        this.tRecords = (Math.round(recievedData_1["totalRecords"])).toString();
+        this.dqriScore = recievedData_1["dqriScore"].toString();
+        this.dqpScore = recievedData_1["dqpScore"].toString()+"%";
+        this.impactScore = recievedData_1["impactScore"].toString();
+
+
+
+        var WholeData = this.service.getlistOfDQMoniteringStatsData();
+        var hpDqIssues = this.service.getlistOfHighPriorityDQIssuesData();
+        var openDQIssues = this.service.getopenDQIssuesData();
+        
+       for(var l in WholeData){
+        if(this.drop3.indexOf(WholeData[l]["yearQuarter"]) == -1){
+           this.drop3.push(WholeData[l]["yearQuarter"]);
+          }
+        }
+        for(var j in WholeData){
+        if(this.drop4.indexOf(WholeData[j]["lob"]) == -1){
+           this.drop4.push(WholeData[j]["lob"]);
+          }
+        }
+        for(var k in WholeData){
+        if(this.drop2.indexOf(WholeData[k]["sourceSystem"]) == -1){
+           this.drop2.push(WholeData[k]["sourceSystem"]);
+          }
+        }
+
+        for (var i in WholeData) {
+           if(WholeData[i]['label'] == "ECDEs"){
+             this.grid3config.data.datasets[0].data.push(WholeData[0]["notDQMonitered"]);
+             this.grid3config.data.datasets[1].data.push(WholeData[0]["dqMonitered"]); 
+           }
+            if(WholeData[i]['label'] == "BCDEs"){
+             this.grid3config.data.datasets[0].data.push(WholeData[1]["notDQMonitered"]);
+             this.grid3config.data.datasets[1].data.push(WholeData[1]["dqMonitered"]);
+         }
+         }
+         this.grid3loaded = true;
+            this.grid4config.data.datasets[0].data.push(hpDqIssues[1]["nbrOfIssues"],hpDqIssues[4]["nbrOfIssues"]);
+
+             this.grid4config.data.datasets[1].data.push(hpDqIssues[0]["nbrOfIssues"],hpDqIssues[3]["nbrOfIssues"]);
+
+             this.grid4config.data.datasets[2].data.push(hpDqIssues[2]["nbrOfIssues"],hpDqIssues[5]["nbrOfIssues"]);
+        
+         this.grid4loaded = true;
+        this.grid1config.data.datasets[0].data.push(openDQIssues["priorQuarter"]);
+        this.grid2config.data.datasets[0].data.push(openDQIssues["currentQuarter"]);
+   });
+  }
 }

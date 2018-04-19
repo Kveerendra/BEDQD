@@ -5,6 +5,8 @@ import { KeyHighlightsPageComponent } from './key-highlights-page/key-highlights
 import { ChartModule } from 'angular2-chartjs';
 import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { KeyHilightsService } from './key-hilights.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -14,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot()
   ],
   declarations: [DqScoreComponent, KeyHighlightsPageComponent],
-  exports: [KeyHighlightsPageComponent]
+  exports: [KeyHighlightsPageComponent],
+  providers: [KeyHilightsService]
 })
 export class KeyHighlightsModule { }

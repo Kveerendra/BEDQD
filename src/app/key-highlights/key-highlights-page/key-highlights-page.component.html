@@ -13,29 +13,34 @@
     <div class="div col-xs-12">
       <div class ="text-center" style="font-weight: bolder;color: #787878;">DQ Monitoring Stats</div>
       <br>
-      <div class ="text-center" >
-         <chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" ></chart>
+      <div class ="text-center" *ngIf="grid3loaded">
+         <chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="height: 300px;width: 290px;"></chart>
       </div>     
     </div>
   </div>
-  <div class="col-md-4 col-xs-12" style="padding-right:20px;padding-top:20px; border-right: 1px solid #ccc;">
+  <div class="col-md-5 col-xs-12" style="padding-right:20px;padding-top:20px; border-right: 1px solid #ccc;">
     <h4>Measure / Remediate Data Quality</h4>
     <br>
     <div class ="text-center" style="font-weight: bolder;color: #787878;">High Priority DQ Issues</div>
     <br>
-    <div class="row" style="padding-left: 60px;">
-      <chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options"></chart>
+    <div class="row" style="padding-left: 60px;" *ngIf="grid4loaded">
+      <chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options" style="width: 400px;"></chart>
     </div>
+    <br>
     <div class="row">
-      <div class="col-xs-5">
-       <!--  <chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart> -->
-      </div>
-      <div class="col-xs-6">
-        <!-- <chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options"></chart> -->
+      <div class ="text-center" style="font-weight: bolder;color: #787878;padding-left: 200px;">Open DQ Issues</div>
+      <br><br>
+      <div class="col-12">
+        <div class="row" *ngIf="grid4loaded">
+          <span style="width: 250px;"><chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart></span>
+          <span style="width: 5px;">VS</span>
+        <span style="width: 250px;"><chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options"></chart>
+        </span>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-5 col-xs-12" style="padding-right:20px;padding-top:20px;">
+  <div class="col-md-4 col-xs-12" style="padding-right:20px;padding-top:10px;">
     <h4 class="text-center">Internal Controls</h4>
     <br>
    <div class ="text-center" style="font-weight: bolder;color: #787878;">DQRI and DQP Scores</div>
@@ -45,99 +50,62 @@
         <div class="row mt-3">
           <div class="col-12">
             <span class="float-left" style="color: #787878;font-weight: bolder;font-size: 15px;">Total Records</span>
-            <span class="float-right" style="color: #007399;font-weight: bolder;font-size: 15px;">497229</span>
+            <span class="float-right" style="color: #007399;font-weight: bolder;font-size: 15px;">{{tRecords}}</span>
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-12">
             <span class="float-left"style="color: #787878;font-weight: bolder;font-size: 15px;">DQRI Score</span>
-            <span class="float-right"style="color: #007399;font-weight: bolder;font-size: 15px;">0.2</span>
+            <span class="float-right"style="color: #007399;font-weight: bolder;font-size: 15px;">{{dqriScore}}</span>
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-12">
             <span class="float-left"style="color: #787878;font-weight: bolder;font-size: 15px;">DQP Score</span>
-            <span class="float-right"style="color: #007399;font-weight: bolder;font-size: 15px;">100%</span>
+            <span class="float-right"style="color: #007399;font-weight: bolder;font-size: 15px;">{{dqpScore}}</span>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col-12">
             <span class="float-left"style="color: #787878;font-weight: bolder;font-size: 15px;">Impact Score</span>
-            <span class="float-right"style="color: #007399;font-weight: bolder;font-size: 15px;">2.2</span>
+            <span class="float-right"style="color: #007399;font-weight: bolder;font-size: 15px;">{{impactScore}}</span>
           </div>
         </div>
       </div>
-      <div class="col-3 float-right">
-          <span style="text-align: center;font-weight: bolder;font-size: 14px;"><p>Filters</p></span>
-        <div class="row">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary" disabled>Year-Quarter</button>
-            <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
-              <button class="btn btn-outline-primary" ngbDropdownToggle>All</button>
-              <div class="dropdown-menu" ngbDropdownMenu>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> one
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> two
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> three
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> four
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary" disabled>LOB</button>
-            <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
-              <button class="btn btn-outline-primary" ngbDropdownToggle>All</button>
-              <div class="dropdown-menu" ngbDropdownMenu>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> one
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> two
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> three
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> four
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-3">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary" disabled>Source System</button>
-            <div class="btn-group" ngbDropdown autoClose="outside" role="group" aria-label="Button group with nested dropdown">
-              <button class="btn btn-outline-primary" ngbDropdownToggle>All</button>
-              <div class="dropdown-menu" ngbDropdownMenu>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> one
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> two
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> three
-                </label>
-                <label class="dropdown-item">
-                  <input type="checkbox" /> four
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-4 float-right" >
+          <span style="text-align: center;font-weight: bolder;font-size: 12px;"><p>Filters</p></span>
+        <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 60px;height: 30px;font-size: 12px;">
+             <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
+        </li>
+       <!--  <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button> -->
+      </ul>
+  </div>
+  <br> <br>
+ <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <li class="dropdown-item" *ngFor="let d4 of drop4"style ="width: 80px;height: 30px;font-size: 12px;">
+             <input type="checkbox" id ="{{d4}}" checked="checked" (change)="filterData($event)">{{d4}}
+        </li>
+        </ul>
+    </div>
+     <br> <br>
+    <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Source System</button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <li class="dropdown-item" *ngFor="let d1 of drop2" style ="width: 80px;height: 30px;font-size: 12px;">
+             <input type="checkbox" name="{{d1}}" checked="checked">{{d1}}
+        </li>
+       <!--  <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button> -->
+      </ul>
+    </div>
       </div>
     </div>
 

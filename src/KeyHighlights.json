@@ -1,0 +1,77 @@
+{
+    "listOfHighPriorityDQIssues": [
+        {
+            "header": "dqriandDQPScores",
+            "nbrDaysOpen": "Jul-Sep 2014",
+            "agingBucket": ">60",
+            "nbrOfIssues": "722300"
+        },
+        {
+            "header": "dqriandDQPScores",
+            "nbrDaysOpen": "Jul-Sep 2014",
+            "agingBucket": "<30",
+            "nbrOfIssues": "655160"
+        },
+        {
+            "header": "dqriandDQPScores",
+            "nbrDaysOpen": "Jul-Sep 2014",
+            "agingBucket": "30-60",
+            "nbrOfIssues": "679280"
+        },
+        {
+            "header": "dqriandDQPScores",
+            "nbrDaysOpen": "Oct-Dec 2014",
+            "agingBucket": ">60",
+            "nbrOfIssues": "185280"
+        },
+        {
+            "header": "dqriandDQPScores",
+            "nbrDaysOpen": "Oct-Dec 2014",
+            "agingBucket": "<30",
+            "nbrOfIssues": "192760"
+        },
+        {
+            "header": "dqriandDQPScores",
+            "nbrDaysOpen": "Oct-Dec 2014",
+            "agingBucket": "30-60",
+            "nbrOfIssues": "260280"
+        }
+    ],
+    "listOfDQMoniteringStats": [
+        {
+            "header": "dataMoniteringStats",
+            "label": "ECDEs",
+            "notDQMonitered": "49.0",
+            "dqMonitered": "51.0",
+            "yearQuarter": "Jan-Mar 2014",
+            "lob": "Vendor Management",
+            "sourceSystem": "Blueprint"
+        },
+        {
+            "header": "dataMoniteringStats",
+            "label": "BCDEs",
+            "notDQMonitered": "61.0",
+            "dqMonitered": "39.0",
+            "yearQuarter": "Oct-Dec 2014",
+            "lob": "ABC Bank",
+            "sourceSystem": "UGIns Prod"
+        }
+    ],
+    "dataQualityMonitering": {
+        "header": "dataQualityDQScore",
+        "dqScore": "83.39",
+        "changeFromPriorQuarter": "3.82"
+    },
+    "dQRIAndDQPScores": {
+        "header": "dqriandDQPScores",
+        "totalRecords": "3227.936076",
+        "dqriScore": "0.2",
+        "dqpScore": "100.0",
+        "impactScore": "2.1"
+    },
+    "openDQIssues": {
+        "header": "openDQIssues",
+        "priorQuarter": "23",
+        "currentQuarter": "1"
+    }
+}
