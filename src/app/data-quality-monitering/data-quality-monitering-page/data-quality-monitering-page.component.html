@@ -38,11 +38,11 @@
 <div *ngIf="grid1loaded" class="col-md-5 col-xs-12 text-center">
   <span style="font-weight: bolder;font-size: 12px;">% of ADS Profiled</span>
   <br>
-    <chart  [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;width: 400px;" [options]="grid1config.options"></chart>
+    <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;width: 400px;" [options]="grid1config.options"></chart>
     <br><br>
     <span style="font-weight: bolder;font-size: 12px;">ECDE and BCDE with DQ Monitoring by ADS</span>
 <!-- <div class="col-md-2 col-sm-12"></div> -->
-    <chart [type]="grid2config.type" [data]="grid2config.data" style="height: 300px;width: 400px;" [options]="grid2config.options"></chart>
+    <chart #grid2Chart [type]="grid2config.type" [data]="grid2config.data" style="height: 300px;width: 400px;" [options]="grid2config.options"></chart>
 </div>
 <div class="col-md-2 col-xs-12" style="padding-top: 50px;">
     <div ngbDropdown class="d-inline-block">
@@ -71,7 +71,7 @@
       <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
         <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
         <li class="dropdown-item" *ngFor="let d4 of drop4"style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" id ="{{d4}}" checked="checked" (change)="filterData($event)">{{d4}}
+             <input type="checkbox" id ="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d4]" (change)="filterData($event)">{{d4}}
         </li>
         </ul>
     </div>

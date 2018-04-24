@@ -8,13 +8,15 @@ import { LabelPercentageComponent } from './label-percentage/label-percentage.co
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DataQualityMoniteringService } from './service/data-quality-monitering.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
     ChartModule,
     SharedModule,
     NgbModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [DataQualityMoniteringPageComponent, LabelPercentageComponent],
   exports: [DataQualityMoniteringPageComponent],

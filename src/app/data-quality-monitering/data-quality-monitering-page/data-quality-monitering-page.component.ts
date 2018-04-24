@@ -1,6 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject,ViewChild } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { DataQualityMoniteringService } from '../service/data-quality-monitering.service';
+import {ChangeDetectorRef} from '@angular/core';
+import { ChartComponent } from 'angular2-chartjs';
+
 
 @Component({
   selector: 'app-data-quality-monitering-page',
@@ -10,6 +13,12 @@ import { DataQualityMoniteringService } from '../service/data-quality-monitering
 })
 
 export class DataQualityMoniteringPageComponent implements OnInit {
+  @ViewChild("grid1Chart")
+  chart1:ChartComponent;
+  @ViewChild("grid2Chart")
+  chart2:ChartComponent;
+  LOBFilter = {};
+
   grid1loaded = false;
   grid2loaded = false;
   dataQualityScoreModel = {};
@@ -23,7 +32,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   grid1config = {
     type: 'bar',
     data: {
-      labels: ['CAO', 'CD', 'HR', 'Legal', 'QS', 'XXXGS', 'XYZ'],
+      labels: [],
       datasets: [
         {
           label: 'Current Quarter',
@@ -102,7 +111,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     },
   };
   service: DataQualityMoniteringService;
-  constructor(dataQualityMoniteringService: DataQualityMoniteringService) {
+  constructor(private dataQualityMoniteringService: DataQualityMoniteringService,private cd : ChangeDetectorRef) {
     this.drop1 = 'Source System';
     this.drop5 = 'ADS';
     this.service = dataQualityMoniteringService;
@@ -127,9 +136,11 @@ export class DataQualityMoniteringPageComponent implements OnInit {
      for(var j in recievedData_1){
       if(this.drop4.indexOf(recievedData_1[j]["bucfName"]) == -1){
          this.drop4.push(recievedData_1[j]["bucfName"]);
+         this.LOBFilter[recievedData_1[j]["bucfName"]] = true;
         }
         
       }
+      this.grid1config.data.labels = this.drop4;
      for(var l in receivedData_2){
       if(this.drop3.indexOf(receivedData_2[l]["yearQtr"]) == -1){
          this.drop3.push(receivedData_2[l]["yearQtr"]);
@@ -181,9 +192,27 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     });
  
   }
+  
 filterData(e){
-  if(!e.target.checked){  
-    alert("not checked");
+  var labels = [];
+for(var key in this.LOBFilter){
+  console.log(key +" -> "+this.LOBFilter[key]);
+  if(this.LOBFilter[key]){
+    labels.push(key);
   }
+}
+this.chart1.data.labels =labels;
+this.chart1.chart.update();
+  /*
+  if(!e.target.checked){
+
+alert(this.LOBFilter);
+console.log(this.LOBFilter);
+    this.chart1.data.labels = ['CAO', 'CD', 'HR', 'Legal', 'QS', 'XXXGS'];
+    this.chart1.chart.update()
+   
+   
+  }
+  */
 }
 }
