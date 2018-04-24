@@ -14,24 +14,27 @@ export class GridComponent implements OnInit {
 appGridLoaded = false;
   constructor(dataQualityMoniteringService: DataQualityMoniteringService) {
     this.columnDefs = [
-      {headerName: "Database Name", field: "make" },
-      {headerName: "DQ Score", field: "model"},
-      {headerName: "Change From Prior Quarter", field: "price"},
-      {headerName: "#Records Passed", field: "Rpassed"},
-      {headerName: "#Records Tested", field: "RFailed"}
+      {headerName: "Database Name", field: "databaseName", },
+      {headerName: "DQ Score", field: "dataQualityScore", valueFormatter: this.percentageFormatter},
+      {headerName: "Change From Prior Quarter", field: "chgFrmPrQtr", valueFormatter: this.percentageFormatter},
+      {headerName: "#Records Passed", field: "rcrdsPsd"},
+      {headerName: "#Records Tested", field: "rowsTstd"}
   ];
 
   this.rowData = [
-      {make: "Insurance Data Warehouse", model: "", price: "10.8%",Rpassed: "0",RFailed : ""},
-      {make: "People Soft", model: "", price: "0%",Rpassed: "228,730",RFailed : "229,264"}
+    //  {make: "Insurance Data Warehouse", model: "", price: "10.8%",Rpassed: "0",RFailed : ""},
+    //  {make: "People Soft", model: "", price: "0%",Rpassed: "228,730",RFailed : "229,264"}
   ]
 
  this.service = dataQualityMoniteringService;
    }
 
   ngOnInit() {
+    var rowData = {};
   this.service.getData().then((dataaa) => {
    var recievedData_3 = this.service.getdQMonitoringDetailsbySourceSystem();
+   this.rowData = recievedData_3;
+  });/*
 //alert(recievedData_3);
    var recordsTestedFor_1 = 0;
    var recordsTestedFor_2 = 0;
@@ -59,8 +62,15 @@ appGridLoaded = false;
      this.rowData[1].Rpassed = recordsPassesFor_2;
      this.rowData[0].RFailed = recordsTestedFor_1;
      this.rowData[1].RFailed = recordsTestedFor_2;
+    // this.gridApi.refreshCells({ force: true});
    });
-   this.appGridLoaded = true;
+   this.appGridLoaded = true;*/
   }
+ // onGridReady(params){
+ //   this.gridApi = params.api;
+ // }
 
+ percentageFormatter(params) {
+  return params.value+"%";
+}
 }
