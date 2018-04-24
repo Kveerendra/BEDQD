@@ -220,7 +220,6 @@ this.chart2.chart.update();
 }
 
 filterQuarterData(e){
-alert("fnkafhskfhs");
 this.service.getData().then((dataaa) => {
 var quarterlabels = this.service.geteCDEandBCDEwithDQmonitoringbyADS();
 this.grid2config.data.datasets[0].data = [];
