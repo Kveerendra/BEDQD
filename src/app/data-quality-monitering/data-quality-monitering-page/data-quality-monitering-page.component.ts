@@ -18,6 +18,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   @ViewChild("grid2Chart")
   chart2:ChartComponent;
   LOBFilter = {};
+  SourceSysFilter = {};
 
   grid1loaded = false;
   grid2loaded = false;
@@ -131,6 +132,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       for(var k in dropDown2){
         if(this.drop2.indexOf(dropDown2[k]["ads"]) == -1){
           this.drop2.push(dropDown2[k]["ads"]);
+          this.SourceSysFilter[dropDown2[k]["ads"]] = true;
         }
       }
      for(var j in recievedData_1){
@@ -196,23 +198,22 @@ export class DataQualityMoniteringPageComponent implements OnInit {
 filterData(e){
   var labels = [];
 for(var key in this.LOBFilter){
-  console.log(key +" -> "+this.LOBFilter[key]);
   if(this.LOBFilter[key]){
     labels.push(key);
   }
 }
 this.chart1.data.labels =labels;
 this.chart1.chart.update();
-  /*
-  if(!e.target.checked){
-
-alert(this.LOBFilter);
-console.log(this.LOBFilter);
-    this.chart1.data.labels = ['CAO', 'CD', 'HR', 'Legal', 'QS', 'XXXGS'];
-    this.chart1.chart.update()
-   
-   
+}
+filterSourceSystemData(e){
+  var labels = [];
+for(var key in this.SourceSysFilter){
+  if(this.SourceSysFilter[key]){
+    labels.push(key);
   }
-  */
+}
+this.chart2.data.labels =labels;
+
+this.chart2.chart.update();
 }
 }
