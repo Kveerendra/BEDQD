@@ -14,7 +14,10 @@ export class DataQualityMoniteringService {
     getData() {
         console.log("inside service data Qulaity")
         return new Promise(resolve => {
-            this.httpc.get(this.url).subscribe((data) => { resolve(data); this.dataQualityJsonObject = data; }, err => { console.error(err); });
+            this.httpc.get(this.url).subscribe((data) => { 
+            resolve(data); 
+            this.dataQualityJsonObject = data;
+            console.log(data) }, err => { console.error(err); });
         });
     }
     getbcdeWithDQModel() {

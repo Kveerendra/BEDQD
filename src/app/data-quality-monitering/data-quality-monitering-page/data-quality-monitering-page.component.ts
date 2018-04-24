@@ -19,7 +19,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   chart2:ChartComponent;
   LOBFilter = {};
   SourceSysFilter = {};
-
+  QuarterFilterQtr = {};
   grid1loaded = false;
   grid2loaded = false;
   dataQualityScoreModel = {};
@@ -146,6 +146,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
      for(var l in receivedData_2){
       if(this.drop3.indexOf(receivedData_2[l]["yearQtr"]) == -1){
          this.drop3.push(receivedData_2[l]["yearQtr"]);
+         this.QuarterFilterQtr[receivedData_2[l]["yearQtr"]] = true;
         }
         
       }
@@ -205,6 +206,7 @@ for(var key in this.LOBFilter){
 this.chart1.data.labels =labels;
 this.chart1.chart.update();
 }
+
 filterSourceSystemData(e){
   var labels = [];
 for(var key in this.SourceSysFilter){
@@ -216,4 +218,26 @@ this.chart2.data.labels =labels;
 
 this.chart2.chart.update();
 }
+
+filterQuarterData(e){
+alert("fnkafhskfhs");
+this.service.getData().then((dataaa) => {
+var quarterlabels = this.service.geteCDEandBCDEwithDQmonitoringbyADS();
+this.grid2config.data.datasets[0].data = [];
+this.grid2config.data.datasets[1].data = [];
+for(var i in quarterlabels){
+  if(this.QuarterFilterQtr[quarterlabels[i]["yearQtr"]]){
+    this.grid2config.data.datasets[0].data.push(quarterlabels[i]["bcdeTot"]);
+    this.grid2config.data.datasets[1].data.push(quarterlabels[i]["ecdeTot"]);
+  }
 }
+     this.chart2.data.datasets[0].data = this.grid2config.data.datasets[0].data;
+this.chart2.data.datasets[1].data = this.grid2config.data.datasets[1].data;
+this.chart2.chart.update();
+ });
+  }
+  
+
+
+}
+

@@ -60,7 +60,7 @@
       <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
       <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
         <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
+             <input type="checkbox" name="{{d3}}" id ="QuarterFilterQtrid" checked="checked" [(ngModel)]="QuarterFilterQtr[d3]" (change)="filterQuarterData($event)">{{d3}}
         </li>
        <!--  <button class="dropdown-item">Another Action</button>
         <button class="dropdown-item">Something else is here</button> -->
