@@ -9,32 +9,45 @@ import { DataQualityMoniteringService } from '../../data-quality-monitering/serv
 })
 export class GridComponent implements OnInit {
   columnDefs;
-  rowData;
+  rowData = [];
   service: DataQualityMoniteringService;
-appGridLoaded = false;
+  appGridLoaded = false;
   constructor(dataQualityMoniteringService: DataQualityMoniteringService) {
     this.columnDefs = [
-      {headerName: "Database Name", field: "databaseName", },
-      {headerName: "DQ Score", field: "dataQualityScore", valueFormatter: this.percentageFormatter},
-      {headerName: "Change From Prior Quarter", field: "chgFrmPrQtr", valueFormatter: this.percentageFormatter},
-      {headerName: "#Records Passed", field: "rcrdsPsd"},
-      {headerName: "#Records Tested", field: "rowsTstd"}
-  ];
+      { headerName: "Database Name", field: "databaseName", },
+      { headerName: "DQ Score", field: "dataQualityScore", valueFormatter: this.percentageFormatter },
+      { headerName: "Change From Prior Quarter", field: "chgFrmPrQtr", valueFormatter: this.percentageFormatter },
+      { headerName: "#Records Passed", field: "rcrdsPsd" },
+      { headerName: "#Records Tested", field: "rowsTstd" }
+    ];
 
-  this.rowData = [
-    //  {make: "Insurance Data Warehouse", model: "", price: "10.8%",Rpassed: "0",RFailed : ""},
-    //  {make: "People Soft", model: "", price: "0%",Rpassed: "228,730",RFailed : "229,264"}
-  ]
+    this.rowData = [
+      //  {make: "Insurance Data Warehouse", model: "", price: "10.8%",Rpassed: "0",RFailed : ""},
+      //  {make: "People Soft", model: "", price: "0%",Rpassed: "228,730",RFailed : "229,264"}
+    ]
 
- this.service = dataQualityMoniteringService;
-   }
+    this.service = dataQualityMoniteringService;
+  }
 
   ngOnInit() {
-    var rowData = {};
-  this.service.getData().then((dataaa) => {
-   var recievedData_3 = this.service.getdQMonitoringDetailsbySourceSystem();
-   this.rowData = recievedData_3;
-  });/*
+    var rowDataWithKeys = {};
+    this.service.getData().then((dataaa) => {
+      var recievedData_3 = this.service.getdQMonitoringDetailsbySourceSystem();
+      for (var i in recievedData_3) {
+        if (rowDataWithKeys[recievedData_3[i]["databaseName"]]) {
+          rowDataWithKeys[recievedData_3[i]["databaseName"]]["rcrdsPsd"] = parseInt(rowDataWithKeys[recievedData_3[i]["databaseName"]]["rcrdsPsd"]) + parseInt(recievedData_3[i]["rcrdsPsd"]);
+          rowDataWithKeys[recievedData_3[i]["databaseName"]]["rowsTstd"] = parseInt(rowDataWithKeys[recievedData_3[i]["databaseName"]]["rowsTstd"]) + parseInt(recievedData_3[i]["rowsTstd"]);
+        }
+        else {
+          rowDataWithKeys[recievedData_3[i]["databaseName"]] = recievedData_3[i];
+        }
+      }
+      var tempArray = [];
+      for (var i in rowDataWithKeys) {
+        tempArray.push(rowDataWithKeys[i]);
+      }
+      this.rowData = tempArray;
+    });/*
 //alert(recievedData_3);
    var recordsTestedFor_1 = 0;
    var recordsTestedFor_2 = 0;
@@ -66,11 +79,19 @@ appGridLoaded = false;
    });
    this.appGridLoaded = true;*/
   }
- // onGridReady(params){
- //   this.gridApi = params.api;
- // }
+  // onGridReady(params){
+  //   this.gridApi = params.api;
+  // }
 
- percentageFormatter(params) {
-  return params.value+"%";
-}
+  percentageFormatter(params) {
+    return params.value + "%";
+  }
+
+  recordsPassedGetter(params) {
+    console.log(params);
+    return params.getValue("rcrdsPsd") * 1000;
+  }
+  recordsTestedGetter(params) {
+    return params.getValue("rowsTstd") * 1000;
+  }
 }
