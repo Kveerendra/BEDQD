@@ -1,0 +1,17 @@
+<div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 10px;">
+  <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;">Data Quality Monitoring</div>
+<div class="col-4 pull-right text-center"style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">Default Date as of Oct-Dec 2014
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-4">
+ <app-label-percentage [percentage]="dqRIScoreModel['dqScore']" [label]="dqRIScoreModel['header']"></app-label-percentage>
+</div>
+<div class="col-4">
+ <app-label-percentage [percentage]="dQPScoreModel['ecdeWithDQScore']" [label]="dQPScoreModel['header']"></app-label-percentage>
+</div>
+<div class="col-4">
+ <app-label-percentage [percentage]="impactScoreModel['bcdeWithDQcore']" [label]="impactScoreModel['header']"></app-label-percentage>
+</div>
+</div>

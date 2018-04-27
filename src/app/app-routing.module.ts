@@ -7,12 +7,15 @@ import { MeasureRemidateDataQualityComponent } from './measure-remidate-data-qua
 import { DataQualityMoniteringService } from './data-quality-monitering/service/data-quality-monitering.service';
 import { KeyHilightsService } from './key-highlights/key-hilights.service';
 import { MeasureRemidateDQService } from './measure-remidate-data-quality/measure-remidate-data-quality.service';
+import { InternalControlsPageComponent } from './internal-controls/internal-controls-page/internal-controls-page.component';
+import { InternalControlService } from './internal-controls/service/internal-control.service';
 
 const app_routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: 'home', pathMatch: 'full', component: KeyHighlightsPageComponent },
     { path: 'dq', pathMatch: 'full', component: DataQualityMoniteringPageComponent },
     { path: 'mrdq', pathMatch: 'full', component: MeasureRemidateDataQualityComponent },
+	{ path: 'ic', pathMatch: 'full', component: InternalControlsPageComponent },	
     { path: '**', pathMatch: 'full', redirectTo: 'home' } //catch any unfound routes and redirect to home page
 ];
 
