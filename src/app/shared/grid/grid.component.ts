@@ -88,7 +88,6 @@ export class GridComponent implements OnInit {
   }
 
   recordsPassedGetter(params) {
-    console.log(params);
     return params.getValue("rcrdsPsd") * 1000;
   }
   recordsTestedGetter(params) {

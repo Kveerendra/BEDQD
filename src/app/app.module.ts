@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KeyHighlightsModule } from './key-highlights/key-highlights.module';
 import { DataQualityMoniteringModule } from './data-quality-monitering/data-quality-monitering.module';
+import { MeasureRemidateDataQualityModule } from './measure-remidate-data-quality/measure-remidate-data-quality-module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DataQualityMoniteringModule } from './data-quality-monitering/data-qual
     AppRoutingModule,
     NgbModule.forRoot(),
     KeyHighlightsModule,
-    DataQualityMoniteringModule
+    DataQualityMoniteringModule,
+    MeasureRemidateDataQualityModule
   ],
   providers: [],
   bootstrap: [AppComponent ]

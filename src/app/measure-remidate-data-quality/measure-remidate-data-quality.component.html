@@ -1,0 +1,90 @@
+
+<div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 10px;width: 100%">
+  <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;">Measure/Remidate Data Quality</div>
+  <div class="col-4 pull-right text-center" style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">Default Date as of Oct-Dec 2014
+  </div>
+</div>
+  <div class="row" style="border-bottom: #ccc solid 1px;width: 100%">
+    <div class="text-center" style="padding-top:20px">
+    <h6 style="margin-left: 35px;">{{header}}</h6>
+    <div style="font-size: 15px;color: #007399;font-weight:bolder;">{{openDQIssues}}</div>
+  </div>
+</div>
+<br/>
+  <div class="row" width="100%">
+    <div class="col-md-12" style="color: #787878;font-size: 15px;font-weight: bolder;margin-left: 10px;margin-bottom: 10px;">High Priority DQ Issues for current Quarter</div>
+  <br/>
+  <div class="row" style="border-bottom: 1px solid #ccc;margin-bottom: 80px;">
+      <div class="col-md-5 text-center" style="margin-bottom: 50px;">
+        <span style="font-weight: bolder;font-size: 12px;">-----Prior Quarter-----</span>
+        <br>
+        <br>
+        <chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="width:500px;border-right: 1px solid #ccc;margin-right: 80px;"></chart>
+      </div>
+
+      <div class="col-md-5 text-center">
+        <span style="font-weight: bolder;font-size: 12px;">-----Current Quarter-----</span>
+        <br>
+        <br>
+        <chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options"style="width:500px"></chart>
+      </div>
+    <div class="col-2 float-right" >
+        <span style="font-weight: bolder;font-size: 12px;"><p style="margin-left: 10px;">Filters</p></span>
+        <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 60px;height: 30px;font-size: 12px;">
+             <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
+        </li>
+       <!--  <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button> -->
+      </ul>
+  </div>
+  <br> <br>
+ <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <li class="dropdown-item" *ngFor="let d4 of drop4"style ="width: 80px;height: 30px;font-size: 12px;">
+             <input type="checkbox" id ="{{d4}}" checked="checked" (change)="filterData($event)">{{d4}}
+        </li>
+        </ul>
+    </div>
+     <br> <br>
+    <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Source System</button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <li class="dropdown-item" *ngFor="let d1 of drop2" style ="width: 80px;height: 30px;font-size: 12px;">
+             <input type="checkbox" name="{{d1}}" checked="checked">{{d1}}
+        </li>
+       <!--  <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button> -->
+      </ul>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <app-grid2 style="width: 1500px;"></app-grid2>
+</div>
+<div class="col-md-2">
+ <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
+   <p style="font-weight: bolder;text-align: center;margin-top:10px;">Priority Details</p>
+   <form>
+    <input type="radio" name="priority" value = "pd" checked style="margin-left:10px;">Priority Details
+    <br/>
+    <input type="radio" name="priority" value = "ps" style="margin-left:10px;margin-bottom:10px;"> Priority Summary
+  </form>
+  </div> 
+  <br/>
+  <br/>
+  <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
+      <p style="font-weight: bolder;text-align: center;margin-top:10px;">Issue</p>
+      <form>
+       <input type="radio" name="issue" value = "is" checked style="margin-left:10px;">Issue Summary
+       <br/>
+       <input type="radio" name="issue" value = "id" style="margin-left:10px;margin-bottom:10px;"> Issue Type Details
+     </form>
+     </div>
+</div>
+</div>

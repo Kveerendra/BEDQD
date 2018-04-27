@@ -27,13 +27,13 @@ export class KeyHighlightsPageComponent implements OnInit {
         datasets: [{
             label:"Not DQ Monitered",
             data: [],
-            backgroundColor: "#29a329",
-            hoverBackgroundColor: "#29a329"
+            backgroundColor: "#b32d00",
+            hoverBackgroundColor: "#b32d00"
         },{
             label:"DQ Monitered",
             data: [],
-            backgroundColor: " #007acc",
-            hoverBackgroundColor: " #007acc"
+            backgroundColor: "#00b359",
+            hoverBackgroundColor: "#00b359"
         }]
     },
 
@@ -81,52 +81,68 @@ grid4config = {
           label: '<30 days',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: ' #007acc',
+          backgroundColor: '#00b359',
         },
         {
           label: '60 days',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#29a329'
+          backgroundColor: '#cccc00'
         },
         {
           label: '30-60 days',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#85e085'
+          backgroundColor: '#b32d00'
         }
       ]
     },
     options: {
-      responsive: true
+      responsive: true,
     }
   };
 
   grid1config = {
-    type: 'pie',
+    type: 'bar',
     data: {
       labels: ['Prior Quarter'],
       datasets: [
         {
           label: '',
           data: [],
-          backgroundColor: ' #007acc',
+          backgroundColor: '#00b359',
         }
       ]
+    },
+    options:{
+      legend: {
+        display: false
+     },
+     tooltips: {
+        enabled: false
+     }
     }
   };
 
   grid2config = {
-    type: 'pie',
+    type: 'bar',
     data: {
       labels: ['Current Quarter'],
       datasets: [
         {
           label: '',
           data: [],
-          backgroundColor: ' #007acc',
+          backgroundColor: '#b32d00',
         }
       ]
+    },
+    options:{
+      legend: {
+        display: false
+     },
+     tooltips: {
+        enabled: false
+     }
     }
   };
   service: KeyHilightsService;
@@ -179,9 +195,9 @@ grid4config = {
          this.grid3loaded = true;
             this.grid4config.data.datasets[0].data.push(hpDqIssues[1]["nbrOfIssues"],hpDqIssues[4]["nbrOfIssues"]);
 
-             this.grid4config.data.datasets[1].data.push(hpDqIssues[0]["nbrOfIssues"],hpDqIssues[3]["nbrOfIssues"]);
+             this.grid4config.data.datasets[1].data.push(hpDqIssues[2]["nbrOfIssues"],hpDqIssues[5]["nbrOfIssues"]);
 
-             this.grid4config.data.datasets[2].data.push(hpDqIssues[2]["nbrOfIssues"],hpDqIssues[5]["nbrOfIssues"]);
+             this.grid4config.data.datasets[2].data.push(hpDqIssues[0]["nbrOfIssues"],hpDqIssues[3]["nbrOfIssues"]);
         
          this.grid4loaded = true;
         this.grid1config.data.datasets[0].data.push(openDQIssues["priorQuarter"]);
