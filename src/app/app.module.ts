@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { KeyHighlightsModule } from './key-highlights/key-highlights.module';
 import { DataQualityMoniteringModule } from './data-quality-monitering/data-quality-monitering.module';
 import { MeasureRemidateDataQualityModule } from './measure-remidate-data-quality/measure-remidate-data-quality-module';
-
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { MeasureRemidateDataQualityModule } from './measure-remidate-data-qualit
     NgbModule.forRoot(),
     KeyHighlightsModule,
     DataQualityMoniteringModule,
-    MeasureRemidateDataQualityModule
+    MeasureRemidateDataQualityModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent ]

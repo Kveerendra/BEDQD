@@ -101,7 +101,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
                 {
                   scaleLabel: {
                     display: true,
-                    labelString: '% Profiled'
+                    labelString: 'Value'
                   },
                   stacked: true
                 }
@@ -137,7 +137,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           {
             scaleLabel: {
               display: true,
-              labelString: '% Profiled'
+              labelString: 'Value'
             }
           }
         ]

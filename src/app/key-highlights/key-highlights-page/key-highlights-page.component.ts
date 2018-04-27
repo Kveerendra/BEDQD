@@ -1,12 +1,13 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { KeyHilightsService } from '../key-hilights.service';
+import { AngularFontAwesomeService} from 'angular-font-awesome';
 
 @Component({
   selector: 'app-key-highlights-page',
   templateUrl: './key-highlights-page.component.html',
   styleUrls: ['./key-highlights-page.component.css'],
-  providers: [NgbDropdownConfig,KeyHilightsService]
+  providers: [NgbDropdownConfig,KeyHilightsService,AngularFontAwesomeService]
 })
 export class KeyHighlightsPageComponent implements OnInit {
 

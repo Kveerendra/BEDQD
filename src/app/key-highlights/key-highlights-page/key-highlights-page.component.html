@@ -1,50 +1,69 @@
 <div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 10px;">
   <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;">Data Quality and Integrity - key Highlights</div>
-  <div class="col-4 pull-right text-center"style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">Default Date as of Oct-Dec 2014
+  <div class="col-4 pull-right text-center" style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">Default Date as of Oct-Dec 2014
   </div>
 </div>
 <div class="container-fluid row">
 
   <div class="col-md-3 col-xs-12" style="padding-right:20px;padding-top:20px; border-right: 1px solid #ccc;">
-    <h4>Data Quality Monitoring</h4>
+    <span>
+      <p style="text-align: center">
+        <i class="fa fa-dashboard fa-3x" aria-hidden="true"></i>
+      </p>
+      <h4>Data Quality Monitoring</h4>
+    </span>
     <app-dq-score></app-dq-score>
 
     <hr>
     <div class="div col-xs-12">
-      <div class ="text-center" style="font-weight: bolder;color: #787878;">DQ Monitoring Stats</div>
+      <div class="text-center" style="font-weight: bolder;color: #787878;">DQ Monitoring Stats</div>
       <br>
-      <div class ="text-center" *ngIf="grid3loaded">
-         <chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="height: 300px;width: 290px;"></chart>
-      </div>     
+      <div class="text-center" *ngIf="grid3loaded">
+        <chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="height: 300px;width: 290px;"></chart>
+      </div>
     </div>
   </div>
   <div class="col-md-5 col-xs-12" style="padding-right:20px;padding-top:20px; border-right: 1px solid #ccc;">
-    <h4 style="text-align: center">Measure / Remediate Data Quality</h4>
+    <span>
+      <p style="text-align: center;">
+        <i class="fa fa-wrench fa-3x" aria-hidden="true"></i>
+      </p>
+      <h4 style="text-align: center">Measure / Remediate Data Quality</h4>
+    </span>
     <br>
-    <div class ="text-center" style="font-weight: bolder;color: #787878;">High Priority DQ Issues</div>
+    <div class="text-center" style="font-weight: bolder;color: #787878;">High Priority DQ Issues</div>
     <br>
     <div class="row" style="padding-left: 60px;" *ngIf="grid4loaded">
       <chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options" style="width: 400px;"></chart>
     </div>
     <br>
     <div class="row">
-      <div class ="text-center" style="font-weight: bolder;color: #787878;padding-left: 200px;">Open DQ Issues</div>
-      <br><br>
+      <div class="text-center" style="font-weight: bolder;color: #787878;padding-left: 200px;">Open DQ Issues</div>
+      <br>
+      <br>
       <div class="col-12">
         <div class="row" *ngIf="grid4loaded">
-          <span style="width: 250px;"><chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart></span>
+          <span style="width: 250px;">
+            <chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
+          </span>
           <span style="width: 5px;font-size: 10px;font-weight: bolder;">VS</span>
-        <span style="width: 250px;"><chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options" style="margin-left: 15px;"></chart>
-        </span>
+          <span style="width: 250px;">
+            <chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options" style="margin-left: 15px;"></chart>
+          </span>
         </div>
       </div>
     </div>
   </div>
   <div class="col-md-4 col-xs-12" style="padding-right:20px;padding-top:20px;">
-    <h4 class="text-center">Internal Controls</h4>
+    <span>
+      <p style="text-align: center">
+        <i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i>
+      </p>
+      <h4 class="text-center">Internal Controls</h4>
+    </span>
     <br>
-   <div class ="text-center" style="font-weight: bolder;color: #787878;">DQRI and DQP Scores</div>
-   <br>
+    <div class="text-center" style="font-weight: bolder;color: #787878;">DQRI and DQP Scores</div>
+    <br>
     <div class="row">
       <div class="col-7 offset-1">
         <div class="row mt-3">
@@ -56,56 +75,60 @@
 
         <div class="row mt-3">
           <div class="col-12">
-            <span class="float-left"style="color: #787878;font-weight: bolder;font-size: 15px;">DQRI Score</span>
-            <span class="float-right"style="color: #00b359;font-weight: bolder;font-size: 15px;">{{dqriScore}}</span>
+            <span class="float-left" style="color: #787878;font-weight: bolder;font-size: 15px;">DQRI Score</span>
+            <span class="float-right" style="color: #00b359;font-weight: bolder;font-size: 15px;">{{dqriScore}}</span>
           </div>
         </div>
 
         <div class="row mt-3">
           <div class="col-12">
-            <span class="float-left"style="color: #787878;font-weight: bolder;font-size: 15px;">DQP Score</span>
-            <span class="float-right"style="color: #00b359;font-weight: bolder;font-size: 15px;">{{dqpScore}}</span>
+            <span class="float-left" style="color: #787878;font-weight: bolder;font-size: 15px;">DQP Score</span>
+            <span class="float-right" style="color: #00b359;font-weight: bolder;font-size: 15px;">{{dqpScore}}</span>
           </div>
         </div>
         <div class="row mt-3">
           <div class="col-12">
-            <span class="float-left"style="color: #787878;font-weight: bolder;font-size: 15px;">Impact Score</span>
-            <span class="float-right"style="color: #00b359;font-weight: bolder;font-size: 15px;">{{impactScore}}</span>
+            <span class="float-left" style="color: #787878;font-weight: bolder;font-size: 15px;">Impact Score</span>
+            <span class="float-right" style="color: #00b359;font-weight: bolder;font-size: 15px;">{{impactScore}}</span>
           </div>
         </div>
       </div>
-      <div class="col-4 float-right" >
-          <span style="text-align: center;font-weight: bolder;font-size: 12px;"><p>Filters</p></span>
+      <div class="col-4 float-right">
+        <span style="text-align: center;font-weight: bolder;font-size: 12px;">
+          <p>Filters</p>
+        </span>
         <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 60px;height: 30px;font-size: 12px;">
-             <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
-        </li>
-       <!--  <button class="dropdown-item">Another Action</button>
+          <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
+          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 60px;height: 30px;font-size: 12px;">
+              <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
+            </li>
+            <!--  <button class="dropdown-item">Another Action</button>
         <button class="dropdown-item">Something else is here</button> -->
-      </ul>
-  </div>
-  <br> <br>
- <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <li class="dropdown-item" *ngFor="let d4 of drop4"style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" id ="{{d4}}" checked="checked" (change)="filterData($event)">{{d4}}
-        </li>
-        </ul>
-    </div>
-     <br> <br>
-    <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Source System</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <li class="dropdown-item" *ngFor="let d1 of drop2" style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" name="{{d1}}" checked="checked">{{d1}}
-        </li>
-       <!--  <button class="dropdown-item">Another Action</button>
+          </ul>
+        </div>
+        <br>
+        <br>
+        <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
+          <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">LOB</button>
+          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <li class="dropdown-item" *ngFor="let d4 of drop4" style="width: 80px;height: 30px;font-size: 12px;">
+              <input type="checkbox" id="{{d4}}" checked="checked" (change)="filterData($event)">{{d4}}
+            </li>
+          </ul>
+        </div>
+        <br>
+        <br>
+        <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
+          <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
+          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <li class="dropdown-item" *ngFor="let d1 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
+              <input type="checkbox" name="{{d1}}" checked="checked">{{d1}}
+            </li>
+            <!--  <button class="dropdown-item">Another Action</button>
         <button class="dropdown-item">Something else is here</button> -->
-      </ul>
-    </div>
+          </ul>
+        </div>
       </div>
     </div>
 
