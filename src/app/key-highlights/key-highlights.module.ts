@@ -7,13 +7,15 @@ import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { KeyHilightsService } from './key-hilights.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     ChartModule,
     SharedModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   declarations: [DqScoreComponent, KeyHighlightsPageComponent],
   exports: [KeyHighlightsPageComponent],

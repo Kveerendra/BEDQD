@@ -5,9 +5,9 @@ import { ChangeDetectorRef } from '@angular/core';
 import { ChartComponent } from 'angular2-chartjs';
 
 @Component({
-  selector: "app-data-quality-monitering-page",
-  templateUrl: "./data-quality-monitering-page.component.html",
-  styleUrls: ["./data-quality-monitering-page.component.css"],
+  selector: 'app-data-quality-monitering-page',
+  templateUrl: './data-quality-monitering-page.component.html',
+  styleUrls: ['./data-quality-monitering-page.component.css'],
   providers: [NgbDropdownConfig, DataQualityMoniteringService]
 })
 export class DataQualityMoniteringPageComponent implements OnInit {
@@ -27,21 +27,21 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   drop4: String[] = [];
   drop5: String;
   grid1config = {
-    type: "bar",
+    type: 'bar',
     data: {
       labels: [],
       datasets: [
         {
-          label: "Current Quarter",
+          label: 'Current Quarter',
           data: [],
           stack: 'Stack 0',
           backgroundColor: '#007acc'
         },
         {
-          label: "Prior Quarter",
+          label: 'Prior Quarter',
           data: [],
-          stack: "Stack 1",
-          backgroundColor: "#29a329"
+          stack: 'Stack 1',
+          backgroundColor: '#29a329'
         }
       ]
     },
@@ -73,7 +73,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     }
   };
   grid2config = {
-    type: "bar",
+    type: 'bar',
     data: {
       labels: [
         'Archer',
@@ -88,8 +88,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         {
           label: '',
           data: [],
-          stack: "Stack 0",
-          backgroundColor: "#29a329",
+          stack: 'Stack 0',
+          backgroundColor: '#29a329',
           options: {
             scales: {
               xAxes: [
@@ -112,8 +112,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         {
           label: '',
           data: [],
-          stack: "Stack 0",
-          backgroundColor: "#007acc"
+          stack: 'Stack 0',
+          backgroundColor: '#007acc'
         }
       ]
     },
@@ -186,8 +186,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       const data = {
         label: '0',
         data: [],
-        stack: "Stack 0",
-        backgroundColor: "blue"
+        stack: 'Stack 0',
+        backgroundColor: 'blue'
       };
       const priorQrtr = this.grid1config.data.datasets[0].data;
       const currentQrtr = this.grid1config.data.datasets[1].data;
