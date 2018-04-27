@@ -12,7 +12,8 @@
         "favicon.ico",
         "DataQualityMonitoring.json",
         "KeyHighlights.json",
-        "MeasureRemidateDQ.json"
+        "MeasureRemidateDQ.json",
+		"InternalControls.json"
       ],
       "index": "index.html",
       "main": "main.ts",
