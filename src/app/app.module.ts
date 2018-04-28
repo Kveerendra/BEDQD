@@ -10,6 +10,7 @@ import { KeyHighlightsModule } from './key-highlights/key-highlights.module';
 import { DataQualityMoniteringModule } from './data-quality-monitering/data-quality-monitering.module';
 import { MeasureRemidateDataQualityModule } from './measure-remidate-data-quality/measure-remidate-data-quality-module';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { InternalControlsModule } from './internal-controls/internal-controls.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     KeyHighlightsModule,
     DataQualityMoniteringModule,
     MeasureRemidateDataQualityModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+	InternalControlsModule
   ],
   providers: [],
   bootstrap: [AppComponent ]
