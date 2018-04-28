@@ -2,6 +2,3121 @@
     "dqScoreModel": {
         "header": "Open DQ Issues",
         "dqScore": "1"
-    }
+    },
+	"issueSummaryLst": [{
+			"legalEntity": "CD",
+			"yearQuarter": "Jul-Sep 2014",
+			"sourceSystem": "HR GDW",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Apr-Jun 2019",
+			"sourceSystem": "Fieldglass",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Apr-Jun 2022",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "Service No...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2021",
+			"sourceSystem": "Blueprint",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2020",
+			"sourceSystem": "Fieldglass",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": null,
+			"sourceSystem": "HR GDW",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "Insurance ...",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "Service No...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "UGIns Prod",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2015",
+			"sourceSystem": "Insurance ...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "Insurance ...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jul-Sep 2012",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2011",
+			"sourceSystem": "Insurance ...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "GOALD- UK",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2016",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Apr-Jun 2022",
+			"sourceSystem": "GOALD- UK",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jan-Mar 2018",
+			"sourceSystem": "Blueprint",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": null,
+			"sourceSystem": "Finance FW",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jul-Sep 2021",
+			"sourceSystem": "Archer",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Oct-Dec 2010",
+			"sourceSystem": "Service No...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Oct-Dec 2021",
+			"sourceSystem": "Archer",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2015",
+			"sourceSystem": "Finance FW",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "CREST",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "Finance FW",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": null,
+			"sourceSystem": "GOALD- UK",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": null,
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "Archer",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Oct-Dec 2019",
+			"sourceSystem": "CREST",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2012",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2016",
+			"sourceSystem": "HR GDW",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "Archer",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2011",
+			"sourceSystem": "Service No...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2021",
+			"sourceSystem": "Blueprint",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jan-Mar 2016",
+			"sourceSystem": "Blueprint",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jan-Mar 2019",
+			"sourceSystem": "CREST",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Oct-Dec 2015",
+			"sourceSystem": "Insurance ...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2012",
+			"sourceSystem": "Archer",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Apr-Jun 2021",
+			"sourceSystem": "Fieldglass",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2021",
+			"sourceSystem": "Blueprint",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2013",
+			"sourceSystem": "GOALD- UK",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jul-Sep 2021",
+			"sourceSystem": "Blueprint",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Apr-Jun 2013",
+			"sourceSystem": "Blueprint",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jul-Sep 2021",
+			"sourceSystem": "UGIns Prod",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": null,
+			"sourceSystem": "SARM Wareh...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2017",
+			"sourceSystem": "CREST",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "HR GDW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2013",
+			"sourceSystem": "Blueprint",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": null,
+			"sourceSystem": "HR GDW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jan-Mar 2017",
+			"sourceSystem": "Fieldglass",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jul-Sep 2010",
+			"sourceSystem": "Blueprint",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Oct-Dec 2017",
+			"sourceSystem": "UGIns Prod",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2015",
+			"sourceSystem": "GOALD- UK",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Oct-Dec 2021",
+			"sourceSystem": "CREST",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2020",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jul-Sep 2014",
+			"sourceSystem": "Service No...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": null,
+			"sourceSystem": "Finance FW",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": null,
+			"sourceSystem": "CREST",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Apr-Jun 2017",
+			"sourceSystem": "HR GDW",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": null,
+			"sourceSystem": "GOALD- UK",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "Insurance ...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2022",
+			"sourceSystem": "Service No...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "CREST",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2013",
+			"sourceSystem": "GOALD- UK",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": null,
+			"sourceSystem": "Service No...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": null,
+			"sourceSystem": "Fieldglass",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Oct-Dec 2022",
+			"sourceSystem": "Blueprint",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2013",
+			"sourceSystem": "Archer",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Oct-Dec 2019",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2012",
+			"sourceSystem": "Finance FW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jul-Sep 2011",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Apr-Jun 2013",
+			"sourceSystem": "UGIns Prod",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Apr-Jun 2022",
+			"sourceSystem": "UGIns Prod",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2013",
+			"sourceSystem": "Fieldglass",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Apr-Jun 2020",
+			"sourceSystem": "Fieldglass",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2019",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jul-Sep 2017",
+			"sourceSystem": "Blueprint",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": null,
+			"sourceSystem": "Service No...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": null,
+			"sourceSystem": "HR GDW",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "CREST",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": null,
+			"sourceSystem": "Insurance ...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jul-Sep 2020",
+			"sourceSystem": "Blueprint",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "Service No...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2022",
+			"sourceSystem": "Service No...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2022",
+			"sourceSystem": "HR GDW",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Oct-Dec 2022",
+			"sourceSystem": "CREST",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Apr-Jun 2016",
+			"sourceSystem": "GOALD- UK",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": null,
+			"sourceSystem": "CREST",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": null,
+			"sourceSystem": "SARM Wareh...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jan-Mar 2012",
+			"sourceSystem": "Blueprint",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jul-Sep 2018",
+			"sourceSystem": "Blueprint",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2016",
+			"sourceSystem": "UGIns Prod",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": null,
+			"sourceSystem": "Archer",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2018",
+			"sourceSystem": "Service No...",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jan-Mar 2017",
+			"sourceSystem": "Fieldglass",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2021",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jul-Sep 2022",
+			"sourceSystem": "Finance FW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jul-Sep 2010",
+			"sourceSystem": "Finance FW",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Oct-Dec 2021",
+			"sourceSystem": "Finance FW",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jul-Sep 2019",
+			"sourceSystem": "Archer",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jul-Sep 2018",
+			"sourceSystem": "HR GDW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jul-Sep 2022",
+			"sourceSystem": "Fieldglass",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": null,
+			"sourceSystem": "Finance FW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Apr-Jun 2020",
+			"sourceSystem": "GOALD- UK",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Apr-Jun 2019",
+			"sourceSystem": "Archer",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": null,
+			"sourceSystem": "GOALD- UK",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2010",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2022",
+			"sourceSystem": "HR GDW",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jan-Mar 2016",
+			"sourceSystem": "UGIns Prod",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "GOALD- UK",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": null,
+			"sourceSystem": "Fieldglass",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Oct-Dec 2022",
+			"sourceSystem": "Insurance ...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Oct-Dec 2017",
+			"sourceSystem": "CREST",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Oct-Dec 2015",
+			"sourceSystem": "GOALD- UK",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Oct-Dec 2018",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Apr-Jun 2022",
+			"sourceSystem": "Blueprint",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "UGIns Prod",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Oct-Dec 2017",
+			"sourceSystem": "Archer",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Apr-Jun 2018",
+			"sourceSystem": "Fieldglass",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2015",
+			"sourceSystem": "Blueprint",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2015",
+			"sourceSystem": "HR GDW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Apr-Jun 2011",
+			"sourceSystem": "Fieldglass",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "UGIns Prod",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "HR GDW",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "Finance FW",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": null,
+			"sourceSystem": "Insurance ...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2010",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "CREST",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "HR GDW",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2011",
+			"sourceSystem": "Fieldglass",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2013",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2020",
+			"sourceSystem": "Blueprint",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Oct-Dec 2018",
+			"sourceSystem": "Service No...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Apr-Jun 2022",
+			"sourceSystem": "Finance FW",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "CREST",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Oct-Dec 2019",
+			"sourceSystem": "Insurance ...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": null,
+			"sourceSystem": "Finance FW",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": null,
+			"sourceSystem": "CREST",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "CREST",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2018",
+			"sourceSystem": "UGIns Prod",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "CREST",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Oct-Dec 2010",
+			"sourceSystem": "Insurance ...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2021",
+			"sourceSystem": "Fieldglass",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Apr-Jun 2011",
+			"sourceSystem": "Insurance ...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2012",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jan-Mar 2010",
+			"sourceSystem": "UGIns Prod",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2018",
+			"sourceSystem": "HR GDW",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jul-Sep 2017",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Apr-Jun 2017",
+			"sourceSystem": "Service No...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2012",
+			"sourceSystem": "HR GDW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Jul-Sep 2019",
+			"sourceSystem": "Archer",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Oct-Dec 2012",
+			"sourceSystem": "GOALD- UK",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Oct-Dec 2011",
+			"sourceSystem": "GOALD- UK",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Apr-Jun 2015",
+			"sourceSystem": "UGIns Prod",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jul-Sep 2014",
+			"sourceSystem": "Service No...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Oct-Dec 2015",
+			"sourceSystem": "Service No...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2017",
+			"sourceSystem": "HR GDW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Oct-Dec 2014",
+			"sourceSystem": "Service No...",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2019",
+			"sourceSystem": "CREST",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Apr-Jun 2011",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": null,
+			"sourceSystem": "UGIns Prod",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Apr-Jun 2011",
+			"sourceSystem": "Archer",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2010",
+			"sourceSystem": "Fieldglass",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "UGIns Prod",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": null,
+			"sourceSystem": "Service No...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "CREST",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2022",
+			"sourceSystem": "Blueprint",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2012",
+			"sourceSystem": "Service No...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Oct-Dec 2013",
+			"sourceSystem": "CREST",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Oct-Dec 2017",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jul-Sep 2012",
+			"sourceSystem": "Service No...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Jul-Sep 2013",
+			"sourceSystem": "HR GDW",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": null,
+			"sourceSystem": "SARM Wareh...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "SARM Wareh...",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Oct-Dec 2013",
+			"sourceSystem": "Insurance ...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2017",
+			"sourceSystem": "GOALD- UK",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Apr-Jun 2010",
+			"sourceSystem": "Fieldglass",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": null,
+			"sourceSystem": "Insurance ...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jul-Sep 2014",
+			"sourceSystem": "Finance FW",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jul-Sep 2012",
+			"sourceSystem": "CREST",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Oct-Dec 2014",
+			"sourceSystem": "Finance FW",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2014",
+			"sourceSystem": "CREST",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2011",
+			"sourceSystem": "Fieldglass",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jul-Sep 2022",
+			"sourceSystem": "GOALD- UK",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "Insurance ...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Apr-Jun 2012",
+			"sourceSystem": "CREST",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "GOALD- UK",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Oct-Dec 2019",
+			"sourceSystem": "GOALD- UK",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Oct-Dec 2016",
+			"sourceSystem": "Service No...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Oct-Dec 2015",
+			"sourceSystem": "Fieldglass",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "Finance FW",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Jan-Mar 2014",
+			"sourceSystem": "GOALD- UK",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": null,
+			"sourceSystem": "Fieldglass",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": null,
+			"sourceSystem": "Archer",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jul-Sep 2014",
+			"sourceSystem": "Blueprint",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jul-Sep 2012",
+			"sourceSystem": "Blueprint",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jul-Sep 2015",
+			"sourceSystem": "UGIns Prod",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "Blueprint",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jul-Sep 2020",
+			"sourceSystem": "Finance FW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2011",
+			"sourceSystem": "CREST",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Apr-Jun 2016",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2022",
+			"sourceSystem": "Archer",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2012",
+			"sourceSystem": "GOALD- UK",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Apr-Jun 2018",
+			"sourceSystem": "Archer",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2017",
+			"sourceSystem": "Fieldglass",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Oct-Dec 2022",
+			"sourceSystem": "Service No...",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Oct-Dec 2020",
+			"sourceSystem": "Fieldglass",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": null,
+			"sourceSystem": "UGIns Prod",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Jan-Mar 2015",
+			"sourceSystem": "CREST",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2012",
+			"sourceSystem": "Finance FW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2015",
+			"sourceSystem": "UGIns Prod",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": null,
+			"sourceSystem": "Service No...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jul-Sep 2013",
+			"sourceSystem": "UGIns Prod",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Oct-Dec 2020",
+			"sourceSystem": "Blueprint",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2013",
+			"sourceSystem": "Blueprint",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Oct-Dec 2014",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": "Oct-Dec 2011",
+			"sourceSystem": "UGIns Prod",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2020",
+			"sourceSystem": "UGIns Prod",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2016",
+			"sourceSystem": "Service No...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": null,
+			"sourceSystem": "Fieldglass",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2016",
+			"sourceSystem": "VALIC-Ligh...",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": null,
+			"sourceSystem": "Archer",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Oct-Dec 2017",
+			"sourceSystem": "CREST",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "QS",
+			"yearQuarter": "Jan-Mar 2019",
+			"sourceSystem": "Insurance ...",
+			"lob": "QS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2013",
+			"sourceSystem": "HR GDW",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Oct-Dec 2010",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Apr-Jun 2021",
+			"sourceSystem": "CREST",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Apr-Jun 2012",
+			"sourceSystem": "GOALD- UK",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Oct-Dec 2017",
+			"sourceSystem": "HR GDW",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Null",
+			"yearQuarter": "Jan-Mar 2010",
+			"sourceSystem": "Blueprint",
+			"lob": "",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": "Apr-Jun 2014",
+			"sourceSystem": "Insurance ...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2021",
+			"sourceSystem": "Finance FW",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "HR",
+			"yearQuarter": "Jan-Mar 2020",
+			"sourceSystem": "Finance FW",
+			"lob": "HR",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XXXGS",
+			"yearQuarter": null,
+			"sourceSystem": "Insurance ...",
+			"lob": "XXXGS",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CAO",
+			"yearQuarter": "Jan-Mar 2020",
+			"sourceSystem": "Archer",
+			"lob": "CAO",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "Legal",
+			"yearQuarter": "Apr-Jun 2015",
+			"sourceSystem": "SARM Wareh...",
+			"lob": "Legal",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "XYZ",
+			"yearQuarter": "Oct-Dec 2010",
+			"sourceSystem": "GOALD- UK",
+			"lob": "XYZ",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}, {
+			"legalEntity": "CD",
+			"yearQuarter": null,
+			"sourceSystem": "Blueprint",
+			"lob": "CD",
+			"priorQuarter": "23",
+			"currentQuarter": "1",
+			"change": "22"
+		}
+	],
+	"issueTypeDetails": {
+		"openDQIssuesTypeDetailsMap": {
+			"": [{
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}
+			],
+			"CAO": [{
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}
+			],
+			"CD": [{
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}
+			],
+			"QS": [{
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}
+			],
+			"XXXGS": [{
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}
+			],
+			"Legal": [{
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}
+			],
+			"XYZ": [{
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}
+			],
+			"HR": [{
+					"dqDimension": "Completeness",
+					"priorQuarter": "14",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "1",
+					"currentQuarter": "1"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "10",
+					"currentQuarter": "1"
+				}
+			]
+		}
+	},
+	"openDQPrioritySummary": {
+		"openDQPrioritySummaryMap": {
+			"CAO": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "25440",
+					"newOrMigrateIn": "14840",
+					"total": "40280",
+					"closed": "19080",
+					"migrateOut": "8480",
+					"outstanding": "12720",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "8480",
+					"newOrMigrateIn": "10600",
+					"total": "19080",
+					"closed": "3180",
+					"migrateOut": "5300",
+					"outstanding": "10600",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "25440",
+					"newOrMigrateIn": "11660",
+					"total": "37100",
+					"closed": "21200",
+					"migrateOut": "9540",
+					"outstanding": "6360",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
+			"CD": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "24380",
+					"newOrMigrateIn": "33920",
+					"total": "58300",
+					"closed": "1060",
+					"migrateOut": "10600",
+					"outstanding": "46640",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "9540",
+					"newOrMigrateIn": "13780",
+					"total": "23320",
+					"closed": "1060",
+					"migrateOut": "5300",
+					"outstanding": "16960",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "15900",
+					"newOrMigrateIn": "8480",
+					"total": "24380",
+					"closed": "15900",
+					"migrateOut": "8480",
+					"outstanding": "0",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
+			"QS": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "24380",
+					"newOrMigrateIn": "21200",
+					"total": "45580",
+					"closed": "13780",
+					"migrateOut": "10600",
+					"outstanding": "21200",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "13780",
+					"newOrMigrateIn": "12720",
+					"total": "26500",
+					"closed": "10600",
+					"migrateOut": "8480",
+					"outstanding": "7420",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "66780",
+					"newOrMigrateIn": "16960",
+					"total": "83740",
+					"closed": "0",
+					"migrateOut": "6360",
+					"outstanding": "77380",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
+			"XXXGS": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "27560",
+					"newOrMigrateIn": "16960",
+					"total": "44520",
+					"closed": "16960",
+					"migrateOut": "6360",
+					"outstanding": "21200",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "26500",
+					"newOrMigrateIn": "26500",
+					"total": "53000",
+					"closed": "9540",
+					"migrateOut": "9540",
+					"outstanding": "33920",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "13780",
+					"newOrMigrateIn": "13780",
+					"total": "27560",
+					"closed": "9540",
+					"migrateOut": "9540",
+					"outstanding": "8480",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
+			"Legal": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "20140",
+					"newOrMigrateIn": "20140",
+					"total": "40280",
+					"closed": "7420",
+					"migrateOut": "7420",
+					"outstanding": "25440",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "28620",
+					"newOrMigrateIn": "30740",
+					"total": "59360",
+					"closed": "5300",
+					"migrateOut": "7420",
+					"outstanding": "46640",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "27560",
+					"newOrMigrateIn": "15900",
+					"total": "43460",
+					"closed": "21200",
+					"migrateOut": "9540",
+					"outstanding": "12720",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
+			"XYZ": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "10600",
+					"newOrMigrateIn": "12720",
+					"total": "23320",
+					"closed": "5300",
+					"migrateOut": "7420",
+					"outstanding": "10600",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "19080",
+					"newOrMigrateIn": "12720",
+					"total": "31800",
+					"closed": "11660",
+					"migrateOut": "5300",
+					"outstanding": "14840",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "14840",
+					"newOrMigrateIn": "12720",
+					"total": "27560",
+					"closed": "7420",
+					"migrateOut": "5300",
+					"outstanding": "14840",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
+			"FIN": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "3220",
+					"newOrMigrateIn": "3640",
+					"total": "6860",
+					"closed": "560",
+					"migrateOut": "980",
+					"outstanding": "5320",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "2100",
+					"newOrMigrateIn": "1960",
+					"total": "4060",
+					"closed": "1120",
+					"migrateOut": "980",
+					"outstanding": "1960",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "1120",
+					"newOrMigrateIn": "1120",
+					"total": "2240",
+					"closed": "840",
+					"migrateOut": "840",
+					"outstanding": "560",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
+			"HR": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "26500",
+					"newOrMigrateIn": "14840",
+					"total": "41340",
+					"closed": "21200",
+					"migrateOut": "9540",
+					"outstanding": "10600",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "20140",
+					"newOrMigrateIn": "14840",
+					"total": "34980",
+					"closed": "11660",
+					"migrateOut": "6360",
+					"outstanding": "16960",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "72080",
+					"newOrMigrateIn": "31800",
+					"total": "103880",
+					"closed": "3180",
+					"migrateOut": "9540",
+					"outstanding": "91160",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			]
+		}
+	},
+	"openDQPriorityDtlsLowPr": {
+		"openDQPrioritySummaryMap": {
+			"CAO": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CAO",
+					"highPriority": null,
+					"lowPriority": "7420"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CAO",
+					"highPriority": null,
+					"lowPriority": "4240"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CAO",
+					"highPriority": null,
+					"lowPriority": "5300"
+				}
+			],
+			"CD": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CD",
+					"highPriority": null,
+					"lowPriority": "26500"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CD",
+					"highPriority": null,
+					"lowPriority": "7420"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CD",
+					"highPriority": null,
+					"lowPriority": "2120"
+				}
+			],
+			"QS": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "QS",
+					"highPriority": null,
+					"lowPriority": "13780"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "QS",
+					"highPriority": null,
+					"lowPriority": "4240"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "QS",
+					"highPriority": null,
+					"lowPriority": "7420"
+				}
+			],
+			"XXXGS": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XXXGS",
+					"highPriority": null,
+					"lowPriority": "9540"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XXXGS",
+					"highPriority": null,
+					"lowPriority": "19080"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XXXGS",
+					"highPriority": null,
+					"lowPriority": "5300"
+				}
+			],
+			"Legal": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "Legal",
+					"highPriority": null,
+					"lowPriority": "12720"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "Legal",
+					"highPriority": null,
+					"lowPriority": "21200"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "Legal",
+					"highPriority": null,
+					"lowPriority": "10600"
+				}
+			],
+			"XYZ": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XYZ",
+					"highPriority": null,
+					"lowPriority": "5300"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XYZ",
+					"highPriority": null,
+					"lowPriority": "3180"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XYZ",
+					"highPriority": null,
+					"lowPriority": "7420"
+				}
+			],
+			"FIN": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "FIN",
+					"highPriority": null,
+					"lowPriority": "2940"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "FIN",
+					"highPriority": null,
+					"lowPriority": "980"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "FIN",
+					"highPriority": null,
+					"lowPriority": "420"
+				}
+			],
+			"HR": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "HR",
+					"highPriority": null,
+					"lowPriority": "9540"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "HR",
+					"highPriority": null,
+					"lowPriority": "4240"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "HR",
+					"highPriority": null,
+					"lowPriority": "23320"
+				}
+			]
+		}
+	},
+	"openDQPriorityDtlsHighPr": {
+		"openDQPrioritySummaryMap": {
+			"CAO": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CAO",
+					"highPriority": "25440",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CAO",
+					"highPriority": "45580",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CAO",
+					"highPriority": "36040",
+					"lowPriority": null
+				}
+			],
+			"CD": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CD",
+					"highPriority": "46640",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CD",
+					"highPriority": "29680",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "CD",
+					"highPriority": "24380",
+					"lowPriority": null
+				}
+			],
+			"QS": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "QS",
+					"highPriority": "39220",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "QS",
+					"highPriority": "46640",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "QS",
+					"highPriority": "57240",
+					"lowPriority": null
+				}
+			],
+			"XXXGS": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XXXGS",
+					"highPriority": "14840",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XXXGS",
+					"highPriority": "18020",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XXXGS",
+					"highPriority": "39220",
+					"lowPriority": null
+				}
+			],
+			"Legal": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "Legal",
+					"highPriority": "21200",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "Legal",
+					"highPriority": "16960",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "Legal",
+					"highPriority": "30740",
+					"lowPriority": null
+				}
+			],
+			"XYZ": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XYZ",
+					"highPriority": "41340",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XYZ",
+					"highPriority": "22260",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "XYZ",
+					"highPriority": "25440",
+					"lowPriority": null
+				}
+			],
+			"FIN": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "FIN",
+					"highPriority": "5740",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "FIN",
+					"highPriority": "3220",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "FIN",
+					"highPriority": "6580",
+					"lowPriority": null
+				}
+			],
+			"HR": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "HR",
+					"highPriority": "33920",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "HR",
+					"highPriority": "37100",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "HR",
+					"highPriority": "23320",
+					"lowPriority": null
+				}
+			]
+		}
+	}
 }
+
     
