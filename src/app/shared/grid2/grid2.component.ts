@@ -10,38 +10,41 @@ export class Grid2Component implements OnInit {
   columnDefs;
   rowData = [];
   service: MeasureRemidateDQService;
-  constructor(measureRemidateDQService : MeasureRemidateDQService) {
-    this.columnDefs = [
-      { headerName: "Legal Entity/LOB", field: "LOBName"},
-      { headerName: "Current Quarter", field: "crntQtr"},
-      { headerName: "Prior Quarter", field: "prQtr"},
-      { headerName: "Change", field: "change" }
-    ];
+  constructor(measureRemidateDQService: MeasureRemidateDQService) {
+    this.columnDefs = [{ headerName: "Legal Entity/LOB", field: "legalEntity" },
+    { headerName: "Current Quarter", field: "crntQtr" },
+    { headerName: "Prior Quarter", field: "prQtr" },
+    { headerName: "Change", field: "change" }];
 
-    this.rowData = [
-        
-    ]
+    this.rowData = [];
     this.service = measureRemidateDQService;
-   }
+  }
 
   ngOnInit() {
     this.service.getData().then((dataaa) => {
-      this.columnDefs = [
-        { headerName: "Legal Entity/LOB", field: "LOBName"},
-        { headerName: "Current Quarter", field: "crntQtr"},
-        { headerName: "Prior Quarter", field: "prQtr"},
-        { headerName: "Change", field: "change" }
-      ];
-  
-      this.rowData = [
-        {LOBName: "CAO", crntQtr: "1", prQtr: "23",change: "22"},
-        {LOBName: "CD", crntQtr: "1", prQtr: "23",change: "22"},
-        {LOBName: "HR", crntQtr: "1", prQtr: "23",change: "22"},
-        {LOBName: "Legal", crntQtr: "1", prQtr: "23",change: "22"},
-        {LOBName: "QS", crntQtr: "1", prQtr: "23",change: "22"},
-        {LOBName: "XXXGS", crntQtr: "1", prQtr: "23",change: "22"},
-        {LOBName: "XYZ", crntQtr: "1", prQtr: "23",change: "22"}
-      ];
+
+      var tempVar = {};
+      var tempArray = [];
+
+      var appGridData = this.service.getissueSummaryLst();
+
+      for (const itr_3 in appGridData) {
+        if (tempVar[appGridData[itr_3]['legalEntity']]) {
+          tempVar[appGridData[itr_3]['legalEntity']]['crntQtr'] = appGridData[itr_3]['currentQuarter']
+          tempVar[appGridData[itr_3]['legalEntity']]['prQtr'] = appGridData[itr_3]['priorQuarter']
+          tempVar[appGridData[itr_3]['legalEntity']]['change'] = appGridData[itr_3]['change'];
+        } else {
+          tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
+         // console.log(tempVar[appGridData[itr_3]['legalEntity']]);
+        }
+      }
+
+      for (const itr_4 in tempVar) {
+        tempArray.push(tempVar[itr_4]);
+      }
+      this.rowData = tempArray;
+
+      //this.rowData = tempVar;
     });
   }
 

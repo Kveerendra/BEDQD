@@ -11,7 +11,6 @@ export class GridComponent implements OnInit {
   columnDefs;
   rowData = [];
   service: DataQualityMoniteringService;
-  appGridLoaded = false;
   constructor(dataQualityMoniteringService: DataQualityMoniteringService) {
     this.columnDefs = [
       { headerName: "Database Name", field: "databaseName", },
