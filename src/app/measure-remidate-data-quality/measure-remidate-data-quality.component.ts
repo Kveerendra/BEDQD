@@ -7,7 +7,7 @@ import { ChangeDetectorRef } from '@angular/core';
     selector: 'app-measure-remidate-data-quality',
     templateUrl: './measure-remidate-data-quality.component.html',
     styleUrls: ['./measure-remidate-data-quality.component.css'],
-    providers: [MeasureRemidateDQService]
+    providers: [MeasureRemidateDQService,NgbDropdownConfig]
 })
 export class MeasureRemidateDataQualityComponent implements OnInit {
     @ViewChild('grid3Chart') chart1: ChartComponent;
@@ -272,8 +272,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     };
 
     service: MeasureRemidateDQService;
-    constructor(measureRemidateDQService: MeasureRemidateDQService,private cd: ChangeDetectorRef) {
+    constructor(measureRemidateDQService: MeasureRemidateDQService,private cd: ChangeDetectorRef,ngbDropdownConfi:NgbDropdownConfig) {
         this.service = measureRemidateDQService;
+        ngbDropdownConfi.autoClose='outside';
     }
 
     ngOnInit() {
@@ -328,21 +329,21 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
                 if(lob.indexOf(appGridData[itr_3]['lob']) == -1 && null != appGridData[itr_3]['lob']){
                     lob.push(appGridData[itr_3]['lob']);
                     this.LOBFilter[appGridData[itr_3]['lob']] = true;
-                    
+
                 }
             }
             for (const itr_4 in appGridData) {
                 if(sourceSystem.indexOf(appGridData[itr_4]['sourceSystem']) == -1 && null != appGridData[itr_4]['sourceSystem']){
                     sourceSystem.push(appGridData[itr_4]['sourceSystem']);
-                    
+
                 }
             }
             for(const itr_5 in issueDetailsMap){
                 grid5MapList = issueDetailsMap[itr_5];
                 for (const itr_2 in grid5MapList) {
                     dataset_grid5 = -1*parseInt(grid5MapList[itr_2]['priorQuarter']);
-                    dataset_grid6 = grid5MapList[itr_2]['currentQuarter']; 
-    
+                    dataset_grid6 = grid5MapList[itr_2]['currentQuarter'];
+
                     this.grid5config.data.datasets[itr_2].data.push(dataset_grid5);
                     this.grid6config.data.datasets[itr_2].data.push(dataset_grid6);
                 }

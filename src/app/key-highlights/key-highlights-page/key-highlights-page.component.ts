@@ -160,8 +160,9 @@ export class KeyHighlightsPageComponent implements OnInit {
     }
   };
   service: KeyHilightsService;
-  constructor(KeyHighlightsService: KeyHilightsService) {
+  constructor(KeyHighlightsService: KeyHilightsService, ngbDropdownConfig: NgbDropdownConfig) {
     this.service = KeyHighlightsService;
+    ngbDropdownConfig.autoClose='outside';
   }
 
   ngOnInit() {

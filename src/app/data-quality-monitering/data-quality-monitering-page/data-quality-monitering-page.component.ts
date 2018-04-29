@@ -147,11 +147,13 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   service: DataQualityMoniteringService;
   constructor(
     private dataQualityMoniteringService: DataQualityMoniteringService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    ngbDropdownConfig: NgbDropdownConfig
   ) {
     this.drop1 = 'Source System';
     this.drop5 = 'ADS';
     this.service = dataQualityMoniteringService;
+    ngbDropdownConfig.autoClose = 'outside';
   }
 
   ngOnInit() {
