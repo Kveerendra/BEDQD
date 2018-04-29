@@ -11,8 +11,13 @@ import { ChartComponent } from 'angular2-chartjs';
   providers: [NgbDropdownConfig, KeyHilightsService, AngularFontAwesomeService]
 })
 export class KeyHighlightsPageComponent implements OnInit {
+  @ViewChild('grid1configChart') chart1: ChartComponent;
+  @ViewChild('grid2configChart') chart2: ChartComponent;
   @ViewChild('grid3configChart') chart3: ChartComponent;
+  @ViewChild('grid4configChart') chart4: ChartComponent;
   sourceSystem = {};
+  lobFilter = {};
+  yearQuarterFilter = {};
   grid3loaded = false;
   grid4loaded = false;
   tRecords: String;
@@ -172,13 +177,18 @@ export class KeyHighlightsPageComponent implements OnInit {
       var openDQIssues = this.service.getopenDQIssuesData();
 
       for (var l in WholeData) {
-        if (WholeData[l] && this.drop3.indexOf(WholeData[l]['yearQuarter']) === -1) {
+        if (
+          WholeData[l] &&
+          this.drop3.indexOf(WholeData[l]['yearQuarter']) === -1
+        ) {
           this.drop3.push(WholeData[l]['yearQuarter']);
+          this.yearQuarterFilter[WholeData[l]['yearQuarter']] = true;
         }
       }
       for (var j in WholeData) {
         if (WholeData[j] && this.drop4.indexOf(WholeData[j]['lob']) === -1) {
           this.drop4.push(WholeData[j]['lob']);
+          this.lobFilter[WholeData[j]['lob']] = true;
         }
       }
       for (var k in WholeData) {
@@ -231,14 +241,20 @@ export class KeyHighlightsPageComponent implements OnInit {
       );
     });
   }
-  filterSourceSystem(e) {
+
+  filtergrid3(e) {
     var WholeData = this.service.getlistOfDQMoniteringStatsData();
     this.grid3config.data.datasets[0].data = [];
     this.grid3config.data.datasets[1].data = [];
     for (var i in WholeData) {
       if (WholeData[i]) {
         console.log(WholeData[i]);
-        if (WholeData[i]['label'] === 'ECDEs' &&  (this.sourceSystem[WholeData[i]['sourceSystem']])) {
+        if (
+          WholeData[i]['label'] === 'ECDEs' &&
+          this.lobFilter[WholeData[i]['lob']] &&
+          this.sourceSystem[WholeData[i]['sourceSystem']] &&
+          this.yearQuarterFilter[WholeData[i]['yearQuarter']]
+        ) {
           this.grid3config.data.datasets[0].data.push(
             WholeData[0]['notDQMonitered']
           );
@@ -246,7 +262,10 @@ export class KeyHighlightsPageComponent implements OnInit {
             WholeData[0]['dqMonitered']
           );
         }
-        if (WholeData[i]['label'] === 'BCDEs' && (this.sourceSystem[WholeData[i]['sourceSystem']])) {
+        if (
+          WholeData[i]['label'] === 'BCDEs' &&
+          this.sourceSystem[WholeData[i]['sourceSystem']]
+        ) {
           this.grid3config.data.datasets[0].data.push(
             WholeData[1]['notDQMonitered']
           );

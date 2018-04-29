@@ -34,7 +34,7 @@
     <div class="text-center" style="font-weight: bolder;color: #787878;">High Priority DQ Issues</div>
     <br>
     <div class="row" style="padding-left: 60px;" *ngIf="grid4loaded">
-      <chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options" style="width: 400px;"></chart>
+      <chart #grid4configChart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options" style="width: 400px;"></chart>
     </div>
     <br>
     <div class="row">
@@ -44,11 +44,11 @@
       <div class="col-12">
         <div class="row" *ngIf="grid4loaded">
           <span style="width: 250px;">
-            <chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
+            <chart #grid1configChart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
           </span>
           <span style="width: 5px;font-size: 10px;font-weight: bolder;">VS</span>
           <span style="width: 250px;">
-            <chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options" style="margin-left: 15px;"></chart>
+            <chart #grid2configChart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options" style="margin-left: 15px;"></chart>
           </span>
         </div>
       </div>
@@ -101,7 +101,7 @@
           <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 60px;height: 30px;font-size: 12px;">
-              <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
+              <input type="checkbox" name="{{d3}}" checked="checked" [(ngModel)]="yearQuarterFilter[d3]" (change)="filtergrid3($event)">{{d3}}
             </li>
             <!--  <button class="dropdown-item">Another Action</button>
         <button class="dropdown-item">Something else is here</button> -->
@@ -113,7 +113,7 @@
           <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">LOB</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <li class="dropdown-item" *ngFor="let d4 of drop4" style="width: 80px;height: 30px;font-size: 12px;">
-              <input type="checkbox" id="{{d4}}" checked="checked" (change)="filterData($event)">{{d4}}
+              <input type="checkbox" id="{{d4}}" checked="checked" [(ngModel)]="lobFilter[d4]" (change)="filtergrid3($event)">{{d4}}
             </li>
           </ul>
         </div>
@@ -123,7 +123,7 @@
           <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <li class="dropdown-item" *ngFor="let d1 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
-              <input type="checkbox" name="{{d1}}" checked="checked" [(ngModel)]="sourceSystem[d1]" (change)="filterSourceSystem($event)">{{d1}}
+              <input type="checkbox" name="{{d1}}" checked="checked" [(ngModel)]="sourceSystem[d1]" (change)="filtergrid3($event)">{{d1}}
             </li>
             <!--  <button class="dropdown-item">Another Action</button>
         <button class="dropdown-item">Something else is here</button> -->
