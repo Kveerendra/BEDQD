@@ -45,15 +45,15 @@
              <br/>
              <input type="radio" name="priority" value = "ps" style="margin-left:10px;margin-bottom:10px;"> Priority Summary
            </form>
-           </div> 
+           </div>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-md-10">
       <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;text-align: center;">Open DQ Issues Prior Vs. Current Quarter</div>
-      <div id="div1"> 
-        <app-grid2></app-grid2>
+      <div id="div1">
+        <app-grid2 #gridTable></app-grid2>
       </div>
       <div style ="display:none" id="div2" class=" col-md-12">
         <div class="row" style="margin-bottom: 50px;">
@@ -63,7 +63,7 @@
                 <br>
                 <chart #grid5Chart [type]="grid5config.type" [data]="grid5config.data" [options]="grid5config.options"></chart>
               </div>
-        
+
               <div *ngIf="grid6loaded" class="col-md-6 text-center">
                 <span style="font-weight: bolder;font-size: 12px;">-----Current Quarter-----</span>
                 <br>
@@ -72,11 +72,11 @@
               </div>
         </div>
       </div>
-     
+
 </div>
 <div class="col-md-2">
     <span style="font-weight: bolder;font-size: 12px;"><p style="margin-left: 10px;">Filters</p></span>
- 
+
   <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
       <p style="font-weight: bolder;text-align: center;margin-top:10px;">Issue</p>
       <form>
@@ -85,13 +85,13 @@
        <input type="radio" name="issue" value = "id" style="margin-left:10px;margin-bottom:10px;" (change)="changeData2()"> Issue Type Details
      </form>
      </div>
-        
+
   <br/>
   <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
       <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
       <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
       <li class="dropdown-item" *ngFor="let d1 of drop1" style ="width: 60px;height: 30px;font-size: 12px;">
-           <input type="checkbox" name="{{d1}}" checked="checked">{{d1}}
+           <input type="checkbox" name="{{d1}}" checked="checked" [(ngModel)]="yearQtr[d1]" (change)="filteryearQtr($event)">{{d1}}
       </li>
       <!--  <button class="dropdown-item">Another Action</button>
       <button class="dropdown-item">Something else is here</button> -->
