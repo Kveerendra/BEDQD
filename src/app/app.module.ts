@@ -14,7 +14,7 @@ import { InternalControlsModule } from './internal-controls/internal-controls.mo
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

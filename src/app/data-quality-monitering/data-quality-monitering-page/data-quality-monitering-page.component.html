@@ -1,6 +1,6 @@
-<div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 10px;">
-     <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;">Data Quality Monitoring</div>
-  <div class="col-4 pull-right text-center"style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">Default Date as of Oct-Dec 2014
+<div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 12px;">
+     <div class="col-6" style="color: white;font-size: 16px;font-weight: bolder;margin-left: 15px;">Data Quality Monitoring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-home fa-2x"></i></span></div>
+  <div class="col-4 pull-right text-center"style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;"><span><i class="fa fa-wrench fa-2x" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Date as of Oct-Dec 2014
   </div>
   </div>
   <br>
@@ -68,7 +68,7 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div ngbDropdown class="d-inline-block">
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Source System</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
           <li class="dropdown-item" *ngFor="let d1 of drop2" style ="width: 80px;height: 30px;font-size: 12px;">
                <input type="checkbox" name="{{d1}}" id ="SourceSysFilterid" checked="checked" [(ngModel)]="SourceSysFilter[d1]" (change)="filterSourceSystemData($event)">{{d1}}
           </li>
@@ -79,7 +79,7 @@
   <br><br>
    <div ngbDropdown class="d-inline-block">
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
           <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 80px;height: 30px;font-size: 12px;">
                <input type="checkbox" name="{{d3}}" id ="QuarterFilterQtrid" checked="checked" [(ngModel)]="QuarterFilterQtr[d3]" (change)="filterQuarterData($event)">{{d3}}
           </li>

@@ -380,4 +380,16 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         document.getElementById("div1").style.display = "none";
         document.getElementById("div2").style.display = "block";
     }
+
+    changeData4(){
+        document.getElementById("div4").style.display = "block";
+        document.getElementById("div5").style.display = "block";
+        document.getElementById("div3").style.display = "none";
+    }
+
+    changeData5(){
+        document.getElementById("div4").style.display = "none";
+        document.getElementById("div5").style.display = "none";
+        document.getElementById("div3").style.display = "block";
+    }
 }

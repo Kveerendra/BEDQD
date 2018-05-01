@@ -1,6 +1,6 @@
 
-<div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 10px;">
-  <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;"><span>Measure/Remidate Data Quality</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-home fa-1.5x"></i></span></div>
+<div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 12px;">
+  <div class="col-6" style="color: white;font-size: 16px;font-weight: bolder;margin-left: 15px;"><span>Measure/Remidate Data Quality</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-home fa-2x"></i></span></div>
   <div class="col-4 pull-right text-center" style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;"><span><i class="fa fa-wrench fa-2x" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Default Date as of Oct-Dec 2014</span>
   </div>
 </div>
@@ -13,19 +13,22 @@
 <br/>
   <div class="row" width="100%">
   <div class="row" style="border-bottom: 1px solid #ccc;margin-bottom: 80px;">
-      <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;margin-bottom: 10px;text-align: center">High Priority DQ Issues for current Quarter</div>
-      <div *ngIf="grid3loaded" class="col-md-5 text-center" style="margin-bottom: 50px;border-right: 1px solid #ccc;">
+      <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;margin-bottom: 10px;padding-left: 430px;">High Priority DQ Issues for current Quarter</div>
+      <div *ngIf="grid3loaded"  id = "div5" class="col-md-5 text-center" style="margin-bottom: 50px;border-right: 1px solid #ccc;">
         <span style="font-weight: bolder;font-size: 12px;">-----Prior Quarter-----</span>
         <br>
         <br>
         <chart #grid3Chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="width:500px;margin-right: 80px;"></chart>
       </div>
 
-      <div *ngIf="grid4loaded" class="col-md-5 text-center">
+      <div *ngIf="grid4loaded" id = "div4"  class="col-md-5 text-center">
         <span style="font-weight: bolder;font-size: 12px;">-----Current Quarter-----</span>
         <br>
         <br>
         <chart #grid4Chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options"style="width:500px"></chart>
+      </div>
+      <div id="div3" class="col-md-10 " style="display:none; max-height: 300px;overflow-y: scroll;">
+        <app-grid3></app-grid3>
       </div>
     <div class="col-2 float-right" >
         <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
@@ -41,9 +44,10 @@
         <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
             <p style="font-weight: bolder;text-align: center;margin-top:10px;">Priority Details</p>
             <form>
-             <input type="radio" name="priority" value = "pd" checked style="margin-left:10px;"> Priority Details
+             <input type="radio" name="priority" value = "pd" checked style="margin-left:10px;" (change)="changeData4()
+             "> Priority Details
              <br/>
-             <input type="radio" name="priority" value = "ps" style="margin-left:10px;margin-bottom:10px;"> Priority Summary
+             <input type="radio" name="priority" value = "ps" style="margin-left:10px;margin-bottom:10px;" (change)="changeData5()"> Priority Summary
            </form>
            </div> 
     </div>
@@ -51,8 +55,8 @@
 </div>
 <div class="row">
   <div class="col-md-10">
-      <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;text-align: center;">Open DQ Issues Prior Vs. Current Quarter</div>
-      <div id="div1"> 
+      <div class="col-md-12 " style="color: #007399;font-size: 13px;font-weight: bolder;text-align: center;">Open DQ Issues Prior Vs. Current Quarter</div>
+      <div id="div1" style="max-height: 200px;overflow-y: scroll; margin-left: 80px; margin-bottom: 30px;"> 
         <app-grid2></app-grid2>
       </div>
       <div style ="display:none" id="div2" class=" col-md-12">
@@ -89,7 +93,7 @@
   <br/>
   <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
       <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
       <li class="dropdown-item" *ngFor="let d1 of drop1" style ="width: 60px;height: 30px;font-size: 12px;">
            <input type="checkbox" name="{{d1}}" checked="checked">{{d1}}
       </li>
@@ -100,7 +104,7 @@
       <br> <br>
      <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Source System</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
         <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 80px;height: 30px;font-size: 12px;">
              <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
         </li>

@@ -32,5 +32,10 @@ export class MeasureRemidateDQService {
     getissueTypeDetails(){
         return this.MeasureRemidateJsonObject['issueTypeDetails']['openDQIssuesTypeDetailsMap'];
     }
+
+    getopenDQPrioritySummaryMap(){
+        return this.MeasureRemidateJsonObject['openDQPrioritySummary']['openDQPrioritySummaryMap'];
+        
+    }
 }
 
