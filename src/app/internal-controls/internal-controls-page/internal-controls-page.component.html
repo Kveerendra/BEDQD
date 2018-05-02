@@ -39,16 +39,16 @@
           <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">{{scoreBySelected}}</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDQP" (change)="updateChart1()" checked style="margin-left:5px;"> Level 1 Process
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDQP" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 1 Process
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level2ProcessDQP" (change)="updateChart1()" checked style="margin-left:5px;"> Level 1 Process
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level2ProcessDQP" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 1 Process
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceSystem" (change)="updateChart1()" checked style="margin-left:5px;"> Source System
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceSystem" (change)="updateBothCharts()" checked style="margin-left:5px;"> Source System
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceLob" (change)="updateChart1()" checked style="margin-left:5px;"> Legal Entity / LOB
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceLob" (change)="updateBothCharts()" checked style="margin-left:5px;"> Legal Entity / LOB
             </li>
           </ul>
         </div>
@@ -62,9 +62,9 @@
       <div class="col-4">
         <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 100%">
           <form>
-            <input type="radio" name="priority" value="pd" checked style="margin-left:5px;"> ECDE Records Tested
+            <input type="radio" name="priority"  [(ngModel)]="ecdeSelected" value="ecdeRcrdsTstd" (change)="updateChart2()"  checked style="margin-left:5px;"> ECDE Records Tested
             <br/>
-            <input type="radio" name="priority" value="ps" style="margin-left:5px"> ECDE Count
+            <input type="radio" name="priority"  [(ngModel)]="ecdeSelected" value="ecdeCnt" (change)="updateChart2()"  style="margin-left:5px"> ECDE Count
           </form>
         </div>
       </div>
@@ -73,15 +73,15 @@
           <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle>LOB</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
             <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
-              <input type="checkbox" id="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d4]" (change)="filterData($event)">{{d4}}
+              <input type="checkbox" id="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d3]" (change)="filterData($event)">{{d3}}
             </li>
           </ul>
         </div>
       </div>
       <div class="col-4">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle>Source System</button>
-          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic2" ngbDropdownToggle>Source System</button>
+          <ul ngbDropdownMenu aria-labelledby="dropdownBasic2" class="dropdown-menu">
             <li class="dropdown-item" *ngFor="let d4 of drop4">
               <input type="checkbox" id="sourceSystemFilterid" checked="checked" [(ngModel)]="sourceSystemFilter[d4]" (change)="filterData($event)">{{d4}}
             </li>
@@ -106,6 +106,6 @@
 </div>
 <div class="row">
   <div class="col-12">
-    <app-grid></app-grid>
+    <app-grid #grid></app-grid>
 </div>
 </div>
