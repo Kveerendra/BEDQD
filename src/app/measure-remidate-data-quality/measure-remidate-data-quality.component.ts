@@ -443,6 +443,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     for (const itr_4 in tempVar) {
       tempArray.push(tempVar[itr_4]);
     }
+    console.log("sdfghjjjjjjjjjjjjjjj");
     this.rowData = tempArray;
     this.grid.rowData = this.rowData;
   }
