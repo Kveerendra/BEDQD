@@ -34,12 +34,15 @@ export class InternalControlService {
     return this.internalControlsJsonObject['dQPScoreModel'];
   }
   getIsL1L2SrcSysLglEntityModel() {
-    return this.internalControlsJsonObject['isL1L2SrcSysLglEntityModel'];
+    return this.internalControlsJsonObject['dqriDQPImpactScoreL1L2SrcLegalModel'];
   }
   getEcdeCntL1SrcSysLegalEntityModel() {
     return this.internalControlsJsonObject['ecdeCntL1SrcSysLegalEntityModel'];
   }
   getEcdeCntL2SrcSysLegalEntityModel() {
     return this.internalControlsJsonObject['ecdeCntL2SrcSysLegalEntityModel'];
+  }
+  getImpactScoreL1L2SrcLegalEntityModel() {
+    return this.internalControlsJsonObject['impactScoreL1L2SrcLegalEntityModel'];
   }
 }
