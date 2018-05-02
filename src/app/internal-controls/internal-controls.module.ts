@@ -8,6 +8,7 @@ import { LabelPercentageComponent } from './label-percentage/label-percentage.co
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InternalControlService } from './service/internal-control.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     ChartModule,
     SharedModule,
     NgbModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [InternalControlsPageComponent, LabelPercentageComponent],
   exports: [InternalControlsPageComponent],
