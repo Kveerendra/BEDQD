@@ -36,7 +36,7 @@
       </div>
       <div class="col-2">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">{{scoreBySelected}}</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle >{{scoreBySelected}}</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
             <li class="dropdown-item">
                 <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDQP" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 1 Process
@@ -106,6 +106,6 @@
 </div>
 <div class="row">
   <div class="col-12">
-    <app-grid #grid></app-grid>
+    <app-grid #grid style="height: 50%;"></app-grid>
 </div>
 </div>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataQualityMoniteringService } from '../../data-quality-monitering/service/data-quality-monitering.service';
+import { Grid } from 'ag-grid';
 
 @Component({
   selector: 'app-grid',
@@ -8,9 +9,17 @@ import { DataQualityMoniteringService } from '../../data-quality-monitering/serv
   providers: [DataQualityMoniteringService]
 })
 export class GridComponent implements OnInit {
+  @ViewChild('grid') grid: Grid;
   internalControlsFlag = false;
   columnDefs;
   rowData = [];
+  gridOptions = {
+    animateRows: true,
+    enableRangeSelection: true,
+    enableSorting:true,
+    rowModelType :'infinite'
+};
+
   service: DataQualityMoniteringService;
   constructor(dataQualityMoniteringService: DataQualityMoniteringService) {
     this.columnDefs = [
