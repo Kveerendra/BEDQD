@@ -106,7 +106,7 @@
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Source System</button>
         <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
         <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" name="{{d3}}" checked="checked">{{d3}}
+             <input type="checkbox" name="{{d3}}" checked="checked" [(ngModel)]="SourceSystem[d3]" (change)="filterSourceSystem($event)">{{d3}}
         </li>
         <!--  <button class="dropdown-item">Another Action</button>
         <button class="dropdown-item">Something else is here</button> -->
