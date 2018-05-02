@@ -21,11 +21,11 @@
       <div class="col-2">
         <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 100%">
           <form>
-            <input type="radio" name="priority" value="pd" checked style="margin-left:5px;"> DQRI Score
+            <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqriScore" checked style="margin-left:5px;"> DQRI Score
             <br/>
-            <input type="radio" name="priority" value="ps" style="margin-left:5px"> DQI Score
+            <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqpScore" style="margin-left:5px"> DQI Score
             <br/>
-            <input type="radio" name="priority" value="ps" style="margin-left:5px;margin-bottom:10px;"> Impact Score
+            <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="impactScore" style="margin-left:5px;margin-bottom:10px;"> Impact Score
 
           </form>
         </div>
@@ -36,19 +36,19 @@
       </div>
       <div class="col-2">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">LOB</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">{{scoreBySelected}}</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
             <li class="dropdown-item">
-              <p>hiq</p>
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDQP" (change)="updateChart1()" checked style="margin-left:5px;"> Level 1 Process
             </li>
             <li class="dropdown-item">
-              <p>hiq</p>
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level2ProcessDQP" (change)="updateChart1()" checked style="margin-left:5px;"> Level 1 Process
             </li>
             <li class="dropdown-item">
-              <p>hiq</p>
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceSystem" (change)="updateChart1()" checked style="margin-left:5px;"> Source System
             </li>
             <li class="dropdown-item">
-              <p>hiq</p>
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceLob" (change)="updateChart1()" checked style="margin-left:5px;"> Legal Entity / LOB
             </li>
           </ul>
         </div>
@@ -93,7 +93,7 @@
 </div>
 <div class="row ">
   <div class="col-5">
-      <chart #grid2Chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
+      <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
   </div>
   <div class="col-7">
     <div class="col-12">

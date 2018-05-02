@@ -1,30 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { InternalControlService } from '../service/internal-control.service';
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { InternalControlService } from "../service/internal-control.service";
+import { ChartComponent } from "angular2-chartjs";
 
 @Component({
-  selector: 'app-internal-controls-page',
-  templateUrl: './internal-controls-page.component.html',
-  styleUrls: ['./internal-controls-page.component.css']
+  selector: "app-internal-controls-page",
+  templateUrl: "./internal-controls-page.component.html",
+  styleUrls: ["./internal-controls-page.component.css"]
 })
 export class InternalControlsPageComponent implements OnInit {
+  @ViewChild("grid1Chart") chart1: ChartComponent;
+  @ViewChild("grid2Chart") chart2: ChartComponent;
   impactScoreModel = {};
   dQPScoreModel = {};
   dqRIScoreModel = {};
+  isL1L2SrcSysLglEntityModel = [];
   LOBFilter = {};
   sourceSystemFilter = {};
   drop3 = [];
   drop4 = [];
+  scoreSelected = "dqriScore";
+  scoreBySelected = "sourceSystem";
   grid1config = {
-    type: 'horizontalBar',
+    type: "horizontalBar",
     data: {
-      labels: ['a', 'b', 'c', 'd'],
+      labels: [],
       datasets: [
-      {
-        label: '<30',
-        data: [0, 59, 75, 20],
-        backgroundColor: '#0086b3',
-        hoverBackgroundColor: '#0086b3'
-      }]
+        {
+          label: "<30",
+          data: [],
+          backgroundColor: "#0086b3",
+          hoverBackgroundColor: "#0086b3"
+        }
+      ]
     },
     options: {
       legend: {
@@ -33,15 +40,17 @@ export class InternalControlsPageComponent implements OnInit {
     }
   };
   grid2config = {
-    type: 'bar',
+    type: "bar",
     data: {
-      labels: ['a', 'b', 'c', 'd'],
-      datasets: [{
-        label: '<30',
-        data: [0, 59, 75, 20],
-        backgroundColor: '#0086b3',
-        hoverBackgroundColor: '#0086b3'
-      }]
+      labels: [],
+      datasets: [
+        {
+          label: "<30",
+          data: [],
+          backgroundColor: "#0086b3",
+          hoverBackgroundColor: "#0086b3"
+        }
+      ]
     },
     options: {
       legend: {
@@ -60,7 +69,39 @@ export class InternalControlsPageComponent implements OnInit {
       this.dQPScoreModel = this.service.getQPModel();
       this.impactScoreModel = this.service.getImpactScoreModel();
       this.dqRIScoreModel = this.service.getdQScoreModel();
+      this.isL1L2SrcSysLglEntityModel = this.service.getIsL1L2SrcSysLglEntityModel();
+
+      this.updateChart1();
     });
+  }
+
+  updateChart1() {
+    this.grid1config.data.datasets[0].data = [];
+      this.grid1config.data.labels = [];
+      for (var i in this.isL1L2SrcSysLglEntityModel) {
+        if (this.isL1L2SrcSysLglEntityModel[i]) {
+          var index = this.grid1config.data.labels.indexOf(
+            this.isL1L2SrcSysLglEntityModel[i][this.scoreBySelected]
+          );
+          if (index !== -1) {
+            this.grid1config.data.datasets[0].data[index] =
+              parseFloat(this.grid1config.data.datasets[0].data[index]) +
+              parseFloat(
+                this.isL1L2SrcSysLglEntityModel[i][this.scoreSelected]
+              );
+          } else {
+            this.grid1config.data.datasets[0].data.push(
+              parseFloat(this.isL1L2SrcSysLglEntityModel[i][this.scoreSelected])
+            );
+            this.grid1config.data.labels.push(
+              this.isL1L2SrcSysLglEntityModel[i][this.scoreBySelected]
+            );
+          }
+        }
+      }
+      console.log(this.grid1config.data);
+      this.chart1.chart.data = this.grid1config.data;
+      this.chart1.chart.update();
   }
   filterData(e) {}
 }
