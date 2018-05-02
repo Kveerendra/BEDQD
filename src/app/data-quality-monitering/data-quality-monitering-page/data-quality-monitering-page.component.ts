@@ -283,4 +283,25 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       this.chart2.chart.update();
     });
   }
+  filterDataOnBUCF(e) {
+    var labels = [];
+    for (const key in this.SourceSysFilter) {
+      if (this.SourceSysFilter[key]) {
+        labels.push(key);
+      }
+    }
+    this.chart2.data.labels = labels;
+    this.chart2.chart.update();
+  }
+
+  filterDataOnADS(e) {
+    var labels = [];
+    for (const key in this.LOBFilter) {
+      if (this.LOBFilter[key]) {
+        labels.push(key);
+      }
+    }
+    this.chart2.data.labels = labels;
+    this.chart2.chart.update();
+  }
 }

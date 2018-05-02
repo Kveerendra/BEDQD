@@ -57,11 +57,11 @@
    <div ngbDropdown class="d-inline-block">
       <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 100px;height: 30px;font-size: 12px;">Dimension</button>
         <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <li class="dropdown-item" style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" name="ADS">ADS
+        <li class="dropdown-item" style ="width: 80px;height: 30px;font-size: 12px;cursor: pointer;"id ="LOBFilterId" checked="checked" [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)">
+          ADS
         </li>
-         <li class="dropdown-item" style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" name="BUs/CFs">BUs/CFs
+         <li class="dropdown-item" style ="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" id ="SourceSysFilterid" [(ngModel)]="SourceSysFilter[d1]" (click)="filterDataOnBUCF($event)">
+          BUs/CFs
         </li>
         </ul>
     </div>
