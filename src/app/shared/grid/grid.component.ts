@@ -16,8 +16,7 @@ export class GridComponent implements OnInit {
   gridOptions = {
     animateRows: true,
     enableRangeSelection: true,
-    enableSorting:true,
-    rowModelType :'infinite'
+    enableSorting: true
 };
 
   service: DataQualityMoniteringService;
