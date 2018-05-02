@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { InternalControlService } from '../service/internal-control.service';
 import { ChartComponent } from 'angular2-chartjs';
 import { GridComponent } from '../../shared/grid/grid.component';
+import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-internal-controls-page',
@@ -63,8 +64,9 @@ export class InternalControlsPageComponent implements OnInit {
   };
 
   service: InternalControlService;
-  constructor(internalControlService: InternalControlService) {
+  constructor(internalControlService: InternalControlService, ngbDropdownConfi: NgbDropdownConfig) {
     this.service = internalControlService;
+    ngbDropdownConfi.autoClose = 'outside';
   }
 
   ngOnInit() {
