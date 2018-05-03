@@ -66,7 +66,7 @@
         "header": "dqriandDQPScores",
         "totalRecords": "497229 ",
         "dqriScore": "0.2",
-        "dqpScore": "100.0",
+        "dqpScore": "100",
         "impactScore": "2.1"
     },
     "openDQIssues": {

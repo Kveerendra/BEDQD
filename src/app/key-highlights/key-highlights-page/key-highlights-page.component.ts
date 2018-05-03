@@ -133,7 +133,7 @@ export class KeyHighlightsPageComponent implements OnInit {
         display: false
       },
       tooltips: {
-        enabled: false
+        enabled: true
       }
     }
   };
@@ -155,7 +155,7 @@ export class KeyHighlightsPageComponent implements OnInit {
         display: false
       },
       tooltips: {
-        enabled: false
+        enabled: true
       }
     }
   };
