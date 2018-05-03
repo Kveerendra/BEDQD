@@ -6,13 +6,13 @@
 <br>
 <div class="row">
   <div class="col-4">
-    <app-label-percentage [percentage]="dqRIScoreModel['dqriScore']" [label]="dqRIScoreModel['header']"></app-label-percentage>
+    <app-label-percentage [NoPFlag]="true" [percentage]="dqRIScoreModel['dqriScore']" [label]="dqRIScoreModel['header']"></app-label-percentage>
   </div>
   <div class="col-4">
     <app-label-percentage [percentage]="dQPScoreModel['dqpScore']" [label]="dQPScoreModel['header']"></app-label-percentage>
   </div>
   <div class="col-4">
-    <app-label-percentage [percentage]="impactScoreModel['impactScore']" [label]="impactScoreModel['header']"></app-label-percentage>
+    <app-label-percentage [NoPFlag]="true" [percentage]="impactScoreModel['impactScore']" [label]="impactScoreModel['header']"></app-label-percentage>
   </div>
 </div>
 <div class="row">
@@ -31,12 +31,12 @@
         </div>
       </div>
       <div class="col-6" style="text-align: center">
-        <p style = "font-size: 12px;font-weight: bolder;text-align: center;">DQRI Score by Source System</p>
+        <p style = "font-size: 12px;font-weight: bolder;text-align: center;">{{displayValue[scoreSelected]}} by {{displayValue[scoreBySelected]}}</p>
 
       </div>
       <div class="col-2">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 130px;height: 30px;font-size: 12px;">{{scoreBySelected}}</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 130px;height: 30px;font-size: 12px;">{{displayValue[scoreBySelected]}}</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
             <li class="dropdown-item">
                 <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDQP" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 1 Process
@@ -56,7 +56,7 @@
     </div>
   </div>
   <div class="col-6">
-    <p style = "font-size: 12px;font-weight: bolder;text-align: center">ECDE Count for Source System</p>
+    <p style = "font-size: 12px;font-weight: bolder;text-align: center">{{displayValue[ecdeSelected]}} for {{displayValue[scoreBySelected]}}</p>
     <div class="row">
 
       <div class="col-4">

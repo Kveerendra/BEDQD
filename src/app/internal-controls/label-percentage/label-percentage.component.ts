@@ -9,7 +9,14 @@ export class LabelPercentageComponent implements OnInit {
 label: String;
 @Input()
 percentage: Number;
-  constructor() { }
+
+@Input()
+NoPFlag: boolean;
+  constructor() {
+    if(this.NoPFlag === undefined){
+      this.NoPFlag = false;
+    }
+   }
 
   ngOnInit() {
   }
