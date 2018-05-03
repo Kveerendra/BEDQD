@@ -98,17 +98,18 @@ export class KeyHighlightsPageComponent implements OnInit {
           backgroundColor: '#00b359'
         },
         {
-          label: '60 days',
+          label: '30-60 days',
           data: [],
           stack: 'Stack 0',
           backgroundColor: '#cccc00'
         },
         {
-          label: '30-60 days',
+          label: '60 days',
           data: [],
           stack: 'Stack 0',
           backgroundColor: '#b32d00'
         }
+        
       ]
     },
     options: {

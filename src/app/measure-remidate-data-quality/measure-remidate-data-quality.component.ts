@@ -64,7 +64,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
               fontFamily: 'Open Sans Bold, sans-serif'
             },
             scaleLabel: {
-              display: true
+              display: true,
+              labelString: 'High Priority DQ Issues-Positive'
             },
             gridLines: {},
             stacked: true,
@@ -128,7 +129,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
               fontFamily: 'Open Sans Bold, sans-serif'
             },
             scaleLabel: {
-              display: true
+              display: true,
+              labelString: 'Low Priority'
             },
             gridLines: {},
             stacked: true,

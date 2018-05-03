@@ -16,6 +16,7 @@
       <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;margin-bottom: 10px;padding-left: 430px;">High Priority DQ Issues for current Quarter</div>
       <div *ngIf="grid3loaded"  id = "div5" class="col-md-5 text-center" style="margin-bottom: 50px;border-right: 1px solid #ccc;">
         <span style="font-weight: bolder;font-size: 12px;">-----Prior Quarter-----</span>
+
         <br>
         <br>
         <chart #grid3Chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="width:500px;margin-right: 80px;"></chart>
