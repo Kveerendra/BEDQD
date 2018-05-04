@@ -26,6 +26,11 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   drop3: String[] = [];
   drop4: String[] = [];
   drop5: String;
+  d1;
+  d2;
+  d3;
+  d4;
+  d5;
   grid1config = {
     type: 'bar',
     data: {
