@@ -407,6 +407,35 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         labels.push(key);
       }
     }
+
+    var tempVar = {};
+    var tempArray = [];
+
+    var appGridData = this.service.getissueSummaryLst();
+
+    for (const itr_3 in appGridData) {
+      if (this.LOBFilter[appGridData[itr_3]['lob']]) {
+        if (tempVar[appGridData[itr_3]['legalEntity']]) {
+          tempVar[appGridData[itr_3]['legalEntity']]['crntQtr'] =
+            appGridData[itr_3]['currentQuarter'];
+          tempVar[appGridData[itr_3]['legalEntity']]['prQtr'] =
+            appGridData[itr_3]['priorQuarter'];
+          tempVar[appGridData[itr_3]['legalEntity']]['change'] =
+            appGridData[itr_3]['change'];
+        } else {
+          tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
+          // console.log(tempVar[appGridData[itr_3]['legalEntity']]);
+        }
+      }
+    }
+
+    for (const itr_4 in tempVar) {
+      tempArray.push(tempVar[itr_4]);
+    }
+    this.rowData = tempArray;
+    this.grid.rowData = this.rowData;
+
+console.log(this.grid.rowData);
     this.chart1.data.labels = labels;
     this.chart1.chart.update();
     this.chart2.data.labels = labels;
