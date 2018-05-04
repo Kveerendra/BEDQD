@@ -49,6 +49,12 @@ export class KeyHighlightsPageComponent implements OnInit {
     },
 
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       scales: {
         xAxes: [
           {
@@ -113,6 +119,12 @@ export class KeyHighlightsPageComponent implements OnInit {
       ]
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       responsive: true
     }
   };
@@ -130,6 +142,12 @@ export class KeyHighlightsPageComponent implements OnInit {
       ]
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       legend: {
         display: false
       },
@@ -152,6 +170,12 @@ export class KeyHighlightsPageComponent implements OnInit {
       ]
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       legend: {
         display: false
       },

@@ -46,6 +46,12 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       ]
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       responsive: true,
       maintainAspectRatio: false,
       legend: {
@@ -118,6 +124,12 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       ]
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       responsive: true,
       maintainAspectRatio: false,
       legend: {

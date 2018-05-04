@@ -49,6 +49,12 @@ export class InternalControlsPageComponent implements OnInit {
       ]
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       legend: {
         display: false
       }
@@ -68,6 +74,12 @@ export class InternalControlsPageComponent implements OnInit {
       ]
     },
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       legend: {
         display: false
       }
