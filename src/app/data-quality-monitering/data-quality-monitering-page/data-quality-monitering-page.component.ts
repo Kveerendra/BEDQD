@@ -74,6 +74,11 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         ],
         yAxes: [
           {
+            ticks: {
+              callback:  function (value) {
+                return  value  +  "%"
+              }
+            },
             scaleLabel: {
               display: true,
               labelString: '% Profiled'
@@ -149,9 +154,9 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         xAxes: [
           {
             barPercentage: 0.5,
-            categoryPercentage : 1.0,
-            scaleLabel : {
-              padding : 0
+            categoryPercentage: 1.0,
+            scaleLabel: {
+              padding: 0
             }
           }
         ],
