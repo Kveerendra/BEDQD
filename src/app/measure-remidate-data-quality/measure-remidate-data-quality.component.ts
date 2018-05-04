@@ -4,6 +4,9 @@ import { MeasureRemidateDQService } from './measure-remidate-data-quality.servic
 import { ChartComponent } from 'angular2-chartjs';
 import { ChangeDetectorRef } from '@angular/core';
 import { Grid2Component } from '../shared/grid2/grid2.component';
+import { Chart } from 'chart.js';
+import  'chartjs-plugin-datalabels';
+
 @Component({
   selector: 'app-measure-remidate-data-quality',
   templateUrl: './measure-remidate-data-quality.component.html',
@@ -56,6 +59,12 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     },
 
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       scales: {
         xAxes: [
           {
@@ -121,6 +130,12 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     },
 
     options: {
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       scales: {
         xAxes: [
           {
@@ -192,6 +207,12 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     },
 
     options: {
+        plugins: {
+          datalabels: {
+            color: 'white',
+            formatter: Math.round
+          }
+        },
       scales: {
         xAxes: [
           {
@@ -262,6 +283,12 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     },
 
     options: {
+       plugins: {
+          datalabels: {
+            color: 'white',
+           formatter: Math.round
+          }
+        },
       scales: {
         xAxes: [
           {
@@ -519,4 +546,7 @@ console.log(this.grid.rowData);
     document.getElementById("div5").style.display = "none";
     document.getElementById("div3").style.display = "block";
   }
+
+  
+ 
 }
