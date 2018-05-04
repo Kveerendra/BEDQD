@@ -48,6 +48,7 @@ export class InternalControlsPageComponent implements OnInit {
         }
       ]
     },
+      
     options: {
       plugins: {
         datalabels: {
@@ -82,6 +83,12 @@ export class InternalControlsPageComponent implements OnInit {
       },
       legend: {
         display: false
+      }, scales: {
+        xAxes: [
+          {
+            minRotation : 90
+          }
+        ],
       }
     }
   };

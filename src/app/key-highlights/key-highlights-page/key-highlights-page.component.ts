@@ -142,12 +142,12 @@ export class KeyHighlightsPageComponent implements OnInit {
       ]
     },
     options: {
-      plugins: {
-        datalabels: {
-          color: 'white',
-          formatter: Math.round
-        }
-      },
+      // plugins: {
+      //   datalabels: {
+      //     color: 'white',
+      //     formatter: Math.round
+      //   }
+      // },
       legend: {
         display: false
       },
@@ -170,12 +170,12 @@ export class KeyHighlightsPageComponent implements OnInit {
       ]
     },
     options: {
-      plugins: {
-        datalabels: {
-          color: 'white',
-          formatter: Math.round
-        }
-      },
+      // plugins: {
+      //   datalabels: {
+      //     color: 'white',
+      //     formatter: Math.round
+      //   }
+      // },
       legend: {
         display: false
       },
@@ -262,9 +262,7 @@ export class KeyHighlightsPageComponent implements OnInit {
 
       this.grid4loaded = true;
       this.grid1config.data.datasets[0].data.push(openDQIssues['priorQuarter']);
-      this.grid2config.data.datasets[0].data.push(
-        openDQIssues['currentQuarter']
-      );
+      this.grid2config.data.datasets[0].data.push(openDQIssues['currentQuarter']);
     });
   }
 

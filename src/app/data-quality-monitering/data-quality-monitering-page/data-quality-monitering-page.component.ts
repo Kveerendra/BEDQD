@@ -88,7 +88,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         'Finance FW',
         'GOALD-UK',
         'Insurence...',
-        'Service No...'
+        'Service No...',
+        'VALIC-Ligh...'
       ],
       datasets: [
         {
@@ -142,14 +143,18 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       scales: {
         xAxes: [
           {
-            barPercentage: 0.8
+            barPercentage: 0.5,
+            categoryPercentage : 1.0,
+            scaleLabel : {
+              padding : 0
+            }
           }
         ],
         yAxes: [
           {
             scaleLabel: {
               display: true,
-              labelString: 'Value'
+              labelString: 'Value',
             }
           }
         ]
