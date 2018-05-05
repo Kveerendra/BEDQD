@@ -86,9 +86,13 @@ export class InternalControlsPageComponent implements OnInit {
       }, scales: {
         xAxes: [
           {
-            minRotation : 90
+            ticks: {
+            autoSkip: false,
+            maxRotation: 90,
+            minRotation: 0,
           }
-        ],
+          }
+        ]
       }
     }
   };
