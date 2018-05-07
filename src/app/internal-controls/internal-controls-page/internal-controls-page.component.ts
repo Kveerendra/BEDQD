@@ -78,7 +78,8 @@ export class InternalControlsPageComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          formatter: Math.round,
+          rotation : 90
         }
       },
       legend: {
@@ -90,7 +91,7 @@ export class InternalControlsPageComponent implements OnInit {
             autoSkip: false,
             maxRotation: 90,
             minRotation: 0,
-          }
+          },barPercentage: 1
           }
         ]
       }

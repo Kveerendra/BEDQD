@@ -54,7 +54,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          formatter: Math.round,
+          rotation : 90
         }
       },
       responsive: true,
