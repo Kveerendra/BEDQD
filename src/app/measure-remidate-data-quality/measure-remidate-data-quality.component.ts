@@ -5,7 +5,7 @@ import { ChartComponent } from 'angular2-chartjs';
 import { ChangeDetectorRef } from '@angular/core';
 import { Grid2Component } from '../shared/grid2/grid2.component';
 import { Chart } from 'chart.js';
-import  'chartjs-plugin-datalabels';
+import 'chartjs-plugin-datalabels';
 
 @Component({
   selector: 'app-measure-remidate-data-quality',
@@ -207,12 +207,12 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     },
 
     options: {
-        plugins: {
-          datalabels: {
-            color: 'white',
-            formatter: Math.round
-          }
-        },
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       scales: {
         xAxes: [
           {
@@ -283,12 +283,12 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     },
 
     options: {
-       plugins: {
-          datalabels: {
-            color: 'white',
-           formatter: Math.round
-          }
-        },
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       scales: {
         xAxes: [
           {
@@ -451,7 +451,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             appGridData[itr_3]['change'];
         } else {
           tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
-          // console.log(tempVar[appGridData[itr_3]['legalEntity']]);
         }
       }
     }
@@ -461,8 +460,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     }
     this.rowData = tempArray;
     this.grid.rowData = this.rowData;
-
-console.log(this.grid.rowData);
     this.chart1.data.labels = labels;
     this.chart1.chart.update();
     this.chart2.data.labels = labels;
@@ -495,7 +492,6 @@ console.log(this.grid.rowData);
             appGridData[itr_3]['change'];
         } else {
           tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
-          // console.log(tempVar[appGridData[itr_3]['legalEntity']]);
         }
       }
     }
@@ -524,7 +520,6 @@ console.log(this.grid.rowData);
             appGridData[itr_3]['change'];
         } else {
           tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
-          // console.log(tempVar[appGridData[itr_3]['legalEntity']]);
         }
       }
     }
@@ -546,7 +541,4 @@ console.log(this.grid.rowData);
     document.getElementById("div5").style.display = "none";
     document.getElementById("div3").style.display = "block";
   }
-
-  
- 
 }

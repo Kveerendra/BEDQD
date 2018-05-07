@@ -115,7 +115,7 @@ export class KeyHighlightsPageComponent implements OnInit {
           stack: 'Stack 0',
           backgroundColor: '#b32d00'
         }
-        
+
       ]
     },
     options: {
@@ -187,7 +187,7 @@ export class KeyHighlightsPageComponent implements OnInit {
   service: KeyHilightsService;
   constructor(KeyHighlightsService: KeyHilightsService, ngbDropdownConfig: NgbDropdownConfig) {
     this.service = KeyHighlightsService;
-    ngbDropdownConfig.autoClose='outside';
+    ngbDropdownConfig.autoClose = 'outside';
   }
 
   ngOnInit() {
@@ -272,7 +272,6 @@ export class KeyHighlightsPageComponent implements OnInit {
     this.grid3config.data.datasets[1].data = [];
     for (var i in WholeData) {
       if (WholeData[i]) {
-        console.log(WholeData[i]);
         if (
           WholeData[i]['label'] === 'ECDEs' &&
           this.lobFilter[WholeData[i]['lob']] &&

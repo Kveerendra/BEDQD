@@ -18,11 +18,11 @@ export class InternalControlsPageComponent implements OnInit {
     level2ProcessDQP: 'Level 2 Process',
     sourceSystem: 'Source System',
     sourceLob: 'Legal Entity / LOB',
-    dqriScore:'DQRI Score',
-    dqpScore:'DQI Score',
-    impactScore:'Impact Score',
-    ecdeRcrdsTstd:'ECDE Records Tested',
-    ecdeCnt:'ECDE Count'
+    dqriScore: 'DQRI Score',
+    dqpScore: 'DQI Score',
+    impactScore: 'Impact Score',
+    ecdeRcrdsTstd: 'ECDE Records Tested',
+    ecdeCnt: 'ECDE Count'
   };
   impactScoreModel = {};
   dQPScoreModel = {};
@@ -48,7 +48,7 @@ export class InternalControlsPageComponent implements OnInit {
         }
       ]
     },
-      
+
     options: {
       plugins: {
         datalabels: {
@@ -79,7 +79,7 @@ export class InternalControlsPageComponent implements OnInit {
         datalabels: {
           color: 'white',
           formatter: Math.round,
-          rotation : 90
+          rotation: 90
         }
       },
       legend: {
@@ -88,10 +88,10 @@ export class InternalControlsPageComponent implements OnInit {
         xAxes: [
           {
             ticks: {
-            autoSkip: false,
-            maxRotation: 90,
-            minRotation: 0,
-          },barPercentage: 1
+              autoSkip: false,
+              maxRotation: 90,
+              minRotation: 0,
+            }, barPercentage: 1
           }
         ]
       }
@@ -166,7 +166,6 @@ export class InternalControlsPageComponent implements OnInit {
         this.LOBFilter[dataSet[i]['sourceLob']] &&
         this.sourceSystemFilter[dataSet[i]['sourceSystem']]
       ) {
-        console.log(this.ecdeSelected);
         const index = this.grid2config.data.labels.indexOf(
           dataSet[i][this.scoreBySelected]
         );
@@ -182,7 +181,6 @@ export class InternalControlsPageComponent implements OnInit {
         }
       }
     }
-    console.log(this.grid2config.data);
     this.chart2.chart.data = this.grid2config.data;
     this.chart2.chart.update();
   }

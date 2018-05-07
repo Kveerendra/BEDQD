@@ -55,7 +55,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         datalabels: {
           color: 'white',
           formatter: Math.round,
-          rotation : 90
+          rotation: 90
         }
       },
       responsive: true,
@@ -76,8 +76,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         yAxes: [
           {
             ticks: {
-              callback:  function (value) {
-                return  value  +  "%"
+              callback: function (value) {
+                return value + "%"
               }
             },
             scaleLabel: {
@@ -212,7 +212,6 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           this.QuarterFilterQtr[receivedData_2[l]['yearQtr']] = true;
         }
       }
-      // alert(this.drop4);
       const data = {
         label: '0',
         data: [],
@@ -249,22 +248,6 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         }
       }
       this.grid2loaded = true;
-
-      /*  datasets = [
-        {
-          label: '0',
-          data: priorQrtr,
-          stack: 'Stack 0',
-          backgroundColor: 'blue'
-        },
-        {
-          label: '3',
-          data: currentQrtr,
-          stack: 'Stack 1',
-          backgroundColor: 'green'
-        }
-      ]*/
-      // this.grid1config.data.datasets = datasets;
     });
   }
 
