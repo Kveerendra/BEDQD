@@ -38,13 +38,13 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       labels: [],
       datasets: [
         {
-          label: '30-60',
+          label: '<30',
           data: [],
           backgroundColor: '#b3cccc',
           hoverBackgroundColor: '#b3cccc'
         },
         {
-          label: '<30',
+          label: '30-60',
           data: [],
           backgroundColor: '#0086b3',
           hoverBackgroundColor: '#0086b3'
@@ -62,7 +62,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          formatter: Math.abs
         }
       },
       scales: {
@@ -70,7 +70,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           {
             ticks: {
               beginAtZero: true,
-              fontFamily: 'Open Sans Bold, sans-serif'
+              fontFamily: 'Open Sans Bold, sans-serif',
+              callback: function (value) {
+                return Math.abs(value);
+              }
             },
             scaleLabel: {
               display: true,
@@ -96,6 +99,15 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           }
         ]
       },
+      tooltips: {
+        callbacks: {
+           label: function(t, d) {
+              var datasetLabel = d.datasets[t.datasetIndex].label;
+              var xLabel = Math.abs(t.xLabel);
+              return datasetLabel + ': ' + xLabel;
+           }
+        }
+     },
       legend: {
         position: 'bottom',
         display: true
@@ -109,13 +121,13 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       labels: [],
       datasets: [
         {
-          label: '30-60',
+          label: '<30',
           data: [],
           backgroundColor: '#b3cccc',
           hoverBackgroundColor: '#b3cccc'
         },
         {
-          label: '<30',
+          label: '30-60',
           data: [],
           backgroundColor: '#0086b3',
           hoverBackgroundColor: '#0086b3'
