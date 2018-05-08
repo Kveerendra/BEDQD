@@ -36,14 +36,14 @@ export class KeyHighlightsPageComponent implements OnInit {
         {
           label: 'Not DQ Monitered',
           data: [],
-          backgroundColor: '#b32d00',
-          hoverBackgroundColor: '#b32d00'
+          backgroundColor: '#e30613',
+          hoverBackgroundColor: '#e30613'
         },
         {
           label: 'DQ Monitered',
           data: [],
-          backgroundColor: '#00b359',
-          hoverBackgroundColor: '#00b359'
+          backgroundColor: '#43b02a',
+          hoverBackgroundColor: '#43b02a'
         }
       ]
     },
@@ -52,7 +52,7 @@ export class KeyHighlightsPageComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          formatter: (value)=>{return value+" %";}
         }
       },
       scales: {
@@ -61,7 +61,8 @@ export class KeyHighlightsPageComponent implements OnInit {
             ticks: {
               beginAtZero: true,
               fontFamily: 'Open Sans Bold, sans-serif',
-              fontSize: 11
+              fontSize: 11,
+              callback: (value)=>{return value+" %";}
             },
             scaleLabel: {
               display: true
@@ -80,7 +81,7 @@ export class KeyHighlightsPageComponent implements OnInit {
             },
             ticks: {
               fontFamily: 'Open Sans Bold, sans-serif',
-              fontSize: 11
+              fontSize: 11,
             },
             stacked: true
           }
@@ -101,19 +102,19 @@ export class KeyHighlightsPageComponent implements OnInit {
           label: '<30 days',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#00b359'
+          backgroundColor: '#43b02a'
         },
         {
           label: '30-60 days',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#cccc00'
+          backgroundColor: '#ffd500'
         },
         {
           label: '60 days',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#b32d00'
+          backgroundColor: '#e30613'
         }
 
       ]
@@ -125,29 +126,49 @@ export class KeyHighlightsPageComponent implements OnInit {
           formatter: Math.round
         }
       },
-      responsive: true
+      responsive: true,
+      scales : {
+        xAxes :[
+          {
+          scaleLabel: {
+            display: true,
+            labelString: '# of Days Open'
+          }
+        } 
+        ],
+        yAxes :[
+          {
+          scaleLabel: {
+            display: true,
+            labelString: '# of Issues'
+          }
+        }
+          
+        ]
+        
+      }
     }
   };
 
   grid1config = {
     type: 'bar',
     data: {
-      labels: ['Prior Quarter'],
+      labels: ['Prior Quarter','Current Quarter'],
       datasets: [
         {
           label: '',
           data: [],
-          backgroundColor: '#00b359'
+          backgroundColor: '#43b02a'
         }
       ]
     },
     options: {
-      // plugins: {
-      //   datalabels: {
-      //     color: 'white',
-      //     formatter: Math.round
-      //   }
-      // },
+      plugins: {
+        datalabels: {
+          color: 'white',
+          formatter: Math.round
+        }
+      },
       legend: {
         display: false
       },
@@ -262,7 +283,7 @@ export class KeyHighlightsPageComponent implements OnInit {
 
       this.grid4loaded = true;
       this.grid1config.data.datasets[0].data.push(openDQIssues['priorQuarter']);
-      this.grid2config.data.datasets[0].data.push(openDQIssues['currentQuarter']);
+      this.grid1config.data.datasets[0].data.push(openDQIssues['currentQuarter']);
     });
   }
 

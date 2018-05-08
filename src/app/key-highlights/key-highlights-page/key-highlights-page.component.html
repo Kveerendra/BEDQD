@@ -64,18 +64,14 @@
       <chart #grid4configChart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options" style="width: 400px;"></chart>
     </div>
     <br>
-    <div class="row">
-      <div class="text-center" style="font-weight: bolder;color: #787878;padding-left: 200px;">Open DQ Issues</div>
+    <div class="row" style="padding-left: 60px;">
+      <div class="text-center" style="font-weight: bolder;color: #787878;padding-left: 140px;">Open DQ Issues</div>
       <br>
       <br>
       <div class="col-12">
         <div class="row" *ngIf="grid4loaded">
-          <span style="width: 250px;">
+          <span style="text-align:center">
             <chart #grid1configChart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
-          </span>
-          <span style="width: 5px;font-size: 10px;font-weight: bolder;">VS</span>
-          <span style="width: 250px;">
-            <chart #grid2configChart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options"></chart>
           </span>
         </div>
       </div>

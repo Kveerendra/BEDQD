@@ -222,7 +222,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          formatter: Math.abs
         }
       },
       scales: {
@@ -230,7 +230,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           {
             ticks: {
               beginAtZero: true,
-              fontFamily: 'Open Sans Bold, sans-serif'
+              fontFamily: 'Open Sans Bold, sans-serif',
+              callback: function (value) {
+                return Math.abs(value);
+              }
             },
             scaleLabel: {
               display: true
@@ -254,7 +257,15 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             display: true
           }
         ]
-      },
+      },tooltips: {
+        callbacks: {
+           label: function(t, d) {
+              var datasetLabel = d.datasets[t.datasetIndex].label;
+              var xLabel = Math.abs(t.xLabel);
+              return datasetLabel + ': ' + xLabel;
+           }
+        }
+     },
       legend: {
         position: 'bottom',
         display: true
