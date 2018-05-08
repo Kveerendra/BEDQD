@@ -11,6 +11,7 @@ import { DataQualityMoniteringModule } from './data-quality-monitering/data-qual
 import { MeasureRemidateDataQualityModule } from './measure-remidate-data-quality/measure-remidate-data-quality-module';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import { InternalControlsModule } from './internal-controls/internal-controls.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InternalControlsModule } from './internal-controls/internal-controls.mo
     DataQualityMoniteringModule,
     MeasureRemidateDataQualityModule,
     AngularFontAwesomeModule,
-	InternalControlsModule
+  InternalControlsModule,
+  BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent ]

@@ -33,8 +33,10 @@ export class InternalControlService {
   getQPModel() {
     return this.internalControlsJsonObject['dQPScoreModel'];
   }
-  getIsL1L2SrcSysLglEntityModel() {
-    return this.internalControlsJsonObject['dqriDQPImpactScoreL1L2SrcLegalModel'];
+  getDqriDQPImpactScoreL1L2SrcLegalModel() {
+    return this.internalControlsJsonObject[
+      'dqriDQPImpactScoreL1L2SrcLegalModel'
+    ];
   }
   getEcdeCntL1SrcSysLegalEntityModel() {
     return this.internalControlsJsonObject['ecdeCntL1SrcSysLegalEntityModel'];
@@ -43,6 +45,26 @@ export class InternalControlService {
     return this.internalControlsJsonObject['ecdeCntL2SrcSysLegalEntityModel'];
   }
   getImpactScoreL1L2SrcLegalEntityModel() {
-    return this.internalControlsJsonObject['impactScoreL1L2SrcLegalEntityModel'];
+    return this.internalControlsJsonObject[
+      'impactScoreL1L2SrcLegalEntityModel'
+    ];
+  }
+  getImpactScoreL2SrcSystemLegalEntityLOBModel() {
+    return this.internalControlsJsonObject[
+      'impactScoreL2SrcSystemLegalEntityLOBModel'
+    ];
+  }
+  getImpactScoreSrcSysSrcSystemLegalEntityLOBModel() {
+    return this.internalControlsJsonObject[
+      'impactScoreSrcSysSrcSystemLegalEntityLOBModel'
+    ];
+  }
+  getEcdeCountEcdeRecords() {
+    return this.internalControlsJsonObject['ecdeCountEcdeRecords'];
+  }
+  getImpactScoreL1SrcSystemLegalEntityLOBModel() {
+    return this.internalControlsJsonObject[
+      'impactScoreL1SrcSystemLegalEntityLOBModel'
+    ];
   }
 }

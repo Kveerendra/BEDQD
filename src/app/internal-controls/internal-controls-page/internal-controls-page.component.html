@@ -93,12 +93,12 @@
   </div>
 </div>
 <div class="row ">
-  <div class="col-6" style="border-right: solid #ccc 1px;">
-      <div class="col-12">
-      <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
+  <div [ngClass]="scoreBySelected=='level2ProcessDQP'?'col-12':'col-6'" style="border-right: solid #ccc 1px;">
+      <div class="col-12" >
+      <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options" ></chart>
  </div>
     </div>
-  <div class="col-6">
+  <div [ngClass]="scoreBySelected=='level2ProcessDQP'?'col-12':'col-6'">
     <div class="col-12">
 
       <chart #grid2Chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options"></chart>
