@@ -137,8 +137,8 @@ export class InternalControlsPageComponent implements OnInit {
         );
         if (index !== -1) {
           this.grid1config.data.datasets[0].data[index] =
-            parseFloat(this.grid1config.data.datasets[0].data[index]) +
-            parseFloat(dataSet[i][this.scoreSelected]);
+          ((parseFloat(this.grid1config.data.datasets[0].data[index]) +
+            parseFloat(dataSet[i][this.scoreSelected]))/2).toFixed(2);
         } else {
           this.grid1config.data.datasets[0].data.push(
             parseFloat(dataSet[i][this.scoreSelected])
@@ -147,6 +147,7 @@ export class InternalControlsPageComponent implements OnInit {
         }
       }
     }
+    this.grid1config.data.labels.sort();
     this.chart1.chart.data = this.grid1config.data;
     this.chart1.chart.update();
   }
