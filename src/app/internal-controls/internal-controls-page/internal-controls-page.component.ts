@@ -229,17 +229,17 @@ export class InternalControlsPageComponent implements OnInit {
             label: function(t, d) {
               var datasetLabel = d.datasets[t.datasetIndex].label;
               var xLabel = Math.abs(t.xLabel);
-              return (
+              return [
                 'Dimentions_Swap : ' +
-                d.labels[t.index] +
+                d.labels[t.index] ,
                 ' ECDE Count : ' +
-                d.datasets[0].data[t.index].r / 3 +
+                d.datasets[0].data[t.index].r / 3 ,
                 ' Impact Score : ' +
-                d.datasets[0].data[t.index].x +
+                d.datasets[0].data[t.index].x ,
                 ' DQP Score : ' +
                 d.datasets[0].data[t.index].y +
                 '%'
-              );
+              ];
             }
           }
         };
