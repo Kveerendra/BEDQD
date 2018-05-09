@@ -290,7 +290,6 @@ export class InternalControlsPageComponent implements OnInit {
         this.LOBFilter[dataSet[i]['sourcelob']] &&
         this.sourceSystemFilter[dataSet[i]['sourceSystem']]
       ) {
-        console.log(dataSet[i][this.getSourceBySelectedKey().toString()]);
         let index = this.grid2config.data.labels.indexOf(
           dataSet[i][this.getSourceBySelectedKey().toString()]
         );
@@ -298,15 +297,7 @@ export class InternalControlsPageComponent implements OnInit {
           this.grid2config.data.datasets[0].data[index] =
             parseFloat(this.grid2config.data.datasets[0].data[index]) +
             parseFloat(dataSet[i][this.ecdeSelected]);
-          console.log(
-            parseFloat(this.grid2config.data.datasets[0].data[index]) +
-              parseFloat(dataSet[i][this.ecdeSelected])
-          );
         } else {
-          console.log(parseFloat(dataSet[i][this.ecdeSelected]));
-          this.grid2config.data.datasets[0].data.push(
-            parseFloat(dataSet[i][this.ecdeSelected])
-          );
           this.grid2config.data.labels.push(
             dataSet[i][this.getSourceBySelectedKey().toString()]
           );
