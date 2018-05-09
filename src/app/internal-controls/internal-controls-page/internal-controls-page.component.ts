@@ -53,7 +53,10 @@ export class InternalControlsPageComponent implements OnInit {
     options: {
       plugins: {
         datalabels: {
-          color: 'white',
+          color: '#b3b3b3',
+          display: true,
+         align: 'end',
+         anchor: 'top',
           formatter: label => {
             if (this.scoreSelected === 'impactScore') {
               return '';
@@ -73,12 +76,17 @@ export class InternalControlsPageComponent implements OnInit {
             ticks: {
               autoSkip: false,
               minRotation: 0,
-              maxRotation: 90
+              maxRotation: 90,
             },
             barPercentage: 1
           }
-        ]
-      }
+        ],yAxes: [{
+          ticks: {
+              beginAtZero: true,
+              max: 120
+          },barPercentage: 1.15
+      }]
+      },
     }
   };
   grid2config = {
@@ -97,7 +105,10 @@ export class InternalControlsPageComponent implements OnInit {
     options: {
       plugins: {
         datalabels: {
-          color: 'white',
+          color: '#b3b3b3',
+          display: true,
+         align: 'end',
+         anchor: 'top',
           formatter: Math.round,
           rotation: 90
         }
@@ -115,7 +126,12 @@ export class InternalControlsPageComponent implements OnInit {
             },
             barPercentage: 1
           }
-        ]
+        ],yAxes: [{
+          ticks: {
+              beginAtZero: true,
+              max: 5000000
+          }
+      }]
       }
     }
   };
@@ -228,7 +244,7 @@ export class InternalControlsPageComponent implements OnInit {
           callbacks: {
             label: function(t, d) {
               var datasetLabel = d.datasets[t.datasetIndex].label;
-              var xLabel = Math.abs(t.xLabel);
+              var xLabel = Math.abs(t.xLabel); 
               return [
                 'Dimentions_Swap : ' + d.labels[t.index],
                 ' ECDE Count : ' + d.datasets[0].data[t.index].r / 3,
@@ -252,7 +268,9 @@ export class InternalControlsPageComponent implements OnInit {
       dataSet = this.service.getEcdeCntL1SrcSysLegalEntityModel();
     } else if (this.scoreBySelected === 'level2ProcessDQP') {
       dataSet = this.service.getEcdeCntL2SrcSysLegalEntityModel();
-    } else {
+    }else if (this.scoreBySelected === 'sourceSystem') {
+      dataSet = this.service.getEcdeCountEcdeRecords();
+    }else {
       dataSet = [];
     }
     return dataSet;

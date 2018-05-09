@@ -175,6 +175,15 @@ export class KeyHighlightsPageComponent implements OnInit {
       },
       tooltips: {
         enabled: true
+      },scales: {
+        yAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: '# of Issues'
+            }
+          }
+        ]
       }
     }
   };
