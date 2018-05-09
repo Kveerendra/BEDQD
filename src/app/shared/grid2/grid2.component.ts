@@ -44,7 +44,9 @@ export class Grid2Component implements OnInit {
       }
 
       for (const itr_4 in tempVar) {
-        tempArray.push(tempVar[itr_4]);
+        if (tempVar[itr_4]) {
+          tempArray.push(tempVar[itr_4]);
+        }
       }
       this.rowData = tempArray;
 

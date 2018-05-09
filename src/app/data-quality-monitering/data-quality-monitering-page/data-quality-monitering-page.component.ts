@@ -259,7 +259,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   }
 
   filterData(e) {
-    var labels = [];
+    let labels = [];
     for (const key in this.LOBFilter) {
       if (this.LOBFilter[key]) {
         labels.push(key);
@@ -270,7 +270,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   }
 
   filterSourceSystemData(e) {
-    var labels = [];
+    let labels = [];
     for (const key in this.SourceSysFilter) {
       if (this.SourceSysFilter[key]) {
         labels.push(key);

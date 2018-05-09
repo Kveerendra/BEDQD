@@ -229,6 +229,7 @@ export class InternalControlsPageComponent implements OnInit {
             dataSet[i][this.getSourceBySelectedKey().toString()]
           );
         }
+        delete this.grid1config.options['tooltips'];
       } else if (this.scoreSelected === 'impactScore') {
         this.grid1config.data.datasets[0].data.push({
           x: parseFloat(dataSet[i]['impactScore']),
@@ -262,6 +263,8 @@ export class InternalControlsPageComponent implements OnInit {
     this.chart1.chart.data = this.grid1config.data;
     this.chart1.chart.render(this.grid1config);
     this.chart1.chart.update();
+    this.chart2.chart.render(this.grid2config);
+    this.chart2.chart.update();
   }
   getchart2Data() {
     let dataSet = [];
@@ -293,10 +296,10 @@ export class InternalControlsPageComponent implements OnInit {
         );
         if (index !== -1) {
           this.grid2config.data.datasets[0].data[index] =
-            parseFloat(this.grid1config.data.datasets[0].data[index]) +
+            parseFloat(this.grid2config.data.datasets[0].data[index]) +
             parseFloat(dataSet[i][this.ecdeSelected]);
           console.log(
-            parseFloat(this.grid1config.data.datasets[0].data[index]) +
+            parseFloat(this.grid2config.data.datasets[0].data[index]) +
               parseFloat(dataSet[i][this.ecdeSelected])
           );
         } else {
@@ -311,6 +314,7 @@ export class InternalControlsPageComponent implements OnInit {
       }
     }
     this.chart2.chart.data = this.grid2config.data;
+    this.chart2.chart.render(this.grid2config);
     this.chart2.chart.update();
   }
   updateBothCharts() {
