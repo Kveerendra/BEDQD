@@ -21,4 +21,4 @@ import { FormsModule } from '@angular/forms';
   exports: [KeyHighlightsPageComponent],
   providers: [KeyHilightsService]
 })
-export class KeyHighlightsModule { }
+export class KeyHighlightsModule {}

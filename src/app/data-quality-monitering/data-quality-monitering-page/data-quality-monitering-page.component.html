@@ -26,20 +26,20 @@
 <div class="container-fluid row">
   <div class="col-5 col-xs-12" style="border-right: 1px solid #ccc;">
     <span style="font-weight: bolder;font-size: 12px;">DQ Monitoring Details By Source System</span>
-    <div ngbDropdown class="d-inline-block" style="padding-left: 80px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Dimension</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <div ngbDropdown #radioDrop class="d-inline-block" style="padding-left: 80px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">{{displayJson[dimensionFilter]}}</button>
+      <ul ngbDropdownMenu autoClose="true" aria-labelledby="dropdownBasic1">
         <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-          <input type="checkbox" name="ADS">Source System
+          <input type="radio" id="dimensionFilterid" [(ngModel)]="dimensionFilter" value="sourceSystem" (change)="filterDimensionData($event)">Source System
         </li>
         <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-          <input type="checkbox" name="BUs/CFs">Entity Legal/LOB
+          <input type="radio" id="dimensionFilterid" [(ngModel)]="dimensionFilter" value="entityLegalLob" (change)="filterDimensionData($event)">Entity Legal/LOB
       </ul>
     </div>
     <br>
     <br>
     <div *ngIf="grid1loaded" style="font-size: 8px;">
-      <app-grid></app-grid>
+      <app-grid #grid></app-grid>
     </div>
   </div>
   <div class="row col-md-7">
@@ -54,11 +54,12 @@
     <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
       <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 100px;height: 30px;font-size: 12px;">Dimension</button>
       <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" id="LOBFilterId" checked="checked"
-          [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)">
+        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" >
+        <input type="radio" id="LOBFilterId" checked="checked" [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)">
           ADS
         </li>
-        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" id="SourceSysFilterid" [(ngModel)]="SourceSysFilter[d1]"
+        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" >
+        <input type="radio"  id="SourceSysFilterid" [(ngModel)]="SourceSysFilter[d1]"
           (click)="filterDataOnBUCF($event)">
           BUs/CFs
         </li>

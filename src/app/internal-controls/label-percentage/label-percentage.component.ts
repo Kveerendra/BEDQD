@@ -5,20 +5,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./label-percentage.component.css']
 })
 export class LabelPercentageComponent implements OnInit {
-@Input()
-label: String;
-@Input()
-percentage: Number;
+  @Input() label: String;
+  @Input() percentage: Number;
 
-@Input()
-NoPFlag: boolean;
+  @Input() NoPFlag: boolean;
   constructor() {
-    if(this.NoPFlag === undefined){
+    if (this.NoPFlag === undefined) {
       this.NoPFlag = false;
     }
-   }
-
-  ngOnInit() {
   }
 
+  ngOnInit() {}
 }

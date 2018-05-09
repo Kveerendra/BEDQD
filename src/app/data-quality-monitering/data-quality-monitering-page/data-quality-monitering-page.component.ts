@@ -3,6 +3,7 @@ import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { DataQualityMoniteringService } from '../service/data-quality-monitering.service';
 import { ChangeDetectorRef } from '@angular/core';
 import { ChartComponent } from 'angular2-chartjs';
+import { GridComponent } from '../../shared/grid/grid.component';
 
 @Component({
   selector: 'app-data-quality-monitering-page',
@@ -13,6 +14,12 @@ import { ChartComponent } from 'angular2-chartjs';
 export class DataQualityMoniteringPageComponent implements OnInit {
   @ViewChild('grid1Chart') chart1: ChartComponent;
   @ViewChild('grid2Chart') chart2: ChartComponent;
+  @ViewChild('grid') grid: GridComponent;
+  dimensionFilter = 'sourceSystem';
+  displayJson = {
+    sourceSystem: 'Source System',
+    entityLegalLob: 'Entity Legal/LOB'
+  };
   LOBFilter = {};
   SourceSysFilter = {};
   QuarterFilterQtr = {};
@@ -76,8 +83,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         yAxes: [
           {
             ticks: {
-              callback: function (value) {
-                return value + "%"
+              callback: function(value) {
+                return value + '%';
               }
             },
             scaleLabel: {
@@ -165,7 +172,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           {
             scaleLabel: {
               display: true,
-              labelString: 'Value',
+              labelString: 'Value'
             }
           }
         ]
@@ -314,5 +321,20 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     }
     this.chart2.data.labels = labels;
     this.chart2.chart.update();
+  }
+  filterDimensionData(e) {
+    if (this.dimensionFilter === 'entityLegalLob') {
+      this.grid.rowData = this.service
+        .getdQMonitoringDetailsbySourceSystem()
+        .filter(x => {
+          return x['databaseName'].toLowerCase().indexOf('insurance') === -1;
+        });
+    } else if (this.dimensionFilter === 'sourceSystem') {
+      this.grid.rowData = this.service
+        .getdQMonitoringDetailsbySourceSystem()
+        .filter(x => {
+          return x['databaseName'].toLowerCase().indexOf('insurance') !== -1;
+        });
+    }
   }
 }

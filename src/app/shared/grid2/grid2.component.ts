@@ -11,18 +11,19 @@ export class Grid2Component implements OnInit {
   rowData = [];
   service: MeasureRemidateDQService;
   constructor(measureRemidateDQService: MeasureRemidateDQService) {
-    this.columnDefs = [{ headerName: "Legal Entity/LOB", field: "legalEntity" },
-    { headerName: "Current Quarter", field: "crntQtr" },
-    { headerName: "Prior Quarter", field: "prQtr" },
-    { headerName: "Change", field: "change" }];
+    this.columnDefs = [
+      { headerName: 'Legal Entity/LOB', field: 'legalEntity' },
+      { headerName: 'Current Quarter', field: 'crntQtr' },
+      { headerName: 'Prior Quarter', field: 'prQtr' },
+      { headerName: 'Change', field: 'change' }
+    ];
 
     this.rowData = [];
     this.service = measureRemidateDQService;
   }
 
   ngOnInit() {
-    this.service.getData().then((dataaa) => {
-
+    this.service.getData().then(dataaa => {
       var tempVar = {};
       var tempArray = [];
 
@@ -30,12 +31,15 @@ export class Grid2Component implements OnInit {
 
       for (const itr_3 in appGridData) {
         if (tempVar[appGridData[itr_3]['legalEntity']]) {
-          tempVar[appGridData[itr_3]['legalEntity']]['crntQtr'] = appGridData[itr_3]['currentQuarter']
-          tempVar[appGridData[itr_3]['legalEntity']]['prQtr'] = appGridData[itr_3]['priorQuarter']
-          tempVar[appGridData[itr_3]['legalEntity']]['change'] = appGridData[itr_3]['change'];
+          tempVar[appGridData[itr_3]['legalEntity']]['crntQtr'] =
+            appGridData[itr_3]['currentQuarter'];
+          tempVar[appGridData[itr_3]['legalEntity']]['prQtr'] =
+            appGridData[itr_3]['priorQuarter'];
+          tempVar[appGridData[itr_3]['legalEntity']]['change'] =
+            appGridData[itr_3]['change'];
         } else {
           tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
-         // console.log(tempVar[appGridData[itr_3]['legalEntity']]);
+          // console.log(tempVar[appGridData[itr_3]['legalEntity']]);
         }
       }
 
@@ -47,5 +51,4 @@ export class Grid2Component implements OnInit {
       //this.rowData = tempVar;
     });
   }
-
 }

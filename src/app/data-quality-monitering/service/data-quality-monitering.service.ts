@@ -1,11 +1,11 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class DataQualityMoniteringService {
   dataQualityJsonObject = {};
   // just change this url to point to the service
-  private url = "DataQualityMonitoring.json";
+  private url = 'DataQualityMonitoring.json';
   constructor(private httpc: HttpClient) {
     this.getData().then(data => {
       this.dataQualityJsonObject = data;
@@ -25,23 +25,23 @@ export class DataQualityMoniteringService {
     });
   }
   getbcdeWithDQModel() {
-    return this.dataQualityJsonObject["bcdeWithDQModel"];
+    return this.dataQualityJsonObject['bcdeWithDQModel'];
   }
   getdQScoreModel() {
-    return this.dataQualityJsonObject["dQScoreModel"];
+    return this.dataQualityJsonObject['dQScoreModel'];
   }
   getecdeWithDQModel() {
-    return this.dataQualityJsonObject["ecdeWithDQModel"];
+    return this.dataQualityJsonObject['ecdeWithDQModel'];
   }
 
   getperstOfAdsProfileModel() {
-    return this.dataQualityJsonObject["perstOfAdsProfileModel"];
+    return this.dataQualityJsonObject['perstOfAdsProfileModel'];
   }
 
   getdQMonitoringDetailsbySourceSystem() {
-    return this.dataQualityJsonObject["dQMonitoringDetailsbySourceSystem"];
+    return this.dataQualityJsonObject['dQMonitoringDetailsbySourceSystem'];
   }
   geteCDEandBCDEwithDQmonitoringbyADS() {
-    return this.dataQualityJsonObject["eCDEandBCDEwithDQmonitoringbyADS"];
+    return this.dataQualityJsonObject['eCDEandBCDEwithDQmonitoringbyADS'];
   }
 }

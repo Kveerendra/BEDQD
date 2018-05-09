@@ -23,4 +23,4 @@ import { FormsModule } from '@angular/forms';
   exports: [InternalControlsPageComponent],
   providers: [InternalControlService]
 })
-export class InternalControlsModule { }
+export class InternalControlsModule {}

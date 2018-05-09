@@ -10,6 +10,7 @@ import { Grid } from 'ag-grid';
 })
 export class GridComponent implements OnInit {
   @ViewChild('grid') grid: Grid;
+  dimensionFilter = '';
   internalControlsFlag = false;
   columnDefs;
   rowData = [];
@@ -17,7 +18,7 @@ export class GridComponent implements OnInit {
     animateRows: true,
     enableRangeSelection: true,
     enableSorting: true
-};
+  };
 
   service: DataQualityMoniteringService;
   constructor(dataQualityMoniteringService: DataQualityMoniteringService) {
@@ -49,7 +50,16 @@ export class GridComponent implements OnInit {
     if (!this.internalControlsFlag) {
       var rowDataWithKeys = {};
       this.service.getData().then(dataaa => {
-        var recievedData_3 = this.service.getdQMonitoringDetailsbySourceSystem();
+        let recievedData_3 = [];
+        /*if (this.dimensionFilter) {
+          recievedData_3 = this.service
+            .getdQMonitoringDetailsbySourceSystem()
+            .filter(x => {
+              return x['databaseName'].toLowerCase().indexOf('insurance') == -1;
+            });
+        } else {*/
+        recievedData_3 = this.service.getdQMonitoringDetailsbySourceSystem();
+        //  }
         for (var i in recievedData_3) {
           if (rowDataWithKeys[recievedData_3[i]['databaseName']]) {
             rowDataWithKeys[recievedData_3[i]['databaseName']]['rcrdsPsd'] =
@@ -71,9 +81,7 @@ export class GridComponent implements OnInit {
         }
         this.rowData = tempArray;
       });
-    }
-    else if(this.internalControlsFlag){
-
+    } else if (this.internalControlsFlag) {
     }
   }
 

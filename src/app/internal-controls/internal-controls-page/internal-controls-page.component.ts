@@ -230,15 +230,10 @@ export class InternalControlsPageComponent implements OnInit {
               var datasetLabel = d.datasets[t.datasetIndex].label;
               var xLabel = Math.abs(t.xLabel);
               return [
-                'Dimentions_Swap : ' +
-                d.labels[t.index] ,
-                ' ECDE Count : ' +
-                d.datasets[0].data[t.index].r / 3 ,
-                ' Impact Score : ' +
-                d.datasets[0].data[t.index].x ,
-                ' DQP Score : ' +
-                d.datasets[0].data[t.index].y +
-                '%'
+                'Dimentions_Swap : ' + d.labels[t.index],
+                ' ECDE Count : ' + d.datasets[0].data[t.index].r / 3,
+                ' Impact Score : ' + d.datasets[0].data[t.index].x,
+                ' DQP Score : ' + d.datasets[0].data[t.index].y + '%'
               ];
             }
           }
@@ -281,10 +276,12 @@ export class InternalControlsPageComponent implements OnInit {
           this.grid2config.data.datasets[0].data[index] =
             parseFloat(this.grid1config.data.datasets[0].data[index]) +
             parseFloat(dataSet[i][this.ecdeSelected]);
-            console.log(parseFloat(this.grid1config.data.datasets[0].data[index]) +
-            parseFloat(dataSet[i][this.ecdeSelected]));
+          console.log(
+            parseFloat(this.grid1config.data.datasets[0].data[index]) +
+              parseFloat(dataSet[i][this.ecdeSelected])
+          );
         } else {
-          console.log( parseFloat(dataSet[i][this.ecdeSelected]));
+          console.log(parseFloat(dataSet[i][this.ecdeSelected]));
           this.grid2config.data.datasets[0].data.push(
             parseFloat(dataSet[i][this.ecdeSelected])
           );

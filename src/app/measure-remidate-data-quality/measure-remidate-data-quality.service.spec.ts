@@ -8,7 +8,10 @@ describe('MeasureRemidateDQService', () => {
     });
   });
 
-  it('should be created', inject([MeasureRemidateDQService], (service: MeasureRemidateDQService) => {
-    expect(service).toBeTruthy();
-  }));
+  it(
+    'should be created',
+    inject([MeasureRemidateDQService], (service: MeasureRemidateDQService) => {
+      expect(service).toBeTruthy();
+    })
+  );
 });

@@ -52,7 +52,9 @@ export class KeyHighlightsPageComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: (value)=>{return value+" %";}
+          formatter: value => {
+            return value + ' %';
+          }
         }
       },
       scales: {
@@ -62,7 +64,9 @@ export class KeyHighlightsPageComponent implements OnInit {
               beginAtZero: true,
               fontFamily: 'Open Sans Bold, sans-serif',
               fontSize: 11,
-              callback: (value)=>{return value+" %";}
+              callback: value => {
+                return value + ' %';
+              }
             },
             scaleLabel: {
               display: true
@@ -81,7 +85,7 @@ export class KeyHighlightsPageComponent implements OnInit {
             },
             ticks: {
               fontFamily: 'Open Sans Bold, sans-serif',
-              fontSize: 11,
+              fontSize: 11
             },
             stacked: true
           }
@@ -116,7 +120,6 @@ export class KeyHighlightsPageComponent implements OnInit {
           stack: 'Stack 0',
           backgroundColor: '#e30613'
         }
-
       ]
     },
     options: {
@@ -127,25 +130,23 @@ export class KeyHighlightsPageComponent implements OnInit {
         }
       },
       responsive: true,
-      scales : {
-        xAxes :[
+      scales: {
+        xAxes: [
           {
-          scaleLabel: {
-            display: true,
-            labelString: '# of Days Open'
+            scaleLabel: {
+              display: true,
+              labelString: '# of Days Open'
+            }
           }
-        } 
         ],
-        yAxes :[
+        yAxes: [
           {
-          scaleLabel: {
-            display: true,
-            labelString: '# of Issues'
+            scaleLabel: {
+              display: true,
+              labelString: '# of Issues'
+            }
           }
-        }
-          
         ]
-        
       }
     }
   };
@@ -153,7 +154,7 @@ export class KeyHighlightsPageComponent implements OnInit {
   grid1config = {
     type: 'bar',
     data: {
-      labels: ['Prior Quarter','Current Quarter'],
+      labels: ['Prior Quarter', 'Current Quarter'],
       datasets: [
         {
           label: '',
@@ -206,7 +207,10 @@ export class KeyHighlightsPageComponent implements OnInit {
     }
   };
   service: KeyHilightsService;
-  constructor(KeyHighlightsService: KeyHilightsService, ngbDropdownConfig: NgbDropdownConfig) {
+  constructor(
+    KeyHighlightsService: KeyHilightsService,
+    ngbDropdownConfig: NgbDropdownConfig
+  ) {
     this.service = KeyHighlightsService;
     ngbDropdownConfig.autoClose = 'outside';
   }
@@ -283,7 +287,9 @@ export class KeyHighlightsPageComponent implements OnInit {
 
       this.grid4loaded = true;
       this.grid1config.data.datasets[0].data.push(openDQIssues['priorQuarter']);
-      this.grid1config.data.datasets[0].data.push(openDQIssues['currentQuarter']);
+      this.grid1config.data.datasets[0].data.push(
+        openDQIssues['currentQuarter']
+      );
     });
   }
 
