@@ -1,17 +1,21 @@
-<div class = "row col-12" >
-<ul class="nav nav-tabs" style="font-size: 12px;background-color: #b3cccc;">
-  <li class="nav-item" style="border-right: #007399 solid 2px;">
-    <a class="nav-link" routerLink="/home" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Key Highlights</a>
-  </li>
-  <li class="nav-item" style="border-right: #007399 solid 2px;">
-    <a class="nav-link"routerLink="/dq" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Data Quality Monitoring</a>
-  </li>
-  <li class="nav-item" style="border-right: #007399 solid 2px;">
-    <a class="nav-link" routerLink="/mrdq" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Measure/Remidate Data Quality</a>
-  </li>
-   <li class="nav-item">
-    <a class="nav-link"routerLink="/ic" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Internal Controls</a>
-  </li>
-</ul>
-</div>
-<router-outlet></router-outlet>
+<html>
+  <body>
+      <div class = "row col-12" >
+          <ul class="nav nav-tabs" style="font-size: 12px;background-color: #b3cccc;">
+            <li class="nav-item" style="border-right: #007399 solid 2px;">
+              <a class="nav-link" routerLink="/home" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Key Highlights</a>
+            </li>
+            <li class="nav-item" style="border-right: #007399 solid 2px;">
+              <a class="nav-link"routerLink="/dq" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Data Quality Monitoring</a>
+            </li>
+            <li class="nav-item" style="border-right: #007399 solid 2px;">
+              <a class="nav-link" routerLink="/mrdq" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Measure/Remidate Data Quality</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link"routerLink="/ic" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Internal Controls</a>
+            </li>
+          </ul>
+          </div>
+          <router-outlet></router-outlet>
+</body>
+</html>
