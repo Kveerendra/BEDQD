@@ -129,7 +129,8 @@ export class InternalControlsPageComponent implements OnInit {
         ],yAxes: [{
           ticks: {
               beginAtZero: true,
-              max: 5000000
+              //max: 5000000
+              stepSize : 500000
           }
       }]
       }

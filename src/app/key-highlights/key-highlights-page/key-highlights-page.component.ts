@@ -144,7 +144,10 @@ export class KeyHighlightsPageComponent implements OnInit {
             scaleLabel: {
               display: true,
               labelString: '# of Issues'
-            }
+            },ticks: {
+              beginAtZero: true,
+              stepSize:700000
+          }
           }
         ]
       }
