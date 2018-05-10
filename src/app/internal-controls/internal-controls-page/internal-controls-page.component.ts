@@ -129,7 +129,6 @@ export class InternalControlsPageComponent implements OnInit {
         ],yAxes: [{
           ticks: {
               beginAtZero: true,
-              //max: 5000000
               stepSize : 500000
           }
       }]
@@ -151,12 +150,10 @@ export class InternalControlsPageComponent implements OnInit {
       this.dQPScoreModel = this.service.getQPModel();
       this.impactScoreModel = this.service.getImpactScoreModel();
       this.dqRIScoreModel = this.service.getdQScoreModel();
-      // this.isL1L2SrcSysLglEntityModel = this.service.getIsL1L2SrcSysLglEntityModel();
       this.fillLobFilter();
       this.fillSourceSystemFilter();
       this.updateBothCharts();
       this.updateGrid();
-      this.dQPScoreModel['dqpScore'] = Math.abs(this.dQPScoreModel['dqpScore']);
     });
     this.grid.internalControlsFlag = true;
   }
@@ -186,26 +183,21 @@ export class InternalControlsPageComponent implements OnInit {
             : 'level1ProcessDqp';
   }
   updateChart1Type() {
-    // let type = '';
     if (this.scoreSelected === 'dqriScore') {
-      // this.grid1config.options.plugins.datalabels['rotation'] = 0;
       this.grid1config.type = 'horizontalBar';
     } else if (this.scoreSelected === 'dqpScore') {
       this.grid1config.type = 'bar';
-      //   this.grid1config.options.plugins.datalabels['rotation'] = 90;
     } else if (this.scoreSelected === 'impactScore') {
       this.grid1config.type = 'bubble';
     } else {
       this.grid1config.type = 'horizontalBar';
     }
 
-    // this.chart1.chart.type = type;
   }
   updateChart1() {
     this.grid1config.data.datasets[0].data = [];
     this.grid1config.data.labels = [];
     let dataSet = this.getchart1Data();
-    // this.chart1.chart.canvas.height='1500';
     for (let i in dataSet) {
       if (
         dataSet[i] &&
@@ -264,8 +256,6 @@ export class InternalControlsPageComponent implements OnInit {
     this.chart1.chart.data = this.grid1config.data;
     this.chart1.chart.render(this.grid1config);
     this.chart1.chart.update();
-    this.chart2.chart.render(this.grid2config);
-    this.chart2.chart.update();
   }
   getchart2Data() {
     let dataSet = [];
@@ -296,9 +286,12 @@ export class InternalControlsPageComponent implements OnInit {
         );
         if (index !== -1) {
           this.grid2config.data.datasets[0].data[index] =
-            parseFloat(this.grid2config.data.datasets[0].data[index]) +
+            parseFloat(this.grid1config.data.datasets[0].data[index]) +
             parseFloat(dataSet[i][this.ecdeSelected]);
         } else {
+          this.grid2config.data.datasets[0].data.push(
+            parseFloat(dataSet[i][this.ecdeSelected])
+          );
           this.grid2config.data.labels.push(
             dataSet[i][this.getSourceBySelectedKey().toString()]
           );
@@ -306,7 +299,6 @@ export class InternalControlsPageComponent implements OnInit {
       }
     }
     this.chart2.chart.data = this.grid2config.data;
-    this.chart2.chart.render(this.grid2config);
     this.chart2.chart.update();
   }
   updateBothCharts() {
