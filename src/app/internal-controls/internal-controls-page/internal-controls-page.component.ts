@@ -156,6 +156,7 @@ export class InternalControlsPageComponent implements OnInit {
       this.fillSourceSystemFilter();
       this.updateBothCharts();
       this.updateGrid();
+      this.dQPScoreModel['dqpScore'] = Math.abs(this.dQPScoreModel['dqpScore']);
     });
     this.grid.internalControlsFlag = true;
   }

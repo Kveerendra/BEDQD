@@ -53,7 +53,7 @@ export class KeyHighlightsPageComponent implements OnInit {
         datalabels: {
           color: 'white',
           formatter: value => {
-            return value + ' %';
+            return Math.abs(value) + ' %';
           }
         }
       },
@@ -169,8 +169,10 @@ export class KeyHighlightsPageComponent implements OnInit {
     options: {
       plugins: {
         datalabels: {
-          color: 'white',
-          formatter: Math.round
+          color: '#b3b3b3',
+          formatter: Math.round,
+          align: 'end',
+          anchor: 'top'
         }
       },
       legend: {

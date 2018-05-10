@@ -198,6 +198,10 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       this.ecdeWithDQModel = this.service.getecdeWithDQModel();
       const recievedData_1 = this.service.getperstOfAdsProfileModel();
       const receivedData_2 = this.service.geteCDEandBCDEwithDQmonitoringbyADS();
+      this.dataQualityScoreModel['header']='Data Quality Score';
+      this.ecdeWithDQModel['header']='ECDE with DQ Monitoring';
+      this.bcdeWithDQModel['header']='BCDE with DQ Monitoring';
+
 
       const dropDown2 = this.service.getdQMonitoringDetailsbySourceSystem();
       for (const k in dropDown2) {
