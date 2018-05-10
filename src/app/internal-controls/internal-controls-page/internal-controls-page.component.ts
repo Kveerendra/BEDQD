@@ -148,6 +148,8 @@ export class InternalControlsPageComponent implements OnInit {
   ngOnInit() {
     this.service.getData().then(dataaa => {
       this.dQPScoreModel = this.service.getQPModel();
+     
+      this.dQPScoreModel['dqpScore'] = Math.abs(parseFloat(this.dQPScoreModel['dqpScore']));
       this.impactScoreModel = this.service.getImpactScoreModel();
       this.dqRIScoreModel = this.service.getdQScoreModel();
       this.fillLobFilter();
