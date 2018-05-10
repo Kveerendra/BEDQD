@@ -77,6 +77,9 @@ export class GridComponent implements OnInit {
         }
         var tempArray = [];
         for (var i in rowDataWithKeys) {
+          rowDataWithKeys[i]['rcrdsPsd'] = this.formatNumberWithComma(rowDataWithKeys[i]['rcrdsPsd']);
+          rowDataWithKeys[i]['rowsTstd'] = this.formatNumberWithComma(rowDataWithKeys[i]['rowsTstd']);
+          rowDataWithKeys[i]['chgFrmPrQtr'] = Math.abs(rowDataWithKeys[i]['chgFrmPrQtr']);
           tempArray.push(rowDataWithKeys[i]);
         }
         this.rowData = tempArray;
@@ -94,5 +97,19 @@ export class GridComponent implements OnInit {
   }
   recordsTestedGetter(params) {
     return params.getValue('rowsTstd') * 1000;
+  }
+
+  formatNumberWithComma = function (nStr) {
+    nStr +='';
+    var x = nStr.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{5})/;
+    var rgx2 = /(\d+)(\d{3})/;
+    if (rgx.test(x1)) {
+    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    x1 = x1.replace(rgx2, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
   }
 }

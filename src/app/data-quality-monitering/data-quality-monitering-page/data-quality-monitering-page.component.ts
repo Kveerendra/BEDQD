@@ -152,7 +152,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       responsive: true,
       maintainAspectRatio: false,
       legend: {
-        display: true
+        display: false
       },
       tooltips: {
         enabled: true,

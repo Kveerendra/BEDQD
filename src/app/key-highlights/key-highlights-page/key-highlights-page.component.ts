@@ -33,9 +33,11 @@ export class KeyHighlightsPageComponent implements OnInit {
     var x = nStr.split('.');
     var x1 = x[0];
     var x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{3})/;
-    while (rgx.test(x1)) {
+    var rgx = /(\d+)(\d{5})/;
+    var rgx2 = /(\d+)(\d{3})/;
+    if (rgx.test(x1)) {
     x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    x1 = x1.replace(rgx2, '$1' + ',' + '$2');
     }
     return x1 + x2;
   }
@@ -246,7 +248,7 @@ export class KeyHighlightsPageComponent implements OnInit {
   ngOnInit() {
     this.service.getData().then(dataaa => {
       var recievedData_1 = this.service.getdQRIAndDQPScoresData();
-      this.tRecords = Math.round(recievedData_1['totalRecords']).toString();
+      this.tRecords = this.formatNumberWithComma(Math.round(recievedData_1['totalRecords'])).toString();
       this.dqriScore = recievedData_1['dqriScore'].toString();
       this.dqpScore = recievedData_1['dqpScore'].toString() + '%';
       this.impactScore = recievedData_1['impactScore'].toString();
