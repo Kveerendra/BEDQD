@@ -44,16 +44,16 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       labels: [],
       datasets: [
         {
-          label: 'Current Quarter',
-          data: [],
-          stack: 'Stack 0',
-          backgroundColor: '#007acc'
-        },
-        {
           label: 'Prior Quarter',
           data: [],
           stack: 'Stack 1',
           backgroundColor: '#29a329'
+        },
+        {
+          label: 'Current Quarter',
+          data: [],
+          stack: 'Stack 0',
+          backgroundColor: '#007acc'
         }
       ]
     },
