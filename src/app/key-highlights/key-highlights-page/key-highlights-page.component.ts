@@ -28,18 +28,19 @@ export class KeyHighlightsPageComponent implements OnInit {
   drop3: String[] = [];
   drop4: String[] = [];
 
-  formatNumberWithComma = function (nStr) {
-    nStr +='';
-    var x = nStr.split('.');
-    var x1 = x[0];
-    var x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{5})/;
-    var rgx2 = /(\d+)(\d{3})/;
-    if (rgx.test(x1)) {
-    x1 = x1.replace(rgx, '$1' + ',' + '$2');
-    x1 = x1.replace(rgx2, '$1' + ',' + '$2');
-    }
-    return x1 + x2;
+  formatNumberWithComma = function (x) {
+    x = x.toString();
+    var afterPoint = '';
+    if (x.indexOf('.') > 0)
+      afterPoint = x.substring(x.indexOf('.'), x.length);
+    x = Math.floor(x);
+    x = x.toString();
+    var lastThree = x.substring(x.length - 3);
+    var otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers != '')
+      lastThree = ',' + lastThree;
+    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    return res;
   }
 
   grid3config = {
@@ -114,7 +115,7 @@ export class KeyHighlightsPageComponent implements OnInit {
   grid4config = {
     type: 'bar',
     data: {
-      labels: ['Jul-Sep 2014', 'Oct-Dec 2014'],
+      labels: ['Jul-Sep 2017', 'Oct-Dec 2017'],
       datasets: [
         {
           label: '<30 days',
@@ -160,10 +161,24 @@ export class KeyHighlightsPageComponent implements OnInit {
             scaleLabel: {
               display: true,
               labelString: '# of Issues'
-            },ticks: {
+            }, ticks: {
+              callback: function (x) {
+                x = x.toString();
+                var afterPoint = '';
+                if (x.indexOf('.') > 0)
+                  afterPoint = x.substring(x.indexOf('.'), x.length);
+                x = Math.floor(x);
+                x = x.toString();
+                var lastThree = x.substring(x.length - 3);
+                var otherNumbers = x.substring(0, x.length - 3);
+                if (otherNumbers != '')
+                  lastThree = ',' + lastThree;
+                var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+                return res;
+              },
               beginAtZero: true,
-              stepSize:700000
-          }
+              stepSize: 700000
+            }
           }
         ]
       }
@@ -196,7 +211,7 @@ export class KeyHighlightsPageComponent implements OnInit {
       },
       tooltips: {
         enabled: true
-      },scales: {
+      }, scales: {
         yAxes: [
           {
             scaleLabel: {

@@ -62,7 +62,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.abs
+          formatter: value => {
+            return this.formatNumberWithComma(Math.abs(value));
+          }
         }
       },
       scales: {
@@ -71,9 +73,21 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             ticks: {
               beginAtZero: true,
               fontFamily: 'Open Sans Bold, sans-serif',
-              callback: function (value) {
-                return Math.abs(value);
-              }
+              callback: function (x) {
+
+                  x = Math.abs(x).toString();
+                  var afterPoint = '';
+                  if (x.indexOf('.') > 0)
+                    afterPoint = x.substring(x.indexOf('.'), x.length);
+                  x = Math.floor(x);
+                  x = x.toString();
+                  var lastThree = x.substring(x.length - 3);
+                  var otherNumbers = x.substring(0, x.length - 3);
+                  if (otherNumbers != '')
+                    lastThree = ',' + lastThree;
+                  var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+                  return res
+                }
             },
             scaleLabel: {
               display: true,
@@ -145,13 +159,29 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          formatter: value => {
+            return this.formatNumberWithComma(Math.abs(value));
+          }
         }
       },
       scales: {
         xAxes: [
           {
             ticks: {
+              callback: function (x) {
+                x = x.toString();
+                var afterPoint = '';
+                if (x.indexOf('.') > 0)
+                  afterPoint = x.substring(x.indexOf('.'), x.length);
+                x = Math.floor(x);
+                x = x.toString();
+                var lastThree = x.substring(x.length - 3);
+                var otherNumbers = x.substring(0, x.length - 3);
+                if (otherNumbers != '')
+                  lastThree = ',' + lastThree;
+                var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+                return res;
+              },
               beginAtZero: true,
               fontFamily: 'Open Sans Bold, sans-serif'
             },
@@ -563,5 +593,20 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     document.getElementById("div4").style.display = "none";
     document.getElementById("div5").style.display = "none";
     document.getElementById("div3").style.display = "block";
+  }
+
+  formatNumberWithComma = function (x) {
+    x = x.toString();
+    var afterPoint = '';
+    if (x.indexOf('.') > 0)
+      afterPoint = x.substring(x.indexOf('.'), x.length);
+    x = Math.floor(x);
+    x = x.toString();
+    var lastThree = x.substring(x.length - 3);
+    var otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers != '')
+      lastThree = ',' + lastThree;
+    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    return res;
   }
 }

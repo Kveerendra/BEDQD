@@ -42,19 +42,33 @@ export class Grid3Component implements OnInit {
           for (let itr_2 in gridMap[i]) {
             tempVar['legalEntity'] = itr_1;
             tempVar['days'] = gridMap[i]['agingBucket'];
-            tempVar['prQtrCnt'] = gridMap[i]['priorQuarter'];
-            tempVar['MigrateInCnt'] = gridMap[i]['newOrMigrateIn'];
-            tempVar['TotalCnt'] = gridMap[i]['total'];
-            tempVar['closedCnt'] = gridMap[i]['closed'];
-            tempVar['mgOutCnt'] = gridMap[i]['migrateOut'];
-            tempVar['outstandingCnt'] = gridMap[i]['outstanding'];
+            tempVar['prQtrCnt'] = this.formatNumberWithComma(gridMap[i]['priorQuarter']);
+            tempVar['MigrateInCnt'] = this.formatNumberWithComma(gridMap[i]['newOrMigrateIn']);
+            tempVar['TotalCnt'] = this.formatNumberWithComma(gridMap[i]['total']);
+            tempVar['closedCnt'] = this.formatNumberWithComma(gridMap[i]['closed']);
+            tempVar['mgOutCnt'] = this.formatNumberWithComma(gridMap[i]['migrateOut']);
+            tempVar['outstandingCnt'] = this.formatNumberWithComma(gridMap[i]['outstanding']);
             // console.log(tempVar[gridMap[itr_2]['legalEntity']]);
           }
           tempArray.push(tempVar);
         }
-      }
-      console.log(tempArray);
+      } 
       this.rowData = tempArray;
     });
+  }
+
+  formatNumberWithComma = function (x) {
+    x = x.toString();
+    var afterPoint = '';
+    if (x.indexOf('.') > 0)
+      afterPoint = x.substring(x.indexOf('.'), x.length);
+    x = Math.floor(x);
+    x = x.toString();
+    var lastThree = x.substring(x.length - 3);
+    var otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers != '')
+      lastThree = ',' + lastThree;
+    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    return res;
   }
 }

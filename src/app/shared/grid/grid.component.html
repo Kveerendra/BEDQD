@@ -1,4 +1,4 @@
-<div style="font-size: 5px;height: 525px;"  class="ag-theme-balham" >
+<div ui-grid="main.gridOptions" style="font-size: 5px;height: 525px;overflow-y: scroll; max-height: 500px;"  class="ag-theme-balham"  ui-grid-pinning >
 	<ag-grid-angular  class="ag-theme-material" #grid
 [rowData]="rowData" [domLayout]="'autoHeight'"  [gridOptions]="gridOptions"
 [columnDefs]="columnDefs">

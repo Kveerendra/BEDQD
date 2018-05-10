@@ -109,7 +109,9 @@ export class InternalControlsPageComponent implements OnInit {
           display: true,
          align: 'end',
          anchor: 'top',
-          formatter: Math.round,
+         formatter: value => {
+          return this.formatNumberWithComma(Math.round(value));
+        },
           rotation: 90
         }
       },
@@ -128,6 +130,20 @@ export class InternalControlsPageComponent implements OnInit {
           }
         ],yAxes: [{
           ticks: {
+            callback: function (x) {
+              x = x.toString();
+              var afterPoint = '';
+              if (x.indexOf('.') > 0)
+                afterPoint = x.substring(x.indexOf('.'), x.length);
+              x = Math.floor(x);
+              x = x.toString();
+              var lastThree = x.substring(x.length - 3);
+              var otherNumbers = x.substring(0, x.length - 3);
+              if (otherNumbers != '')
+                lastThree = ',' + lastThree;
+              var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+              return res;
+            },
               beginAtZero: true,
               stepSize : 500000
           }
@@ -363,5 +379,20 @@ export class InternalControlsPageComponent implements OnInit {
       .getImpactScoreL1L2SrcLegalEntityModel()
       .filter(record => record.dimention === dimention);
     this.grid.rowData = rowData;
+  }
+
+  formatNumberWithComma = function (x) {
+    x = x.toString();
+    var afterPoint = '';
+    if (x.indexOf('.') > 0)
+      afterPoint = x.substring(x.indexOf('.'), x.length);
+    x = Math.floor(x);
+    x = x.toString();
+    var lastThree = x.substring(x.length - 3);
+    var otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers != '')
+      lastThree = ',' + lastThree;
+    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    return res;
   }
 }

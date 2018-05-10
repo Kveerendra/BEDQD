@@ -99,17 +99,18 @@ export class GridComponent implements OnInit {
     return params.getValue('rowsTstd') * 1000;
   }
 
-  formatNumberWithComma = function (nStr) {
-    nStr +='';
-    var x = nStr.split('.');
-    var x1 = x[0];
-    var x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{5})/;
-    var rgx2 = /(\d+)(\d{3})/;
-    if (rgx.test(x1)) {
-    x1 = x1.replace(rgx, '$1' + ',' + '$2');
-    x1 = x1.replace(rgx2, '$1' + ',' + '$2');
-    }
-    return x1 + x2;
+  formatNumberWithComma = function (x) {
+    x = x.toString();
+    var afterPoint = '';
+    if (x.indexOf('.') > 0)
+      afterPoint = x.substring(x.indexOf('.'), x.length);
+    x = Math.floor(x);
+    x = x.toString();
+    var lastThree = x.substring(x.length - 3);
+    var otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers != '')
+      lastThree = ',' + lastThree;
+    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    return res;
   }
 }
