@@ -67,4 +67,15 @@ export class InternalControlService {
       'impactScoreL1SrcSystemLegalEntityLOBModel'
     ];
   }
+
+  getImpactScroreForLegalEntityLOBSourceSystemLegalEntityLOB() {
+    return this.internalControlsJsonObject[
+      'impactScroreForLegalEntityLOBSourceSystemLegalEntityLOB'
+    ];
+  }
+  getECDECountForLegalEntityLOBSourceSystemLegalEntityLOB() {
+    return this.internalControlsJsonObject[
+      'eCDECountForLegalEntityLOBSourceSystemLegalEntityLOB'
+    ];
+  }
 }

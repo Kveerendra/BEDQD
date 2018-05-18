@@ -144,8 +144,7 @@ export class InternalControlsPageComponent implements OnInit {
               var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
               return res;
             },
-              beginAtZero: true,
-              stepSize : 500000
+              beginAtZero: true
           }
       }]
       }
@@ -164,7 +163,7 @@ export class InternalControlsPageComponent implements OnInit {
   ngOnInit() {
     this.service.getData().then(dataaa => {
       this.dQPScoreModel = this.service.getQPModel();
-     
+
       this.dQPScoreModel['dqpScore'] = Math.abs(parseFloat(this.dQPScoreModel['dqpScore']));
       this.impactScoreModel = this.service.getImpactScoreModel();
       this.dqRIScoreModel = this.service.getdQScoreModel();
@@ -184,11 +183,11 @@ export class InternalControlsPageComponent implements OnInit {
           ? this.service.getImpactScoreL2SrcSystemLegalEntityLOBModel()
           : this.scoreBySelected === 'sourceSystem'
             ? this.service.getImpactScoreSrcSysSrcSystemLegalEntityLOBModel()
-            : this.scoreBySelected === 'sourcelob'
-              ? []
+            : this.scoreBySelected === 'sourceLob'
+              ? this.service.getImpactScroreForLegalEntityLOBSourceSystemLegalEntityLOB()
               : this.service.getImpactScoreL1SrcSystemLegalEntityLOBModel();
     return dataSet;
-  }
+  }/*
   getSourceBySelectedKey(): String {
     return this.scoreBySelected === 'level1ProcessDQP'
       ? 'level1ProcessDqp'
@@ -199,7 +198,7 @@ export class InternalControlsPageComponent implements OnInit {
           : this.scoreBySelected === 'sourceLob'
             ? ''
             : 'level1ProcessDqp';
-  }
+  }*/
   updateChart1Type() {
     if (this.scoreSelected === 'dqriScore') {
       this.grid1config.type = 'horizontalBar';
@@ -219,12 +218,12 @@ export class InternalControlsPageComponent implements OnInit {
     for (let i in dataSet) {
       if (
         dataSet[i] &&
-        this.LOBFilter[dataSet[i]['sourcelob']] &&
+        this.LOBFilter[dataSet[i]['sourceLob']] &&
         this.sourceSystemFilter[dataSet[i]['sourceSystem']] &&
         this.scoreSelected !== 'impactScore'
       ) {
         const index = this.grid1config.data.labels.indexOf(
-          dataSet[i][this.getSourceBySelectedKey().toString()]
+          dataSet[i][this.scoreBySelected]
         );
         if (index !== -1) {
           this.grid1config.data.datasets[0].data[index] = (
@@ -237,7 +236,7 @@ export class InternalControlsPageComponent implements OnInit {
             parseFloat(dataSet[i][this.scoreSelected])
           );
           this.grid1config.data.labels.push(
-            dataSet[i][this.getSourceBySelectedKey().toString()]
+            dataSet[i][this.scoreBySelected]
           );
         }
         delete this.grid1config.options['tooltips'];
@@ -248,7 +247,7 @@ export class InternalControlsPageComponent implements OnInit {
           r: parseFloat(dataSet[i]['ecdeCnt']) * 3
         });
         this.grid1config.data.labels.push(
-          dataSet[i][this.getSourceBySelectedKey().toString()]
+          dataSet[i][this.scoreBySelected]
         );
         this.grid1config.data.datasets[0]['backgroundColor'] = '#0086b3';
         this.grid1config.data.datasets[0]['hoverBackgroundColor'] = '#0086b3';
@@ -257,7 +256,7 @@ export class InternalControlsPageComponent implements OnInit {
           callbacks: {
             label: function(t, d) {
               var datasetLabel = d.datasets[t.datasetIndex].label;
-              var xLabel = Math.abs(t.xLabel); 
+              var xLabel = Math.abs(t.xLabel);
               return [
                 'Dimentions_Swap : ' + d.labels[t.index],
                 ' ECDE Count : ' + d.datasets[0].data[t.index].r / 3,
@@ -283,6 +282,8 @@ export class InternalControlsPageComponent implements OnInit {
       dataSet = this.service.getEcdeCntL2SrcSysLegalEntityModel();
     }else if (this.scoreBySelected === 'sourceSystem') {
       dataSet = this.service.getEcdeCountEcdeRecords();
+    }else if (this.scoreBySelected === 'sourceLob') {
+      dataSet = this.service.getECDECountForLegalEntityLOBSourceSystemLegalEntityLOB();
     }else {
       dataSet = [];
     }
@@ -296,22 +297,22 @@ export class InternalControlsPageComponent implements OnInit {
     for (const i in dataSet) {
       if (
         dataSet[i] &&
-        this.LOBFilter[dataSet[i]['sourcelob']] &&
+        this.LOBFilter[dataSet[i]['sourceLob']] &&
         this.sourceSystemFilter[dataSet[i]['sourceSystem']]
       ) {
         let index = this.grid2config.data.labels.indexOf(
-          dataSet[i][this.getSourceBySelectedKey().toString()]
+          dataSet[i][this.scoreBySelected]
         );
         if (index !== -1) {
           this.grid2config.data.datasets[0].data[index] =
-            parseFloat(this.grid1config.data.datasets[0].data[index]) +
+            parseFloat(this.grid2config.data.datasets[0].data[index]) +
             parseFloat(dataSet[i][this.ecdeSelected]);
         } else {
           this.grid2config.data.datasets[0].data.push(
             parseFloat(dataSet[i][this.ecdeSelected])
           );
           this.grid2config.data.labels.push(
-            dataSet[i][this.getSourceBySelectedKey().toString()]
+            dataSet[i][this.scoreBySelected]
           );
         }
       }
@@ -340,9 +341,9 @@ export class InternalControlsPageComponent implements OnInit {
     let lobs = [];
 
     for (const i in dataSet) {
-      if (lobs.indexOf(dataSet[i]['sourcelob']) == -1) {
-        lobs.push(dataSet[i]['sourcelob']);
-        this.LOBFilter[dataSet[i]['sourcelob']] = true;
+      if (lobs.indexOf(dataSet[i]['sourceLob']) == -1) {
+        lobs.push(dataSet[i]['sourceLob']);
+        this.LOBFilter[dataSet[i]['sourceLob']] = true;
       }
     }
     this.drop3 = lobs;
@@ -371,7 +372,7 @@ export class InternalControlsPageComponent implements OnInit {
           ? 'Level2_Process_DQP'
           : this.scoreBySelected === 'sourceSystem'
             ? 'SOURCE_SYSTEM'
-            : this.scoreBySelected === 'sourcelob'
+            : this.scoreBySelected === 'sourceLob'
               ? 'LOB'
               : 'Level1_Process_Name';
 
