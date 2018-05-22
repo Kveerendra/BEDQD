@@ -386,7 +386,7 @@ export class InternalControlsPageComponent implements OnInit {
 
     rowData = this.service
       .getImpactScoreL1L2SrcLegalEntityModel()
-      .filter(record => record.dimension === dimension);
+      .filter(record => record.dimension === dimension && this.LOBFilter[record.sourceLOB] && this.sourceSystemFilter[record.sourceSytem]);
     this.grid.rowData = rowData;
   }
 
