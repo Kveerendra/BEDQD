@@ -15,10 +15,10 @@ export class InternalControlsPageComponent implements OnInit {
   @ViewChild('grid') grid: GridComponent;
   grid1chartStyle = '';
   displayValue = {
-    level1ProcessDQP: 'Level 1 Process',
-    level2ProcessDQP: 'Level 2 Process',
+    level1ProcessDqp: 'Level 1 Process',
+    level2ProcessDqp: 'Level 2 Process',
     sourceSystem: 'Source System',
-    sourceLob: 'Legal Entity / LOB',
+    sourceLOB: 'Legal Entity / LOB',
     dqriScore: 'DQRI Score',
     dqpScore: 'DQI Score',
     impactScore: 'Impact Score',
@@ -34,7 +34,7 @@ export class InternalControlsPageComponent implements OnInit {
   drop3 = [];
   drop4 = [];
   scoreSelected = 'dqriScore';
-  scoreBySelected = 'level1ProcessDQP';
+  scoreBySelected = 'level1ProcessDqp';
   ecdeSelected = 'ecdeRcrdsTstd';
   grid1config = {
     type: 'horizontalBar',
@@ -55,8 +55,8 @@ export class InternalControlsPageComponent implements OnInit {
         datalabels: {
           color: '#b3b3b3',
           display: true,
-         align: 'end',
-         anchor: 'top',
+          align: 'end',
+          anchor: 'top',
           formatter: label => {
             if (this.scoreSelected === 'impactScore') {
               return '';
@@ -76,17 +76,21 @@ export class InternalControlsPageComponent implements OnInit {
             ticks: {
               autoSkip: false,
               minRotation: 0,
-              maxRotation: 90,
+              maxRotation: 90
             },
             barPercentage: 1
           }
-        ],yAxes: [{
-          ticks: {
+        ],
+        yAxes: [
+          {
+            ticks: {
               beginAtZero: true,
               max: 120
-          },barPercentage: 1.15
-      }]
-      },
+            },
+            barPercentage: 1.15
+          }
+        ]
+      }
     }
   };
   grid2config = {
@@ -107,11 +111,11 @@ export class InternalControlsPageComponent implements OnInit {
         datalabels: {
           color: '#b3b3b3',
           display: true,
-         align: 'end',
-         anchor: 'top',
-         formatter: value => {
-          return this.formatNumberWithComma(Math.round(value));
-        },
+          align: 'end',
+          anchor: 'top',
+          formatter: value => {
+            return this.formatNumberWithComma(Math.round(value));
+          },
           rotation: 90
         }
       },
@@ -128,25 +132,33 @@ export class InternalControlsPageComponent implements OnInit {
             },
             barPercentage: 1
           }
-        ],yAxes: [{
-          ticks: {
-            callback: function (x) {
-              x = x.toString();
-              var afterPoint = '';
-              if (x.indexOf('.') > 0)
-                afterPoint = x.substring(x.indexOf('.'), x.length);
-              x = Math.floor(x);
-              x = x.toString();
-              var lastThree = x.substring(x.length - 3);
-              var otherNumbers = x.substring(0, x.length - 3);
-              if (otherNumbers != '')
-                lastThree = ',' + lastThree;
-              var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
-              return res;
-            },
+        ],
+        yAxes: [
+          {
+            ticks: {
+              callback: function(x) {
+                x = x.toString();
+                let afterPoint = '';
+                if (x.indexOf('.') > 0) {
+                  afterPoint = x.substring(x.indexOf('.'), x.length);
+                }
+                x = Math.floor(x);
+                x = x.toString();
+                let lastThree = x.substring(x.length - 3);
+                let otherNumbers = x.substring(0, x.length - 3);
+                if (otherNumbers != '') {
+                  lastThree = ',' + lastThree;
+                }
+                let res =
+                  otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') +
+                  lastThree +
+                  afterPoint;
+                return res;
+              },
               beginAtZero: true
+            }
           }
-      }]
+        ]
       }
     }
   };
@@ -164,7 +176,9 @@ export class InternalControlsPageComponent implements OnInit {
     this.service.getData().then(dataaa => {
       this.dQPScoreModel = this.service.getQPModel();
 
-      this.dQPScoreModel['dqpScore'] = Math.abs(parseFloat(this.dQPScoreModel['dqpScore']));
+      this.dQPScoreModel['dqpScore'] = Math.abs(
+        parseFloat(this.dQPScoreModel['dqpScore'])
+      );
       this.impactScoreModel = this.service.getImpactScoreModel();
       this.dqRIScoreModel = this.service.getdQScoreModel();
       this.fillLobFilter();
@@ -177,25 +191,25 @@ export class InternalControlsPageComponent implements OnInit {
   getchart1Data() {
     let dataSet = [];
     dataSet =
-      this.scoreBySelected === 'level1ProcessDQP'
+      this.scoreBySelected === 'level1ProcessDqp'
         ? this.service.getImpactScoreL1SrcSystemLegalEntityLOBModel()
-        : this.scoreBySelected === 'level2ProcessDQP'
+        : this.scoreBySelected === 'level2ProcessDqp'
           ? this.service.getImpactScoreL2SrcSystemLegalEntityLOBModel()
           : this.scoreBySelected === 'sourceSystem'
             ? this.service.getImpactScoreSrcSysSrcSystemLegalEntityLOBModel()
-            : this.scoreBySelected === 'sourceLob'
+            : this.scoreBySelected === 'sourceLOB'
               ? this.service.getImpactScroreForLegalEntityLOBSourceSystemLegalEntityLOB()
               : this.service.getImpactScoreL1SrcSystemLegalEntityLOBModel();
     return dataSet;
-  }/*
+  } /*
   getSourceBySelectedKey(): String {
-    return this.scoreBySelected === 'level1ProcessDQP'
+    return this.scoreBySelected === 'level1ProcessDqp'
       ? 'level1ProcessDqp'
-      : this.scoreBySelected === 'level2ProcessDQP'
+      : this.scoreBySelected === 'level2ProcessDqp'
         ? 'level2ProcessDqp'
         : this.scoreBySelected === 'sourceSystem'
           ? 'sourceSystem'
-          : this.scoreBySelected === 'sourceLob'
+          : this.scoreBySelected === 'sourceLOB'
             ? ''
             : 'level1ProcessDqp';
   }*/
@@ -209,7 +223,6 @@ export class InternalControlsPageComponent implements OnInit {
     } else {
       this.grid1config.type = 'horizontalBar';
     }
-
   }
   updateChart1() {
     this.grid1config.data.datasets[0].data = [];
@@ -218,7 +231,7 @@ export class InternalControlsPageComponent implements OnInit {
     for (let i in dataSet) {
       if (
         dataSet[i] &&
-        this.LOBFilter[dataSet[i]['sourceLob']] &&
+        this.LOBFilter[dataSet[i]['sourceLOB']] &&
         this.sourceSystemFilter[dataSet[i]['sourceSystem']] &&
         this.scoreSelected !== 'impactScore'
       ) {
@@ -235,9 +248,7 @@ export class InternalControlsPageComponent implements OnInit {
           this.grid1config.data.datasets[0].data.push(
             parseFloat(dataSet[i][this.scoreSelected])
           );
-          this.grid1config.data.labels.push(
-            dataSet[i][this.scoreBySelected]
-          );
+          this.grid1config.data.labels.push(dataSet[i][this.scoreBySelected]);
         }
         delete this.grid1config.options['tooltips'];
       } else if (this.scoreSelected === 'impactScore') {
@@ -246,17 +257,15 @@ export class InternalControlsPageComponent implements OnInit {
           y: parseFloat(dataSet[i]['dqpScore']),
           r: parseFloat(dataSet[i]['ecdeCnt']) * 3
         });
-        this.grid1config.data.labels.push(
-          dataSet[i][this.scoreBySelected]
-        );
+        this.grid1config.data.labels.push(dataSet[i][this.scoreBySelected]);
         this.grid1config.data.datasets[0]['backgroundColor'] = '#0086b3';
         this.grid1config.data.datasets[0]['hoverBackgroundColor'] = '#0086b3';
         //this.grid1config.data.datasets[0]['radius']=50;
         this.grid1config.options['tooltips'] = {
           callbacks: {
             label: function(t, d) {
-              var datasetLabel = d.datasets[t.datasetIndex].label;
-              var xLabel = Math.abs(t.xLabel);
+              let datasetLabel = d.datasets[t.datasetIndex].label;
+              let xLabel = Math.abs(t.xLabel);
               return [
                 'Dimentions_Swap : ' + d.labels[t.index],
                 ' ECDE Count : ' + d.datasets[0].data[t.index].r / 3,
@@ -276,15 +285,15 @@ export class InternalControlsPageComponent implements OnInit {
   }
   getchart2Data() {
     let dataSet = [];
-    if (this.scoreBySelected === 'level1ProcessDQP') {
+    if (this.scoreBySelected === 'level1ProcessDqp') {
       dataSet = this.service.getEcdeCntL1SrcSysLegalEntityModel();
-    } else if (this.scoreBySelected === 'level2ProcessDQP') {
+    } else if (this.scoreBySelected === 'level2ProcessDqp') {
       dataSet = this.service.getEcdeCntL2SrcSysLegalEntityModel();
-    }else if (this.scoreBySelected === 'sourceSystem') {
+    } else if (this.scoreBySelected === 'sourceSystem') {
       dataSet = this.service.getEcdeCountEcdeRecords();
-    }else if (this.scoreBySelected === 'sourceLob') {
+    } else if (this.scoreBySelected === 'sourceLOB') {
       dataSet = this.service.getECDECountForLegalEntityLOBSourceSystemLegalEntityLOB();
-    }else {
+    } else {
       dataSet = [];
     }
     return dataSet;
@@ -297,7 +306,7 @@ export class InternalControlsPageComponent implements OnInit {
     for (const i in dataSet) {
       if (
         dataSet[i] &&
-        this.LOBFilter[dataSet[i]['sourceLob']] &&
+        this.LOBFilter[dataSet[i]['sourceLOB']] &&
         this.sourceSystemFilter[dataSet[i]['sourceSystem']]
       ) {
         let index = this.grid2config.data.labels.indexOf(
@@ -311,9 +320,7 @@ export class InternalControlsPageComponent implements OnInit {
           this.grid2config.data.datasets[0].data.push(
             parseFloat(dataSet[i][this.ecdeSelected])
           );
-          this.grid2config.data.labels.push(
-            dataSet[i][this.scoreBySelected]
-          );
+          this.grid2config.data.labels.push(dataSet[i][this.scoreBySelected]);
         }
       }
     }
@@ -323,6 +330,7 @@ export class InternalControlsPageComponent implements OnInit {
   updateBothCharts() {
     this.updateChart1();
     this.updateChart2();
+    this.updateGrid();
   }
   fillSourceSystemFilter(): any {
     let dataSet = this.getchart1Data();
@@ -341,9 +349,9 @@ export class InternalControlsPageComponent implements OnInit {
     let lobs = [];
 
     for (const i in dataSet) {
-      if (lobs.indexOf(dataSet[i]['sourceLob']) == -1) {
-        lobs.push(dataSet[i]['sourceLob']);
-        this.LOBFilter[dataSet[i]['sourceLob']] = true;
+      if (lobs.indexOf(dataSet[i]['sourceLOB']) === -1) {
+        lobs.push(dataSet[i]['sourceLOB']);
+        this.LOBFilter[dataSet[i]['sourceLOB']] = true;
       }
     }
     this.drop3 = lobs;
@@ -364,36 +372,41 @@ export class InternalControlsPageComponent implements OnInit {
     ];
 
     this.grid.columnDefs = columnDefs;
-    let dimention = '';
-    dimention =
-      this.scoreBySelected === 'level1ProcessDQP'
+    let dimension = '';
+    dimension =
+      this.scoreBySelected === 'level1ProcessDqp'
         ? 'Level1_Process_Name'
-        : this.scoreBySelected === 'level2ProcessDQP'
+        : this.scoreBySelected === 'level2ProcessDqp'
           ? 'Level2_Process_DQP'
           : this.scoreBySelected === 'sourceSystem'
             ? 'SOURCE_SYSTEM'
-            : this.scoreBySelected === 'sourceLob'
+            : this.scoreBySelected === 'sourceLOB'
               ? 'LOB'
               : 'Level1_Process_Name';
 
     rowData = this.service
       .getImpactScoreL1L2SrcLegalEntityModel()
-      .filter(record => record.dimention === dimention);
+      .filter(record => record.dimension === dimension);
     this.grid.rowData = rowData;
   }
 
-  formatNumberWithComma = function (x) {
+  formatNumberWithComma = function(x) {
     x = x.toString();
-    var afterPoint = '';
-    if (x.indexOf('.') > 0)
+    let afterPoint = '';
+    if (x.indexOf('.') > 0) {
       afterPoint = x.substring(x.indexOf('.'), x.length);
+    }
     x = Math.floor(x);
     x = x.toString();
-    var lastThree = x.substring(x.length - 3);
-    var otherNumbers = x.substring(0, x.length - 3);
-    if (otherNumbers != '')
+    let lastThree = x.substring(x.length - 3);
+    let otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers != '') {
       lastThree = ',' + lastThree;
-    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    }
+    let res =
+      otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') +
+      lastThree +
+      afterPoint;
     return res;
-  }
+  };
 }

@@ -39,16 +39,16 @@
           <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 130px;height: 30px;font-size: 12px;">{{displayValue[scoreBySelected]}}</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDQP" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 1 Process
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDqp" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 1 Process
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level2ProcessDQP" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 2 Process
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level2ProcessDqp" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 2 Process
             </li>
             <li class="dropdown-item">
                 <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceSystem" (change)="updateBothCharts()" checked style="margin-left:5px;"> Source System
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceLob" (change)="updateBothCharts()" checked style="margin-left:5px;"> Legal Entity / LOB
+                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceLOB" (change)="updateBothCharts()" checked style="margin-left:5px;"> Legal Entity / LOB
             </li>
           </ul>
         </div>
@@ -93,12 +93,12 @@
   </div>
 </div>
 <div class="row ">
-  <div [ngClass]="scoreBySelected=='level2ProcessDQP'?'col-12':'col-6'" style="border-right: solid #ccc 1px;">
+  <div [ngClass]="scoreBySelected=='level2ProcessDqp'?'col-12':'col-6'" style="border-right: solid #ccc 1px;">
       <div class="col-12" >
       <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options" ></chart>
  </div>
     </div>
-  <div [ngClass]="scoreBySelected=='level2ProcessDQP'?'col-12':'col-6'">
+  <div [ngClass]="scoreBySelected=='level2ProcessDqp'?'col-12':'col-6'">
     <div class="col-12">
 
       <chart #grid2Chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options"></chart>
