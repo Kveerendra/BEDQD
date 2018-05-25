@@ -85,9 +85,16 @@ export class InternalControlsPageComponent implements OnInit {
           {
             ticks: {
               beginAtZero: true,
-              max: 120
+              max: 120,
+              callback: function(value) {
+                return value ;
+              }
             },
-            barPercentage: 1.15
+            barPercentage: 1.15,
+            scaleLabel: {
+              display: true,
+              labelString: 'DQRI Score'
+            }
           }
         ]
       }
@@ -156,6 +163,10 @@ export class InternalControlsPageComponent implements OnInit {
                 return res;
               },
               beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: '#of Rows Tested'
             }
           }
         ]
@@ -213,15 +224,29 @@ export class InternalControlsPageComponent implements OnInit {
             ? ''
             : 'level1ProcessDqp';
   }*/
+  valueWithPercent(value){
+    return value + '%';
+  }
+  valueWithOutPercent(value){
+    return value ;
+  }
   updateChart1Type() {
     if (this.scoreSelected === 'dqriScore') {
       this.grid1config.type = 'horizontalBar';
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString='DQRI Score';
+      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithOutPercent;
     } else if (this.scoreSelected === 'dqpScore') {
       this.grid1config.type = 'bar';
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'DQP Score';
+      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
     } else if (this.scoreSelected === 'impactScore') {
       this.grid1config.type = 'bubble';
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'Impact Score';
+      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
     } else {
       this.grid1config.type = 'horizontalBar';
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = '';
+      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithOutPercent;
     }
   }
   updateChart1() {
@@ -324,7 +349,17 @@ export class InternalControlsPageComponent implements OnInit {
         }
       }
     }
+    if(this.ecdeSelected === 'ecdeRcrdsTstd'){
+      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString='#of Rows Tested';
+    }
+    else if(this.ecdeSelected === 'ecdeCnt'){
+      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString='ECDE Count';
+    }
+    else{
+      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString='ECDE Count';
+    }
     this.chart2.chart.data = this.grid2config.data;
+    this.chart2.chart.render(this.grid2config);
     this.chart2.chart.update();
   }
   updateBothCharts() {
