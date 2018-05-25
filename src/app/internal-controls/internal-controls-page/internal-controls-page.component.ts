@@ -247,8 +247,8 @@ export class InternalControlsPageComponent implements OnInit {
       this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
     } else if (this.scoreSelected === 'impactScore') {
       this.grid1config.type = 'bubble';
-      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'Impact Score';
-      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='';
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'DQP Score';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='Impact Score';
       this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
     } else {
       this.grid1config.type = 'horizontalBar';

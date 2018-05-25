@@ -23,7 +23,7 @@
           <form>
             <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqriScore" checked style="margin-left:5px;"> DQRI Score
             <br/>
-            <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqpScore" style="margin-left:5px"> DQI Score
+            <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqpScore" style="margin-left:5px"> DQP Score
             <br/>
             <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="impactScore" style="margin-left:5px;margin-bottom:10px;"> Impact Score
 
@@ -107,7 +107,7 @@
 </div>
 
 </div>
-<p style="font-weight: bolder;font-size: 12px;margin-top: 20px;text-align: center;"> Impact Score for  Level1 Process</p>
+<p style="font-weight: bolder;font-size: 12px;margin-top: 20px;text-align: center;"> Impact Score for  {{displayValue[scoreBySelected]}}</p>
 <div class="row" style="border-top: solid #ccc 1px; margin-top: 15px;margin-bottom: 15px;">
   <div class="col-12" style="max-height: 300px;overflow-y: scroll;">
     <app-grid #grid></app-grid>
