@@ -78,7 +78,11 @@ export class InternalControlsPageComponent implements OnInit {
               minRotation: 0,
               maxRotation: 90
             },
-            barPercentage: 1
+            barPercentage: 1,
+            scaleLabel: {
+              display: true,
+              labelString: 'DQRI Score'
+            }
           }
         ],
         yAxes: [
@@ -93,7 +97,7 @@ export class InternalControlsPageComponent implements OnInit {
             barPercentage: 1.15,
             scaleLabel: {
               display: true,
-              labelString: 'DQRI Score'
+              labelString: ''
             }
           }
         ]
@@ -233,19 +237,23 @@ export class InternalControlsPageComponent implements OnInit {
   updateChart1Type() {
     if (this.scoreSelected === 'dqriScore') {
       this.grid1config.type = 'horizontalBar';
-      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString='DQRI Score';
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString='';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='DQRI Score';
       this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithOutPercent;
     } else if (this.scoreSelected === 'dqpScore') {
       this.grid1config.type = 'bar';
       this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'DQP Score';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='';
       this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
     } else if (this.scoreSelected === 'impactScore') {
       this.grid1config.type = 'bubble';
       this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'Impact Score';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='';
       this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
     } else {
       this.grid1config.type = 'horizontalBar';
       this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = '';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='';
       this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithOutPercent;
     }
   }
@@ -358,6 +366,7 @@ export class InternalControlsPageComponent implements OnInit {
     else{
       this.grid2config.options.scales.yAxes[0].scaleLabel.labelString='ECDE Count';
     }
+    console.log(this.grid2config.options.scales.yAxes[0].scaleLabel.labelString);
     this.chart2.chart.data = this.grid2config.data;
     this.chart2.chart.render(this.grid2config);
     this.chart2.chart.update();
