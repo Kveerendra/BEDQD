@@ -76,17 +76,18 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
               callback: function (x) {
 
                   x = Math.abs(x).toString();
-                  var afterPoint = '';
-                  if (x.indexOf('.') > 0)
+                  let afterPoint = '';
+                  if (x.indexOf('.') > 0) {
                     afterPoint = x.substring(x.indexOf('.'), x.length);
+                  }
                   x = Math.floor(x);
                   x = x.toString();
-                  var lastThree = x.substring(x.length - 3);
-                  var otherNumbers = x.substring(0, x.length - 3);
-                  if (otherNumbers != '')
+                  let lastThree = x.substring(x.length - 3);
+                  const otherNumbers = x.substring(0, x.length - 3);
+                  if (otherNumbers != '') {
                     lastThree = ',' + lastThree;
-                  var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
-                  return res
+                  }
+                  return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
                 }
             },
             scaleLabel: {
@@ -116,8 +117,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       tooltips: {
         callbacks: {
            label: function(t, d) {
-              var datasetLabel = d.datasets[t.datasetIndex].label;
-              var xLabel = Math.abs(t.xLabel);
+              let datasetLabel = d.datasets[t.datasetIndex].label;
+              let xLabel = Math.abs(t.xLabel);
               return datasetLabel + ': ' + xLabel;
            }
         }
@@ -170,16 +171,17 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             ticks: {
               callback: function (x) {
                 x = x.toString();
-                var afterPoint = '';
-                if (x.indexOf('.') > 0)
+                let afterPoint = '';
+                if (x.indexOf('.') > 0) {
                   afterPoint = x.substring(x.indexOf('.'), x.length);
+                }
                 x = Math.floor(x);
                 x = x.toString();
-                var lastThree = x.substring(x.length - 3);
-                var otherNumbers = x.substring(0, x.length - 3);
+                let lastThree = x.substring(x.length - 3);
+                let otherNumbers = x.substring(0, x.length - 3);
                 if (otherNumbers != '')
                   lastThree = ',' + lastThree;
-                var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+                let res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
                 return res;
               },
               beginAtZero: true,
@@ -290,8 +292,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       },tooltips: {
         callbacks: {
            label: function(t, d) {
-              var datasetLabel = d.datasets[t.datasetIndex].label;
-              var xLabel = Math.abs(t.xLabel);
+              let datasetLabel = d.datasets[t.datasetIndex].label;
+              let xLabel = Math.abs(t.xLabel);
               return datasetLabel + ': ' + xLabel;
            }
         }
@@ -391,22 +393,22 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData().then(dataaa => {
-      var grid3MapList;
-      var grid4MapList;
-      var grid5MapList;
-      var dataset_grid3;
-      var dataset_grid4;
-      var dataset_grid5;
-      var dataset_grid6;
-      var yearQuarter = [];
-      var lob = [];
-      var sourceSystem = [];
+      let grid3MapList;
+      let grid4MapList;
+      let grid5MapList;
+      let dataset_grid3;
+      let dataset_grid4;
+      let dataset_grid5;
+      let dataset_grid6;
+      let yearQuarter = [];
+      let lob = [];
+      let sourceSystem = [];
 
-      var openDQIssuesData = this.service.getdataQualityScoreData();
-      var grid3Data = this.service.getopenDQPrioritySummary();
-      var grid4Data = this.service.getopenDQPriorityDtlsLowPr();
-      var appGridData = this.service.getissueSummaryLst();
-      var issueDetailsMap = this.service.getissueTypeDetails();
+      let openDQIssuesData = this.service.getdataQualityScoreData();
+      let grid3Data = this.service.getopenDQPrioritySummary();
+      let grid4Data = this.service.getopenDQPriorityDtlsLowPr();
+      let appGridData = this.service.getissueSummaryLst();
+      let issueDetailsMap = this.service.getissueTypeDetails();
 
       this.openDQIssues = Math.round(openDQIssuesData['dqScore']).toString();
       this.header = openDQIssuesData['header'].toString();
@@ -481,35 +483,35 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   }
 
   filterLOBData(e) {
-    var labels = [];
+    let labels = [];
     for (const key in this.LOBFilter) {
       if (this.LOBFilter[key]) {
         labels.push(key);
       }
     }
 
-    var tempVar = {};
-    var tempArray = [];
+    let templet = {};
+    let tempArray = [];
 
-    var appGridData = this.service.getissueSummaryLst();
+    const appGridData = this.service.getissueSummaryLst();
 
     for (const itr_3 in appGridData) {
       if (this.LOBFilter[appGridData[itr_3]['lob']]) {
-        if (tempVar[appGridData[itr_3]['legalEntity']]) {
-          tempVar[appGridData[itr_3]['legalEntity']]['crntQtr'] =
+        if (templet[appGridData[itr_3]['legalEntity']]) {
+          templet[appGridData[itr_3]['legalEntity']]['crntQtr'] =
             appGridData[itr_3]['currentQuarter'];
-          tempVar[appGridData[itr_3]['legalEntity']]['prQtr'] =
+          templet[appGridData[itr_3]['legalEntity']]['prQtr'] =
             appGridData[itr_3]['priorQuarter'];
-          tempVar[appGridData[itr_3]['legalEntity']]['change'] =
+          templet[appGridData[itr_3]['legalEntity']]['change'] =
             appGridData[itr_3]['change'];
         } else {
-          tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
+          templet[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
         }
       }
     }
 
-    for (const itr_4 in tempVar) {
-      tempArray.push(tempVar[itr_4]);
+    for (const itr_4 in templet) {
+      tempArray.push(templet[itr_4]);
     }
     this.rowData = tempArray;
     this.grid.rowData = this.rowData;
@@ -518,95 +520,97 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     this.chart2.data.labels = labels;
     this.chart2.chart.update();
   }
-  changeData1(name) {
+  changeData1() {
     document.getElementById('div1').style.display = 'block';
     document.getElementById('div2').style.display = 'none';
   }
 
-  changeData2(name) {
+  changeData2() {
     document.getElementById('div1').style.display = 'none';
     document.getElementById('div2').style.display = 'block';
   }
 
   filteryearQtr(e) {
-    var tempVar = {};
-    var tempArray = [];
+    let templet = {};
+    let tempArray = [];
 
-    var appGridData = this.service.getissueSummaryLst();
+    const appGridData = this.service.getissueSummaryLst();
 
     for (const itr_3 in appGridData) {
       if (this.yearQtr[appGridData[itr_3]['yearQuarter']]) {
-        if (tempVar[appGridData[itr_3]['legalEntity']]) {
-          tempVar[appGridData[itr_3]['legalEntity']]['crntQtr'] =
+        if (templet[appGridData[itr_3]['legalEntity']]) {
+          templet[appGridData[itr_3]['legalEntity']]['crntQtr'] =
             appGridData[itr_3]['currentQuarter'];
-          tempVar[appGridData[itr_3]['legalEntity']]['prQtr'] =
+          templet[appGridData[itr_3]['legalEntity']]['prQtr'] =
             appGridData[itr_3]['priorQuarter'];
-          tempVar[appGridData[itr_3]['legalEntity']]['change'] =
+          templet[appGridData[itr_3]['legalEntity']]['change'] =
             appGridData[itr_3]['change'];
         } else {
-          tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
+          templet[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
         }
       }
     }
 
-    for (const itr_4 in tempVar) {
-      tempArray.push(tempVar[itr_4]);
+    for (const itr_4 in templet) {
+      tempArray.push(templet[itr_4]);
     }
     this.rowData = tempArray;
     this.grid.rowData = this.rowData;
   }
 
   filterSourceSystem(e) {
-    var tempVar = {};
-    var tempArray = [];
+    let templet = {};
+    let tempArray = [];
 
-    var appGridData = this.service.getissueSummaryLst();
+    const appGridData = this.service.getissueSummaryLst();
 
     for (const itr_3 in appGridData) {
       if (this.SourceSystem[appGridData[itr_3]['sourceSystem']]) {
-        if (tempVar[appGridData[itr_3]['legalEntity']]) {
-          tempVar[appGridData[itr_3]['legalEntity']]['crntQtr'] =
+        if (templet[appGridData[itr_3]['legalEntity']]) {
+          templet[appGridData[itr_3]['legalEntity']]['crntQtr'] =
             appGridData[itr_3]['currentQuarter'];
-          tempVar[appGridData[itr_3]['legalEntity']]['prQtr'] =
+          templet[appGridData[itr_3]['legalEntity']]['prQtr'] =
             appGridData[itr_3]['priorQuarter'];
-          tempVar[appGridData[itr_3]['legalEntity']]['change'] =
+          templet[appGridData[itr_3]['legalEntity']]['change'] =
             appGridData[itr_3]['change'];
         } else {
-          tempVar[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
+          templet[appGridData[itr_3]['legalEntity']] = appGridData[itr_3];
         }
       }
     }
 
-    for (const itr_4 in tempVar) {
-      tempArray.push(tempVar[itr_4]);
+    for (const itr_4 in templet) {
+      if (templet[itr_4]) {
+              tempArray.push(templet[itr_4]);
+      }
     }
     this.rowData = tempArray;
     this.grid.rowData = this.rowData;
   }
   changeData4() {
-    document.getElementById("div4").style.display = "block";
-    document.getElementById("div5").style.display = "block";
-    document.getElementById("div3").style.display = "none";
+    document.getElementById('div4').style.display = 'block';
+    document.getElementById('div5').style.display = 'block';
+    document.getElementById('div3').style.display = 'none';
   }
 
   changeData5() {
-    document.getElementById("div4").style.display = "none";
-    document.getElementById("div5").style.display = "none";
-    document.getElementById("div3").style.display = "block";
+    document.getElementById('div4').style.display = 'none';
+    document.getElementById('div5').style.display = 'none';
+    document.getElementById('div3').style.display = 'block';
   }
 
   formatNumberWithComma = function (x) {
     x = x.toString();
-    var afterPoint = '';
+    let afterPoint = '';
     if (x.indexOf('.') > 0)
       afterPoint = x.substring(x.indexOf('.'), x.length);
     x = Math.floor(x);
     x = x.toString();
-    var lastThree = x.substring(x.length - 3);
-    var otherNumbers = x.substring(0, x.length - 3);
+    let lastThree = x.substring(x.length - 3);
+    let otherNumbers = x.substring(0, x.length - 3);
     if (otherNumbers != '')
       lastThree = ',' + lastThree;
-    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    let res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
     return res;
   }
 }
