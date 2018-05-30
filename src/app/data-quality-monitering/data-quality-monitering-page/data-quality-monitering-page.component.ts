@@ -20,6 +20,9 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     sourceSystem: 'Source System',
     entityLegalLob: 'Entity Legal/LOB'
   };
+  allLobSelected = true;
+  allYearQrtrSelected = true;
+  allSourceSysSelected = true;
   LOBFilter = {};
   SourceSysFilter = {};
   QuarterFilterQtr = {};
@@ -68,7 +71,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       responsive: true,
       maintainAspectRatio: false,
       legend: {
-        display: true
+        display: true,
+         position: 'bottom'
       },
       tooltips: {
         enabled: true,
@@ -77,6 +81,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       scales: {
         xAxes: [
           {
+             position: 'top' ,
             barPercentage: 0.8
           }
         ],
@@ -384,5 +389,26 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       lastThree = ',' + lastThree;
     var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
     return res;
+  }
+  selectAllLobs = function (e) {
+    for (let key in this.LOBFilter) {
+      if (this.LOBFilter[key] !== undefined) {
+        this.LOBFilter[key] = this.allLobSelected;
+      }
+    }
+  }
+  selectAllYearQrtr = function (e) {
+    for (let key in this.LOBFilter) {
+      if (this.LOBFilter[key] !== undefined) {
+        this.LOBFilter[key] = this.allYearQrtrSelected;
+      }
+    }
+  }
+  selectAllSourceSys = function (e) {
+    for (let key in this.LOBFilter) {
+      if (this.LOBFilter[key] !== undefined) {
+        this.LOBFilter[key] = this.allSourceSysSelected;
+      }
+    }
   }
 }
