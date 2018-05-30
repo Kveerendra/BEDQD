@@ -51,15 +51,14 @@ export class GridComponent implements OnInit {
       var rowDataWithKeys = {};
       this.service.getData().then(dataaa => {
         let recievedData_3 = [];
-        /*if (this.dimensionFilter) {
-          recievedData_3 = this.service
-            .getdQMonitoringDetailsbySourceSystem()
-            .filter(x => {
-              return x['databaseName'].toLowerCase().indexOf('insurance') == -1;
-            });
-        } else {*/
-        recievedData_3 = this.service.getdQMonitoringDetailsbySourceSystem();
-        //  }
+      //  recievedData_3 = this.service.getdQMonitoringDetailsbySourceSystem();
+        recievedData_3 = this.service
+        .getdQMonitoringDetailsbySourceSystem()
+        .filter(x => {
+          return x['databaseName'].toLowerCase().indexOf('insurance') !== -1;
+        });
+
+
         for (var i in recievedData_3) {
           if (rowDataWithKeys[recievedData_3[i]['databaseName']]) {
             rowDataWithKeys[recievedData_3[i]['databaseName']]['rcrdsPsd'] =
@@ -92,7 +91,7 @@ export class GridComponent implements OnInit {
     return params.value + '%';
   }
 
-  recordsPassedGetter(params) {
+  public recordsPassedGetter(params) {
     return params.getValue('rcrdsPsd') * 1000;
   }
   recordsTestedGetter(params) {

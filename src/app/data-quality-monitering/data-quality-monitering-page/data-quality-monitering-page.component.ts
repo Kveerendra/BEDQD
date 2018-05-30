@@ -201,8 +201,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       this.dataQualityScoreModel['header']='Data Quality Score';
       this.ecdeWithDQModel['header']='ECDE with DQ Monitoring';
       this.bcdeWithDQModel['header']='BCDE with DQ Monitoring';
-
-
+     // this.filterDimensionData();
       const dropDown2 = this.service.getdQMonitoringDetailsbySourceSystem();
       for (const k in dropDown2) {
         if (this.drop2.indexOf(dropDown2[k]['ads']) === -1) {
@@ -260,6 +259,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       }
       this.grid2loaded = true;
     });
+
   }
 
   filterData(e) {
@@ -326,19 +326,63 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     this.chart2.data.labels = labels;
     this.chart2.chart.update();
   }
-  filterDimensionData(e) {
+  filterDimensionData(): void {
+    let recievedData_3 = [];
+    var rowDataWithKeys = {};
     if (this.dimensionFilter === 'entityLegalLob') {
-      this.grid.rowData = this.service
+      recievedData_3 = this.service
         .getdQMonitoringDetailsbySourceSystem()
         .filter(x => {
           return x['databaseName'].toLowerCase().indexOf('insurance') === -1;
         });
     } else if (this.dimensionFilter === 'sourceSystem') {
-      this.grid.rowData = this.service
+      recievedData_3 = this.service
         .getdQMonitoringDetailsbySourceSystem()
         .filter(x => {
           return x['databaseName'].toLowerCase().indexOf('insurance') !== -1;
         });
     }
+
+    for (var i in recievedData_3) {
+      if (rowDataWithKeys[recievedData_3[i]['databaseName']]) {
+        rowDataWithKeys[recievedData_3[i]['databaseName']]['rcrdsPsd'] =
+          parseInt(
+            rowDataWithKeys[recievedData_3[i]['databaseName']]['rcrdsPsd']
+          ) + parseInt(recievedData_3[i]['rcrdsPsd']);
+        rowDataWithKeys[recievedData_3[i]['databaseName']]['rowsTstd'] =
+          parseInt(
+            rowDataWithKeys[recievedData_3[i]['databaseName']]['rowsTstd']
+          ) + parseInt(recievedData_3[i]['rowsTstd']);
+      } else {
+        rowDataWithKeys[recievedData_3[i]['databaseName']] =
+          recievedData_3[i];
+      }
+    }
+
+    var tempArray = [];
+    for (var i in rowDataWithKeys) {
+      if(rowDataWithKeys[i]) {
+      rowDataWithKeys[i]['rcrdsPsd'] = this.formatNumberWithComma(rowDataWithKeys[i]['rcrdsPsd']);
+      rowDataWithKeys[i]['rowsTstd'] = this.formatNumberWithComma(rowDataWithKeys[i]['rowsTstd']);
+      rowDataWithKeys[i]['chgFrmPrQtr'] = Math.abs(rowDataWithKeys[i]['chgFrmPrQtr']);
+      tempArray.push(rowDataWithKeys[i]);
+    }
+  }
+    this.grid.rowData = tempArray;
+  }
+
+  formatNumberWithComma = function (x) {
+    x = x.toString();
+    var afterPoint = '';
+    if (x.indexOf('.') > 0)
+      afterPoint = x.substring(x.indexOf('.'), x.length);
+    x = Math.floor(x);
+    x = x.toString();
+    var lastThree = x.substring(x.length - 3);
+    var otherNumbers = x.substring(0, x.length - 3);
+    if (otherNumbers != '')
+      lastThree = ',' + lastThree;
+    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+    return res;
   }
 }

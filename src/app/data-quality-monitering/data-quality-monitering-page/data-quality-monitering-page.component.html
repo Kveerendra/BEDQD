@@ -24,17 +24,19 @@
 </div>
 <br>
 <div class="container-fluid row">
-  <div class="col-5 col-xs-12" style="border-right: 1px solid #ccc;">
-    <span style="font-weight: bolder;font-size: 12px;">DQ Monitoring Details By Source System</span>
-    <div ngbDropdown #radioDrop class="d-inline-block" style="padding-left: 80px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;">{{displayJson[dimensionFilter]}}</button>
-      <ul ngbDropdownMenu autoClose="true" aria-labelledby="dropdownBasic1">
-        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-          <input type="radio" id="dimensionFilterid" [(ngModel)]="dimensionFilter" value="sourceSystem" (change)="filterDimensionData($event)">Source System
-        </li>
-        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-          <input type="radio" id="dimensionFilterid" [(ngModel)]="dimensionFilter" value="entityLegalLob" (change)="filterDimensionData($event)">Legal Entity/LOB
-      </ul>
+  <div class="col-md-6 col-sm-12 ">
+    <div class="text-center">
+      <strong class="label">DQ Monitoring Details By Source System</strong>
+      <div ngbDropdown #radioDrop class="d-inline-block" style="padding-left: 80px;">
+        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;">{{displayJson[dimensionFilter]}}</button>
+        <ul ngbDropdownMenu autoClose="true" aria-labelledby="dropdownBasic1">
+          <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+            <input type="radio" id="dimensionFilterid" [(ngModel)]="dimensionFilter" value="sourceSystem" (change)="filterDimensionData()">Source System
+          </li>
+          <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+            <input type="radio" id="dimensionFilterid" [(ngModel)]="dimensionFilter" value="entityLegalLob" (change)="filterDimensionData()">Legal Entity/LOB
+        </ul>
+      </div>
     </div>
     <br>
     <br>
@@ -42,56 +44,63 @@
       <app-grid #grid></app-grid>
     </div>
   </div>
-  <div class="row col-md-7">
-    <div ngbDropdown class="d-inline-block" style="padding-right: 25px;padding-left: 35px;">
-      <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">LOB</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
-        <li class="dropdown-item" *ngFor="let d4 of drop4" style="width: 80px;height: 30px;font-size: 12px;">
-          <input type="checkbox" id="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d4]" (change)="filterData($event)">{{d4}}
-        </li>
-      </ul>
-    </div>
-    <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 100px;height: 30px;font-size: 12px;">Dimension</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;"id="LOBFilterId" checked="checked" [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)" >
-          ADS
-        </li>
-        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;"  id="SourceSysFilterid" [(ngModel)]="SourceSysFilter[d1]" (click)="filterDataOnBUCF($event)">
-          BUs/CFs
-        </li>
-      </ul>
-    </div>
-    <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
-        <li class="dropdown-item" *ngFor="let d1 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
-          <input type="checkbox" name="{{d1}}" id="SourceSysFilterid" checked="checked" [(ngModel)]="SourceSysFilter[d1]" (change)="filterSourceSystemData($event)">{{d1}}
-        </li>
-        <!--  <button class="dropdown-item">Another Action</button>
+  <div class="col-md-6 col-sm-12">
+    <div class="row">
+      <div ngbDropdown class="d-inline-block" style="padding-right: 25px;padding-left: 35px;">
+        <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">LOB</button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+          <li class="dropdown-item" *ngFor="let d4 of drop4" style="width: 80px;height: 30px;font-size: 12px;">
+            <input type="checkbox" id="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d4]" (change)="filterData($event)">{{d4}}
+          </li>
+        </ul>
+      </div>
+      <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
+        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 100px;height: 30px;font-size: 12px;">Dimension</button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)">
+            ADS
+          </li>
+          <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="SourceSysFilter[d1]"
+            (click)="filterDataOnBUCF($event)">
+            BUs/CFs
+          </li>
+        </ul>
+      </div>
+      <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
+        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
+          <li class="dropdown-item" *ngFor="let d1 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
+            <input type="checkbox" name="{{d1}}" id="SourceSysFilterid" checked="checked" [(ngModel)]="SourceSysFilter[d1]" (change)="filterSourceSystemData($event)">{{d1}}
+          </li>
+          <!--  <button class="dropdown-item">Another Action</button>
           <button class="dropdown-item">Something else is here</button> -->
-      </ul>
-    </div>
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
-        <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
-          <input type="checkbox" name="{{d3}}" id="QuarterFilterQtrid" checked="checked" [(ngModel)]="QuarterFilterQtr[d3]" (change)="filterQuarterData($event)">{{d3}}
-        </li>
-        <!--  <button class="dropdown-item">Another Action</button>
+        </ul>
+      </div>
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
+          <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
+            <input type="checkbox" name="{{d3}}" id="QuarterFilterQtrid" checked="checked" [(ngModel)]="QuarterFilterQtr[d3]" (change)="filterQuarterData($event)">{{d3}}
+          </li>
+          <!--  <button class="dropdown-item">Another Action</button>
           <button class="dropdown-item">Something else is here</button> -->
-      </ul>
+        </ul>
+      </div>
     </div>
     <br>
     <br>
-    <div *ngIf="grid1loaded" class="col-md-7 col-xs-12">
-      <span style="font-weight: bolder;font-size: 12px;">% of ADS Profiled</span>
-      <br>
-      <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;width: 600px;" [options]="grid1config.options"></chart>
-      <br>
-      <span style="font-weight: bolder;font-size: 12px;">ECDE and BCDE with DQ Monitoring by ADS</span><br><br>
-      <!-- <div class="col-md-2 col-sm-12"></div> -->
-      <chart #grid2Chart [type]="grid2config.type" [data]="grid2config.data" style="height: 300px;width: 600px;" [options]="grid2config.options"></chart>
+    <div *ngIf="grid1loaded text-center" class="col-12">
+      <div class="text-center">
+        <strong class=" label">% of ADS Profiled</strong>
+        <br>
+        <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;width: 600px;" [options]="grid1config.options"></chart>
+        <br>
+        <strong class="label">ECDE and BCDE with DQ Monitoring by ADS</strong>
+        <br>
+        <br>
+        <!-- <div class="col-md-2 col-sm-12"></div> -->
+        <chart #grid2Chart [type]="grid2config.type" [data]="grid2config.data" style="height: 300px;width: 600px;" [options]="grid2config.options"></chart>
+      </div>
     </div>
   </div>
 </div>
