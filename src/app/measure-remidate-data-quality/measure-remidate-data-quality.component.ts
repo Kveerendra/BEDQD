@@ -108,6 +108,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             },
             ticks: {
               fontFamily: 'Open Sans Bold, sans-serif'
+            },scaleLabel: {
+              display: true,
+              labelString: 'Legal Entity'
             },
             stacked: true,
             position: 'right',
@@ -205,6 +208,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             },
             ticks: {
               fontFamily: 'Open Sans Bold, sans-serif'
+            },scaleLabel: {
+              display: true,
+              labelString: 'Legal Entity'
             },
             stacked: true,
             position: 'left',
