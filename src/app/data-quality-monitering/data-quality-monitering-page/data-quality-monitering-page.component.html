@@ -26,7 +26,7 @@
 <div class="container-fluid row">
   <div class="col-md-6 col-sm-12 ">
     <div class="text-center">
-      <strong class="label">DQ Monitoring Details By Source System</strong>
+      <strong class="label" style="font-size: 14px;">DQ Monitoring Details By Source System</strong>
       <div ngbDropdown #radioDrop class="d-inline-block" style="padding-left: 80px;">
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;">{{displayJson[dimensionFilter]}}</button>
         <ul ngbDropdownMenu autoClose="true" aria-labelledby="dropdownBasic1">
@@ -40,9 +40,19 @@
     </div>
     <br>
     <br>
-    <div *ngIf="grid1loaded" style="font-size: 8px;">
+    <div *ngIf="grid1loaded" style="font-size: 8px; padding-bottom: 20px;">
       <app-grid #grid></app-grid>
     </div>
+    <div class="row mt-3">
+        <div class="col-5" style="margin-left: 15px;border: #ccc solid 1px; padding: 5px;background-color: #ccc">
+          <div class="" style="font-weight: bolder;margin-bottom: 10px;">Glossary</div>
+          <hr>
+          <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">ADS : <span style="color: #43b02a">Authoritative Data Source</span></div>
+          <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">BCDE: <span style="color: #43b02a">Business Critical Data Element</span></div>
+          <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">ECDE : <span style="color: #43b02a">Enterprise Critical Data Element</span></div>
+          <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">LOB : <span style="color: #43b02a">Line of Business</span></div>
+        </div>
+      </div>
   </div>
   <div class="col-md-6 col-sm-12">
     <div class="row">
@@ -85,9 +95,9 @@
       <div ngbDropdown class="d-inline-block">
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
         <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
-            <!--<li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
                 <input type="checkbox" [(ngModel)]="allYearQrtrSelected" (change)="selectAllYearQrtr($event)">All
-              </li>-->
+              </li>
           <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
             <input type="checkbox" name="{{d3}}" id="QuarterFilterQtrid" checked="checked" [(ngModel)]="QuarterFilterQtr[d3]" (change)="filterQuarterData($event)">{{d3}}
           </li>
@@ -100,11 +110,11 @@
     <br>
     <div *ngIf="grid1loaded text-center" class="col-12">
       <div class="text-center">
-        <strong class=" label">% of ADS Profiled</strong>
+        <strong class=" label" style="font-size: 14px;">% of ADS Profiled</strong>
         <br>
         <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;width: 600px;" [options]="grid1config.options"></chart>
         <br>
-        <strong class="label">ECDE and BCDE with DQ Monitoring by ADS</strong>
+        <strong class="label" style="font-size: 14px;">ECDE and BCDE with DQ Monitoring by ADS</strong>
         <br>
         <br>
         <!-- <div class="col-md-2 col-sm-12"></div> -->
