@@ -20,6 +20,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   openDQIssues: String;
   header: String;
   columnDefs;
+  allLobSelected = true;
   rowData = [];
   drop1 = [];
   drop2 = [];
@@ -612,5 +613,14 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       lastThree = ',' + lastThree;
     let res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
     return res;
+  }
+
+  selectAllLobs = function (e) {
+    for (let key in this.LOBFilter) {
+      if (this.LOBFilter[key] !== undefined) {
+        this.LOBFilter[key] = this.allLobSelected;
+      }
+    }
+    this.filterLOBData();
   }
 }

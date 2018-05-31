@@ -11,7 +11,7 @@
   </div>
 </div>
 <br/>
-  <div class="row" width="100%">
+  <div class="row">
   <div class="row" style="border-bottom: 1px solid #ccc;margin-bottom: 80px;">
       <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;margin-bottom: 10px;padding-left: 430px;">High Priority DQ Issues for current Quarter</div>
       <div *ngIf="grid3loaded"  id = "div5" class="col-md-5 text-center" style="margin-bottom: 50px;border-right: 1px solid #ccc;">
@@ -19,7 +19,7 @@
 
         <br>
         <br>
-        <chart #grid3Chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="width:500px;margin-right: 80px;"></chart>
+        <chart #grid3Chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="width:500px;margin-right: 80px;margin-left: 12px;"></chart>
       </div>
 
       <div *ngIf="grid4loaded" id = "div4"  class="col-md-5 text-center">
@@ -28,13 +28,16 @@
         <br>
         <chart #grid4Chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options"style="width:500px"></chart>
       </div>
-      <div id="div3" class="col-md-10 " style="display:none; max-height: 300px;overflow-y: scroll;">
-        <app-grid3></app-grid3>
+      <div id="div3" class="col-md-10" style="display:none;">
+        <app-grid3 ></app-grid3>
       </div>
     <div class="col-2 float-right" >
         <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
             <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
             <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+                <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
+            </li>
             <li class="dropdown-item" *ngFor="let d2 of drop2"style ="width: 80px;height: 30px;font-size: 12px;">
                  <input type="checkbox" id ="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d2]" (change)="filterLOBData($event)">{{d2}}
             </li>
@@ -57,7 +60,7 @@
 <div class="row">
   <div class="col-md-10">
       <div class="col-md-12 " style="color: #007399;font-size: 13px;font-weight: bolder;text-align: center;">Open DQ Issues Prior Vs. Current Quarter</div>
-      <div id="div1" style="max-height: 200px;overflow-y: scroll; margin-left: 80px; margin-bottom: 30px;">
+      <div id="div1" style="margin-bottom: 30px;">
         <app-grid2 #gridTable></app-grid2>
       </div>
       <div style ="display:none" id="div2" class=" col-md-12">

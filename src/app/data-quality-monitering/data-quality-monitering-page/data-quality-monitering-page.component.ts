@@ -396,19 +396,22 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         this.LOBFilter[key] = this.allLobSelected;
       }
     }
+    this.filterData();
   }
   selectAllYearQrtr = function (e) {
-    for (let key in this.LOBFilter) {
-      if (this.LOBFilter[key] !== undefined) {
-        this.LOBFilter[key] = this.allYearQrtrSelected;
+    for (let key in this.QuarterFilterQtr) {
+      if (this.QuarterFilterQtr[key] !== undefined) {
+        this.QuarterFilterQtr[key] = this.allYearQrtrSelected;
       }
     }
+    this.filterQuarterData();
   }
   selectAllSourceSys = function (e) {
-    for (let key in this.LOBFilter) {
-      if (this.LOBFilter[key] !== undefined) {
-        this.LOBFilter[key] = this.allSourceSysSelected;
+    for (let key in this.SourceSysFilter) {
+      if (this.SourceSysFilter[key] !== undefined) {
+        this.SourceSysFilter[key] = this.allSourceSysSelected;
       }
     }
+    this.filterSourceSystemData();
   }
 }

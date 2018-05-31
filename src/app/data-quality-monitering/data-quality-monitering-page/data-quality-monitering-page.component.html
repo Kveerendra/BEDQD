@@ -26,7 +26,7 @@
 <div class="container-fluid row">
   <div class="col-md-6 col-sm-12 ">
     <div class="text-center">
-      <strong class="label">DQ Monitoring Details By Source System</strong>
+      <strong class="label" style="font-size: 12px;">DQ Monitoring Details By Source System</strong>
       <div ngbDropdown #radioDrop class="d-inline-block" style="padding-left: 80px;">
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;">{{displayJson[dimensionFilter]}}</button>
         <ul ngbDropdownMenu autoClose="true" aria-labelledby="dropdownBasic1">
@@ -100,11 +100,11 @@
     <br>
     <div *ngIf="grid1loaded text-center" class="col-12">
       <div class="text-center">
-        <strong class=" label">% of ADS Profiled</strong>
+        <strong class="label" style="font-size: 12px;">% of ADS Profiled</strong>
         <br>
         <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" style="height: 300px;width: 600px;" [options]="grid1config.options"></chart>
         <br>
-        <strong class="label">ECDE and BCDE with DQ Monitoring by ADS</strong>
+        <strong class="label" style="font-size: 12px;">ECDE and BCDE with DQ Monitoring by ADS</strong>
         <br>
         <br>
         <!-- <div class="col-md-2 col-sm-12"></div> -->

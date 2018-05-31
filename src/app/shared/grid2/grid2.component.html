@@ -1,6 +1,7 @@
-<div style="font-size: 5px;" ag-grid="gridOptions" class="ag-theme-balham col-md-11" >
-    <ag-grid-angular  #gridComp class="ag-theme-material" [enableFilter]="true" [enableSorting]="true"
-  [rowData]="rowData" [domLayout]="'autoHeight'"
-  [columnDefs]="columnDefs"style="font-size: 12px;">
-  </ag-grid-angular></div>
+<div>
+    <ag-grid-angular  #gridComp class="ag-theme-balham" #grid style="width: 90%; height: 220px " [rowData]="rowData" [gridOptions]="gridOptions"
+    [columnDefs]="columnDefs"
+    [enableColResize]="true">
+  </ag-grid-angular>
+</div>
 
