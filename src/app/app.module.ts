@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, keyframes } from '@angular/core';
+import { NgModule, keyframes, APP_INITIALIZER } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
 import { AgGridModule } from 'ag-grid-angular';
@@ -12,6 +12,7 @@ import { MeasureRemidateDataQualityModule } from './measure-remidate-data-qualit
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import { InternalControlsModule } from './internal-controls/internal-controls.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataProvider } from './shared/DataProvider';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   InternalControlsModule,
   BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    DataProvider,
+    { provide: APP_INITIALIZER, useFactory: dataProviderFactory, deps: [DataProvider], multi: true }
+  ],
   bootstrap: [AppComponent ]
 })
 export class AppModule { }
+
+export function dataProviderFactory(provider: DataProvider) {
+  return () => provider.loadinternalControlsJsonObject();
+}

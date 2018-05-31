@@ -7,21 +7,30 @@ export class InternalControlService {
   // just change this url to point to the service
   private url = 'InternalControls.json';
   constructor(private httpc: HttpClient) {
-    this.getData().then(data => {
-      this.internalControlsJsonObject = data;
-    });
+    if (this.internalControlsJsonObject === {}) {
+      this.getData().then(data => {
+        this.internalControlsJsonObject = data;
+      });
+    }
+  }
+  setData(data) {
+    this.internalControlsJsonObject = data;
   }
   getData() {
     return new Promise(resolve => {
-      this.httpc.get(this.url).subscribe(
-        data => {
-          resolve(data);
-          this.internalControlsJsonObject = data;
-        },
-        err => {
-          console.error(err);
-        }
-      );
+      if (Object.keys(this.internalControlsJsonObject).length <= 0) {
+        this.httpc.get(this.url).subscribe(
+          data => {
+            resolve(data);
+            this.internalControlsJsonObject = data;
+          },
+          err => {
+            console.error(err);
+          }
+        );
+      } else {
+        resolve(this.internalControlsJsonObject);
+      }
     });
   }
   getImpactScoreModel() {
