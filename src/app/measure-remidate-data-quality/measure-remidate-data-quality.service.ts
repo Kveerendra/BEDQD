@@ -12,7 +12,21 @@ export class MeasureRemidateDQService {
     }
     getData() {
         return new Promise(resolve => {
-            this.httpc.get(this.url).subscribe((data) => { resolve(data); this.MeasureRemidateJsonObject = data; }, err => { console.error(err); });
+            if (Object.keys(this.MeasureRemidateJsonObject).length <= 0) {
+                this.httpc.get(this.url).subscribe(
+                    data => {
+                        resolve(data);
+                        this.MeasureRemidateJsonObject = data;
+                    },
+                    err => {
+                        console.error(err);
+                    }
+                );
+            } else {
+                resolve(this.MeasureRemidateJsonObject);
+            }
+
+
         });
     }
     getdataQualityScoreData() {
@@ -25,17 +39,17 @@ export class MeasureRemidateDQService {
         return this.MeasureRemidateJsonObject['openDQPriorityDtlsLowPr']['openDQPrioritySummaryMap'];
     }
 
-    getissueSummaryLst(){
+    getissueSummaryLst() {
         return this.MeasureRemidateJsonObject['issueSummaryLst'];
     }
 
-    getissueTypeDetails(){
+    getissueTypeDetails() {
         return this.MeasureRemidateJsonObject['issueTypeDetails']['openDQIssuesTypeDetailsMap'];
     }
 
-    getopenDQPrioritySummaryMap(){
+    getopenDQPrioritySummaryMap() {
         return this.MeasureRemidateJsonObject['openDQPrioritySummary']['openDQPrioritySummaryMap'];
-        
+
     }
 }
 

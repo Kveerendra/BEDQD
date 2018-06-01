@@ -1,15 +1,87 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BEDQD</title>
-  <base href="/BEDQD/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+<!doctype html>
+<html>
+  <head>
+      <title>BEDQD</title>
+      <link rel = "icon" type="image/png" ng-href = "src/assets/favicon.png">
+      <base href="/BEDQD/">
+    <!-- reduced for brevity -->
+    
+    <!-- inline spinner styles to be able to display spinner right away -->
+    <style type="text/css">
+      body, html {
+        height: 100%;
+      }
+      .pokeball {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  display: inline-block;
+  animation: rotate 1.5s linear infinite;
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+}
+.pokeball .inner {
+  width: 150px;
+  height: 75px;
+  border: 48px solid #43b02a;
+  box-sizing: border-box;
+}
+.pokeball .upper, .pokeball .lower {
+  width: 100%;
+  position: absolute;
+  height: calc(50% - 5px);
+  overflow: hidden;
+}
+.pokeball .upper {
+  top: 0;
+}
+.pokeball .upper .inner {
+  border-radius: 123px 123px 0 0;
+  border-bottom: 0;
+  margin-bottom: -5px;
+}
+.pokeball .lower {
+  bottom: 0;
+}
+.pokeball .lower .inner {
+  margin-top: -5px;
+  border-radius: 0 0 123px 123px;
+  border-top: 0;
+}
+.pokeball .middle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  position: absolute;
+  left: calc(50% - 20px);
+  top: calc(50% - 20px);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+    </style>
+  </head>
+  <body>
+    <app-root> <!-- selector from app.component.ts -->
+      
+      <!-- loading layout replaced by app after startupp -->
+      <div style = "position:relative;text-align: center;margin-top: 150px;font-weight: bolder;"><p>BEDQD Dasboards are getting initialized...</p></div>
+      
+      <div class="pokeball">
+          <div class="upper">
+            <div class="inner"></div>
+          </div>
+          <div class="middle"></div>
+          <div class="lower">
+            <div class="inner"></div>
+          </div>
+        </div>
+      
+    </app-root>
+  </body>
 </html>
