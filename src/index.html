@@ -9,59 +9,68 @@
     
     <!-- inline spinner styles to be able to display spinner right away -->
     <style type="text/css">
-      body, html {
-        height: 100%;
-      }
-      .pokeball {
-  width: 150px;
-  height: 150px;
+    .loading {
   position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.loading-bar {
   display: inline-block;
-  animation: rotate 1.5s linear infinite;
-  left: calc(50% - 75px);
-  top: calc(50% - 75px);
+  width: 25px;
+  height: 45px;
+  border-radius: 4px;
+  animation: loading 1s ease-in-out infinite;
 }
-.pokeball .inner {
-  width: 150px;
-  height: 75px;
-  border: 48px solid #43b02a;
-  box-sizing: border-box;
+.loading-bar:nth-child(1) {
+  background-color: #007399;
+  animation-delay: 0;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
 }
-.pokeball .upper, .pokeball .lower {
-  width: 100%;
-  position: absolute;
-  height: calc(50% - 5px);
-  overflow: hidden;
+.loading-bar:nth-child(2) {
+  background-color: #e30613;
+  animation-delay: 0.05s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
 }
-.pokeball .upper {
-  top: 0;
+.loading-bar:nth-child(3) {
+  background-color: #f0ca34;
+  animation-delay: .10s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
 }
-.pokeball .upper .inner {
-  border-radius: 123px 123px 0 0;
-  border-bottom: 0;
-  margin-bottom: -5px;
+.loading-bar:nth-child(4) {
+  background-color: #000000;
+  animation-delay: .15s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
 }
-.pokeball .lower {
-  bottom: 0;
-}
-.pokeball .lower .inner {
-  margin-top: -5px;
-  border-radius: 0 0 123px 123px;
-  border-top: 0;
-}
-.pokeball .middle {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-color: #000;
-  position: absolute;
-  left: calc(50% - 20px);
-  top: calc(50% - 20px);
+.loading-bar:nth-child(5) {
+  background-color: #43b02a;
+  animation-delay: .20s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1, 2.2);
+  }
+  40% {
+    transform: scale(1);
   }
 }
     </style>
@@ -70,17 +79,15 @@
     <app-root> <!-- selector from app.component.ts -->
       
       <!-- loading layout replaced by app after startupp -->
-      <div style = "position:relative;text-align: center;margin-top: 150px;font-weight: bolder;"><p>BEDQD Dasboards are getting initialized...</p></div>
+
       
-      <div class="pokeball">
-          <div class="upper">
-            <div class="inner"></div>
-          </div>
-          <div class="middle"></div>
-          <div class="lower">
-            <div class="inner"></div>
-          </div>
-        </div>
+          <div class="loading">
+              <div class="loading-bar">B</div>&nbsp;
+              <div class="loading-bar">E</div>&nbsp;
+              <div class="loading-bar">D</div>&nbsp;
+              <div class="loading-bar">Q</div>&nbsp;
+              <div class="loading-bar">D</div>&nbsp;&nbsp;<span style="font-weight: bold;">Dashboards are getting initialized...</span>
+            </div>
       
     </app-root>
   </body>
