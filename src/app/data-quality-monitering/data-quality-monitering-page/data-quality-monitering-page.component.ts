@@ -15,6 +15,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   @ViewChild('grid1Chart') chart1: ChartComponent;
   @ViewChild('grid2Chart') chart2: ChartComponent;
   @ViewChild('grid') grid: GridComponent;
+  auBuText : string;
   dimensionFilter = 'sourceSystem';
   displayJson = {
     sourceSystem: 'Source System',
@@ -189,7 +190,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     private dataQualityMoniteringService: DataQualityMoniteringService,
     private cd: ChangeDetectorRef,
     ngbDropdownConfig: NgbDropdownConfig
-  ) {
+    ) {
     this.drop1 = 'Source System';
     this.drop5 = 'ADS';
     this.service = dataQualityMoniteringService;
@@ -198,6 +199,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData().then(dataaa => {
+      this.auBuText = 'ADS'
       this.dataQualityScoreModel = this.service.getdQScoreModel();
       this.bcdeWithDQModel = this.service.getbcdeWithDQModel();
       this.ecdeWithDQModel = this.service.getecdeWithDQModel();
@@ -312,6 +314,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   }
   filterDataOnBUCF(e) {
     var labels = [];
+     this.auBuText = 'BUs/CFs'; 
     for (const key in this.SourceSysFilter) {
       if (this.SourceSysFilter[key]) {
         labels.push(key);
@@ -323,6 +326,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
 
   filterDataOnADS(e) {
     var labels = [];
+    this.auBuText = 'ADS'; 
     for (const key in this.LOBFilter) {
       if (this.LOBFilter[key]) {
         labels.push(key);
