@@ -26,7 +26,8 @@
 <div class="container-fluid row">
   <div class="col-md-6 col-sm-12 ">
     <div class="text-center">
-      <strong class="label" style="font-size: 14px;">DQ Monitoring Details By Source System</strong>
+      <strong *ngIf="dimensionFilter == 'sourceSystem'" class="label" style="font-size: 14px;">DQ Monitoring Details By Source System</strong>
+      <strong *ngIf="dimensionFilter == 'entityLegalLob'" class="label" style="font-size: 14px;">DQ Monitoring Details By Legal Entity/LOB</strong>
       <div ngbDropdown #radioDrop class="d-inline-block" style="padding-left: 80px;">
         <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;">{{displayJson[dimensionFilter]}}</button>
         <ul ngbDropdownMenu autoClose="true" aria-labelledby="dropdownBasic1">
@@ -67,44 +68,6 @@
           </li>
         </ul>
       </div>
-      <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
-        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 100px;height: 30px;font-size: 12px;">Dimension</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)">
-            ADS
-          </li>
-          <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="SourceSysFilter[d1]"
-            (click)="filterDataOnBUCF($event)">
-            BUs/CFs
-          </li>
-        </ul>
-      </div>
-      <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
-        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
-            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-                <input type="checkbox" [(ngModel)]="allSourceSysSelected" (change)="selectAllSourceSys($event)">All
-              </li>
-          <li class="dropdown-item" *ngFor="let d1 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
-            <input type="checkbox" name="{{d1}}" id="SourceSysFilterid" checked="checked" [(ngModel)]="SourceSysFilter[d1]" (change)="filterSourceSystemData($event)">{{d1}}
-          </li>
-          <!--  <button class="dropdown-item">Another Action</button>
-          <button class="dropdown-item">Something else is here</button> -->
-        </ul>
-      </div>
-      <div ngbDropdown class="d-inline-block">
-        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
-            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-                <input type="checkbox" [(ngModel)]="allYearQrtrSelected" (change)="selectAllYearQrtr($event)">All
-              </li>
-          <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
-            <input type="checkbox" name="{{d3}}" id="QuarterFilterQtrid" checked="checked" [(ngModel)]="QuarterFilterQtr[d3]" (change)="filterQuarterData($event)">{{d3}}
-          </li>
-          <!--  <button class="dropdown-item">Another Action</button>
-          <button class="dropdown-item">Something else is here</button> -->
-        </ul>
-      </div>
     </div>
     <br>
     <br>
@@ -117,6 +80,48 @@
         <strong class="label" style="font-size: 14px;">ECDE and BCDE with DQ Monitoring by ADS</strong>
         <br>
         <br>
+        <div class="row">
+            <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
+              <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 100px;height: 30px;font-size: 12px;">Dimension</button>
+              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)">
+                  ADS
+                </li>
+                <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="SourceSysFilter[d1]"
+                  (click)="filterDataOnBUCF($event)">
+                  BUs/CFs
+                </li>
+              </ul>
+            </div>
+            <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
+              <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
+              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
+                  <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+                      <input type="checkbox" [(ngModel)]="allSourceSysSelected" (change)="selectAllSourceSys($event)">All
+                    </li>
+                <li class="dropdown-item" *ngFor="let d1 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
+                  <input type="checkbox" name="{{d1}}" id="SourceSysFilterid" checked="checked" [(ngModel)]="SourceSysFilter[d1]" (change)="filterSourceSystemData($event)">{{d1}}
+                </li>
+                <!--  <button class="dropdown-item">Another Action</button>
+                <button class="dropdown-item">Something else is here</button> -->
+              </ul>
+            </div>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
+              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 150px;">
+                  <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+                      <input type="checkbox" [(ngModel)]="allYearQrtrSelected" (change)="selectAllYearQrtr($event)">All
+                    </li>
+                <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
+                  <input type="checkbox" name="{{d3}}" id="QuarterFilterQtrid" checked="checked" [(ngModel)]="QuarterFilterQtr[d3]" (change)="filterQuarterData($event)">{{d3}}
+                </li>
+                <!--  <button class="dropdown-item">Another Action</button>
+                <button class="dropdown-item">Something else is here</button> -->
+              </ul>
+            </div>
+          </div>
+          <br>
+          <br>
         <!-- <div class="col-md-2 col-sm-12"></div> -->
         <chart #grid2Chart [type]="grid2config.type" [data]="grid2config.data" style="height: 300px;width: 600px;" [options]="grid2config.options"></chart>
       </div>

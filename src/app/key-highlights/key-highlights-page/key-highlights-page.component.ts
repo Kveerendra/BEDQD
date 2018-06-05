@@ -84,7 +84,8 @@ export class KeyHighlightsPageComponent implements OnInit {
               }
             },
             scaleLabel: {
-              display: true
+              display: true,
+              labelString: '% Monitored'
             },
             gridLines: {},
             stacked: true
@@ -152,7 +153,9 @@ export class KeyHighlightsPageComponent implements OnInit {
           {
             scaleLabel: {
               display: true,
-              labelString: '# of Days Open'
+              labelString: '# of Days Open',
+              fontStyle : 'bold',
+              fontSize : '13' 
             }
           }
         ],
