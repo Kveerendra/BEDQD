@@ -21,6 +21,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   header: String;
   columnDefs;
   allLobSelected = true;
+  allSourceSystemSelected = true;
+  allYearQtrSelected = true;
   rowData = [];
   drop1 = [];
   drop2 = [];
@@ -628,5 +630,23 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       }
     }
     this.filterLOBData();
+  }
+
+  selectAllSourceSystem = function (e) {
+    for (let key in this.SourceSystem) {
+      if (this.SourceSystem[key] !== undefined) {
+        this.SourceSystem[key] = this.allSourceSystemSelected;
+      }
+    }
+    this.filterSourceSystem();
+  }
+
+  selectAllYearQuarter = function (e) {
+    for (let key in this.yearQtr) {
+      if (this.yearQtr[key] !== undefined) {
+        this.yearQtr[key] = this.allYearQtrSelected;
+      }
+    }
+    this.filteryearQtr();
   }
 }
