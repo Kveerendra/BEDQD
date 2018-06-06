@@ -17,12 +17,13 @@
       <br>
       <div class="text-center" *ngIf="grid3loaded">
         <chart #grid3configChart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="height: 160px;width: 350px;"></chart>
+       <br>
         <p style="text-align: center;font-weight: bolder;font-size: 15px;">Filters
           </p>
           <span>
             <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
               <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
-              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
                 <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 60px;height: 30px;font-size: 12px;">
                   <input type="checkbox" name="{{d3}}" checked="checked" [(ngModel)]="yearQuarterFilter[d3]" (change)="filtergrid3($event)">{{d3}}
                 </li>
@@ -32,7 +33,7 @@
             </div>
             <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
               <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">LOB</button>
-              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
                 <li class="dropdown-item" *ngFor="let d4 of drop4" style="width: 80px;height: 30px;font-size: 12px;">
                   <input type="checkbox" id="{{d4}}" checked="checked" [(ngModel)]="lobFilter[d4]" (change)="filtergrid3($event)">{{d4}}
                 </li>
@@ -40,7 +41,7 @@
             </div>
             <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
               <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
-              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
                 <li class="dropdown-item" *ngFor="let d1 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
                   <input type="checkbox" name="{{d1}}" checked="checked" [(ngModel)]="sourceSystem[d1]" (change)="filtergrid3($event)">{{d1}}
                 </li>
