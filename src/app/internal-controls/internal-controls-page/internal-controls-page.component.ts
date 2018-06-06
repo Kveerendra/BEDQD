@@ -14,6 +14,8 @@ export class InternalControlsPageComponent implements OnInit {
   @ViewChild('grid2Chart') chart2: ChartComponent;
   @ViewChild('grid') grid: GridComponent;
   grid1chartStyle = '';
+  allLobSelected = true;
+  allSourceSysSelected = true;
   displayValue = {
     level1ProcessDqp: 'Level 1 Process',
     level2ProcessDqp: 'Level 2 Process',
@@ -91,7 +93,7 @@ export class InternalControlsPageComponent implements OnInit {
               beginAtZero: true,
               max: 120,
               callback: function(value) {
-                return value ;
+                return value;
               }
             },
             barPercentage: 1.15,
@@ -228,33 +230,37 @@ export class InternalControlsPageComponent implements OnInit {
             ? ''
             : 'level1ProcessDqp';
   }*/
-  valueWithPercent(value){
+  valueWithPercent(value) {
     return value + '%';
   }
-  valueWithOutPercent(value){
-    return value ;
+  valueWithOutPercent(value) {
+    return value;
   }
   updateChart1Type() {
     if (this.scoreSelected === 'dqriScore') {
       this.grid1config.type = 'horizontalBar';
-      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString='';
-      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='DQRI Score';
-      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithOutPercent;
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = '';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString =
+        'DQRI Score';
+      this.grid1config.options.scales.yAxes[0].ticks.callback = this.valueWithOutPercent;
     } else if (this.scoreSelected === 'dqpScore') {
       this.grid1config.type = 'bar';
-      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'DQP Score';
-      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='';
-      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString =
+        'DQP Score';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString = '';
+      this.grid1config.options.scales.yAxes[0].ticks.callback = this.valueWithPercent;
     } else if (this.scoreSelected === 'impactScore') {
       this.grid1config.type = 'bubble';
-      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = 'DQP Score';
-      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='Impact Score';
-      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithPercent;
+      this.grid1config.options.scales.yAxes[0].scaleLabel.labelString =
+        'DQP Score';
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString =
+        'Impact Score';
+      this.grid1config.options.scales.yAxes[0].ticks.callback = this.valueWithPercent;
     } else {
       this.grid1config.type = 'horizontalBar';
       this.grid1config.options.scales.yAxes[0].scaleLabel.labelString = '';
-      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString='';
-      this.grid1config.options.scales.yAxes[0].ticks.callback=this.valueWithOutPercent;
+      this.grid1config.options.scales.xAxes[0].scaleLabel.labelString = '';
+      this.grid1config.options.scales.yAxes[0].ticks.callback = this.valueWithOutPercent;
     }
   }
   updateChart1() {
@@ -357,16 +363,16 @@ export class InternalControlsPageComponent implements OnInit {
         }
       }
     }
-    if(this.ecdeSelected === 'ecdeRcrdsTstd'){
-      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString='#of Rows Tested';
+    if (this.ecdeSelected === 'ecdeRcrdsTstd') {
+      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString =
+        '#of Rows Tested';
+    } else if (this.ecdeSelected === 'ecdeCnt') {
+      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString =
+        'ECDE Count';
+    } else {
+      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString =
+        'ECDE Count';
     }
-    else if(this.ecdeSelected === 'ecdeCnt'){
-      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString='ECDE Count';
-    }
-    else{
-      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString='ECDE Count';
-    }
-    console.log(this.grid2config.options.scales.yAxes[0].scaleLabel.labelString);
     this.chart2.chart.data = this.grid2config.data;
     this.chart2.chart.render(this.grid2config);
     this.chart2.chart.update();
@@ -402,6 +408,8 @@ export class InternalControlsPageComponent implements OnInit {
   }
   filterData(e) {
     this.updateBothCharts();
+    this.allLobFilterValues();
+    this.allSourceSysValues();
   }
   updateGrid() {
     let rowData = [];
@@ -430,7 +438,12 @@ export class InternalControlsPageComponent implements OnInit {
 
     rowData = this.service
       .getImpactScoreL1L2SrcLegalEntityModel()
-      .filter(record => record.dimension === dimension && this.LOBFilter[record.sourceLOB] && this.sourceSystemFilter[record.sourceSytem]);
+      .filter(
+        record =>
+          record.dimension === dimension &&
+          this.LOBFilter[record.sourceLOB] &&
+          this.sourceSystemFilter[record.sourceSytem]
+      );
     this.grid.rowData = rowData;
   }
 
@@ -452,5 +465,35 @@ export class InternalControlsPageComponent implements OnInit {
       lastThree +
       afterPoint;
     return res;
+  };
+  selectAllLobs = function(e) {
+    for (let key in this.LOBFilter) {
+      if (this.LOBFilter[key] !== undefined) {
+        this.LOBFilter[key] = this.allLobSelected;
+      }
+    }
+    this.filterData();
+  };
+  selectAllSourceSys = function(e) {
+    for (let key in this.sourceSystemFilter) {
+      if (this.sourceSystemFilter[key] !== undefined) {
+        this.sourceSystemFilter[key] = this.allSourceSysSelected;
+      }
+    }
+    this.filterData();
+  };
+  allLobFilterValues = function() {
+    for (let o in this.LOBFilter) {
+      if (!this.LOBFilter[o]) {
+        this.allLobSelected = false;
+      }
+    }
+  };
+  allSourceSysValues = function() {
+    for (let o in this.sourceSystemFilter) {
+      if (!this.sourceSystemFilter[o]) {
+        this.allSourceSysSelected = false;
+      }
+    }
   };
 }

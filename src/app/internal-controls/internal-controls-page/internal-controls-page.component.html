@@ -72,8 +72,11 @@
         <div ngbDropdown>
           <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 80px;height: 30px;font-size: 12px;">LOB</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+              <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+                  <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
+                </li>
             <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
-              <input type="checkbox" id="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d3]" (change)="filterData($event)">{{d3}}
+              <input type="checkbox" id="LOBFilterid" [(ngModel)]="LOBFilter[d3]" (change)="filterData($event)">{{d3}}
             </li>
           </ul>
         </div>
@@ -82,8 +85,11 @@
         <div ngbDropdown>
           <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic2" ngbDropdownToggle style = "width: 120px;height: 30px;font-size: 12px;">Source System</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic2" class="dropdown-menu" style="overflow-y: scroll; max-height: 200px;font-size: 15px;">
+              <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+                  <input type="checkbox" [(ngModel)]="allSourceSysSelected" (change)="selectAllSourceSys($event)">All
+                </li>
             <li class="dropdown-item" *ngFor="let d4 of drop4">
-              <input type="checkbox" id="sourceSystemFilterid" checked="checked" [(ngModel)]="sourceSystemFilter[d4]" (change)="filterData($event)">{{d4}}
+              <input type="checkbox" id="sourceSystemFilterid" [(ngModel)]="sourceSystemFilter[d4]" (change)="filterData($event)">{{d4}}
             </li>
           </ul>
         </div>
@@ -117,8 +123,8 @@
     <div class="" style="font-weight: bolder;">Glossary</div>
     <hr>
     <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">DQP: <span style="color: #0086b3">Data Quality Profiling</span></div>
-    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">LOB : <span style="color: #0086b3">Line of Business</span></div> 
+    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">LOB : <span style="color: #0086b3">Line of Business</span></div>
     <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">DQRI : <span style="color: #0086b3">Data Quality Risk Index</span></div>
-    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">ECDE : <span style="color: #0086b3">Enterprise Critical Data Element</span></div> 
+    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">ECDE : <span style="color: #0086b3">Enterprise Critical Data Element</span></div>
   </div>
 </div>

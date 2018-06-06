@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.loading-bar {
+  display: inline-block;
+  width: 25px;
+  height: 45px;
+  border-radius: 4px;
+  animation: loading 1s ease-in-out infinite;
+}
+.loading-bar:nth-child(1) {
+  background-color: #007399;
+  animation-delay: 0;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+.loading-bar:nth-child(2) {
+  background-color: #e30613;
+  animation-delay: 0.05s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+.loading-bar:nth-child(3) {
+  background-color: #f0ca34;
+  animation-delay: .10s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+.loading-bar:nth-child(4) {
+  background-color: #000000;
+  animation-delay: .15s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+.loading-bar:nth-child(5) {
+  background-color: #43b02a;
+  animation-delay: .20s;
+  text-align: center;
+  padding: 7px;
+  color: #fff;
+  font-weight: bold;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1, 2.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
