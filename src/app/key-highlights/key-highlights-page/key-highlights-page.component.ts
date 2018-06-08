@@ -166,18 +166,21 @@ export class KeyHighlightsPageComponent implements OnInit {
               labelString: '# of Issues'
             }, ticks: {
               callback: function (x) {
-                x = x.toString();
-                var afterPoint = '';
-                if (x.indexOf('.') > 0)
-                  afterPoint = x.substring(x.indexOf('.'), x.length);
-                x = Math.floor(x);
-                x = x.toString();
-                var lastThree = x.substring(x.length - 3);
-                var otherNumbers = x.substring(0, x.length - 3);
-                if (otherNumbers != '')
-                  lastThree = ',' + lastThree;
-                var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
-                return res;
+                // x = x.toString();
+                // var afterPoint = '';
+                // if (x.indexOf('.') > 0)
+                //   afterPoint = x.substring(x.indexOf('.'), x.length);
+                // x = Math.floor(x);
+                // x = x.toString();
+                // var lastThree = x.substring(x.length - 3);
+                // var otherNumbers = x.substring(0, x.length - 3);
+                // if (otherNumbers != '')
+                //   lastThree = ',' + lastThree;
+                // var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
+                // return res;
+                x = x/1000;
+                x = x+'K';
+                return x;
               },
               beginAtZero: true,
               stepSize: 700000
@@ -301,18 +304,18 @@ export class KeyHighlightsPageComponent implements OnInit {
         if (WholeData[i]) {
           if (WholeData[i]['label'] === 'ECDEs') {
             this.grid3config.data.datasets[0].data.push(
-              WholeData[0]['notDQMonitered']
+              WholeData[i]['notDQMonitered']
             );
             this.grid3config.data.datasets[1].data.push(
-              WholeData[0]['dqMonitered']
+              WholeData[i]['dqMonitered']
             );
           }
           if (WholeData[i]['label'] === 'BCDEs') {
             this.grid3config.data.datasets[0].data.push(
-              WholeData[1]['notDQMonitered']
+              WholeData[i]['notDQMonitered']
             );
             this.grid3config.data.datasets[1].data.push(
-              WholeData[1]['dqMonitered']
+              WholeData[i]['dqMonitered']
             );
           }
         }

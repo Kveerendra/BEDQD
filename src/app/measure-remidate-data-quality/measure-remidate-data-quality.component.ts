@@ -41,10 +41,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       labels: [],
       datasets: [
         {
-          label: '<30',
+          label: '>60',
           data: [],
-          backgroundColor: '#b3cccc',
-          hoverBackgroundColor: '#b3cccc'
+          backgroundColor: '#264d73',
+          hoverBackgroundColor: '#264d73'
         },
         {
           label: '30-60',
@@ -53,10 +53,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           hoverBackgroundColor: '#0086b3'
         },
         {
-          label: '>60',
+          label: '<30',
           data: [],
-          backgroundColor: '#264d73',
-          hoverBackgroundColor: '#264d73'
+          backgroundColor: '#b3cccc',
+          hoverBackgroundColor: '#b3cccc'
         }
       ]
     },
@@ -78,19 +78,21 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
               fontFamily: 'Open Sans Bold, sans-serif',
               callback: function (x) {
 
-                  x = Math.abs(x).toString();
-                  let afterPoint = '';
-                  if (x.indexOf('.') > 0) {
-                    afterPoint = x.substring(x.indexOf('.'), x.length);
-                  }
-                  x = Math.floor(x);
-                  x = x.toString();
-                  let lastThree = x.substring(x.length - 3);
-                  const otherNumbers = x.substring(0, x.length - 3);
-                  if (otherNumbers != '') {
-                    lastThree = ',' + lastThree;
-                  }
-                  return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
+                  // x = Math.abs(x).toString();
+                  // let afterPoint = '';
+                  // if (x.indexOf('.') > 0) {
+                  //   afterPoint = x.substring(x.indexOf('.'), x.length);
+                  // }
+                  // x = Math.floor(x);
+                  // x = x.toString();
+                  // let lastThree = x.substring(x.length - 3);
+                  // const otherNumbers = x.substring(0, x.length - 3);
+                  // if (otherNumbers != '') {
+                  //   lastThree = ',' + lastThree;
+                  // }
+                  // return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
+                  x = (x/1000)*-1;
+                  return x+'K';
                 }
             },
             scaleLabel: {
@@ -142,10 +144,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       labels: [],
       datasets: [
         {
-          label: '<30',
+          label: '>60',
           data: [],
-          backgroundColor: '#b3cccc',
-          hoverBackgroundColor: '#b3cccc'
+          backgroundColor: '#264d73',
+          hoverBackgroundColor: '#264d73'
         },
         {
           label: '30-60',
@@ -154,10 +156,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           hoverBackgroundColor: '#0086b3'
         },
         {
-          label: '>60',
+          label: '<30',
           data: [],
-          backgroundColor: '#264d73',
-          hoverBackgroundColor: '#264d73'
+          backgroundColor: '#b3cccc',
+          hoverBackgroundColor: '#b3cccc'
         }
       ]
     },
@@ -176,19 +178,21 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           {
             ticks: {
               callback: function (x) {
-                x = x.toString();
-                let afterPoint = '';
-                if (x.indexOf('.') > 0) {
-                  afterPoint = x.substring(x.indexOf('.'), x.length);
-                }
-                x = Math.floor(x);
-                x = x.toString();
-                let lastThree = x.substring(x.length - 3);
-                let otherNumbers = x.substring(0, x.length - 3);
-                if (otherNumbers != '')
-                  lastThree = ',' + lastThree;
-                let res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
-                return res;
+                // x = x.toString();
+                // let afterPoint = '';
+                // if (x.indexOf('.') > 0) {
+                //   afterPoint = x.substring(x.indexOf('.'), x.length);
+                // }
+                // x = Math.floor(x);
+                // x = x.toString();
+                // let lastThree = x.substring(x.length - 3);
+                // let otherNumbers = x.substring(0, x.length - 3);
+                // if (otherNumbers != '')
+                //   lastThree = ',' + lastThree;
+                // let res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
+                // return res;
+                x = x/1000;
+                return x+'K';
               },
               beginAtZero: true,
               fontFamily: 'Open Sans Bold, sans-serif'
@@ -295,7 +299,11 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             },
             stacked: true,
             position: 'right',
-            display: true
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Legal Entity'
+            }
           }
         ]
       },tooltips: {
@@ -379,7 +387,11 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             },
             stacked: true,
             position: 'left',
-            display: true
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Legal Entity'
+            }
           }
         ]
       },
@@ -432,7 +444,15 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         grid3MapList = grid3Data[itr_1];
         for (const itr_2 in grid3MapList) {
           dataset_grid3 = -1 * parseInt(grid3MapList[itr_2]['highPriority']);
-          this.grid3config.data.datasets[itr_2].data.push(dataset_grid3);
+          if(grid3MapList[itr_2]['agingBucket'] === '30-60'){
+            this.grid3config.data.datasets[1].data.push(dataset_grid3);
+          }
+          else if(grid3MapList[itr_2]['agingBucket'] === '<30'){
+            this.grid3config.data.datasets[2].data.push(dataset_grid3);
+          }
+          else if(grid3MapList[itr_2]['agingBucket'] === '>60'){
+            this.grid3config.data.datasets[0].data.push(dataset_grid3);
+          }
         }
       }
 
@@ -440,7 +460,15 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         grid4MapList = grid4Data[itr_1];
         for (const itr_2 in grid4MapList) {
           dataset_grid4 = parseInt(grid4MapList[itr_2]['lowPriority']);
-          this.grid4config.data.datasets[itr_2].data.push(dataset_grid4);
+          if(grid3MapList[itr_2]['agingBucket'] === '30-60'){
+            this.grid4config.data.datasets[1].data.push(dataset_grid4);
+          }
+          else if(grid3MapList[itr_2]['agingBucket'] === '<30'){
+            this.grid4config.data.datasets[2].data.push(dataset_grid4);
+          }
+          else if(grid3MapList[itr_2]['agingBucket'] === '>60'){
+            this.grid4config.data.datasets[0].data.push(dataset_grid4);
+          }
         }
       }
       for (const itr_3 in appGridData) {

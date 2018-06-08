@@ -223,6 +223,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         }
       }
       this.grid1config.data.labels = this.drop4;
+      this.grid1config.data.labels.sort();
       for (const l in receivedData_2) {
         if (this.drop3.indexOf(receivedData_2[l]['yearQtr']) === -1) {
           this.drop3.push(receivedData_2[l]['yearQtr']);
@@ -277,7 +278,11 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       }
     }
     this.chart1.data.labels = labels;
+    this.chart1.data.labels.sort();
     this.chart1.chart.update();
+    if(this.auBuText === 'BUs/CFs'){
+      this.filterDataOnBUCF(null);
+    }
   }
 
   filterSourceSystemData(e) {
@@ -315,8 +320,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   filterDataOnBUCF(e) {
     var labels = [];
      this.auBuText = 'BUs/CFs'; 
-    for (const key in this.SourceSysFilter) {
-      if (this.SourceSysFilter[key]) {
+    for (const key in this.LOBFilter) {
+      if (this.LOBFilter[key]) {
         labels.push(key);
       }
     }
@@ -327,8 +332,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   filterDataOnADS(e) {
     var labels = [];
     this.auBuText = 'ADS'; 
-    for (const key in this.LOBFilter) {
-      if (this.LOBFilter[key]) {
+    for (const key in this.SourceSysFilter) {
+      if (this.SourceSysFilter[key]) {
         labels.push(key);
       }
     }

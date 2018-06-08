@@ -22,7 +22,7 @@ export class InternalControlsPageComponent implements OnInit {
     sourceSystem: 'Source System',
     sourceLOB: 'Legal Entity / LOB',
     dqriScore: 'DQRI Score',
-    dqpScore: 'DQI Score',
+    dqpScore: 'DQP Score',
     impactScore: 'Impact Score',
     ecdeRcrdsTstd: 'ECDE Records Tested',
     ecdeCnt: 'ECDE Count'
@@ -120,6 +120,7 @@ export class InternalControlsPageComponent implements OnInit {
       ]
     },
     options: {
+      tooltips: {},
       plugins: {
         datalabels: {
           color: '#b3b3b3',
@@ -366,13 +367,35 @@ export class InternalControlsPageComponent implements OnInit {
     if (this.ecdeSelected === 'ecdeRcrdsTstd') {
       this.grid2config.options.scales.yAxes[0].scaleLabel.labelString =
         '#of Rows Tested';
+        this.grid2config.options['tooltips'] = {
+          callbacks: {
+            label: function(t, d) {
+              let datasetLabel = d.datasets[t.datasetIndex].label;
+              let xLabel = Math.abs(t.xLabel);
+              return [
+                'Dimentions_Swap : ' + d.labels[t.index],
+                ' #of Rows Tested : ' + d.datasets[0].data[t.index].r / 3
+              ];
+            }
+          }
+        };
     } else if (this.ecdeSelected === 'ecdeCnt') {
       this.grid2config.options.scales.yAxes[0].scaleLabel.labelString =
         'ECDE Count';
-    } else {
-      this.grid2config.options.scales.yAxes[0].scaleLabel.labelString =
-        'ECDE Count';
+        this.grid2config.options['tooltips'] = {
+          callbacks: {
+            label: function(t, d) {
+              let datasetLabel = d.datasets[t.datasetIndex].label;
+              let xLabel = Math.abs(t.xLabel);
+              return [
+                'Dimentions_Swap : ' + d.labels[t.index],
+                ' ECDE Count : ' + d.datasets[0].data[t.index].r / 3
+              ];
+            }
+          }
+        };
     }
+    console.log(this.grid2config.options);
     this.chart2.chart.data = this.grid2config.data;
     this.chart2.chart.render(this.grid2config);
     this.chart2.chart.update();
