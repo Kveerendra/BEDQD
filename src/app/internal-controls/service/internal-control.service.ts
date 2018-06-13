@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../environments/environment.prod';
 
 @Injectable()
 export class InternalControlService {
   internalControlsJsonObject = {};
   // just change this url to point to the service
-  private url = 'InternalControls.json';
+  private rootURL = environment.root_Url;
+  private InternalControlJSON = environment.InternalControlJSON;
+  private url = this.rootURL + this.InternalControlJSON + new Date().getTime();
   constructor(private httpc: HttpClient) {
     if (this.internalControlsJsonObject === {}) {
       this.getData().then(data => {
@@ -18,8 +21,10 @@ export class InternalControlService {
   }
   getData() {
     return new Promise(resolve => {
+      let headers = new HttpHeaders();
+      headers.append('no-cache', 'true');
       if (Object.keys(this.internalControlsJsonObject).length <= 0) {
-        this.httpc.get(this.url).subscribe(
+        this.httpc.get(this.url,{headers}).subscribe(
           data => {
             resolve(data);
             this.internalControlsJsonObject = data;

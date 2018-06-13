@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../environments/environment.prod';
 
 @Injectable()
 export class DataQualityMoniteringService {
   dataQualityJsonObject = {};
-  // just change this url to point to the service
-  private url = 'DataQualityMonitoring.json';
+
+  private rootURL = environment.root_Url;
+  private datamonitoringJSON = environment.DataQualityJSON;
+  private url =this.rootURL+ this.datamonitoringJSON + new Date().getTime();
   constructor(private httpc: HttpClient) {
     this.getData().then(data => {
       this.dataQualityJsonObject = data;
@@ -13,7 +16,9 @@ export class DataQualityMoniteringService {
   }
   getData() {
     return new Promise(resolve => {
-      this.httpc.get(this.url).subscribe(
+      let headers = new HttpHeaders();
+      headers.append('no-cache', 'true');
+      this.httpc.get(this.url,{ headers }).subscribe(
         data => {
           resolve(data);
           this.dataQualityJsonObject = data;

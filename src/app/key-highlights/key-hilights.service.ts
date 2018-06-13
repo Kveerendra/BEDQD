@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable()
 export class KeyHilightsService {
   keyHighlightsJsonObject = {};
-  private url = 'KeyHighlights.json';
+  private rootURL = environment.root_Url;
+  private KeyHighlightsJSON = environment.KeyHighlightsJSON;
+  private url = this.rootURL + this.KeyHighlightsJSON + new Date().getTime();
   constructor(private httpc: HttpClient) {
     this.getData().then(data => {
       this.keyHighlightsJsonObject = data;
@@ -12,7 +15,9 @@ export class KeyHilightsService {
   }
   getData() {
     return new Promise(resolve => {
-      this.httpc.get(this.url).subscribe(
+      let headers = new HttpHeaders();
+      headers.append('no-cache', 'true');
+      this.httpc.get(this.url, { headers }).subscribe(
         data => {
           resolve(data);
           this.keyHighlightsJsonObject = data;
