@@ -117,7 +117,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       ],
       datasets: [
         {
-          label: 'BCDE',
+          label: 'ECDE',
           data: [],
           stack: 'Stack 0',
           backgroundColor: '#29a329',
@@ -141,7 +141,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           }
         },
         {
-          label: 'ECDE',
+          label: 'BCDE',
           data: [],
           stack: 'Stack 0',
           backgroundColor: '#007acc'
