@@ -20,6 +20,9 @@ export class KeyHighlightsPageComponent implements OnInit {
   yearQuarterFilter = {};
   grid3loaded = false;
   grid4loaded = false;
+  allLobSelected = true;
+  allYearQrtrSelected = true;
+  allSourceSysSelected = true;
   tRecords: String;
   dqriScore: String;
   dqpScore: String;
@@ -41,6 +44,33 @@ export class KeyHighlightsPageComponent implements OnInit {
       lastThree = ',' + lastThree;
     var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
     return res;
+  }
+
+  selectAllLobs = function (e) {
+    for (let key in this.lobFilter) {
+      if (this.lobFilter[key] !== undefined) {
+        this.lobFilter[key] = this.allLobSelected;
+      }
+    }
+    this.filtergrid3();
+  }
+
+  selectAllYearQrtr = function (e) {
+    for (let key in this.yearQuarterFilter) {
+      if (this.yearQuarterFilter[key] !== undefined) {
+        this.yearQuarterFilter[key] = this.allYearQrtrSelected;
+      }
+    }
+    this.filtergrid3();
+  }
+
+  selectAllSourceSys = function (e) {
+    for (let key in this.sourceSystem) {
+      if (this.sourceSystem[key] !== undefined) {
+        this.sourceSystem[key] = this.allSourceSysSelected;
+      }
+    }
+    this.filtergrid3();
   }
 
   grid3config = {
@@ -300,26 +330,40 @@ export class KeyHighlightsPageComponent implements OnInit {
         }
       }
 
+      let grid3configData = {
+        "ECDEs":{"notDQMonitered":0,
+                  "dqMonitered":0},
+        "BCDEs":{"notDQMonitered":0,
+                  "dqMonitered":0}
+      };
       for (var i in WholeData) {
         if (WholeData[i]) {
           if (WholeData[i]['label'] === 'ECDEs') {
-            this.grid3config.data.datasets[0].data.push(
-              WholeData[i]['notDQMonitered']
-            );
-            this.grid3config.data.datasets[1].data.push(
-              WholeData[i]['dqMonitered']
-            );
+            grid3configData.ECDEs.notDQMonitered = 
+            (parseInt(WholeData[i]['notDQMonitered'])+grid3configData.ECDEs.notDQMonitered)/2;
+            grid3configData.ECDEs.dqMonitered = 
+            (parseInt(WholeData[i]['dqMonitered'])+grid3configData.ECDEs.dqMonitered)/2;
           }
           if (WholeData[i]['label'] === 'BCDEs') {
-            this.grid3config.data.datasets[0].data.push(
-              WholeData[i]['notDQMonitered']
-            );
-            this.grid3config.data.datasets[1].data.push(
-              WholeData[i]['dqMonitered']
-            );
+            grid3configData.BCDEs.notDQMonitered = 
+            (parseInt(WholeData[i]['notDQMonitered'])+grid3configData.BCDEs.notDQMonitered)/2;
+            grid3configData.BCDEs.dqMonitered = 
+            (parseInt(WholeData[i]['dqMonitered'])+grid3configData.BCDEs.dqMonitered)/2;
           }
         }
       }
+      this.grid3config.data.datasets[0].data.push(
+        grid3configData.ECDEs.notDQMonitered
+      );
+      this.grid3config.data.datasets[1].data.push(
+        grid3configData.ECDEs.dqMonitered
+      );
+      this.grid3config.data.datasets[0].data.push(
+        grid3configData.BCDEs.notDQMonitered
+      );
+      this.grid3config.data.datasets[1].data.push(
+        grid3configData.BCDEs.dqMonitered
+      );
       this.grid3loaded = true;
       this.grid4config.data.datasets[0].data.push(
         hpDqIssues[1]['nbrOfIssues'],
@@ -348,6 +392,12 @@ export class KeyHighlightsPageComponent implements OnInit {
     var WholeData = this.service.getlistOfDQMoniteringStatsData();
     this.grid3config.data.datasets[0].data = [];
     this.grid3config.data.datasets[1].data = [];
+    let grid3configData = {
+      "ECDEs":{"notDQMonitered":0,
+                "dqMonitered":0},
+      "BCDEs":{"notDQMonitered":0,
+                "dqMonitered":0}
+    };
     for (var i in WholeData) {
       if (WholeData[i]) {
         if (
@@ -356,26 +406,36 @@ export class KeyHighlightsPageComponent implements OnInit {
           this.sourceSystem[WholeData[i]['sourceSystem']] &&
           this.yearQuarterFilter[WholeData[i]['yearQuarter']]
         ) {
-          this.grid3config.data.datasets[0].data.push(
-            WholeData[0]['notDQMonitered']
-          );
-          this.grid3config.data.datasets[1].data.push(
-            WholeData[0]['dqMonitered']
-          );
+          grid3configData.ECDEs.notDQMonitered = 
+          (parseInt(WholeData[i]['notDQMonitered'])+grid3configData.ECDEs.notDQMonitered)/2;
+          grid3configData.ECDEs.dqMonitered = 
+          (parseInt(WholeData[i]['dqMonitered'])+grid3configData.ECDEs.dqMonitered)/2;
         }
         if (
           WholeData[i]['label'] === 'BCDEs' &&
-          this.sourceSystem[WholeData[i]['sourceSystem']]
+          this.lobFilter[WholeData[i]['lob']] &&
+          this.sourceSystem[WholeData[i]['sourceSystem']] &&
+          this.yearQuarterFilter[WholeData[i]['yearQuarter']]
         ) {
-          this.grid3config.data.datasets[0].data.push(
-            WholeData[1]['notDQMonitered']
-          );
-          this.grid3config.data.datasets[1].data.push(
-            WholeData[1]['dqMonitered']
-          );
+          grid3configData.BCDEs.notDQMonitered = 
+          (parseInt(WholeData[i]['notDQMonitered'])+grid3configData.BCDEs.notDQMonitered)/2;
+          grid3configData.BCDEs.dqMonitered = 
+          (parseInt(WholeData[i]['dqMonitered'])+grid3configData.BCDEs.dqMonitered)/2;
         }
       }
     }
+    this.grid3config.data.datasets[0].data.push(
+      grid3configData.ECDEs.notDQMonitered
+    );
+    this.grid3config.data.datasets[1].data.push(
+      grid3configData.ECDEs.dqMonitered
+    );
+    this.grid3config.data.datasets[0].data.push(
+      grid3configData.BCDEs.notDQMonitered
+    );
+    this.grid3config.data.datasets[1].data.push(
+      grid3configData.BCDEs.dqMonitered
+    );
     this.chart3.data = this.grid3config.data;
     this.chart3.chart.update();
   }
