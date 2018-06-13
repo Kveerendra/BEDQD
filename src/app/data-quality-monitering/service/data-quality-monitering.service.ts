@@ -8,6 +8,7 @@ export class DataQualityMoniteringService {
 
   private rootURL = environment.root_Url;
   private datamonitoringJSON = environment.DataQualityJSON;
+  //private url = 'DataQualityMonitoring.json';
   private url =this.rootURL+ this.datamonitoringJSON + new Date().getTime();
   constructor(private httpc: HttpClient) {
     this.getData().then(data => {

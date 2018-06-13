@@ -8,6 +8,7 @@ export class InternalControlService {
   // just change this url to point to the service
   private rootURL = environment.root_Url;
   private InternalControlJSON = environment.InternalControlJSON;
+  //private url = 'InternalControls.json';
   private url = this.rootURL + this.InternalControlJSON + new Date().getTime();
   constructor(private httpc: HttpClient) {
     if (this.internalControlsJsonObject === {}) {

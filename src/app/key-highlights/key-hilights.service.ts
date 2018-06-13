@@ -7,6 +7,7 @@ export class KeyHilightsService {
   keyHighlightsJsonObject = {};
   private rootURL = environment.root_Url;
   private KeyHighlightsJSON = environment.KeyHighlightsJSON;
+  //private url = 'KeyHighlights.json';
   private url = this.rootURL + this.KeyHighlightsJSON + new Date().getTime();
   constructor(private httpc: HttpClient) {
     this.getData().then(data => {

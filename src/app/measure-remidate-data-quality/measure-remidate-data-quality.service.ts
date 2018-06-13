@@ -6,6 +6,7 @@ export class MeasureRemidateDQService {
     MeasureRemidateJsonObject = {};
     private rootURL = environment.root_Url;
     private MeasureRemidateJSON = environment.MeasureRemidateJSON;
+    //private url = 'MeasureRemidateDQ.json';
     private url = this.rootURL + this.MeasureRemidateJSON + new Date().getTime();
     constructor(private httpc: HttpClient) {
         this.getData().then((data) => {
