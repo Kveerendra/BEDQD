@@ -73,7 +73,10 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       maintainAspectRatio: false,
       legend: {
         display: true,
-         position: 'bottom'
+         position: 'bottom',
+         onClick: function (e) {
+           e.stopPropagation();
+       }
       },
       tooltips: {
         enabled: true,
@@ -95,7 +98,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
             },
             scaleLabel: {
               display: true,
-              labelString: '% Profiled'
+              labelString: '% Profiled',
+              fontStyle : 'bold',
             }
           }
         ]
@@ -132,7 +136,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
                 {
                   scaleLabel: {
                     display: true,
-                    labelString: 'Value'
+                    labelString: 'Value',
+                    fontStyle : 'bold',
                   },
                   stacked: true
                 }
@@ -158,7 +163,10 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       responsive: true,
       maintainAspectRatio: false,
       legend: {
-        display: false
+        display: false,
+        onClick: function (e) {
+          e.stopPropagation();
+      }
       },
       tooltips: {
         enabled: true,
@@ -178,7 +186,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           {
             scaleLabel: {
               display: true,
-              labelString: 'Value'
+              labelString: 'Value',
+              fontStyle : 'bold',
             }
           }
         ]

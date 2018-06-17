@@ -97,7 +97,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             },
             scaleLabel: {
               display: true,
-              labelString: 'High Priority DQ Issues-Positive'
+              labelString: 'High Priority DQ Issues-Positive',
+              fontStyle : 'bold',
             },
             gridLines: {},
             stacked: true,
@@ -114,7 +115,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
               fontFamily: 'Open Sans Bold, sans-serif'
             },scaleLabel: {
               display: true,
-              labelString: 'Legal Entity'
+              labelString: 'Legal Entity',
+              fontStyle : 'bold'
             },
             stacked: true,
             position: 'right',
@@ -133,7 +135,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
      },
       legend: {
         position: 'bottom',
-        display: true
+        display: true,
+        onClick: function (e) {
+          e.stopPropagation();
+      }
       }
     }
   };
@@ -199,7 +204,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             },
             scaleLabel: {
               display: true,
-              labelString: 'Low Priority'
+              labelString: 'Low Priority',
+              fontStyle : 'bold'
             },
             gridLines: {},
             stacked: true,
@@ -216,7 +222,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
               fontFamily: 'Open Sans Bold, sans-serif'
             },scaleLabel: {
               display: true,
-              labelString: 'Legal Entity'
+              labelString: 'Legal Entity',
+              fontStyle : 'bold',
             },
             stacked: true,
             position: 'left',
@@ -226,7 +233,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       },
       legend: {
         position: 'bottom',
-        display: true
+        display: true,
+        onClick: function (e) {
+          e.stopPropagation();
+      }
       }
     }
   };
@@ -302,7 +312,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             display: true,
             scaleLabel: {
               display: true,
-              labelString: 'Legal Entity'
+              labelString: 'Legal Entity',
+              fontStyle : 'bold'
             }
           }
         ]
@@ -317,7 +328,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
      },
       legend: {
         position: 'bottom',
-        display: true
+        display: true,
+        onClick: function (e) {
+          e.stopPropagation();
+      }
       }
     }
   };
@@ -390,14 +404,18 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             display: true,
             scaleLabel: {
               display: true,
-              labelString: 'Legal Entity'
+              labelString: 'Legal Entity',
+              fontStyle : 'bold'
             }
           }
         ]
       },
       legend: {
         position: 'bottom',
-        display: true
+        display: true,
+        onClick: function (e) {
+          e.stopPropagation();
+      }
       }
     }
   };

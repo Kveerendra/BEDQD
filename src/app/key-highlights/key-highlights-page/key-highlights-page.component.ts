@@ -115,7 +115,8 @@ export class KeyHighlightsPageComponent implements OnInit {
             },
             scaleLabel: {
               display: true,
-              labelString: '% Monitored'
+              labelString: '% Monitored',
+              fontStyle : 'bold',
             },
             gridLines: {},
             stacked: true
@@ -138,7 +139,10 @@ export class KeyHighlightsPageComponent implements OnInit {
         ]
       },
       legend: {
-        display: true
+        display: true,
+        onClick: function (e) {
+          e.stopPropagation();
+      }
       }
     }
   };
@@ -193,7 +197,8 @@ export class KeyHighlightsPageComponent implements OnInit {
           {
             scaleLabel: {
               display: true,
-              labelString: '# of Issues'
+              labelString: '# of Issues',
+              fontStyle : 'bold',
             }, ticks: {
               callback: function (x) {
                 // x = x.toString();
@@ -217,6 +222,11 @@ export class KeyHighlightsPageComponent implements OnInit {
             }
           }
         ]
+      }, legend: {
+        display: true,
+        onClick: function (e) {
+          e.stopPropagation();
+      }
       }
     }
   };
@@ -252,7 +262,8 @@ export class KeyHighlightsPageComponent implements OnInit {
           {
             scaleLabel: {
               display: true,
-              labelString: '# of Issues'
+              labelString: '# of Issues',
+              fontStyle : 'bold',
             }
           }
         ]
