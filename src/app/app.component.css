@@ -1,3 +1,18 @@
 html, body {
     overflow-x: hidden;
   }
+
+
+.nav-item a.active {
+  background-color: #007399;
+  color: #fff !important;
+  border: 0px;
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
+  border-bottom:2px #000000 solid;
+}
+.nav-tabs .nav-link  {
+  border: 0px;
+  border-top-left-radius: 0em;
+  border-top-right-radius: 0em;
+}
