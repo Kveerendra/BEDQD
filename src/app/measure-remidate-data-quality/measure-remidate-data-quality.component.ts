@@ -65,6 +65,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
+          formatter: value => {
+            return this.formatNumberWithComma(Math.abs(value));
+          },
           display: (context: any) => {
             return context.chart.isDatasetVisible(context.datasetIndex);
         }
@@ -77,20 +80,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
               beginAtZero: true,
               fontFamily: 'Open Sans Bold, sans-serif',
               callback: function (x) {
-
-                  // x = Math.abs(x).toString();
-                  // let afterPoint = '';
-                  // if (x.indexOf('.') > 0) {
-                  //   afterPoint = x.substring(x.indexOf('.'), x.length);
-                  // }
-                  // x = Math.floor(x);
-                  // x = x.toString();
-                  // let lastThree = x.substring(x.length - 3);
-                  // const otherNumbers = x.substring(0, x.length - 3);
-                  // if (otherNumbers != '') {
-                  //   lastThree = ',' + lastThree;
-                  // }
-                  // return otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
                   x = (x/1000)*-1;
                   return x+'K';
                 }
@@ -126,12 +115,29 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       },
       tooltips: {
         callbacks: {
-           label: function(t, d) {
-              let datasetLabel = d.datasets[t.datasetIndex].label;
-              let xLabel = Math.abs(t.xLabel);
-              return datasetLabel + ': ' + xLabel;
-           }
+          label: function(tooltipItem, data) {
+            let x = tooltipItem.xLabel.toString();
+            let datasetLabel = data.datasets[tooltipItem.datasetIndex].label;
+            let afterPoint = '';
+            if (x.indexOf('.') > 0) {
+              afterPoint = x.substring(x.indexOf('.'), x.length);
+            }
+            x = Math.abs(x);
+            x = x.toString();
+            let lastThree = x.substring(x.length - 3);
+            let otherNumbers = x.substring(0, x.length - 3);
+            if (otherNumbers != '') {
+              lastThree = ',' + lastThree;
+            }
+            let res =
+              otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') +
+              lastThree +
+              afterPoint;
+              tooltipItem.xLabel = res;
+              return (datasetLabel +' : '+tooltipItem.xLabel);
+             }
         }
+
      },
       legend: {
         position: 'bottom',
@@ -170,6 +176,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
+          formatter: value => {
+            return this.formatNumberWithComma(Math.abs(value));
+          },
           display: (context: any) => {
             return context.chart.isDatasetVisible(context.datasetIndex);
         }
@@ -180,19 +189,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           {
             ticks: {
               callback: function (x) {
-                // x = x.toString();
-                // let afterPoint = '';
-                // if (x.indexOf('.') > 0) {
-                //   afterPoint = x.substring(x.indexOf('.'), x.length);
-                // }
-                // x = Math.floor(x);
-                // x = x.toString();
-                // let lastThree = x.substring(x.length - 3);
-                // let otherNumbers = x.substring(0, x.length - 3);
-                // if (otherNumbers != '')
-                //   lastThree = ',' + lastThree;
-                // let res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + lastThree + afterPoint;
-                // return res;
                 x = x/1000;
                 return x+'K';
               },
@@ -227,7 +223,32 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             display: true
           }
         ]
-      },
+      },tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            let x = tooltipItem.xLabel.toString();
+            let datasetLabel = data.datasets[tooltipItem.datasetIndex].label;
+            let afterPoint = '';
+            if (x.indexOf('.') > 0) {
+              afterPoint = x.substring(x.indexOf('.'), x.length);
+            }
+            x = Math.abs(x);
+            x = x.toString();
+            let lastThree = x.substring(x.length - 3);
+            let otherNumbers = x.substring(0, x.length - 3);
+            if (otherNumbers != '') {
+              lastThree = ',' + lastThree;
+            }
+            let res =
+              otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') +
+              lastThree +
+              afterPoint;
+              tooltipItem.xLabel = res;
+              return (datasetLabel +' : '+tooltipItem.xLabel);
+             }
+        }
+
+     },
       legend: {
         position: 'bottom',
         display: true
@@ -271,6 +292,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
+          formatter: value => {
+            return this.formatNumberWithComma(Math.abs(value));
+          },
           display: (context: any) => {
             return context.chart.isDatasetVisible(context.datasetIndex);
         }
