@@ -65,18 +65,17 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round,
-          rotation: 90
+          rotation: 90,
+          display: (context: any) => {
+            return context.chart.isDatasetVisible(context.datasetIndex);
+        }
         }
       },
       responsive: true,
       maintainAspectRatio: false,
       legend: {
         display: true,
-         position: 'bottom',
-         onClick: function (e) {
-           e.stopPropagation();
-       }
+         position: 'bottom'
       },
       tooltips: {
         enabled: true,
@@ -157,16 +156,15 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          display: (context: any) => {
+            return context.chart.isDatasetVisible(context.datasetIndex);
+        }
         }
       },
       responsive: true,
       maintainAspectRatio: false,
       legend: {
-        display: false,
-        onClick: function (e) {
-          e.stopPropagation();
-      }
+        display: false
       },
       tooltips: {
         enabled: true,

@@ -65,9 +65,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: value => {
-            return this.formatNumberWithComma(Math.abs(value));
-          }
+          display: (context: any) => {
+            return context.chart.isDatasetVisible(context.datasetIndex);
+        }
         }
       },
       scales: {
@@ -135,10 +135,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
      },
       legend: {
         position: 'bottom',
-        display: true,
-        onClick: function (e) {
-          e.stopPropagation();
-      }
+        display: true
       }
     }
   };
@@ -173,9 +170,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: value => {
-            return this.formatNumberWithComma(Math.abs(value));
-          }
+          display: (context: any) => {
+            return context.chart.isDatasetVisible(context.datasetIndex);
+        }
         }
       },
       scales: {
@@ -233,10 +230,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       },
       legend: {
         position: 'bottom',
-        display: true,
-        onClick: function (e) {
-          e.stopPropagation();
-      }
+        display: true
       }
     }
   };
@@ -277,7 +271,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.abs
+          display: (context: any) => {
+            return context.chart.isDatasetVisible(context.datasetIndex);
+        }
         }
       },
       scales: {
@@ -328,10 +324,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
      },
       legend: {
         position: 'bottom',
-        display: true,
-        onClick: function (e) {
-          e.stopPropagation();
-      }
+        display: true
       }
     }
   };
@@ -372,7 +365,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       plugins: {
         datalabels: {
           color: 'white',
-          formatter: Math.round
+          display: (context: any) => {
+            return context.chart.isDatasetVisible(context.datasetIndex);
+        }
         }
       },
       scales: {
@@ -412,10 +407,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       },
       legend: {
         position: 'bottom',
-        display: true,
-        onClick: function (e) {
-          e.stopPropagation();
-      }
+        display: true
       }
     }
   };

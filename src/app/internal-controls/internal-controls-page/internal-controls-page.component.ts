@@ -13,6 +13,7 @@ export class InternalControlsPageComponent implements OnInit {
   @ViewChild('grid1Chart') chart1: ChartComponent;
   @ViewChild('grid2Chart') chart2: ChartComponent;
   @ViewChild('grid') grid: GridComponent;
+  public input = '';
   grid1chartStyle = '';
   allLobSelected = true;
   allSourceSysSelected = true;
@@ -120,13 +121,35 @@ export class InternalControlsPageComponent implements OnInit {
       ]
     },
     options: {
-      tooltips: {},
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            let x = tooltipItem.yLabel.toString();
+            let afterPoint = '';
+            if (x.indexOf('.') > 0) {
+              afterPoint = x.substring(x.indexOf('.'), x.length);
+            }
+            x = Math.floor(x);
+            x = x.toString();
+            let lastThree = x.substring(x.length - 3);
+            let otherNumbers = x.substring(0, x.length - 3);
+            if (otherNumbers != '') {
+              lastThree = ',' + lastThree;
+            }
+            let res =
+              otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') +
+              lastThree +
+              afterPoint;
+              tooltipItem.yLabel = res;
+              return tooltipItem.yLabel }, }
+      },
       plugins: {
         datalabels: {
           color: '#b3b3b3',
           display: true,
-          align: 'end',
-          anchor: 'top',
+          align: 'bottom',
+          //anchor: 'top',
+          offset:-55,
           formatter: value => {
             return this.formatNumberWithComma(Math.round(value));
           },
@@ -198,6 +221,18 @@ export class InternalControlsPageComponent implements OnInit {
         parseFloat(this.dQPScoreModel['dqpScore'])
       );
       this.impactScoreModel = this.service.getImpactScoreModel();
+      this.impactScoreModel['header'] = this.initCap(this.impactScoreModel['header']) ;
+
+
+      
+
+
+
+     // console.log(result);
+     // this.impactScoreModel['header'] = result;
+      
+      
+     // console.log(this.impactScoreModel);
       this.dqRIScoreModel = this.service.getdQScoreModel();
       this.fillLobFilter();
       this.fillSourceSystemFilter();
@@ -205,6 +240,26 @@ export class InternalControlsPageComponent implements OnInit {
       this.updateGrid();
     });
     this.grid.internalControlsFlag = true;
+  }
+
+  initCap (input: String)
+  {
+   // debugger;
+    if (input!=null) {
+      var stringArr = input.split(" ");
+      var result = "";
+      var cap = stringArr.length;
+      for(var x = 0; x < cap; x++) {
+        stringArr[x] = stringArr[x].toLowerCase();
+        if(x === cap - 1) {
+          result += stringArr[x].substring(0,1).toUpperCase() + stringArr[x].substring(1);
+        } else {
+          result += stringArr[x].substring(0,1).toUpperCase() + stringArr[x].substring(1) + " ";
+        }
+      }
+    }
+    console.log(result);
+    return result;
   }
   getchart1Data() {
     let dataSet = [];
