@@ -45,7 +45,7 @@ export class InternalControlsPageComponent implements OnInit {
       labels: [],
       datasets: [
         {
-          label: '<30',
+          label: '',
           data: [],
           backgroundColor: '#0086b3',
           hoverBackgroundColor: '#0086b3'
@@ -113,7 +113,7 @@ export class InternalControlsPageComponent implements OnInit {
       labels: [],
       datasets: [
         {
-          label: '<30',
+          label: '',
           data: [],
           backgroundColor: '#0086b3',
           hoverBackgroundColor: '#0086b3'
@@ -452,7 +452,9 @@ export class InternalControlsPageComponent implements OnInit {
     }
     console.log(this.grid2config.options);
     this.chart2.chart.data = this.grid2config.data;
+    this.chart2.chart.options.scales.yAxes[0].scaleLabel.labelString=this.grid2config.options.scales.yAxes[0].scaleLabel.labelString;
     this.chart2.chart.render(this.grid2config);
+    this.chart2.chart.tooltips=this.grid2config.options.tooltips;
     this.chart2.chart.update();
   }
   updateBothCharts() {

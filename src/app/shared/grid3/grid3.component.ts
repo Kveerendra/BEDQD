@@ -1,26 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import { MeasureRemidateDQService } from '../../measure-remidate-data-quality/measure-remidate-data-quality.service';
+import {Component, OnInit} from '@angular/core';
+import {MeasureRemidateDQService} from '../../measure-remidate-data-quality/measure-remidate-data-quality.service';
+import { HoverTextSection } from '@angular/language-service';
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-grid3',
   templateUrl: './grid3.component.html',
   styleUrls: ['./grid3.component.css'],
-  providers: [MeasureRemidateDQService]
+  providers: [MeasureRemidateDQService],
+  
 })
 export class Grid3Component implements OnInit {
   columnDefs;
   rowData = [];
   keysOfGrid3;
+  titleDisplay;
   service: MeasureRemidateDQService;
   constructor(measureRemidateDQService: MeasureRemidateDQService) {
     this.columnDefs = [
-      { headerName: 'Legal Entity/LOB', field: 'legalEntity' },
-      { headerName: 'Days', field: 'days' },
-      { headerName: 'Frm Prior Qtr', field: 'prQtrCnt' },
-      { headerName: 'New/Migrate In', field: 'MigrateInCnt' },
-      { headerName: 'Total', field: 'TotalCnt' },
-      { headerName: 'Closed', field: 'closedCnt' },
-      { headerName: 'Migrate Out', field: 'mgOutCnt' },
-      { headerName: 'Outstanding', field: 'outstandingCnt' }
+      {headerName: 'Legal Entity/LOB', field: 'legalEntity'},
+      {headerName: 'Days', field: 'days'},
+      {headerName: 'Frm Prior Qtr', field: 'prQtrCnt'},
+      {headerName: 'New/Migrate In', field: 'MigrateInCnt'},
+      {headerName: 'Total', field: 'TotalCnt'},
+      {headerName: 'Closed', field: 'closedCnt'},
+      {headerName: 'Migrate Out', field: 'mgOutCnt'},
+      {headerName: 'Outstanding', field: 'outstandingCnt'}
     ];
 
     this.rowData = [];
@@ -52,12 +56,12 @@ export class Grid3Component implements OnInit {
           }
           tempArray.push(tempVar);
         }
-      } 
+      }
       this.rowData = tempArray;
     });
   }
 
-  formatNumberWithComma = function (x) {
+  formatNumberWithComma = function(x) {
     x = x.toString();
     var afterPoint = '';
     if (x.indexOf('.') > 0)
@@ -71,4 +75,25 @@ export class Grid3Component implements OnInit {
     var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree + afterPoint;
     return res;
   }
+
+
+  showData = function(x,y) {
+    console.log("i am atleast here :) "+ x.data)
+    this.titleDisplay=x.data.legalEntity+"\t\n"
+          +x.data.days+ "\t\n"
+          +x.data.prQtrCnt+"\n"
+     +x.data.MigrateInCnt+"\n"
+     +x.data.TotalCnt+"\n"
+     +x.data.closedCnt+"\n"
+     +x.data.mgOutCnt+"\n"
+     +x.data.outstandingCnt+"\n"
+        return this.titleDisplay
+  }
+  
+  
 }
+
+
+
+
+

@@ -1,7 +1,7 @@
 <div class="text-left" style = "margin-left: 6px;">
   <ag-grid-angular  class="ag-theme-balham"  style="width: 98%; height: 220px" [rowData]="rowData"
     [columnDefs]="columnDefs"
-    [enableColResize]="true">
+    [enableColResize]="true"   (cellMouseOver)="showData($event,rowData)" title="{{titleDisplay}}" >
 </ag-grid-angular>
 </div>
 
