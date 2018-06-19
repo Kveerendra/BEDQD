@@ -115,7 +115,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         'CREST',
         'Finance FW',
         'GOALD-UK',
-        'Insurence...',
+        'Insurance...',
         'Service No...',
         'VALIC-Ligh...'
       ],
@@ -124,7 +124,13 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           label: 'ECDE',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#29a329',
+          backgroundColor: '#29a329'
+        },
+        {
+          label: 'BCDE',
+          data: [],
+          stack: 'Stack 0',
+          backgroundColor: '#007acc',
           options: {
             scales: {
               xAxes: [
@@ -144,13 +150,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
               ]
             }
           }
-        },
-        {
-          label: 'BCDE',
-          data: [],
-          stack: 'Stack 0',
-          backgroundColor: '#007acc'
-        }
+        }        
       ]
     },
     options: {
@@ -188,6 +188,24 @@ export class DataQualityMoniteringPageComponent implements OnInit {
               display: true,
               labelString: 'Value',
               fontStyle : 'bold',
+            }
+          }, 
+          {          
+            position : 'right',
+            gridLines: {
+              display: false
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'ECDE DQ Monitored'
+            },
+            ticks: {
+              max : 100,
+              stepSize: 50,
+              beginAtZero: true,              
+              callback: function(value) {
+                return (value) + '%'
+              }
             }
           }
         ]
@@ -236,6 +254,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       for (const l in receivedData_2) {
         if (this.drop3.indexOf(receivedData_2[l]['yearQtr']) === -1) {
           this.drop3.push(receivedData_2[l]['yearQtr']);
+          this.drop3.sort();
           this.QuarterFilterQtr[receivedData_2[l]['yearQtr']] = true;
         }
       }
