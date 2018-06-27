@@ -57,7 +57,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           label: 'Current Quarter',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#007acc'
+          backgroundColor: '#0086b3'
         }
       ]
     },
@@ -129,7 +129,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           label: 'BCDE',
           data: [],
           stack: 'Stack 0',
-          backgroundColor: '#007acc',
+          backgroundColor: '#0086b3',
           options: {
             scales: {
               xAxes: [
