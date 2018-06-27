@@ -544,8 +544,11 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         }
       }
       this.drop1 = yearQuarter;
+      this.drop1.sort();
       this.drop2 = lob;
+      this.drop2.sort();
       this.drop3 = sourceSystem;
+      this.drop3.sort();
 
       this.grid3loaded = true;
       this.grid4loaded = true;
