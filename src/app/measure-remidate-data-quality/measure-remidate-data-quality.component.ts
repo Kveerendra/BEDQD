@@ -69,7 +69,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             return this.formatNumberWithComma(Math.abs(value));
           },
           display: (context: any) => {
-            return context.chart.isDatasetVisible(context.datasetIndex);
+            //debugger;
+            return context.chart.isDatasetVisible(context.datasetIndex)  && Math.abs(context.dataset.data[context.dataIndex]) > 7000;
         }
         }
       },
@@ -180,7 +181,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             return this.formatNumberWithComma(Math.abs(value));
           },
           display: (context: any) => {
-            return context.chart.isDatasetVisible(context.datasetIndex);
+            return context.chart.isDatasetVisible(context.datasetIndex) && Math.abs(context.dataset.data[context.dataIndex]) > 3500;
         }
         }
       },

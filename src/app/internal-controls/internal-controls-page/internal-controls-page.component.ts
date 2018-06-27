@@ -56,7 +56,7 @@ export class InternalControlsPageComponent implements OnInit {
     options: {
       plugins: {
         datalabels: {
-          color: '#b3b3b3',
+          color: '#000000',
           display: true,
           align: 'end',
           anchor: 'top',
@@ -77,6 +77,7 @@ export class InternalControlsPageComponent implements OnInit {
         xAxes: [
           {
             ticks: {
+              fontFamily: 'Open Sans Bold, sans-serif',
               autoSkip: false,
               minRotation: 0,
               maxRotation: 90
@@ -92,6 +93,7 @@ export class InternalControlsPageComponent implements OnInit {
           {
             ticks: {
               beginAtZero: true,
+              fontFamily: 'Open Sans Bold, sans-serif',
               max: 120,
               callback: function(value) {
                 return value;
@@ -145,7 +147,7 @@ export class InternalControlsPageComponent implements OnInit {
       },
       plugins: {
         datalabels: {
-          color: '#b3b3b3',
+          color: '#000000',
           display: true,
           align: 'bottom',
           //anchor: 'top',
@@ -163,6 +165,7 @@ export class InternalControlsPageComponent implements OnInit {
         xAxes: [
           {
             ticks: {
+              fontFamily: 'Open Sans Bold, sans-serif',
               autoSkip: false,
               maxRotation: 90,
               minRotation: 0
@@ -173,6 +176,7 @@ export class InternalControlsPageComponent implements OnInit {
         yAxes: [
           {
             ticks: {
+              fontFamily: 'Open Sans Bold, sans-serif',
               callback: function(x) {
                 x = x.toString();
                 let afterPoint = '';
