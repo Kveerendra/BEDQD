@@ -32,17 +32,7 @@
         <app-grid3 ></app-grid3>
       </div>
     <div class="col-2 float-right" >
-        <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
-            <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
-            <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-                <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
-            </li>
-            <li class="dropdown-item" *ngFor="let d2 of drop2"style ="width: 80px;height: 30px;font-size: 12px;">
-                 <input type="checkbox" id ="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d2]" (change)="filterLOBData($event)">{{d2}}
-            </li>
-            </ul>
-            </div>
+        
             <br/>
             <br/>
         <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
@@ -101,7 +91,19 @@
        <input type="radio" name="issue" value = "id" style="margin-left:10px;margin-bottom:10px;" (change)="changeData2()"> Issue Type Details
      </form>
      </div>
-
+     <br/>
+<div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
+            <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
+            <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+                <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
+            </li>
+            <li class="dropdown-item" *ngFor="let d2 of drop2"style ="width: 80px;height: 30px;font-size: 12px;">
+                 <input type="checkbox" id ="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d2]" (change)="filterLOBData($event)">{{d2}}
+            </li>
+            </ul>
+            </div>
+            <br/>
   <br/>
   <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
       <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
