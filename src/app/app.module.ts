@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, keyframes, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
+import {  keyframes } from '@angular/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 
 import { AppRoutingModule } from './app-routing.module';

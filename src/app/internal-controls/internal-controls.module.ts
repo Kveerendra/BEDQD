@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
 import { InternalControlsPageComponent } from './internal-controls-page/internal-controls-page.component';
 import { ChartModule } from 'angular2-chartjs';
 import { SharedModule } from '../shared/shared.module';
