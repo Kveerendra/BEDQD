@@ -55,7 +55,7 @@ export class GridComponent implements OnInit {
         recievedData_3 = this.service
         .getdQMonitoringDetailsbySourceSystem()
         .filter(x => {
-          return x['databaseName'].toLowerCase().indexOf('insurance') !== -1;
+          return x['dimensionFltr'] === 'SOURCE_SYSTEM';
         });
 
 

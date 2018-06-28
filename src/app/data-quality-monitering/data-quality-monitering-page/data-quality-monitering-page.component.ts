@@ -281,19 +281,111 @@ export class DataQualityMoniteringPageComponent implements OnInit {
 
       this.grid1loaded = true;
 
-      for (const j in receivedData_2) {
-        if (receivedData_2[j]) {
-          this.grid2config.data.datasets[0].data.push(
-            receivedData_2[j]['bcdeTot']
-          );
-          this.grid2config.data.datasets[1].data.push(
-            receivedData_2[j]['ecdeTot']
-          );
-        }
-      }
+      // for (const j in receivedData_2) {
+      //   if (receivedData_2[j]) {
+      //     this.grid2config.data.datasets[0].data.push(
+      //       receivedData_2[j]['bcdeTot']
+      //     );
+      //     this.grid2config.data.datasets[1].data.push(
+      //       receivedData_2[j]['ecdeTot']
+      //     );
+      //   }
+      // }
+      this.updateECDEandBCDEWithDQM();
       this.grid2loaded = true;
     });
 
+  }
+
+  updateECDEandBCDEWithDQM(){
+    let receivedData_2 = this.service.geteCDEandBCDEwithDQmonitoringbyADS();
+    let labels = [];
+    let chartData = {};
+    this.grid2config.data.datasets[0].data = [];
+    this.grid2config.data.datasets[1].data = [];
+    console.log("here");
+    if(this.auBuText === 'ADS'){
+
+      for(const l in this.SourceSysFilter){
+        chartData[l] = {
+          "ecde":[],
+          "bcde":[],
+          "ecdeTot":0,
+          "bcdeTot":0
+        };
+      }
+
+      for(const j in receivedData_2){
+        if(this.QuarterFilterQtr[receivedData_2[j]['yearQtr']]
+            && this.SourceSysFilter[receivedData_2[j]['ads']]
+            && this.LOBFilter[receivedData_2[j]['bucfName']]
+            ){
+              if(chartData[receivedData_2[j]['ads']]['ecde'].indexOf(receivedData_2[j]['ecdeTot']) === -1){
+                chartData[receivedData_2[j]['ads']]['ecdeTot']++;
+                chartData[receivedData_2[j]['ads']]['ecde'].push(receivedData_2[j]['ecdeTot']);
+              }
+              if(chartData[receivedData_2[j]['ads']]['bcde'].indexOf(receivedData_2[j]['bcdeTot']) === -1){
+                chartData[receivedData_2[j]['ads']]['bcdeTot']++;
+                chartData[receivedData_2[j]['ads']]['bcde'].push(receivedData_2[j]['bcdeTot']);
+              }
+        }
+      }
+
+      for(const l in this.SourceSysFilter){
+        if(this.SourceSysFilter[l]){
+          labels.push(l);
+          this.grid2config.data.datasets[0].data.push(
+            parseInt(chartData[l]['ecdeTot'])
+          );
+          this.grid2config.data.datasets[1].data.push(
+            parseInt(chartData[l]['bcdeTot'])
+          );
+        }
+      }
+    }
+    else if(this.auBuText === 'BUs/CFs'){
+
+      for(const l in this.LOBFilter){
+        chartData[l] = {
+          "ecde":[],
+          "bcde":[],
+          "ecdeTot":0,
+          "bcdeTot":0
+        };
+      }
+
+      for(const j in receivedData_2){
+        if(this.QuarterFilterQtr[receivedData_2[j]['yearQtr']]
+            && this.SourceSysFilter[receivedData_2[j]['ads']]
+            && this.LOBFilter[receivedData_2[j]['bucfName']]
+            ){
+              if(chartData[receivedData_2[j]['bucfName']]['ecde'].indexOf(receivedData_2[j]['ecdeTot']) === -1){
+                chartData[receivedData_2[j]['bucfName']]['ecdeTot']++;
+                chartData[receivedData_2[j]['bucfName']]['ecde'].push(receivedData_2[j]['ecdeTot']);
+              }
+              if(chartData[receivedData_2[j]['bucfName']]['bcde'].indexOf(receivedData_2[j]['bcdeTot']) === -1){
+                chartData[receivedData_2[j]['bucfName']]['bcdeTot']++;
+                chartData[receivedData_2[j]['bucfName']]['bcde'].push(receivedData_2[j]['bcdeTot']);
+              }
+        }
+      }
+
+      for(const l in this.LOBFilter){
+        if(this.LOBFilter[l]){
+          labels.push(l);
+          this.grid2config.data.datasets[0].data.push(
+            parseInt(chartData[l]['ecdeTot'])
+          );
+          this.grid2config.data.datasets[1].data.push(
+            parseInt(chartData[l]['bcdeTot'])
+          );
+        }
+      }
+    }
+    this.chart2.data.labels = labels;
+    this.chart2.data.datasets[0].data = this.grid2config.data.datasets[0].data;
+    this.chart2.data.datasets[1].data = this.grid2config.data.datasets[1].data;
+    this.chart2.chart.update();
   }
 
   filterData(e) {
@@ -306,80 +398,85 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     this.chart1.data.labels = labels;
     this.chart1.data.labels.sort();
     this.chart1.chart.update();
-    if(this.auBuText === 'BUs/CFs'){
-      this.filterDataOnBUCF(null);
-    }
+    this.updateECDEandBCDEWithDQM();
+    this.filterDimensionData();
   }
 
   filterSourceSystemData(e) {
-    let labels = [];
-    for (const key in this.SourceSysFilter) {
-      if (this.SourceSysFilter[key]) {
-        labels.push(key);
-      }
-    }
-    this.chart2.data.labels = labels;
+    // let labels = [];
+    // for (const key in this.SourceSysFilter) {
+    //   if (this.SourceSysFilter[key]) {
+    //     labels.push(key);
+    //   }
+    // }
+    // this.chart2.data.labels = labels;
 
-    this.chart2.chart.update();
+    // this.chart2.chart.update();
+    this.updateECDEandBCDEWithDQM();
+    this.filterDimensionData();
   }
 
   filterQuarterData(e) {
-    this.service.getData().then(dataaa => {
-      const quarterlabels = this.service.geteCDEandBCDEwithDQmonitoringbyADS();
-      this.grid2config.data.datasets[0].data = [];
-      this.grid2config.data.datasets[1].data = [];
-      for (const i in quarterlabels) {
-        if (this.QuarterFilterQtr[quarterlabels[i]['yearQtr']]) {
-          this.grid2config.data.datasets[0].data.push(
-            quarterlabels[i]['bcdeTot']
-          );
-          this.grid2config.data.datasets[1].data.push(
-            quarterlabels[i]['ecdeTot']
-          );
-        }
-      }
-      this.chart2.data.datasets[0].data = this.grid2config.data.datasets[0].data;
-      this.chart2.data.datasets[1].data = this.grid2config.data.datasets[1].data;
-      this.chart2.chart.update();
-    });
+    this.updateECDEandBCDEWithDQM();
+    // this.service.getData().then(dataaa => {
+    //   const quarterlabels = this.service.geteCDEandBCDEwithDQmonitoringbyADS();
+    //   this.grid2config.data.datasets[0].data = [];
+    //   this.grid2config.data.datasets[1].data = [];
+    //   for (const i in quarterlabels) {
+    //     if (this.QuarterFilterQtr[quarterlabels[i]['yearQtr']]) {
+    //       this.grid2config.data.datasets[0].data.push(
+    //         quarterlabels[i]['bcdeTot']
+    //       );
+    //       this.grid2config.data.datasets[1].data.push(
+    //         quarterlabels[i]['ecdeTot']
+    //       );
+    //     }
+    //   }
+    //   this.chart2.data.datasets[0].data = this.grid2config.data.datasets[0].data;
+    //   this.chart2.data.datasets[1].data = this.grid2config.data.datasets[1].data;
+    //   this.chart2.chart.update();
+    // });
   }
   filterDataOnBUCF(e) {
     var labels = [];
      this.auBuText = 'BUs/CFs'; 
-    for (const key in this.LOBFilter) {
-      if (this.LOBFilter[key]) {
-        labels.push(key);
-      }
-    }
-    this.chart2.data.labels = labels;
-    this.chart2.chart.update();
+     this.updateECDEandBCDEWithDQM();
+    // for (const key in this.LOBFilter) {
+    //   if (this.LOBFilter[key]) {
+    //     labels.push(key);
+    //   }
+    // }
+    // this.chart2.data.labels = labels;
+    // this.chart2.chart.update();
   }
 
   filterDataOnADS(e) {
     var labels = [];
     this.auBuText = 'ADS'; 
-    for (const key in this.SourceSysFilter) {
-      if (this.SourceSysFilter[key]) {
-        labels.push(key);
-      }
-    }
-    this.chart2.data.labels = labels;
-    this.chart2.chart.update();
+    this.updateECDEandBCDEWithDQM();
+    // for (const key in this.SourceSysFilter) {
+    //   if (this.SourceSysFilter[key]) {
+    //     labels.push(key);
+    //   }
+    // }
+    // this.chart2.data.labels = labels;
+    // this.chart2.chart.update();
   }
   filterDimensionData(): void {
+    console.log("came here");
     let recievedData_3 = [];
     var rowDataWithKeys = {};
     if (this.dimensionFilter === 'entityLegalLob') {
       recievedData_3 = this.service
         .getdQMonitoringDetailsbySourceSystem()
         .filter(x => {
-          return x['databaseName'].toLowerCase().indexOf('insurance') === -1;
+          return x['dimensionFltr'] === 'LEGAL_ENTITY_LOB';
         });
     } else if (this.dimensionFilter === 'sourceSystem') {
       recievedData_3 = this.service
         .getdQMonitoringDetailsbySourceSystem()
         .filter(x => {
-          return x['databaseName'].toLowerCase().indexOf('insurance') !== -1;
+          return x['dimensionFltr'] === 'SOURCE_SYSTEM';
         });
     }
 
@@ -405,7 +502,9 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       rowDataWithKeys[i]['rcrdsPsd'] = this.formatNumberWithComma(rowDataWithKeys[i]['rcrdsPsd']);
       rowDataWithKeys[i]['rowsTstd'] = this.formatNumberWithComma(rowDataWithKeys[i]['rowsTstd']);
       rowDataWithKeys[i]['chgFrmPrQtr'] = Math.abs(rowDataWithKeys[i]['chgFrmPrQtr']);
-      tempArray.push(rowDataWithKeys[i]);
+      if(this.LOBFilter[rowDataWithKeys[i]['bucfName']] === true
+          && this.SourceSysFilter[rowDataWithKeys[i]['ads']] === true){
+      tempArray.push(rowDataWithKeys[i]);}
     }
   }
     this.grid.rowData = tempArray;
