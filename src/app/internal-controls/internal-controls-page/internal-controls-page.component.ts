@@ -460,7 +460,6 @@ export class InternalControlsPageComponent implements OnInit {
           }
         };
     }
-    console.log(this.grid2config.options);
     this.chart2.chart.data = this.grid2config.data;
     this.chart2.chart.options.scales.yAxes[0].scaleLabel.labelString=this.grid2config.options.scales.yAxes[0].scaleLabel.labelString;
     this.chart2.chart.render(this.grid2config);
@@ -532,7 +531,7 @@ export class InternalControlsPageComponent implements OnInit {
         record =>
           record.dimension === dimension &&
           this.LOBFilter[record.sourceLOB] &&
-          this.sourceSystemFilter[record.sourceSytem]
+          this.sourceSystemFilter[record.sourceSystem]
       );
     this.grid.rowData = rowData;
   }
