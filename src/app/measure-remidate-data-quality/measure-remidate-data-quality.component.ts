@@ -23,6 +23,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   allLobSelected = true;
   allSourceSystemSelected = true;
   allYearQtrSelected = true;
+  //hpCurrentQtr=true;
   rowData = [];
   drop1 = [];
   drop2 = [];
@@ -590,22 +591,26 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     }
     this.rowData = tempArray;
     this.grid.rowData = this.rowData;
-    this.chart1.data.labels = labels;
-    this.chart1.chart.update();
-    this.chart2.data.labels = labels;
-    this.chart2.chart.update();
+    //commented the code as we dont want LOB to update High priority DQ issues for current quarter
+    //this.chart1.data.labels = labels;
+    //this.chart1.chart.update();
+    //this.chart2.data.labels = labels;
+    //this.chart2.chart.update();
   }
   changeData1() {
     document.getElementById('div1').style.display = 'block';
     document.getElementById('div2').style.display = 'none';
+    //this.hpCurrentQtr=false;
   }
 
   changeData2() {
     document.getElementById('div1').style.display = 'none';
     document.getElementById('div2').style.display = 'block';
+    //this.hpCurrentQtr=false;
   }
 
   filteryearQtr(e) {
+
     let templet = {};
     let tempArray = [];
 
