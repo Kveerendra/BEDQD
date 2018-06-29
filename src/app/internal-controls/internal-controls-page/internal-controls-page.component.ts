@@ -179,22 +179,28 @@ export class InternalControlsPageComponent implements OnInit {
               fontFamily: 'Open Sans Bold, sans-serif',
               callback: function(x) {
                 x = x.toString();
-                let afterPoint = '';
-                if (x.indexOf('.') > 0) {
-                  afterPoint = x.substring(x.indexOf('.'), x.length);
-                }
-                x = Math.floor(x);
-                x = x.toString();
-                let lastThree = x.substring(x.length - 3);
-                let otherNumbers = x.substring(0, x.length - 3);
-                if (otherNumbers != '') {
-                  lastThree = ',' + lastThree;
-                }
-                let res =
-                  otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') +
-                  lastThree +
-                  afterPoint;
-                return res;
+                if(x.length < 7) { // if x is not in millions, else append M
+                  let afterPoint = '';
+                  if (x.indexOf('.') > 0) {
+                    afterPoint = x.substring(x.indexOf('.'), x.length);
+                  }
+                  x = Math.floor(x);
+                  x = x.toString();
+                  let lastThree = x.substring(x.length - 3);
+                  let otherNumbers = x.substring(0, x.length - 3);
+                  if (otherNumbers != '') {
+                    lastThree = ',' + lastThree;
+                  }
+                  let res =
+                    otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') +
+                    lastThree +
+                    afterPoint;
+                  return res;
+                } else {
+                  x = x/1000000;
+                  x = x + 'M';
+                  return x;
+                }                
               },
               beginAtZero: true
             },
