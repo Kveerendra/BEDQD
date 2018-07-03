@@ -407,6 +407,12 @@ export class InternalControlsPageComponent implements OnInit {
     this.grid2config.data.datasets[0].data = [];
     this.grid2config.data.labels = [];
     let dataSet = this.getchart2Data();
+    
+    // changes to match with latest IC JSON
+    var ecdeSelectedVar = this.ecdeSelected;
+    if(this.scoreBySelected === 'sourceLOB' && this.ecdeSelected === 'ecdeRcrdsTstd') {
+      ecdeSelectedVar = 'ecdeRecordsTested'
+    }
 
     for (const i in dataSet) {
       if (
@@ -420,12 +426,15 @@ export class InternalControlsPageComponent implements OnInit {
         if (index !== -1) {
           this.grid2config.data.datasets[0].data[index] =
             parseFloat(this.grid2config.data.datasets[0].data[index]) +
-            parseFloat(dataSet[i][this.ecdeSelected]);
+            parseFloat(dataSet[i][ecdeSelectedVar]);
         } else {
           this.grid2config.data.datasets[0].data.push(
-            parseFloat(dataSet[i][this.ecdeSelected])
+            parseFloat(dataSet[i][ecdeSelectedVar])
           );
+          
           this.grid2config.data.labels.push(dataSet[i][this.scoreBySelected]);
+          
+          
         }
       }
     }
@@ -514,15 +523,16 @@ export class InternalControlsPageComponent implements OnInit {
 
     this.grid.columnDefs = columnDefs;
     let dimension = '';
+    // changes to match with latest IC JSON
     dimension =
       this.scoreBySelected === 'level1ProcessDqp'
         ? 'Level1_Process_Name'
         : this.scoreBySelected === 'level2ProcessDqp'
-          ? 'Level2_Process_DQP'
+          ? 'Level2_Process_Name'
           : this.scoreBySelected === 'sourceSystem'
             ? 'SOURCE_SYSTEM'
             : this.scoreBySelected === 'sourceLOB'
-              ? 'LOB'
+              ? 'LEGAL_ENTITY_LOB'
               : 'Level1_Process_Name';
 
     rowData = this.service
@@ -531,7 +541,7 @@ export class InternalControlsPageComponent implements OnInit {
         record =>
           record.dimension === dimension &&
           this.LOBFilter[record.sourceLOB] &&
-          this.sourceSystemFilter[record.sourceSystem]
+          this.sourceSystemFilter[record.sourceSytem]
       );
     this.grid.rowData = rowData;
   }
