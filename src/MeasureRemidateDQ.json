@@ -1,9 +1,8 @@
 {
-    "dqScoreModel": {
+	"dqScoreModel": {
         "header": "Open DQ Issues",
         "dqScore": "1"
-    },
-	"issueSummaryLst": [{
+    },"issueSummaryLst": [{
 			"legalEntity": "CD",
 			"yearQuarter": "Jul-Sep 2014",
 			"sourceSystem": "HR GDW",
@@ -28,7 +27,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2014",
 			"sourceSystem": "Service No...",
 			"lob": "",
@@ -44,7 +43,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2020",
 			"sourceSystem": "Fieldglass",
 			"lob": "",
@@ -84,7 +83,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2014",
 			"sourceSystem": "Service No...",
 			"lob": "",
@@ -100,7 +99,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2015",
 			"sourceSystem": "Insurance ...",
 			"lob": "",
@@ -140,7 +139,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2016",
 			"sourceSystem": "VALIC-Ligh...",
 			"lob": "",
@@ -276,7 +275,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2011",
 			"sourceSystem": "Service No...",
 			"lob": "",
@@ -316,7 +315,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2012",
 			"sourceSystem": "Archer",
 			"lob": "",
@@ -340,7 +339,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2013",
 			"sourceSystem": "GOALD- UK",
 			"lob": "",
@@ -364,7 +363,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jul-Sep 2021",
 			"sourceSystem": "UGIns Prod",
 			"lob": "",
@@ -380,7 +379,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2017",
 			"sourceSystem": "CREST",
 			"lob": "",
@@ -388,7 +387,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2014",
 			"sourceSystem": "HR GDW",
 			"lob": "",
@@ -412,7 +411,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": null,
 			"sourceSystem": "HR GDW",
 			"lob": "",
@@ -444,7 +443,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2015",
 			"sourceSystem": "GOALD- UK",
 			"lob": "",
@@ -460,7 +459,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2020",
 			"sourceSystem": "SARM Wareh...",
 			"lob": "",
@@ -484,7 +483,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": null,
 			"sourceSystem": "CREST",
 			"lob": "",
@@ -524,7 +523,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2014",
 			"sourceSystem": "CREST",
 			"lob": "",
@@ -580,7 +579,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2012",
 			"sourceSystem": "Finance FW",
 			"lob": "",
@@ -612,7 +611,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2013",
 			"sourceSystem": "Fieldglass",
 			"lob": "",
@@ -732,7 +731,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": null,
 			"sourceSystem": "SARM Wareh...",
 			"lob": "",
@@ -748,7 +747,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jul-Sep 2018",
 			"sourceSystem": "Blueprint",
 			"lob": "",
@@ -756,7 +755,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2014",
 			"sourceSystem": "SARM Wareh...",
 			"lob": "",
@@ -804,7 +803,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jul-Sep 2022",
 			"sourceSystem": "Finance FW",
 			"lob": "",
@@ -836,7 +835,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jul-Sep 2018",
 			"sourceSystem": "HR GDW",
 			"lob": "",
@@ -852,7 +851,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": null,
 			"sourceSystem": "Finance FW",
 			"lob": "",
@@ -876,7 +875,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": null,
 			"sourceSystem": "GOALD- UK",
 			"lob": "",
@@ -908,7 +907,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2014",
 			"sourceSystem": "GOALD- UK",
 			"lob": "",
@@ -972,7 +971,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2014",
 			"sourceSystem": "UGIns Prod",
 			"lob": "",
@@ -996,7 +995,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2015",
 			"sourceSystem": "Blueprint",
 			"lob": "",
@@ -1004,7 +1003,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2015",
 			"sourceSystem": "HR GDW",
 			"lob": "",
@@ -1028,7 +1027,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2014",
 			"sourceSystem": "UGIns Prod",
 			"lob": "",
@@ -1068,7 +1067,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jul-Sep 2015",
 			"sourceSystem": "CREST",
 			"lob": "",
@@ -1092,7 +1091,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2013",
 			"sourceSystem": "SARM Wareh...",
 			"lob": "",
@@ -1100,7 +1099,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2020",
 			"sourceSystem": "Blueprint",
 			"lob": "",
@@ -1244,7 +1243,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2012",
 			"sourceSystem": "HR GDW",
 			"lob": "",
@@ -1300,7 +1299,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2017",
 			"sourceSystem": "HR GDW",
 			"lob": "",
@@ -1388,7 +1387,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2022",
 			"sourceSystem": "Blueprint",
 			"lob": "",
@@ -1484,7 +1483,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": null,
 			"sourceSystem": "Insurance ...",
 			"lob": "",
@@ -1516,7 +1515,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2014",
 			"sourceSystem": "CREST",
 			"lob": "",
@@ -1524,7 +1523,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2011",
 			"sourceSystem": "Fieldglass",
 			"lob": "",
@@ -1540,7 +1539,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2014",
 			"sourceSystem": "Insurance ...",
 			"lob": "",
@@ -1612,7 +1611,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": null,
 			"sourceSystem": "Archer",
 			"lob": "",
@@ -1636,7 +1635,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jul-Sep 2015",
 			"sourceSystem": "UGIns Prod",
 			"lob": "",
@@ -1652,7 +1651,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jul-Sep 2020",
 			"sourceSystem": "Finance FW",
 			"lob": "",
@@ -1660,7 +1659,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2011",
 			"sourceSystem": "CREST",
 			"lob": "",
@@ -1676,7 +1675,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2022",
 			"sourceSystem": "Archer",
 			"lob": "",
@@ -1684,7 +1683,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2012",
 			"sourceSystem": "GOALD- UK",
 			"lob": "",
@@ -1740,7 +1739,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2012",
 			"sourceSystem": "Finance FW",
 			"lob": "",
@@ -1748,7 +1747,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2015",
 			"sourceSystem": "UGIns Prod",
 			"lob": "",
@@ -1780,7 +1779,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2013",
 			"sourceSystem": "Blueprint",
 			"lob": "",
@@ -1788,7 +1787,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Oct-Dec 2014",
 			"sourceSystem": "SARM Wareh...",
 			"lob": "",
@@ -1804,7 +1803,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2020",
 			"sourceSystem": "UGIns Prod",
 			"lob": "",
@@ -1860,7 +1859,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2013",
 			"sourceSystem": "HR GDW",
 			"lob": "",
@@ -1876,7 +1875,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Apr-Jun 2021",
 			"sourceSystem": "CREST",
 			"lob": "",
@@ -1900,7 +1899,7 @@
 			"currentQuarter": "1",
 			"change": "22"
 		}, {
-			"legalEntity": "Null",
+			"legalEntity": "",
 			"yearQuarter": "Jan-Mar 2010",
 			"sourceSystem": "Blueprint",
 			"lob": "",
@@ -1976,153 +1975,2466 @@
 	"issueTypeDetails": {
 		"openDQIssuesTypeDetailsMap": {
 			"": [{
-					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			],
 			"CAO": [{
-					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
 				}, {
 					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			],
 			"CD": [{
-					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
 				}, {
 					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			],
 			"QS": [{
-					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
 				}, {
 					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			],
 			"XXXGS": [{
-					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
 				}, {
 					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			],
 			"Legal": [{
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
-					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
 				}, {
 					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
 				}, {
 					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			],
 			"XYZ": [{
-					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
 				}, {
 					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			],
 			"HR": [{
-					"dqDimension": "Completeness",
-					"priorQuarter": "14",
-					"currentQuarter": "1"
-				}, {
-					"dqDimension": "Validity",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2014"
 				}, {
 					"dqDimension": "Accuracy",
-					"priorQuarter": "1",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2018"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2010"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Accuracy",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "413",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2022"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "407",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "404",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "401",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "402",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "406",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "405",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "408",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "411",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "414",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "403",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "409",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2014"
+				}, {
+					"dqDimension": "Completeness",
+					"priorQuarter": "410",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2018"
 				}, {
 					"dqDimension": "Conformity",
-					"priorQuarter": "10",
-					"currentQuarter": "1"
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": ""
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "23",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "24",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2012"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2019"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Apr-Jun 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2015"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "398",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2021"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "412",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "395",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "396",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2011"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2014"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jul-Sep 2020"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "400",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "397",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "399",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2010"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2013"
+				}, {
+					"dqDimension": "Conformity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Nov-Dec 2017"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2011"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2013"
+				}, {
+					"dqDimension": "Validity",
+					"priorQuarter": "0",
+					"currentQuarter": "0",
+					"yearQtr": "Jan-Mar 2019"
 				}
 			]
 		}
 	},
 	"openDQPrioritySummary": {
 		"openDQPrioritySummaryMap": {
+			"": [{
+					"agingBucket": "30-60",
+					"priorQuarter": "321220",
+					"newOrMigrateIn": "272880",
+					"total": "594100",
+					"closed": "170160",
+					"migrateOut": "121820",
+					"outstanding": "302120",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": "254380",
+					"newOrMigrateIn": "245760",
+					"total": "500140",
+					"closed": "107120",
+					"migrateOut": "96380",
+					"outstanding": "296640",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": "473880",
+					"newOrMigrateIn": "223720",
+					"total": "697600",
+					"closed": "157720",
+					"migrateOut": "117440",
+					"outstanding": "422440",
+					"colorClosed": "Green",
+					"colorOutstanding": "Green",
+					"bucfName": null,
+					"highPriority": null,
+					"lowPriority": null
+				}
+			],
 			"CAO": [{
 					"agingBucket": "30-60",
 					"priorQuarter": "25440",
@@ -2455,6 +4767,47 @@
 	},
 	"openDQPriorityDtlsLowPr": {
 		"openDQPrioritySummaryMap": {
+			"": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "",
+					"highPriority": null,
+					"lowPriority": "172540"
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "",
+					"highPriority": null,
+					"lowPriority": "128180"
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "",
+					"highPriority": null,
+					"lowPriority": "123380"
+				}
+			],
 			"CAO": [{
 					"agingBucket": "30-60",
 					"priorQuarter": null,
@@ -2787,6 +5140,47 @@
 	},
 	"openDQPriorityDtlsHighPr": {
 		"openDQPrioritySummaryMap": {
+			"": [{
+					"agingBucket": "30-60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "",
+					"highPriority": "450940",
+					"lowPriority": null
+				}, {
+					"agingBucket": "<30",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "",
+					"highPriority": "435700",
+					"lowPriority": null
+				}, {
+					"agingBucket": ">60",
+					"priorQuarter": null,
+					"newOrMigrateIn": null,
+					"total": null,
+					"closed": null,
+					"migrateOut": null,
+					"outstanding": null,
+					"colorClosed": null,
+					"colorOutstanding": null,
+					"bucfName": "",
+					"highPriority": "479340",
+					"lowPriority": null
+				}
+			],
 			"CAO": [{
 					"agingBucket": "30-60",
 					"priorQuarter": null,
@@ -3118,5 +5512,3 @@
 		}
 	}
 }
-
-    
