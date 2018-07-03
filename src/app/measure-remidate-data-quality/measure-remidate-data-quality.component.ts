@@ -16,7 +16,9 @@ import 'chartjs-plugin-datalabels';
 export class MeasureRemidateDataQualityComponent implements OnInit {
   @ViewChild('grid3Chart') chart1: ChartComponent;
   @ViewChild('grid4Chart') chart2: ChartComponent;
-  @ViewChild('gridTable') grid: Grid2Component;
+  @ViewChild('grid5Chart') chart5: ChartComponent;
+  @ViewChild('grid6Chart') chart6: ChartComponent;
+  @ViewChild('grid6Chart') grid: Grid2Component;
   openDQIssues: String;
   header: String;
   columnDefs;
@@ -473,8 +475,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       this.keysOfGrid3 = Object.keys(grid3Data);
       this.grid3config.data.labels = this.keysOfGrid3;
       this.grid4config.data.labels = this.keysOfGrid3;
-      this.grid5config.data.labels = this.keysOfGrid3;
-      this.grid6config.data.labels = this.keysOfGrid3;
 
       for (const itr_1 in grid3Data) {
         grid3MapList = grid3Data[itr_1];
@@ -516,6 +516,15 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           this.yearQtr[appGridData[itr_3]['yearQuarter']] = true;
         }
       }
+      for (const itr_5 in issueDetailsMap){
+        grid5MapList = issueDetailsMap[itr_5];
+        for (const itr_2 in grid5MapList) {
+          if(yearQuarter.indexOf(grid5MapList[itr_2]['yearQtr']) === -1){
+            yearQuarter.push(grid5MapList[itr_2]['yearQtr']);
+          this.yearQtr[grid5MapList[itr_2]['yearQtr']] = true;
+          }
+        }
+      }
       for (const itr_3 in appGridData) {
         if (
           lob.indexOf(appGridData[itr_3]['lob']) == -1 &&
@@ -534,16 +543,16 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
           this.SourceSystem[appGridData[itr_4]['sourceSystem']] = true;
         }
       }
-      for (const itr_5 in issueDetailsMap) {
-        grid5MapList = issueDetailsMap[itr_5];
-        for (const itr_2 in grid5MapList) {
-          dataset_grid5 = -1 * parseInt(grid5MapList[itr_2]['priorQuarter']);
-          dataset_grid6 = grid5MapList[itr_2]['currentQuarter'];
+      // for (const itr_5 in issueDetailsMap) {
+      //   grid5MapList = issueDetailsMap[itr_5];
+      //   for (const itr_2 in grid5MapList) {
+      //     dataset_grid5 = -1 * parseInt(grid5MapList[itr_2]['priorQuarter']);
+      //     dataset_grid6 = grid5MapList[itr_2]['currentQuarter'];
 
-          this.grid5config.data.datasets[itr_2].data.push(dataset_grid5);
-          this.grid6config.data.datasets[itr_2].data.push(dataset_grid6);
-        }
-      }
+      //     this.grid5config.data.datasets[itr_2].data.push(dataset_grid5);
+      //     this.grid6config.data.datasets[itr_2].data.push(dataset_grid6);
+      //   }
+      // }
       this.drop1 = yearQuarter;
       this.drop1.sort();
       this.drop2 = lob;
@@ -553,9 +562,226 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
 
       this.grid3loaded = true;
       this.grid4loaded = true;
+      this.updateIssueTyepDetails();
       this.grid5loaded = true;
       this.grid6loaded = true;
     });
+  }
+
+  filterIssueTyepDetails(){
+    
+    let issueDetailsMap = this.service.getissueTypeDetails();
+    let grid5MapList;
+    let chartData = {};
+    this.grid5config.data.labels = [];
+    this.grid6config.data.labels = [];
+    this.grid5config.data.datasets[0].data = [];
+    this.grid5config.data.datasets[1].data = [];
+    this.grid5config.data.datasets[2].data = [];
+    this.grid5config.data.datasets[3].data = [];
+
+
+    this.grid6config.data.datasets[0].data = [];
+    this.grid6config.data.datasets[1].data = [];
+    this.grid6config.data.datasets[2].data = [];
+    this.grid6config.data.datasets[3].data = [];
+
+    for(const l in this.LOBFilter){
+      chartData[l] = {
+        'Accuracy' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        },
+        'Completeness' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        },
+        'Conformity' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        },
+        'Validity' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        }
+      };
+    }
+
+    for (const itr_5 in issueDetailsMap){
+      grid5MapList = issueDetailsMap[itr_5];
+      for (const itr_2 in grid5MapList) {
+        if(this.yearQtr[grid5MapList[itr_2]['yearQtr']]){
+          if(grid5MapList[itr_2]['dqDimension'] === 'Accuracy' ){
+            if(chartData[itr_5]['Accuracy']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Accuracy']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Accuracy']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Accuracy']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+          else if(grid5MapList[itr_2]['dqDimension'] === 'Completeness' ){
+            if(chartData[itr_5]['Completeness']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Completeness']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Completeness']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Completeness']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+          else if(grid5MapList[itr_2]['dqDimension'] === 'Conformity' ){
+            if(chartData[itr_5]['Conformity']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Conformity']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Conformity']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Conformity']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+          else if(grid5MapList[itr_2]['dqDimension'] === 'Validity' ){
+            if(chartData[itr_5]['Validity']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Validity']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Validity']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Validity']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+        }
+      }
+    }
+
+    for(const l in this.LOBFilter){
+      if(this.LOBFilter[l]){
+           this.grid5config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length * -1);
+           this.grid5config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length * -1);
+           this.grid5config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length * -1);
+           this.grid5config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length * -1);
+
+
+           this.grid6config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length);
+           this.grid6config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length);
+           this.grid6config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length);
+           this.grid6config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length);
+
+           this.grid5config.data.labels.push(l);
+           this.grid6config.data.labels.push(l);
+      }
+    }
+
+    this.chart5.data.labels = this.grid5config.data.labels;
+    this.chart5.data.datasets[0].data = this.grid5config.data.datasets[0].data;
+    this.chart5.data.datasets[1].data = this.grid5config.data.datasets[1].data;
+    this.chart5.data.datasets[2].data = this.grid5config.data.datasets[2].data;
+    this.chart5.data.datasets[3].data = this.grid5config.data.datasets[3].data;
+
+    this.chart6.data.labels = this.grid6config.data.labels;
+    this.chart6.data.datasets[0].data = this.grid6config.data.datasets[0].data;
+    this.chart6.data.datasets[1].data = this.grid6config.data.datasets[1].data;
+    this.chart6.data.datasets[2].data = this.grid6config.data.datasets[2].data;
+    this.chart6.data.datasets[3].data = this.grid6config.data.datasets[3].data;
+
+    this.chart5.chart.update();
+    this.chart6.chart.update();
+ 
+  }
+
+  updateIssueTyepDetails (){
+    let issueDetailsMap = this.service.getissueTypeDetails();
+    let grid5MapList;
+    let chartData = {};
+    this.grid5config.data.labels = [];
+    this.grid6config.data.labels = [];
+
+    for(const l in this.LOBFilter){
+      chartData[l] = {
+        'Accuracy' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        },
+        'Completeness' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        },
+        'Conformity' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        },
+        'Validity' : {
+          'priorQuarter' : [],
+          'currentQuarter' : []
+        }
+      };
+    }
+
+    for (const itr_5 in issueDetailsMap){
+      grid5MapList = issueDetailsMap[itr_5];
+      for (const itr_2 in grid5MapList) {
+        if(this.yearQtr[grid5MapList[itr_2]['yearQtr']]){
+          if(grid5MapList[itr_2]['dqDimension'] === 'Accuracy' ){
+            if(chartData[itr_5]['Accuracy']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Accuracy']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Accuracy']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Accuracy']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+          else if(grid5MapList[itr_2]['dqDimension'] === 'Completeness' ){
+            if(chartData[itr_5]['Completeness']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Completeness']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Completeness']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Completeness']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+          else if(grid5MapList[itr_2]['dqDimension'] === 'Conformity' ){
+            if(chartData[itr_5]['Conformity']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Conformity']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Conformity']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Conformity']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+          else if(grid5MapList[itr_2]['dqDimension'] === 'Validity' ){
+            if(chartData[itr_5]['Validity']['priorQuarter'].indexOf(grid5MapList[itr_2]['priorQuarter']) === -1){
+              chartData[itr_5]['Validity']['priorQuarter'].push(grid5MapList[itr_2]['priorQuarter']);
+            }
+            if(chartData[itr_5]['Validity']['currentQuarter'].indexOf(grid5MapList[itr_2]['currentQuarter']) === -1){
+              chartData[itr_5]['Validity']['currentQuarter'].push(grid5MapList[itr_2]['currentQuarter']);
+            }
+          }
+        }
+      }
+    }
+
+    for(const l in this.LOBFilter){
+      if(this.LOBFilter[l]){
+           this.grid5config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length * -1);
+           this.grid5config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length * -1);
+           this.grid5config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length * -1);
+           this.grid5config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length * -1);
+
+
+           this.grid6config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length);
+           this.grid6config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length);
+           this.grid6config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length);
+           this.grid6config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length);
+
+           this.grid5config.data.labels.push(l);
+           this.grid6config.data.labels.push(l);
+      }
+    }
+
+    // this.chart5.data.labels = this.grid5config.data.labels;
+    // this.chart5.data.datasets[0].data = this.grid5config.data.datasets[0].data;
+    // this.chart5.data.datasets[1].data = this.grid5config.data.datasets[1].data;
+    // this.chart5.data.datasets[2].data = this.grid5config.data.datasets[2].data;
+    // this.chart5.data.datasets[3].data = this.grid5config.data.datasets[3].data;
+
+    // this.chart6.data.labels = this.grid6config.data.labels;
+    // this.chart6.data.datasets[0].data = this.grid6config.data.datasets[0].data;
+    // this.chart6.data.datasets[1].data = this.grid6config.data.datasets[1].data;
+    // this.chart6.data.datasets[2].data = this.grid6config.data.datasets[2].data;
+    // this.chart6.data.datasets[3].data = this.grid6config.data.datasets[3].data;
+
+    // this.chart5.chart.update();
+    // this.chart6.chart.update();
   }
 
   filterLOBData(e) {
@@ -563,6 +789,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     for (const key in this.LOBFilter) {
       if (this.LOBFilter[key]) {
         labels.push(key);
+
       }
     }
 
@@ -596,6 +823,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     //this.chart1.chart.update();
     //this.chart2.data.labels = labels;
     //this.chart2.chart.update();
+    this.filterIssueTyepDetails();
   }
   changeData1() {
     document.getElementById('div1').style.display = 'block';
@@ -636,6 +864,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     }
     this.rowData = tempArray;
     this.grid.rowData = this.rowData;
+
+    this.filterIssueTyepDetails();
   }
 
   filterSourceSystem(e) {
