@@ -84,10 +84,10 @@
             <div ngbDropdown class="d-inline-block" style="padding-right: 25px;">
               <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 100px;height: 30px;font-size: 12px;">Dimension</button>
               <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="LOBFilter[d1]" (click)="filterDataOnADS($event)">
+                <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;"  (click)="filterDataOnADS($event)">
                   ADS
                 </li>
-                <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" [(ngModel)]="SourceSysFilter[d1]"
+                <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;cursor: pointer;" 
                   (click)="filterDataOnBUCF($event)">
                   BUs/CFs
                 </li>
