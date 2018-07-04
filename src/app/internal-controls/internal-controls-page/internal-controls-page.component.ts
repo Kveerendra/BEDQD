@@ -522,8 +522,8 @@ export class InternalControlsPageComponent implements OnInit {
       { headerName: 'Legal Entity / LOB', field: 'level1ProcessDqp' },
       { headerName: 'ECDE', field: 'ecde' },
       { headerName: 'Impact Score', field: 'impactScore' },
-      { headerName: 'Completness', field: 'completness' },
-      { headerName: 'Conformity', field: 'conformity' },
+      { headerName: 'Completness', field: 'completeness' },
+      { headerName: 'Conformity', field: 'confirmity' },
       { headerName: 'Validity', field: 'validity' },
       { headerName: 'Accuracy', field: 'accuracy' }
     ];
