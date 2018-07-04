@@ -251,10 +251,10 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       for (const l in receivedData_2) {
         if (this.drop3.indexOf(receivedData_2[l]['yearQtr']) === -1) {
           this.drop3.push(receivedData_2[l]['yearQtr']);
-          this.drop3.sort();
           this.QuarterFilterQtr[receivedData_2[l]['yearQtr']] = true;
         }
       }
+      this.drop3.sort();
       const data = {
         label: '0',
         data: [],

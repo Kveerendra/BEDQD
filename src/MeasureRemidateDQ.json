@@ -6228,7 +6228,7 @@
       }
    },
    "dqScoreModel":{  
-      "header":"DATA_QUALITY_SCORE",
+      "header":"Open DQ Issues",
       "dqScore":"1"
    }
 }

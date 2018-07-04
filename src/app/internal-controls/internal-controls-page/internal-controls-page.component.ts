@@ -491,6 +491,7 @@ export class InternalControlsPageComponent implements OnInit {
       }
     }
     this.drop4 = sourceSystems;
+    this.drop4.sort();
   }
   fillLobFilter() {
     let dataSet = this.getchart1Data();
@@ -503,6 +504,7 @@ export class InternalControlsPageComponent implements OnInit {
       }
     }
     this.drop3 = lobs;
+    this.drop3.sort();
   }
   filterData(e) {
     this.updateBothCharts();

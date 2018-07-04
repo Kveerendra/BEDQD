@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input, Inject, ViewChild } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { MeasureRemidateDQService } from './measure-remidate-data-quality.service';
@@ -18,7 +19,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   @ViewChild('grid4Chart') chart2: ChartComponent;
   @ViewChild('grid5Chart') chart5: ChartComponent;
   @ViewChild('grid6Chart') chart6: ChartComponent;
-  @ViewChild('grid6Chart') grid: Grid2Component;
+  @ViewChild('gridTable') grid: Grid2Component;
   openDQIssues: String;
   header: String;
   columnDefs;
@@ -648,7 +649,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     }
 
     for(const l in this.LOBFilter){
-      if(this.LOBFilter[l]){
            this.grid5config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length * -1);
            this.grid5config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length * -1);
            this.grid5config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length * -1);
@@ -662,7 +662,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
 
            this.grid5config.data.labels.push(l);
            this.grid6config.data.labels.push(l);
-      }
     }
 
     this.chart5.data.labels = this.grid5config.data.labels;
@@ -823,7 +822,6 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     //this.chart1.chart.update();
     //this.chart2.data.labels = labels;
     //this.chart2.chart.update();
-    this.filterIssueTyepDetails();
   }
   changeData1() {
     document.getElementById('div1').style.display = 'block';

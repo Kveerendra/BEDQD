@@ -403,6 +403,11 @@ export class KeyHighlightsPageComponent implements OnInit {
       this.grid1config.data.datasets[0].data.push(
         openDQIssues['currentQuarter']
       );
+
+      this.drop2.sort();
+      this.drop3.sort();
+      this.drop4.sort();
+
     });
   }
 
