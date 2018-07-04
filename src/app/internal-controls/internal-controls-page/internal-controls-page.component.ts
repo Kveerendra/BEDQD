@@ -412,29 +412,32 @@ export class InternalControlsPageComponent implements OnInit {
     var ecdeSelectedVar = this.ecdeSelected;
     if(this.scoreBySelected === 'sourceLOB' && this.ecdeSelected === 'ecdeRcrdsTstd') {
       ecdeSelectedVar = 'ecdeRecordsTested'
-    }
+    }    
 
-    for (const i in dataSet) {
-      if (
-        dataSet[i] &&
-        this.LOBFilter[dataSet[i]['sourceLOB']] &&
-        this.sourceSystemFilter[dataSet[i]['sourceSystem']]
-      ) {
-        let index = this.grid2config.data.labels.indexOf(
-          dataSet[i][this.scoreBySelected]
-        );
-        if (index !== -1) {
-          this.grid2config.data.datasets[0].data[index] =
-            parseFloat(this.grid2config.data.datasets[0].data[index]) +
-            parseFloat(dataSet[i][ecdeSelectedVar]);
-        } else {
-          this.grid2config.data.datasets[0].data.push(
-            parseFloat(dataSet[i][ecdeSelectedVar])
-          );
-          
-          this.grid2config.data.labels.push(dataSet[i][this.scoreBySelected]);
-          
-          
+    // reading labels first to fill them in increasing order
+    let chart2Labels = [];    
+    for(const idx in dataSet) {
+      if(dataSet[idx] && this.LOBFilter[dataSet[idx]['sourceLOB']] 
+      && this.sourceSystemFilter[dataSet[idx]['sourceSystem']] && chart2Labels.indexOf(dataSet[idx][this.scoreBySelected]) === -1) {
+        chart2Labels.push(dataSet[idx][this.scoreBySelected]);
+      }      
+    }
+    chart2Labels.sort();
+
+    for(const idx in chart2Labels) {
+      for(const i in dataSet) {
+        if(dataSet[i] && this.LOBFilter[dataSet[i]['sourceLOB']] && this.sourceSystemFilter[dataSet[i]['sourceSystem']]) {
+          if(chart2Labels[idx] === dataSet[i][this.scoreBySelected]) {
+            let index = this.grid2config.data.labels.indexOf(dataSet[i][this.scoreBySelected]);
+            if(index!== -1) {
+              this.grid2config.data.datasets[0].data[index] =
+              parseFloat(this.grid2config.data.datasets[0].data[index]) +
+              parseFloat(dataSet[i][ecdeSelectedVar]);
+            } else {
+              this.grid2config.data.datasets[0].data.push(parseFloat(dataSet[i][ecdeSelectedVar]));
+              this.grid2config.data.labels.push(chart2Labels[idx]);          
+            }
+          }
         }
       }
     }
@@ -469,12 +472,17 @@ export class InternalControlsPageComponent implements OnInit {
           }
         };
     }
+    this.grid2config.data.labels.sort();
+    //this.chart2.chart.data.labels = chart2Data.labels
     this.chart2.chart.data = this.grid2config.data;
     this.chart2.chart.options.scales.yAxes[0].scaleLabel.labelString=this.grid2config.options.scales.yAxes[0].scaleLabel.labelString;
+    this.chart2.chart.data.labels.sort();//m
     this.chart2.chart.render(this.grid2config);
     this.chart2.chart.tooltips=this.grid2config.options.tooltips;
+    //this.chart2.data.labels.sort();//m
     this.chart2.chart.update();
   }
+
   updateBothCharts() {
     this.updateChart1();
     this.updateChart2();
