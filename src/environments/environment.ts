@@ -4,5 +4,10 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  root_Url : '',
+  DataQualityJSON : 'DataQualityMonitoring.json?version=',
+  KeyHighlightsJSON : 'KeyHighlights.json?version=',
+  InternalControlJSON : 'InternalControls.json?version=',
+  MeasureRemidateJSON : 'MeasureRemidateDQ.json?version='
 };

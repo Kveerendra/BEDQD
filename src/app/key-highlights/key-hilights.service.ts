@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class KeyHilightsService {
   keyHighlightsJsonObject = {};
   private rootURL = environment.root_Url;
   private KeyHighlightsJSON = environment.KeyHighlightsJSON;
-  //private url = 'KeyHighlights.json';
+ // private url = 'KeyHighlights.json';
   private url = this.rootURL + this.KeyHighlightsJSON + new Date().getTime();
   constructor(private httpc: HttpClient) {
     this.getData().then(data => {
