@@ -472,14 +472,11 @@ export class InternalControlsPageComponent implements OnInit {
           }
         };
     }
-    this.grid2config.data.labels.sort();
-    //this.chart2.chart.data.labels = chart2Data.labels
+    
     this.chart2.chart.data = this.grid2config.data;
     this.chart2.chart.options.scales.yAxes[0].scaleLabel.labelString=this.grid2config.options.scales.yAxes[0].scaleLabel.labelString;
-    this.chart2.chart.data.labels.sort();//m
     this.chart2.chart.render(this.grid2config);
     this.chart2.chart.tooltips=this.grid2config.options.tooltips;
-    //this.chart2.data.labels.sort();//m
     this.chart2.chart.update();
   }
 
