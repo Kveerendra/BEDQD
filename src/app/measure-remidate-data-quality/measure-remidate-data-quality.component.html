@@ -1,136 +1,144 @@
-
 <div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 12px;">
-  <div class="col-6" style="color: white;font-size: 16px;font-weight: bolder;margin-left: 15px;"><span>Measure/Remidate Data Quality</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-home fa-2x"></i></span></div>
-  <div class="col-4 pull-right text-center" style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;"><span><i class="fa fa-wrench fa-2x" aria-hidden="true"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Default Date as of Jan-Mar 2018</span>
+  <div class="col-6" style="color: white;font-size: 16px;font-weight: bolder;margin-left: 15px;">
+    <span>Measure/Remidate Data Quality</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>
+      <i class="fa fa-home fa-2x"></i>
+    </span>
+  </div>
+  <div class="col-4 pull-right text-center" style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">
+    <span>
+      <i class="fa fa-wrench fa-2x" aria-hidden="true"></i>
+    </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>Default Date as of Jan-Mar 2018</span>
   </div>
 </div>
-  <div class="row" style="border-bottom: #ccc solid 1px;width: 100%">
-    <div class="text-center" style="padding-top:20px">
-    <h6 style="margin-left: 35px;">{{header}}</h6>
+<div class="row" style="border-bottom: #ccc solid 1px;width: 100%">
+  <div class="text-center" style="padding-top:20px">
+    <h6 style="margin-left: 35px; color:#787878;font-weight: bold;">{{header}}</h6>
     <div style="font-size: 15px;color: #007399;font-weight:bolder;">{{openDQIssues}}</div>
   </div>
 </div>
 <br/>
-  <div class="row">
-  <div class="row" style="border-bottom: 1px solid #ccc;margin-bottom: 80px;">
-      <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;margin-bottom: 10px;padding-left: 470px;">High Priority DQ Issues for current Quarter</div>
-      <div *ngIf="grid3loaded"  id = "div5" class="col-md-5 text-center" style="margin-bottom: 50px;border-right: 1px solid #ccc;">
-        <span style="font-weight: bolder;font-size: 12px;">-----Prior Quarter-----</span>
+<div class="row">
+  <div class="row" style="border-bottom: 1px solid #ccc;margin-bottom: 30px;">
+    <div class="col-md-12" style="color: #007399;font-size: 13px;font-weight: bolder;margin-bottom: 10px;padding-left: 420px;">High Priority DQ Issues for current Quarter</div>
+    <div *ngIf="grid3loaded" id="div5" class="col-md-5 text-center" style="margin-bottom: 50px;border-right: 1px solid #ccc;">
+      <span style="font-weight: bolder;font-size: 12px;">-----Prior Quarter-----</span>
 
-        <br>
-        <br>
-        <chart #grid3Chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="width:500px;margin-right: 80px;margin-left: 12px;"></chart>
-      </div>
+      <br>
+      <br>
+      <chart #grid3Chart [type]="grid3config.type" [data]="grid3config.data" [options]="grid3config.options" style="width:500px;margin-right: 80px;margin-left: 12px;"></chart>
+    </div>
 
-      <div *ngIf="grid4loaded" id = "div4"  class="col-md-5 text-center">
-        <span style="font-weight: bolder;font-size: 12px;">-----Current Quarter-----</span>
-        <br>
-        <br>
-        <chart #grid4Chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options"style="width:500px"></chart>
-      </div>
-      <div id="div3" class="col-md-10" style="display:none;">
-        <app-grid3 ></app-grid3>
-      </div>
-    <div class="col-2 float-right" >
-        
-            <br/>
-            <br/>
-        <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
-            <p style="font-weight: bolder;text-align: center;margin-top:10px;">Priority</p>
-            <form>
-             <input type="radio" name="priority" value = "pd" checked style="margin-left:10px;" (change)="changeData4()
+    <div *ngIf="grid4loaded" id="div4" class="col-md-5 text-center">
+      <span style="font-weight: bolder;font-size: 12px;">-----Current Quarter-----</span>
+      <br>
+      <br>
+      <chart #grid4Chart [type]="grid4config.type" [data]="grid4config.data" [options]="grid4config.options" style="width:500px"></chart>
+    </div>
+    <div id="div3" class="col-md-10" style="display:none;">
+      <app-grid3></app-grid3>
+    </div>
+    <div class="col-2 float-right">
+
+      <br/>
+      <br/>
+      <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
+        <p style="font-weight: bolder;text-align: center;margin-top:10px;">Priority</p>
+        <form>
+          <input type="radio" name="priority" value="pd" checked style="margin-left:10px;" (change)="changeData4()
              "> Priority Details
-             <br/>
-             <input type="radio" name="priority" value = "ps" style="margin-left:10px;margin-bottom:10px;" (change)="changeData5()"> Priority Summary
-           </form>
-           </div>
-<br>
-           <div class="row mt-3">
-              <div class="col-8" style = " margin-left: 15px;border: #ccc solid 1px; padding: 5px;background-color: #ccc">
-                <div class="" style="font-weight: bolder;">Glossary</div>
-                <hr>
-                <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">LOB : <span style="color: #0086b3">Line of Business</span></div>
-                </div>
-            </div>
+          <br/>
+          <input type="radio" name="priority" value="ps" style="margin-left:10px;margin-bottom:10px;" (change)="changeData5()"> Priority Summary
+        </form>
+      </div>
+      <br>
+      <div class="row mt-3">
+        <div class="col-8" style=" margin-left: 15px;border: #ccc solid 1px; padding: 5px;background-color: #ccc">
+          <div class="" style="font-weight: bolder;">Glossary</div>
+          <hr>
+          <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">LOB :
+            <span style="color: #0086b3">Line of Business</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-md-10">
-      <div class="col-md-12 " style="color: #007399;font-size: 13px;font-weight: bolder;text-align: center;">Open DQ Issues Prior Vs. Current Quarter</div>
-      <div id="div1" style="margin-bottom: 30px;">
-        <app-grid2 #gridTable></app-grid2>
-      </div>
-      <div style ="display:none" id="div2" class=" col-md-12">
-        <div class="row" style="margin-bottom: 50px;">
-            <div *ngIf="grid5loaded" class="col-md-6 text-center" style="border-right: 1px solid #ccc;">
-                <span style="font-weight: bolder;font-size: 12px;">-----Prior Quarter-----</span>
-                <br>
-                <br>
-                <chart #grid5Chart [type]="grid5config.type" [data]="grid5config.data" [options]="grid5config.options"></chart>
-              </div>
+    <div style="color: #007399;font-size: 13px;font-weight: bolder;text-align: center;">Open DQ Issues Prior Vs. Current Quarter</div>
+    <br>
+    <div id="div1" style="margin-bottom: 30px;">
+      <app-grid2 #gridTable></app-grid2>
+    </div>
+    <div style="display:none" id="div2" class=" col-md-12">
+      <div class="row" style="margin-bottom: 50px;">
+        <div *ngIf="grid5loaded" class="col-md-6 text-center" style="border-right: 1px solid #ccc;">
+          <span style="font-weight: bolder;font-size: 12px;">-----Prior Quarter-----</span>
+          <br>
+          <br>
+          <chart #grid5Chart [type]="grid5config.type" [data]="grid5config.data" [options]="grid5config.options"></chart>
+        </div>
 
-              <div *ngIf="grid6loaded" class="col-md-6 text-center">
-                <span style="font-weight: bolder;font-size: 12px;">-----Current Quarter-----</span>
-                <br>
-                <br>
-                <chart #grid6Chart [type]="grid6config.type" [data]="grid6config.data" [options]="grid6config.options"></chart>
-              </div>
+        <div *ngIf="grid6loaded" class="col-md-6 text-center">
+          <span style="font-weight: bolder;font-size: 12px;">-----Current Quarter-----</span>
+          <br>
+          <br>
+          <chart #grid6Chart [type]="grid6config.type" [data]="grid6config.data" [options]="grid6config.options"></chart>
         </div>
       </div>
+    </div>
 
-</div>
-<div class="col-md-2">
-    <span style="font-weight: bolder;font-size: 12px;"><p style="margin-left: 10px;">Filters</p></span>
-
-  <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;">
+  </div>
+  <div class="col-md-2">
+    <span style="font-weight: bolder;font-size: 12px;">
+      <p style="margin-left: 10px;">Filters</p>
+    </span>
+    <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 60px;height: 30px;font-size: 12px;">LOB</button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+          <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
+        </li>
+        <li class="dropdown-item" *ngFor="let d2 of drop2" style="width: 80px;height: 30px;font-size: 12px;">
+          <input type="checkbox" id="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d2]" (change)="filterLOBData($event)">{{d2}}
+        </li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+    <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
+        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+          <input type="checkbox" [(ngModel)]="allYearQtrSelected" (change)="selectAllYearQuarter($event)">All
+        </li>
+        <li class="dropdown-item" *ngFor="let d1 of drop1" style="width: 60px;height: 30px;font-size: 12px;">
+          <input type="checkbox" name="{{d1}}" checked="checked" [(ngModel)]="yearQtr[d1]" (change)="filteryearQtr($event)">{{d1}}
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <div ngbDropdown class="d-inline-block" style="padding-left: 10px;margin-bottom: 20px;">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style="width: 110px;height: 30px;font-size: 12px;">Source System</button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
+        <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+          <input type="checkbox" [(ngModel)]="allSourceSystemSelected" (change)="selectAllSourceSystem($event)">All
+        </li>
+        <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
+          <input type="checkbox" name="{{d3}}" checked="checked" [(ngModel)]="SourceSystem[d3]" (change)="filterSourceSystem($event)">{{d3}}
+        </li>
+      </ul>
+    </div>
+    <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width: 140px;margin-bottom:10px;">
       <p style="font-weight: bolder;text-align: center;margin-top:10px;">Issue</p>
       <form>
-       <input type="radio" name="issue" value = "is" checked style="margin-left:10px;" (change)="changeData1()"> Issue Summary
-       <br/>
-       <input type="radio" name="issue" value = "id" style="margin-left:10px;margin-bottom:10px;" (change)="changeData2()"> Issue Type Details
-     </form>
-     </div>
-     <br/>
-<div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
-            <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 60px;height: 30px;font-size: 12px;">LOB</button>
-            <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-                <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
-            </li>
-            <li class="dropdown-item" *ngFor="let d2 of drop2"style ="width: 80px;height: 30px;font-size: 12px;">
-                 <input type="checkbox" id ="LOBFilterid" checked="checked" [(ngModel)]="LOBFilter[d2]" (change)="filterLOBData($event)">{{d2}}
-            </li>
-            </ul>
-            </div>
-            <br/>
-  <br/>
-  <div ngbDropdown class="d-inline-block" style="padding-left: 10px;">
-      <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Year-Quarter</button>
-      <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
-          <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-              <input type="checkbox" [(ngModel)]="allYearQtrSelected" (change)="selectAllYearQuarter($event)">All
-          </li>
-      <li class="dropdown-item" *ngFor="let d1 of drop1" style ="width: 60px;height: 30px;font-size: 12px;">
-           <input type="checkbox" name="{{d1}}" checked="checked" [(ngModel)]="yearQtr[d1]" (change)="filteryearQtr($event)">{{d1}}
-      </li>
-      <!--  <button class="dropdown-item">Another Action</button>
-      <button class="dropdown-item">Something else is here</button> -->
-      </ul>
-      </div>
-      <br> <br>
-     <div ngbDropdown class="d-inline-block"  style="padding-left: 10px;">
-        <button class="btn" id="dropdownBasic1" ngbDropdownToggle style ="width: 110px;height: 30px;font-size: 12px;">Source System</button>
-        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" style="overflow-y: scroll; max-height: 100px;">
-            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-                <input type="checkbox" [(ngModel)]="allSourceSystemSelected" (change)="selectAllSourceSystem($event)">All
-            </li>
-        <li class="dropdown-item" *ngFor="let d3 of drop3" style ="width: 80px;height: 30px;font-size: 12px;">
-             <input type="checkbox" name="{{d3}}" checked="checked" [(ngModel)]="SourceSystem[d3]" (change)="filterSourceSystem($event)">{{d3}}
-        </li>
-        <!--  <button class="dropdown-item">Another Action</button>
-        <button class="dropdown-item">Something else is here</button> -->
-        </ul>
-        </div>
-</div>
+        <input type="radio" name="issue" value="is" checked style="margin-left:10px;" (change)="changeData1()"> Issue Summary
+        <br/>
+        <input type="radio" name="issue" value="id" style="margin-left:10px;margin-bottom:10px;" (change)="changeData2()"> Issue Type Details
+      </form>
+    </div>
+  </div>
 </div>

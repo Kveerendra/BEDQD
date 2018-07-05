@@ -195,7 +195,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
             },
             scaleLabel: {
               display: true,
-              labelString: 'ECDE DQ Monitored'
+              labelString: 'ECDE DQ Monitored',
+              fontStyle: 'bold'
             },
             ticks: {
               max: 100,

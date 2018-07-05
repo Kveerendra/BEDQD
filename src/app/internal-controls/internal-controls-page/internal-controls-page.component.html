@@ -1,5 +1,9 @@
 <div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 10px;">
-  <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;">Internal Controls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><i class="fa fa-home fa-2x"></i></span></div>
+  <div class="col-6" style="color: white;font-size: 20px;font-weight: bolder;margin-left: 15px;">Internal Controls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>
+      <i class="fa fa-home fa-2x"></i>
+    </span>
+  </div>
   <div class="col-4 pull-right text-center" style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">Default Date as of Jan-Mar 2018
   </div>
 </div>
@@ -15,40 +19,43 @@
     <app-label-percentage [NoPFlag]="true" [percentage]="impactScoreModel['impactScore']" [label]="impactScoreModel['header']"></app-label-percentage>
   </div>
 </div>
+<hr>
 <div class="row">
   <div class="col-6">
     <div class="row">
       <div class="col-2">
-        <div style="font-size: 12px;background-color: #ccc; padding: 5px;width: 120px">
+        <div style="font-size: 12px;width: 120px">
           <form>
             <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqriScore" checked style="margin-left:5px;"> DQRI Score
             <br/>
             <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqpScore" style="margin-left:5px"> DQP Score
             <br/>
             <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="impactScore" style="margin-left:5px;margin-bottom:10px;"> Impact Score
-
           </form>
         </div>
       </div>
       <div class="col-6" style="text-align: center">
-        <p style = "font-size: 12px;font-weight: bolder;text-align: center;">{{displayValue[scoreSelected]}} by {{displayValue[scoreBySelected]}}</p>
+        <p style="font-size: 12px;font-weight: bolder;text-align: center;">{{displayValue[scoreSelected]}} by {{displayValue[scoreBySelected]}}</p>
 
       </div>
       <div class="col-2">
         <div ngbDropdown>
           <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 130px;height: 30px;font-size: 12px;">{{displayValue[scoreBySelected]}}</button>
-          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu" style="font-size: 12px;">
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDqp" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 1 Process
+              <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDqp" (change)="updateBothCharts()" checked
+                style="margin-left:5px;"> Level 1 Process
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level2ProcessDqp" (change)="updateBothCharts()" checked style="margin-left:5px;"> Level 2 Process
+              <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level2ProcessDqp" (change)="updateBothCharts()" checked
+                style="margin-left:5px;"> Level 2 Process
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceSystem" (change)="updateBothCharts()" checked style="margin-left:5px;"> Source System
+              <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceSystem" (change)="updateBothCharts()" checked
+                style="margin-left:5px;"> Source System
             </li>
             <li class="dropdown-item">
-                <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceLOB" (change)="updateBothCharts()" checked style="margin-left:5px;"> Legal Entity / LOB
+              <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="sourceLOB" (change)="updateBothCharts()" checked style="margin-left:5px;"> Legal Entity / LOB
             </li>
           </ul>
         </div>
@@ -56,15 +63,15 @@
     </div>
   </div>
   <div class="col-6">
-    <p style = "font-size: 12px;font-weight: bolder;text-align: center">{{displayValue[ecdeSelected]}} for {{displayValue[scoreBySelected]}}</p>
+    <p style="font-size: 12px;font-weight: bolder;text-align: center">{{displayValue[ecdeSelected]}} for {{displayValue[scoreBySelected]}}</p>
     <div class="row">
 
       <div class="col-4">
         <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width:160px; padding: 5px;">
           <form>
-            <input type="radio" name="priority"  [(ngModel)]="ecdeSelected" value="ecdeRcrdsTstd" (change)="updateChart2()"  checked style="margin-left:5px;"> ECDE Records Tested
+            <input type="radio" name="priority" [(ngModel)]="ecdeSelected" value="ecdeRcrdsTstd" (change)="updateChart2()" checked style="margin-left:5px;"> ECDE Records Tested
             <br/>
-            <input type="radio" name="priority"  [(ngModel)]="ecdeSelected" value="ecdeCnt" (change)="updateChart2()"  style="margin-left:5px"> ECDE Count
+            <input type="radio" name="priority" [(ngModel)]="ecdeSelected" value="ecdeCnt" (change)="updateChart2()" style="margin-left:5px"> ECDE Count
           </form>
         </div>
       </div>
@@ -72,9 +79,9 @@
         <div ngbDropdown>
           <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 80px;height: 30px;font-size: 12px;">LOB</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
-              <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-                  <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
-                </li>
+            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+              <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
+            </li>
             <li class="dropdown-item" *ngFor="let d3 of drop3" style="width: 80px;height: 30px;font-size: 12px;">
               <input type="checkbox" id="LOBFilterid" [(ngModel)]="LOBFilter[d3]" (change)="filterData($event)">{{d3}}
             </li>
@@ -83,11 +90,11 @@
       </div>
       <div class="col-4">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic2" ngbDropdownToggle style = "width: 120px;height: 30px;font-size: 12px;">Source System</button>
-          <ul ngbDropdownMenu aria-labelledby="dropdownBasic2" class="dropdown-menu" style="overflow-y: scroll; max-height: 200px;font-size: 15px;">
-              <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
-                  <input type="checkbox" [(ngModel)]="allSourceSysSelected" (change)="selectAllSourceSys($event)">All
-                </li>
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic2" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;">Source System</button>
+          <ul ngbDropdownMenu aria-labelledby="dropdownBasic2" class="dropdown-menu" style="overflow-y: scroll; max-height: 200px;font-size: 12px;">
+            <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
+              <input type="checkbox" [(ngModel)]="allSourceSysSelected" (change)="selectAllSourceSys($event)">All
+            </li>
             <li class="dropdown-item" *ngFor="let d4 of drop4">
               <input type="checkbox" id="sourceSystemFilterid" [(ngModel)]="sourceSystemFilter[d4]" (change)="filterData($event)">{{d4}}
             </li>
@@ -100,31 +107,38 @@
 </div>
 <div class="row ">
   <div [ngClass]="scoreBySelected=='level2ProcessDqp'?'col-12':'col-6'" style="border-right: solid #ccc 1px;">
-      <div class="col-12" >
-      <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options" ></chart>
- </div>
+    <div class="col-12">
+      <chart #grid1Chart [type]="grid1config.type" [data]="grid1config.data" [options]="grid1config.options"></chart>
     </div>
+  </div>
   <div [ngClass]="scoreBySelected=='level2ProcessDqp'?'col-12':'col-6'">
     <div class="col-12">
 
       <chart #grid2Chart [type]="grid2config.type" [data]="grid2config.data" [options]="grid2config.options"></chart>
+    </div>
+
   </div>
 
 </div>
-
-</div>
 <hr>
-    <p style="font-weight: bolder;font-size: 12px;margin-top: 20px;text-align: center;"> Impact Score for  {{displayValue[scoreBySelected]}}</p>
-    <br>
-  <div class="col-12" style="max-height: 300px;overflow-y: scroll; margin-bottom: 20px;margin-left: 10px;padding-top: 10px">
-    <app-grid #grid></app-grid>
+<p style="font-weight: bolder;font-size: 12px;margin-top: 20px;text-align: center;"> Impact Score for {{displayValue[scoreBySelected]}}</p>
+<div class="col-12" style="max-height: 300px;overflow-y: scroll; margin-bottom: 20px;margin-left: 10px;">
+  <app-grid #grid></app-grid>
 </div>
 
-<div class="col-3" style = " margin-left: 35px;border: #ccc solid 1px; padding: 5px;background-color: #ccc">
-    <div class="" style="font-weight: bolder;">Glossary</div>
-    <hr>
-    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">DQP: <span style="color: #0086b3">Data Quality Profiling</span></div>
-    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">LOB : <span style="color: #0086b3">Line of Business</span></div>
-    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">DQRI : <span style="color: #0086b3">Data Quality Risk Index</span></div>
-    <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">ECDE : <span style="color: #0086b3">Enterprise Critical Data Element</span></div>
-  </div>  
+<div class="col-3" style=" margin-left: 35px;border: #ccc solid 1px; padding: 5px;background-color: #ccc;;margin-bottom: 20px;">
+  <div class="" style="font-weight: bolder;">Glossary</div>
+  <hr>
+  <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">DQP:
+    <span style="color: #0086b3">Data Quality Profiling</span>
+  </div>
+  <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">LOB :
+    <span style="color: #0086b3">Line of Business</span>
+  </div>
+  <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">DQRI :
+    <span style="color: #0086b3">Data Quality Risk Index</span>
+  </div>
+  <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">ECDE :
+    <span style="color: #0086b3">Enterprise Critical Data Element</span>
+  </div>
+</div>
