@@ -149,7 +149,7 @@ export class KeyHighlightsPageComponent implements OnInit {
   grid4config = {
     type: 'bar',
     data: {
-      labels: ['Jul-Sep 2017', 'Oct-Dec 2017'],
+      labels: [],
       datasets: [
         {
           label: '<30 days',
@@ -230,7 +230,8 @@ export class KeyHighlightsPageComponent implements OnInit {
                 return x;
               },
               beginAtZero: true,
-              stepSize: 700000
+              stepSize: 500000,
+              max : 2000000
             }
           }
         ]
@@ -383,27 +384,54 @@ export class KeyHighlightsPageComponent implements OnInit {
         grid3configData.BCDEs.dqMonitered
       );
       this.grid3loaded = true;
-      this.grid4config.data.datasets[0].data.push(
-        hpDqIssues[1]['nbrOfIssues'],
-        hpDqIssues[4]['nbrOfIssues']
-      );
 
-      this.grid4config.data.datasets[1].data.push(
-        hpDqIssues[2]['nbrOfIssues'],
-        hpDqIssues[5]['nbrOfIssues']
-      );
+      let grid4labels = [];      
+      let grid4ConfigData = {};
 
-      this.grid4config.data.datasets[2].data.push(
-        hpDqIssues[0]['nbrOfIssues'],
-        hpDqIssues[3]['nbrOfIssues']
-      );
+      for(const i in hpDqIssues) {
+        let label = hpDqIssues[i]['nbrDaysOpen'];        
+        if(grid4labels.indexOf(label) === -1) {
+           grid4labels.push(label);
+        }
+      }
 
-      this.grid4loaded = true;
+      for(const l in grid4labels) {
+        grid4ConfigData[l] = {
+          "30-60" : 0,
+          "<30" : 0,
+          ">60" : 0
+        }
+      }
+           
+      for(const i in hpDqIssues) { 
+        let idx = grid4labels.indexOf(hpDqIssues[i]['nbrDaysOpen']);
+        if(hpDqIssues[i]['agingBucket'] === '30-60') {
+          grid4ConfigData[idx]['30-60'] = grid4ConfigData[idx]['30-60']+ parseInt(hpDqIssues[i]['nbrOfIssues']);
+          } else if(hpDqIssues[i]['agingBucket'] === '<30') {
+          grid4ConfigData[idx]['<30'] = grid4ConfigData[idx]['<30']+ parseInt(hpDqIssues[i]['nbrOfIssues']); 
+          } else if(hpDqIssues[i]['agingBucket'] === '>60') {
+          grid4ConfigData[idx]['>60'] = grid4ConfigData[idx]['>60']+ parseInt(hpDqIssues[i]['nbrOfIssues']); 
+          } else {
+            // empty else block do nothing
+          }       
+        }      
+      // this for loop is a temporary fix and can be removed if the quarter values are correctly received in the JSON.          
+      for(const idx in grid4labels) {
+        if(grid4labels[idx] == null) {
+          grid4labels[idx] = "July-Sep 2014";
+        }
+      }
+      grid4labels.sort();
+      for (const l in grid4labels) {
+        this.grid4config.data.datasets[0].data.push(parseInt(grid4ConfigData[l]['<30']));
+        this.grid4config.data.datasets[1].data.push(parseInt(grid4ConfigData[l]['30-60']));
+        this.grid4config.data.datasets[2].data.push(parseInt(grid4ConfigData[l]['>60']));        
+      } 
+     
+      this.grid4config.data.labels = grid4labels;
+      this.grid4loaded = true;  
       this.grid1config.data.datasets[0].data.push(openDQIssues['priorQuarter']);
-      this.grid1config.data.datasets[0].data.push(
-        openDQIssues['currentQuarter']
-      );
-
+      this.grid1config.data.datasets[0].data.push(openDQIssues['currentQuarter']);
       this.drop2.sort();
       this.drop3.sort();
       this.drop4.sort();
