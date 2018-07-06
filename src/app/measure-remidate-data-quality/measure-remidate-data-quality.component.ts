@@ -47,20 +47,20 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         {
           label: '>60',
           data: [],
-          backgroundColor: '#264d73',
-          hoverBackgroundColor: '#264d73'
+          backgroundColor: '#e30613',
+          hoverBackgroundColor: '#e30613'
         },
         {
           label: '30-60',
           data: [],
-          backgroundColor: '#0086b3',
-          hoverBackgroundColor: '#0086b3'
+          backgroundColor: '#ffd500',
+          hoverBackgroundColor: '#ffd500'
         },
         {
           label: '<30',
           data: [],
-          backgroundColor: '#b3cccc',
-          hoverBackgroundColor: '#b3cccc'
+          backgroundColor: '#43b02a',
+          hoverBackgroundColor: '#43b02a'
         }
       ]
     },
@@ -159,20 +159,20 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         {
           label: '>60',
           data: [],
-          backgroundColor: '#264d73',
-          hoverBackgroundColor: '#264d73'
+          backgroundColor: '#e30613',
+          hoverBackgroundColor: '#e30613'
         },
         {
           label: '30-60',
           data: [],
-          backgroundColor: '#0086b3',
-          hoverBackgroundColor: '#0086b3'
+          backgroundColor: '#ffd500',
+          hoverBackgroundColor: '#ffd500'
         },
         {
           label: '<30',
-          data: [],
-          backgroundColor: '#b3cccc',
-          hoverBackgroundColor: '#b3cccc'
+          data: [],          
+          backgroundColor: '#43b02a',
+          hoverBackgroundColor: '#43b02a'
         }
       ]
     },
