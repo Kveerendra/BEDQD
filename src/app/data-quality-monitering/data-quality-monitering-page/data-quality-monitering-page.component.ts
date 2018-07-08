@@ -42,6 +42,9 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   d3;
   d4;
   d5;
+  recievedData_1;
+  key = '';
+  order = 'asc';
   grid1config = {
     type: 'bar',
     data: {
@@ -222,14 +225,29 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     this.service = dataQualityMoniteringService;
     ngbDropdownConfig.autoClose = 'outside';
   }
+  sortBy(key: string) {
+    this.key = key;
+    this.recievedData_1.sort(this.compare.bind(this));
+  }
 
+
+  compare(a?: any, b?: any) {
+    if (a[this.key] < b[this.key]) {
+      return this.order === 'asc' ? -1 : 1;
+    }
+    if (a[this.key] > b[this.key]) {
+      return this.order === 'asc' ? 1 : -1;
+    }
+    return 0;
+  }
   ngOnInit() {
     this.service.getData().then(dataaa => {
       this.auBuText = 'ADS'
       this.dataQualityScoreModel = this.service.getdQScoreModel();
       this.bcdeWithDQModel = this.service.getbcdeWithDQModel();
       this.ecdeWithDQModel = this.service.getecdeWithDQModel();
-      const recievedData_1 = this.service.getperstOfAdsProfileModel();
+      this.recievedData_1 = this.service.getperstOfAdsProfileModel();
+      this.sortBy('bucfName');
       const receivedData_2 = this.service.geteCDEandBCDEwithDQmonitoringbyADS();
       this.dataQualityScoreModel['header'] = 'Data Quality Score';
       this.ecdeWithDQModel['header'] = 'ECDE with DQ Monitoring';
@@ -241,10 +259,10 @@ export class DataQualityMoniteringPageComponent implements OnInit {
           this.SourceSysFilter[dropDown2[k]['ads']] = true;
         }
       }
-      for (const j in recievedData_1) {
-        if (this.drop4.indexOf(recievedData_1[j]['bucfName']) === -1) {
-          this.drop4.push(recievedData_1[j]['bucfName']);
-          this.LOBFilter[recievedData_1[j]['bucfName']] = true;
+      for (const j in this.recievedData_1) {
+        if (this.drop4.indexOf(this.recievedData_1[j]['bucfName']) === -1) {
+          this.drop4.push(this.recievedData_1[j]['bucfName']);
+          this.LOBFilter[this.recievedData_1[j]['bucfName']] = true;
         }
       }
       this.grid1config.data.labels = this.drop4;
@@ -268,14 +286,18 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       const priorQrtr_2 = this.grid2config.data.datasets[0].data;
       const currentQrtr_2 = this.grid2config.data.datasets[1].data;
 
-      for (const i in recievedData_1) {
-        if (recievedData_1[i]) {
-          this.grid1config.data.datasets[0].data.push(
-            recievedData_1[i]['prQtr']
-          );
-          this.grid1config.data.datasets[1].data.push(
-            recievedData_1[i]['crntQtr']
-          );
+      for (const i in this.recievedData_1) {
+        if (this.recievedData_1[i]) {
+          if (this.recievedData_1[i].bucfName != "") {
+
+            this.grid1config.data.labels.push(this.recievedData_1[i].bucfName);
+            this.grid1config.data.datasets[0].data.push(
+              this.recievedData_1[i]['prQtr']
+            );
+            this.grid1config.data.datasets[1].data.push(
+              this.recievedData_1[i]['crntQtr']
+            );
+          }
         }
       }
 
@@ -470,13 +492,35 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   }
   filterData(e) {
     let labels = [];
+    this.sortBy('bucfName');
     for (const key in this.LOBFilter) {
-      if (this.LOBFilter[key]) {
+      if (this.LOBFilter[key] && key != "") {
         labels.push(key);
       }
     }
-    this.chart1.data.labels = labels;
-    this.chart1.data.labels.sort();
+    this.grid1config.data.datasets[0].data = [];
+    this.grid1config.data.datasets[1].data = [];
+    this.grid1config.data.labels = [];
+
+    for (const i in this.recievedData_1) {
+      if (this.recievedData_1[i]) {
+        if (this.recievedData_1[i].bucfName != "" && labels.indexOf(this.recievedData_1[i].bucfName) !== -1) {
+          this.grid1config.data.labels.push(this.recievedData_1[i].bucfName);
+          //console.log("============"+ this.recievedData_1[i].bucfName);
+          this.grid1config.data.datasets[0].data.push(
+            this.recievedData_1[i]['prQtr']
+          );
+          this.grid1config.data.datasets[1].data.push(
+            this.recievedData_1[i]['crntQtr']
+          );
+        }
+      }
+    }
+
+    this.grid1loaded = true;
+
+    //this.chart1.data.labels = labels;
+    //this.chart1.data.labels.sort();
     this.chart1.chart.update();
     this.filterECDEandBCDEWithDQM();
     this.filterDimensionData();
