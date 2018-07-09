@@ -260,13 +260,15 @@ export class DataQualityMoniteringPageComponent implements OnInit {
         }
       }
       for (const j in this.recievedData_1) {
-        if (this.drop4.indexOf(this.recievedData_1[j]['bucfName']) === -1) {
-          this.drop4.push(this.recievedData_1[j]['bucfName']);
+        if (this.drop4.indexOf(this.recievedData_1[j]['bucfName']) === -1 ) {
+          if(this.recievedData_1[j]['bucfName'] != ""){
+            this.drop4.push(this.recievedData_1[j]['bucfName']);
+          }
           this.LOBFilter[this.recievedData_1[j]['bucfName']] = true;
         }
       }
-      this.grid1config.data.labels = this.drop4;
-      this.grid1config.data.labels.sort();
+     // this.grid1config.data.labels = this.drop4;
+      //this.grid1config.data.labels.sort();
       for (const l in receivedData_2) {
         if (this.drop3.indexOf(receivedData_2[l]['yearQtr']) === -1) {
           this.drop3.push(receivedData_2[l]['yearQtr']);
