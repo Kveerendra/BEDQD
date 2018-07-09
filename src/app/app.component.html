@@ -1,21 +1,22 @@
 <html>
   <body>
-      <div class = "row" >
+      <div class = "row" style="position:fixed;width: 120%;z-index:100">
           <ul class="nav nav-tabs" style="font-size: 12px;background-color: #d9d9d9;width: 100%;">
             <li class="nav-item" style="padding-left: 4px;">
-              <a class="nav-link" routerLink="/home" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Key Highlights</a>
+              <a class="nav-link" routerLink="/home" routerLinkActive="active" style = "font-weight: bolder;color: #000;width: 220px;text-align: center">Key Highlights</a>
             </li>
-            <li class="nav-item" style="">
-              <a class="nav-link"routerLink="/dq" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Data Quality Monitoring</a>
+            <li class="nav-item">
+              <a class="nav-link"routerLink="/dq" routerLinkActive="active" style = "font-weight: bolder;color: #000;width: 220px;text-align: center">Data Quality Monitoring</a>
             </li>
-            <li class="nav-item" style="">
+            <li class="nav-item" >
               <a class="nav-link" routerLink="/mrdq" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Measure/Remediate Data Quality</a>
             </li>
-             <li class="nav-item" style="">
-              <a class="nav-link"routerLink="/ic" routerLinkActive="active" style = "font-weight: bolder;color: #000;">Internal Controls</a>
+             <li class="nav-item">
+              <a class="nav-link"routerLink="/ic" routerLinkActive="active" style = "font-weight: bolder;color: #000;width: 220px;text-align: center">Internal Controls</a>
             </li>
           </ul>
           </div>
+          <div class="row" style="margin-bottom: 30px;"></div>
           <router-outlet></router-outlet>
 </body>
 </html>

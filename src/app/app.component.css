@@ -10,6 +10,8 @@ html, body {
   border-top-left-radius: 0em;
   border-top-right-radius: 0em;
   border-bottom:2px #000000 solid;
+  border-right:2px #000000 solid;
+  border-left:2px #000000 solid;
 }
 .nav-tabs .nav-link  {
   border: 0px;

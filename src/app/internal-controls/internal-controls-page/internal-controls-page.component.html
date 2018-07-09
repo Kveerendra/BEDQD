@@ -24,7 +24,7 @@
   <div class="col-6">
     <div class="row">
       <div class="col-2">
-        <div style="font-size: 12px;width: 120px">
+        <div style="font-size: 12px;width: 120px; background-color:#ccc;border:#000 solid 1px;padding:10px;">
           <form>
             <input type="radio" name="score" [(ngModel)]="scoreSelected" (change)="updateChart1()" value="dqriScore" checked style="margin-left:5px;"> DQRI Score
             <br/>
@@ -40,8 +40,8 @@
       </div>
       <div class="col-2">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 130px;height: 30px;font-size: 12px;">{{displayValue[scoreBySelected]}}</button>
-          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu" style="font-size: 12px;">
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 130px;height: 30px;font-size: 12px;border:#000 solid 1px;">{{displayValue[scoreBySelected]}}</button>
+          <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu" style="font-size: 12px;border:#000 solid 1px;">
             <li class="dropdown-item">
               <input type="radio" name="score" [(ngModel)]="scoreBySelected" value="level1ProcessDqp" (change)="updateBothCharts()" checked
                 style="margin-left:5px;"> Level 1 Process
@@ -67,7 +67,7 @@
     <div class="row">
 
       <div class="col-4">
-        <div style="font-size: 12px;background-color: #ccc; border: solid #ccc 0.5px;width:160px; padding: 5px;">
+        <div style="font-size: 12px;background-color: #ccc; border: solid #000 1px;width:160px; padding: 5px;">
           <form>
             <input type="radio" name="priority" [(ngModel)]="ecdeSelected" value="ecdeRcrdsTstd" (change)="updateChart2()" checked style="margin-left:5px;"> ECDE Records Tested
             <br/>
@@ -77,7 +77,7 @@
       </div>
       <div class="col-4">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 80px;height: 30px;font-size: 12px;">LOB</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic1" ngbDropdownToggle style="width: 80px;height: 30px;font-size: 12px;border:#000 solid 1px;">LOB</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
             <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
               <input type="checkbox" [(ngModel)]="allLobSelected" (change)="selectAllLobs($event)">All
@@ -90,7 +90,7 @@
       </div>
       <div class="col-4">
         <div ngbDropdown>
-          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic2" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;">Source System</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBasic2" ngbDropdownToggle style="width: 120px;height: 30px;font-size: 12px;border:#000 solid 1px;">Source System</button>
           <ul ngbDropdownMenu aria-labelledby="dropdownBasic2" class="dropdown-menu" style="overflow-y: scroll; max-height: 200px;font-size: 12px;">
             <li class="dropdown-item" style="width: 80px;height: 30px;font-size: 12px;">
               <input type="checkbox" [(ngModel)]="allSourceSysSelected" (change)="selectAllSourceSys($event)">All
@@ -126,7 +126,7 @@
   <app-grid #grid></app-grid>
 </div>
 
-<div class="col-3" style=" margin-left: 35px;border: #ccc solid 1px; padding: 5px;background-color: #ccc;;margin-bottom: 20px;">
+<div class="col-3" style=" margin-left: 35px;border: #000 solid 1px; padding: 5px;background-color: #ccc;;margin-bottom: 20px;">
   <div class="" style="font-weight: bolder;">Glossary</div>
   <hr>
   <div class="" style="color: #000;font-weight: bolder;font-size: 12px;">DQP:
