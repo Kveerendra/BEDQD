@@ -421,7 +421,7 @@ export class KeyHighlightsPageComponent implements OnInit {
           grid4labels[idx] = "July-Sep 2014";
         }
       }
-      grid4labels.sort();
+      //grid4labels.sort();
       for (const l in grid4labels) {
         this.grid4config.data.datasets[0].data.push(parseInt(grid4ConfigData[l]['<30']));
         this.grid4config.data.datasets[1].data.push(parseInt(grid4ConfigData[l]['30-60']));
