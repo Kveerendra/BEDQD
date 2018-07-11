@@ -275,8 +275,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         {
           label: 'Completeness',
           data: [],
-          backgroundColor: '#0086b3',
-          hoverBackgroundColor: '#0086b3'
+          backgroundColor: '#007399',
+          hoverBackgroundColor: '#007399'
         },
         {
           label: 'Validity',
@@ -372,8 +372,8 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         {
           label: 'Completeness',
           data: [],
-          backgroundColor: '#0086b3',
-          hoverBackgroundColor: '#0086b3'
+          backgroundColor: '#007399',
+          hoverBackgroundColor: '#007399'
         },
         {
           label: 'Validity',

@@ -8069,10 +8069,10 @@
 	},
 	"dQRIAndDQPScores": {
 		"header": "dqriandDQPScores",
-		"totalRecords": "3227.936076",
+		"totalRecords": "497229",
 		"dqriScore": "0.2",
-		"dqpScore": "100.0",
-		"impactScore": "2.1"
+		"dqpScore": "100",
+		"impactScore": "2.2"
 	},
 	"openDQIssues": {
 		"header": "openDQIssues",

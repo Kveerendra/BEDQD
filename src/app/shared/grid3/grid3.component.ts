@@ -14,6 +14,11 @@ export class Grid3Component implements OnInit {
   rowData = [];
   keysOfGrid3;
   titleDisplay;
+  gridOptions = {
+    animateRows: true,
+    enableRangeSelection: true,
+    enableSorting: true,
+  };
   service: MeasureRemidateDQService;
   constructor(measureRemidateDQService: MeasureRemidateDQService) {
     this.columnDefs = [
