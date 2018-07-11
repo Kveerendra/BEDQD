@@ -73,7 +73,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
             return this.formatNumberWithComma(Math.abs(value));
           },
           display: (context: any) => {
-            //debugger;
+            //
             return context.chart.isDatasetVisible(context.datasetIndex)  && Math.abs(context.dataset.data[context.dataIndex]) > 7000;
         }
         }
@@ -586,7 +586,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     this.grid6config.data.datasets[1].data = [];
     this.grid6config.data.datasets[2].data = [];
     this.grid6config.data.datasets[3].data = [];
-
+    
     for(const l in this.LOBFilter){
       chartData[l] = {
         'Accuracy' : {
@@ -607,8 +607,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         }
       };
     }
-
+      
     for (const itr_5 in issueDetailsMap){
+      
       grid5MapList = issueDetailsMap[itr_5];
       for (const itr_2 in grid5MapList) {
         if(this.yearQtr[grid5MapList[itr_2]['yearQtr']]){
@@ -649,16 +650,17 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     }
 
     for(const l in this.LOBFilter){
+      
            this.grid5config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length * -1);
            this.grid5config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length * -1);
            this.grid5config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length * -1);
            this.grid5config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length * -1);
 
 
-           this.grid6config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length);
-           this.grid6config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length);
-           this.grid6config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length);
-           this.grid6config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length);
+           this.grid6config.data.datasets[0].data.push(chartData[l]['Conformity']['currentQuarter'].length);
+           this.grid6config.data.datasets[1].data.push(chartData[l]['Completeness']['currentQuarter'].length);
+           this.grid6config.data.datasets[2].data.push(chartData[l]['Validity']['currentQuarter'].length);
+           this.grid6config.data.datasets[3].data.push(chartData[l]['Accuracy']['currentQuarter'].length);
 
            this.grid5config.data.labels.push(l);
            this.grid6config.data.labels.push(l);
@@ -749,6 +751,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       }
     }
 
+    
     for(const l in this.LOBFilter){
       if(this.LOBFilter[l]){
            this.grid5config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length * -1);
@@ -757,10 +760,10 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
            this.grid5config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length * -1);
 
 
-           this.grid6config.data.datasets[0].data.push(chartData[l]['Conformity']['priorQuarter'].length);
-           this.grid6config.data.datasets[1].data.push(chartData[l]['Completeness']['priorQuarter'].length);
-           this.grid6config.data.datasets[2].data.push(chartData[l]['Validity']['priorQuarter'].length);
-           this.grid6config.data.datasets[3].data.push(chartData[l]['Accuracy']['priorQuarter'].length);
+           this.grid6config.data.datasets[0].data.push(chartData[l]['Conformity']['currentQuarter'].length);
+           this.grid6config.data.datasets[1].data.push(chartData[l]['Completeness']['currentQuarter'].length);
+           this.grid6config.data.datasets[2].data.push(chartData[l]['Validity']['currentQuarter'].length);
+           this.grid6config.data.datasets[3].data.push(chartData[l]['Accuracy']['currentQuarter'].length);
 
            this.grid5config.data.labels.push(l);
            this.grid6config.data.labels.push(l);
@@ -836,7 +839,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   }
 
   filteryearQtr(e) {
-
+  
     let templet = {};
     let tempArray = [];
 
