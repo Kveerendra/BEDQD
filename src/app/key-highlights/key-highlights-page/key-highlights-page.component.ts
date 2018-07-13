@@ -225,13 +225,9 @@ export class KeyHighlightsPageComponent implements OnInit {
               fontStyle : 'bold',
             }, ticks: {
               callback: function (x) {
-                x = x/1000;
-                x = x+'K';
                 return x;
               },
               beginAtZero: true,
-              stepSize: 500000,
-              max : 2000000
             }
           }
         ]

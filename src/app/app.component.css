@@ -4,8 +4,8 @@ html, body {
 .nav-item {
   color: #000 !important;
   border: 0px;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   border-left:2px #000000 solid;
   border-right:2px #000000 solid;
 }
@@ -14,8 +14,8 @@ html, body {
   background-color: #007399;
   color: #fff !important;
   border: 0px;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   border-bottom:1px #000000 solid;
 }
 .nav-tabs .nav-link  {
