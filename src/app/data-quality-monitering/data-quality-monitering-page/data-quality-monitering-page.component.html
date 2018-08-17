@@ -1,3 +1,11 @@
+<div>
+    <div *ngIf="!dataLoaded" class="loading">
+      <div class="loading-bar">B</div>&nbsp;
+      <div class="loading-bar">E</div>&nbsp;
+      <div class="loading-bar">D</div>&nbsp;
+      <div class="loading-bar">Q</div>&nbsp;
+      <div class="loading-bar">D</div>&nbsp;&nbsp;<span style="font-weight: bold;">Please wait! Dashboards are getting refreshed...</span>
+      </div><div *ngIf="dataLoaded">
 <div class="row" style="background-color: #007399;padding-top: 10px;padding-bottom: 12px;">
   <div class="col-6" style="color: white;font-size: 16px;font-weight: bolder;margin-left: 15px;">Data Quality Monitoring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <span>
@@ -7,7 +15,10 @@
   <div class="col-4 pull-right text-center" style="color: white;font-size: 10px;padding-top:7px;font-weight: bolder;">
     <span>
       <i class="fa fa-wrench fa-2x" aria-hidden="true"></i>
-    </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default Date as of Oct-Dec 2017
+    </span>&nbsp;&nbsp;&nbsp;Default Date as of Oct-Dec 2017
+    <a href="http://ussltccsw2220.solutions.glbsnet.com:9080/kie-wb" target="new" class="col-4 text-center" style="color: white;font-size: 12px;padding-top:7px;font-weight: bolder;margin-left: 40px;">Launch WORKBENCH</a>
+  </div><div>
+  <button (click)="refreshData()" class="btn" data-toggle="dropdown" id="refresh" style="width: 120px;height: 30px;font-size: 12px;border:#000 solid 1px;">Refresh Dashboard</button>
   </div>
 </div>
 <br>
@@ -127,4 +138,6 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>

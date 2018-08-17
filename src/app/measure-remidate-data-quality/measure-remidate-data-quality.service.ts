@@ -5,19 +5,22 @@ import { environment } from '../../environments/environment';
 export class MeasureRemidateDQService {
     MeasureRemidateJsonObject = {};
     private rootURL = environment.root_Url;
+    private refreshURL = environment.refreshURL;
     private MeasureRemidateJSON = environment.MeasureRemidateJSON;
+    private refreshUrl = this.refreshURL + "refreshDashboardEndPoint";
     //private url = 'MeasureRemidateDQ.json';
     private url = this.rootURL + this.MeasureRemidateJSON + new Date().getTime();
     constructor(private httpc: HttpClient) {
-        this.getData().then((data) => {
+        this.getData(null).then((data) => {
             this.MeasureRemidateJsonObject = data;
         });
     }
-    getData() {
+    getData(refreshCall:string) {
+        this.url = this.rootURL + this.MeasureRemidateJSON + new Date().getTime();
         return new Promise(resolve => {
             let headers = new HttpHeaders();
             headers.append('no-cache', 'true');
-            if (Object.keys(this.MeasureRemidateJsonObject).length <= 0) {
+            if (Object.keys(this.MeasureRemidateJsonObject).length <= 0 || refreshCall == 'refreshCall') {
                 this.httpc.get(this.url,{ headers }).subscribe(
                     data => {
                         resolve(data);
@@ -56,5 +59,21 @@ export class MeasureRemidateDQService {
         return this.MeasureRemidateJsonObject['openDQPrioritySummary']['openDQPrioritySummaryMap'];
 
     }
+
+     getRefreshedData() {
+        return new Promise(resolve => {
+          let headers = new HttpHeaders();
+          headers.append('no-cache', 'true');
+          this.httpc.get(this.refreshUrl, { headers }).subscribe(
+            data => {
+              resolve(data);
+              console.log(data['header']);
+            },
+            err => {
+              console.error(err);
+            }
+          );
+        });
+      } 
 }
 

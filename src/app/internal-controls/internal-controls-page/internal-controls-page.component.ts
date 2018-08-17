@@ -3,6 +3,8 @@ import { InternalControlService } from '../service/internal-control.service';
 import { ChartComponent } from 'angular2-chartjs';
 import { GridComponent } from '../../shared/grid/grid.component';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-internal-controls-page',
@@ -14,6 +16,7 @@ export class InternalControlsPageComponent implements OnInit {
   @ViewChild('grid2Chart') chart2: ChartComponent;
   @ViewChild('grid') grid: GridComponent;
   public input = '';
+  public dataLoaded:boolean=true;
   grid1chartStyle = '';
   allLobSelected = true;
   allSourceSysSelected = true;
@@ -217,14 +220,19 @@ export class InternalControlsPageComponent implements OnInit {
   service: InternalControlService;
   constructor(
     internalControlService: InternalControlService,
-    ngbDropdownConfi: NgbDropdownConfig
+    ngbDropdownConfi: NgbDropdownConfig,
+    private activatedRoute: ActivatedRoute, private router: Router
   ) {
     this.service = internalControlService;
     ngbDropdownConfi.autoClose = 'outside';
   }
 
   ngOnInit() {
-    this.service.getData().then(dataaa => {
+    this.initializeDashboard(null);
+  }
+
+  initializeDashboard(x:string){
+    this.service.getData(x).then(dataaa => {
       this.dQPScoreModel = this.service.getQPModel();
 
       this.dQPScoreModel['dqpScore'] = Math.abs(
@@ -233,21 +241,16 @@ export class InternalControlsPageComponent implements OnInit {
       this.impactScoreModel = this.service.getImpactScoreModel();
       this.impactScoreModel['header'] = this.initCap(this.impactScoreModel['header']) ;
 
-
-      
-
-
-
-     // console.log(result);
-     // this.impactScoreModel['header'] = result;
-      
-      
-     // console.log(this.impactScoreModel);
       this.dqRIScoreModel = this.service.getdQScoreModel();
       this.fillLobFilter();
       this.fillSourceSystemFilter();
       this.updateBothCharts();
-      this.updateGrid();
+     /*  this.updateGrid(); */
+      /* if(x != null){
+        this.updateChart1();
+        this.updateChart2();
+        this.updateGrid();
+      } */
     });
     this.grid.internalControlsFlag = true;
   }
@@ -602,4 +605,17 @@ export class InternalControlsPageComponent implements OnInit {
       }
     }
   };
+
+   refreshData(){
+    console.log("refresh called");
+    this.dataLoaded = false;
+    this.service.getRefreshedData().then(dataaa => {
+      this.dataLoaded = true;
+      console.log(dataaa['header']);
+      if(dataaa['header'] == 'SUCCESS'){
+        this.initializeDashboard('refreshCall');
+      }
+    });
+  };
+  
 }

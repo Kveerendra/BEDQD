@@ -15,6 +15,6 @@ export class DataProvider {
     }
 
     loadinternalControlsJsonObject() {
-      return this.internalControlService.getData();
+      return this.internalControlService.getData(null);
     }
 }

@@ -4,5 +4,6 @@ export const environment = {
   DataQualityJSON : 'DataQualityMonitoring.json?version=',
   KeyHighlightsJSON : 'KeyHighlights.json?version=',
   InternalControlJSON : 'InternalControls.json?version=',
-  MeasureRemidateJSON : 'MeasureRemidateDQ.json?version='
+  MeasureRemidateJSON : 'MeasureRemidateDQ.json?version=',
+  refreshURL : 'http://ussltccsw2220.solutions.glbsnet.com:8088/'
 };

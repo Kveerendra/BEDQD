@@ -3,6 +3,8 @@ import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { KeyHilightsService } from '../key-hilights.service';
 import { AngularFontAwesomeService } from 'angular-font-awesome';
 import { ChartComponent } from 'angular2-chartjs';
+import {ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-key-highlights-page',
@@ -15,6 +17,7 @@ export class KeyHighlightsPageComponent implements OnInit {
   @ViewChild('grid2configChart') chart2: ChartComponent;
   @ViewChild('grid3configChart') chart3: ChartComponent;
   @ViewChild('grid4configChart') chart4: ChartComponent;
+  public dataLoaded:boolean=true;
   sourceSystem = {};
   lobFilter = {};
   yearQuarterFilter = {};
@@ -30,6 +33,7 @@ export class KeyHighlightsPageComponent implements OnInit {
   drop2: String[] = [];
   drop3: String[] = [];
   drop4: String[] = [];
+  
 
   formatNumberWithComma = function (x) {
     x = x.toString();
@@ -305,13 +309,19 @@ export class KeyHighlightsPageComponent implements OnInit {
   service: KeyHilightsService;
   constructor(
     KeyHighlightsService: KeyHilightsService,
-    ngbDropdownConfig: NgbDropdownConfig
+    ngbDropdownConfig: NgbDropdownConfig,
+    private activatedRoute: ActivatedRoute, private router: Router
   ) {
     this.service = KeyHighlightsService;
     ngbDropdownConfig.autoClose = 'outside';
   }
 
   ngOnInit() {
+    this.initializeDashboard(null);
+  }
+
+  initializeDashboard(nullCheck:string){
+    
     this.service.getData().then(dataaa => {
       var recievedData_1 = this.service.getdQRIAndDQPScoresData();
       this.tRecords = this.formatNumberWithComma(Math.round(recievedData_1['totalRecords'])).toString();
@@ -397,8 +407,7 @@ export class KeyHighlightsPageComponent implements OnInit {
           "<30" : 0,
           ">60" : 0
         }
-      }
-           
+      }   
       for(const i in hpDqIssues) { 
         let idx = grid4labels.indexOf(hpDqIssues[i]['nbrDaysOpen']);
         if(hpDqIssues[i]['agingBucket'] === '30-60') {
@@ -418,6 +427,9 @@ export class KeyHighlightsPageComponent implements OnInit {
         }
       }
       //grid4labels.sort();
+      this.grid4config.data.datasets[0].data=[];
+      this.grid4config.data.datasets[1].data=[];
+      this.grid4config.data.datasets[2].data=[];
       for (const l in grid4labels) {
         this.grid4config.data.datasets[0].data.push(parseInt(grid4ConfigData[l]['<30']));
         this.grid4config.data.datasets[1].data.push(parseInt(grid4ConfigData[l]['30-60']));
@@ -425,14 +437,25 @@ export class KeyHighlightsPageComponent implements OnInit {
       } 
      
       this.grid4config.data.labels = grid4labels;
-      this.grid4loaded = true;  
+      this.grid4loaded = true;
+      this.grid1config.data.datasets[0].data=[];  
       this.grid1config.data.datasets[0].data.push(openDQIssues['priorQuarter']);
       this.grid1config.data.datasets[0].data.push(openDQIssues['currentQuarter']);
       this.drop2.sort();
       this.drop3.sort();
       this.drop4.sort();
+      
+      if(nullCheck!=null){
+        this.chart1.data.datasets[0].data=this.grid1config.data.datasets[0].data
+        this.chart4.data.datasets[1].data=this.grid4config.data.datasets[1].data;
+        this.chart4.data.datasets[2].data=this.grid4config.data.datasets[2].data;
 
+        this.chart1.chart.update();
+        this.chart3.chart.update();
+        this.chart4.chart.update();
+      }
     });
+
   }
 
   filtergrid3(e) {
@@ -486,4 +509,14 @@ export class KeyHighlightsPageComponent implements OnInit {
     this.chart3.data = this.grid3config.data;
     this.chart3.chart.update();
   }
+  refreshData(){
+    console.log("refresh called");
+    this.dataLoaded = false;
+    this.service.getRefreshedData().then(dataaa => {
+      this.dataLoaded=true;
+     if(dataaa['header'] == 'SUCCESS'){
+        this.initializeDashboard("NOTNULL");
+      }
+  });
+  };
 }

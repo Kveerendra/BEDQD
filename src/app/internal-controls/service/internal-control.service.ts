@@ -7,12 +7,15 @@ export class InternalControlService {
   internalControlsJsonObject = {};
   // just change this url to point to the service
   private rootURL = environment.root_Url;
+  private refreshURL = environment.refreshURL;
   private InternalControlJSON = environment.InternalControlJSON;
+  private refreshUrl = this.refreshURL + "refreshDashboardEndPoint";
   //private url = 'InternalControls.json';
   private url = this.rootURL + this.InternalControlJSON + new Date().getTime();
+  
   constructor(private httpc: HttpClient) {
     if (this.internalControlsJsonObject === {}) {
-      this.getData().then(data => {
+      this.getData(null).then(data => {
         this.internalControlsJsonObject = data;
       });
     }
@@ -20,11 +23,12 @@ export class InternalControlService {
   setData(data) {
     this.internalControlsJsonObject = data;
   }
-  getData() {
+  getData(refreshCall:string) {
+    this.url = this.rootURL + this.InternalControlJSON + new Date().getTime();
     return new Promise(resolve => {
       let headers = new HttpHeaders();
       headers.append('no-cache', 'true');
-      if (Object.keys(this.internalControlsJsonObject).length <= 0) {
+      if (Object.keys(this.internalControlsJsonObject).length <= 0 || refreshCall == 'refreshCall') {
         this.httpc.get(this.url,{headers}).subscribe(
           data => {
             resolve(data);
@@ -93,4 +97,20 @@ export class InternalControlService {
       'eCDECountForLegalEntityLOBSourceSystemLegalEntityLOB'
     ];
   }
+
+    getRefreshedData() {
+    return new Promise(resolve => {
+      let headers = new HttpHeaders();
+      headers.append('no-cache', 'true');
+      this.httpc.get(this.refreshUrl, { headers }).subscribe(
+        data => {
+          resolve(data);
+          console.log(data['header']);
+        },
+        err => {
+          console.error(err);
+        }
+      );
+    });
+  } 
 }

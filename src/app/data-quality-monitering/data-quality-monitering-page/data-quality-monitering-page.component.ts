@@ -4,6 +4,8 @@ import { DataQualityMoniteringService } from '../service/data-quality-monitering
 import { ChangeDetectorRef } from '@angular/core';
 import { ChartComponent } from 'angular2-chartjs';
 import { GridComponent } from '../../shared/grid/grid.component';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-quality-monitering-page',
@@ -16,6 +18,7 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   @ViewChild('grid2Chart') chart2: ChartComponent;
   @ViewChild('grid') grid: GridComponent;
   auBuText: string;
+  public dataLoaded:boolean=true;
   dimensionFilter = 'sourceSystem';
   displayJson = {
     sourceSystem: 'Source System',
@@ -218,7 +221,8 @@ export class DataQualityMoniteringPageComponent implements OnInit {
   constructor(
     private dataQualityMoniteringService: DataQualityMoniteringService,
     private cd: ChangeDetectorRef,
-    ngbDropdownConfig: NgbDropdownConfig
+    ngbDropdownConfig: NgbDropdownConfig,
+    private activatedRoute: ActivatedRoute, private router: Router
   ) {
     this.drop1 = 'Source System';
     this.drop5 = 'ADS';
@@ -241,6 +245,9 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     return 0;
   }
   ngOnInit() {
+    this.initializeDashboard(null);
+  }
+  initializeDashboard(x:string){
     this.service.getData().then(dataaa => {
       this.auBuText = 'ADS'
       this.dataQualityScoreModel = this.service.getdQScoreModel();
@@ -253,6 +260,9 @@ export class DataQualityMoniteringPageComponent implements OnInit {
       this.ecdeWithDQModel['header'] = 'ECDE with DQ Monitoring';
       this.bcdeWithDQModel['header'] = 'BCDE with DQ Monitoring';
       const dropDown2 = this.service.getdQMonitoringDetailsbySourceSystem();
+      this.grid1config.data.datasets[0].data = [];
+      this.grid1config.data.datasets[1].data = [];
+      this.grid1config.data.labels = [];
       for (const k in dropDown2) {
         if (this.drop2.indexOf(dropDown2[k]['ads']) === -1) {
           this.drop2.push(dropDown2[k]['ads']);
@@ -305,7 +315,16 @@ export class DataQualityMoniteringPageComponent implements OnInit {
 
       this.grid1loaded = true;
       this.updateECDEandBCDEWithDQM();
+      if(x!=null){
+        this.chart1.data.datasets[0].data = this.grid1config.data.datasets[0].data;
+        this.chart1.data.datasets[1].data = this.grid1config.data.datasets[1].data;
+        this.chart2.data.datasets[0].data = this.grid2config.data.datasets[0].data;
+        this.chart2.data.datasets[1].data = this.grid2config.data.datasets[1].data;
+        this.filterDimensionData();
+        this.chart1.chart.update();
+        this.chart2.chart.update();
 
+      }
     });
 
   }
@@ -633,4 +652,16 @@ export class DataQualityMoniteringPageComponent implements OnInit {
     }
     this.filterSourceSystemData();
   }
+  
+  refreshData(){
+    console.log("refresh called");
+    this.dataLoaded = false;
+    this.service.getRefreshedData().then(dataaa => {
+      this.dataLoaded = true;
+      if(dataaa['header'] == 'SUCCESS'){
+        this.initializeDashboard('refreshCall');
+      }
+      
+  });
+  };
 }

@@ -16,6 +16,6 @@ export class MeasureRemidiateDataProvider {
     }
 
     public loadMeasureRemidateJsonObject() {
-      return this.measureRemidateDQService.getData();
+      return this.measureRemidateDQService.getData(null);
     }
 }

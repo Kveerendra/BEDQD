@@ -7,6 +7,8 @@ import { ChangeDetectorRef } from '@angular/core';
 import { Grid2Component } from '../shared/grid2/grid2.component';
 import { Chart } from 'chart.js';
 import 'chartjs-plugin-datalabels';
+import {ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-measure-remidate-data-quality',
@@ -22,6 +24,7 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   @ViewChild('gridTable') grid: Grid2Component;
   openDQIssues: String;
   header: String;
+  public dataLoaded:boolean=true;
   columnDefs;
   allLobSelected = true;
   allSourceSystemSelected = true;
@@ -445,14 +448,19 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
   constructor(
     measureRemidateDQService: MeasureRemidateDQService,
     private cd: ChangeDetectorRef,
-    ngbDropdownConfi: NgbDropdownConfig
+    ngbDropdownConfi: NgbDropdownConfig,
+    private activatedRoute: ActivatedRoute,
+     private router: Router
   ) {
     this.service = measureRemidateDQService;
     ngbDropdownConfi.autoClose = 'outside';
   }
 
   ngOnInit() {
-    this.service.getData().then(dataaa => {
+    this.initializeDashboard(null);
+  }
+  initializeDashboard(x:string){
+    this.service.getData(x).then(dataaa => {
       let grid3MapList;
       let grid4MapList;
       let grid5MapList;
@@ -476,7 +484,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       this.keysOfGrid3 = Object.keys(grid3Data);
       this.grid3config.data.labels = this.keysOfGrid3;
       this.grid4config.data.labels = this.keysOfGrid3;
-
+      this.grid3config.data.datasets[0].data=[];
+      this.grid3config.data.datasets[1].data=[];
+      this.grid3config.data.datasets[2].data=[];
       for (const itr_1 in grid3Data) {
         grid3MapList = grid3Data[itr_1];
         for (const itr_2 in grid3MapList) {
@@ -493,6 +503,9 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
         }
       }
 
+      this.grid4config.data.datasets[0].data=[];
+      this.grid4config.data.datasets[1].data=[];
+      this.grid4config.data.datasets[2].data=[];
       for (const itr_1 in grid4Data) {
         grid4MapList = grid4Data[itr_1];
         for (const itr_2 in grid4MapList) {
@@ -566,6 +579,20 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
       this.updateIssueTyepDetails();
       this.grid5loaded = true;
       this.grid6loaded = true;
+      
+      if(x!=null){
+        console.log('if called');
+        console.log(this.chart1.data);
+        this.chart1.data.datasets[0].data = this.grid3config.data.datasets[0].data;
+        this.chart1.data.datasets[1].data = this.grid3config.data.datasets[1].data;
+        this.chart1.data.datasets[2].data = this.grid3config.data.datasets[2].data;
+        this.chart2.data.datasets[0].data = this.grid4config.data.datasets[0].data;
+        this.chart2.data.datasets[1].data = this.grid4config.data.datasets[1].data;
+        this.chart2.data.datasets[2].data = this.grid4config.data.datasets[2].data;
+        this.filterLOBData(null);
+        this.chart1.chart.update();
+        this.chart2.chart.update();
+      }
     });
   }
 
@@ -951,4 +978,17 @@ export class MeasureRemidateDataQualityComponent implements OnInit {
     }
     this.filteryearQtr();
   }
-}
+
+   refreshData(){
+    console.log("refresh called");
+    this.dataLoaded = false;
+    this.service.getRefreshedData().then(dataaa => {
+      this.dataLoaded = true;
+      console.log(dataaa['header']);
+      if(dataaa['header'] == 'SUCCESS'){
+        this.initializeDashboard('refreshCall');
+      }
+      
+  });
+  };
+  };

@@ -23,7 +23,7 @@ export class Grid2Component implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getData().then(dataaa => {
+    this.service.getData(null).then(dataaa => {
       var tempVar = {};
       var tempArray = [];
 

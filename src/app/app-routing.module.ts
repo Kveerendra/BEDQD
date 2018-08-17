@@ -12,12 +12,13 @@ import { InternalControlsPageComponent } from './internal-controls/internal-cont
 import { InternalControlService } from './internal-controls/service/internal-control.service';
 
 const app_routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
-    { path: 'home', pathMatch: 'full', component: KeyHighlightsPageComponent },
-    { path: 'dq', pathMatch: 'full', component: DataQualityMoniteringPageComponent },
-    { path: 'mrdq', pathMatch: 'full', component: MeasureRemidateDataQualityComponent },
-	  { path: 'ic', pathMatch: 'full', component: InternalControlsPageComponent },
-    { path: '**', redirectTo: 'home' } // catch any unfound routes and redirect to home page
+    { path: '', pathMatch: 'full', redirectTo: 'home',runGuardsAndResolvers:'always' },
+    { path: 'home', pathMatch: 'full', component: KeyHighlightsPageComponent,runGuardsAndResolvers:'always' },
+    { path: 'dq', pathMatch: 'full', component: DataQualityMoniteringPageComponent,runGuardsAndResolvers:'always' },
+    { path: 'mrdq', pathMatch: 'full', component: MeasureRemidateDataQualityComponent,runGuardsAndResolvers:'always' },
+	  { path: 'ic', pathMatch: 'full', component: InternalControlsPageComponent,runGuardsAndResolvers:'always' },
+    { path: '**', redirectTo: 'home' },
+     // catch any unfound routes and redirect to home page
 ];
 
 @NgModule({
